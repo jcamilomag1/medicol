@@ -62,13 +62,33 @@
     "video_title": "Lo que Dicen Nuestros Pacientes",
     "video_description": "Escucha las historias reales de quienes confiaron en nosotros."
   },
+  "footer": {
+    "solutions": "Procedimientos",
+    "company": "Medicol",
+    "legal": {
+      "title": "Legal",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos y Condiciones"
+    },
+    "contact_us": "Contáctanos",
+    "social": "Síguenos",
+    "rights_reserved": "Todos los derechos reservados."
+  },
   "nav": {
     "home": "Inicio",
     "procedures": "Procedimientos",
     "services": "Servicios",
     "about": "Nosotros",
     "contact": "Contacto",
-    "cta": "Agenda tu Consulta"
+    "cta": "Agenda tu Consulta",
+    "cosmetic": "Cirugía Cosmética",
+    "regenerative": "Medicina Regenerativa",
+    "dental": "Diseño de Sonrisa",
+    "diagnostics": "Chequeos Avanzados",
+    "experience": "La Experiencia Medicol",
+    "team": "Nuestro Equipo",
+    "results": "Resultados",
+    "blog": "Blog"
   },
   "blog": {
     "section_title": "Desde Nuestro Blog",

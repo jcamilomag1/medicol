@@ -62,13 +62,33 @@
     "video_title": "What Our Patients Say",
     "video_description": "Hear the real stories of those who trusted us."
   },
+  "footer": {
+    "solutions": "Procedures",
+    "company": "Medicol",
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms and Conditions"
+    },
+    "contact_us": "Contact Us",
+    "social": "Follow Us",
+    "rights_reserved": "All rights reserved."
+  },
   "nav": {
     "home": "Home",
     "procedures": "Procedures",
     "services": "Services",
     "about": "About",
     "contact": "Contact",
-    "cta": "Schedule Consultation"
+    "cta": "Schedule Consultation",
+    "cosmetic": "Cosmetic Surgery",
+    "regenerative": "Regenerative Medicine",
+    "dental": "Smile Design",
+    "diagnostics": "Advanced Checkups",
+    "experience": "The Medicol Experience",
+    "team": "Our Team",
+    "results": "Results",
+    "blog": "Blog"
   },
   "blog": {
     "section_title": "From Our Blog",
