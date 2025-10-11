@@ -6,19 +6,11 @@ export const HeroSection = () => {
   
   return (
     <section id="home" className="relative h-screen">
-      {/* Background Video */}
-      <video
-        className="absolute w-full h-full object-cover -z-10"
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src="/videos/medicol-hero-video.mp4" type="video/mp4" />
-      </video>
+      {/* Background Image */}
+      <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] bg-cover bg-center" />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-primary/70" />
 
       {/* Content Container */}
       <div className="relative flex flex-col justify-center items-center h-full max-w-4xl mx-auto px-4 md:px-6 text-center">
@@ -32,7 +24,7 @@ export const HeroSection = () => {
         </p>
 
         {/* Call to Action */}
-        <Button variant="default" size="lg" className="mt-8 bg-gradient-primary shadow-medium hover:shadow-soft transition-all duration-300 hover:scale-105">
+        <Button variant="default" size="lg" className="mt-8 bg-accent text-primary hover:bg-accent/90 transition-all duration-300 hover:scale-105">
           {t('hero.cta')}
         </Button>
 
