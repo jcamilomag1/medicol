@@ -1,7 +1,8 @@
 {
   "common": {
     "learn_more": "Ver más",
-    "view_profile": "Ver Perfil"
+    "view_profile": "Ver Perfil",
+    "read_more": "Leer más"
   },
   "countries": {
     "usa": "Estados Unidos"
@@ -68,5 +69,26 @@
     "about": "Nosotros",
     "contact": "Contacto",
     "cta": "Agenda tu Consulta"
+  },
+  "blog": {
+    "section_title": "Desde Nuestro Blog",
+    "section_subtitle": "Mantente informado con las últimas noticias, tendencias y consejos de nuestros expertos.",
+    "category": {
+      "cosmetic": "Cirugía Cosmética",
+      "regenerative": "Medicina Regenerativa",
+      "dental": "Salud Dental"
+    },
+    "post1": {
+      "title": "5 Mitos sobre la Lipotransferencia que Debes Conocer",
+      "description": "Desmentimos las ideas erróneas más comunes sobre este procedimiento para que tomes una decisión informada."
+    },
+    "post2": {
+      "title": "¿Cómo las Células Madre Están Revolucionando el Rejuvenecimiento?",
+      "description": "Exploramos la ciencia detrás de la medicina regenerativa y su potencial para combatir el envejecimiento."
+    },
+    "post3": {
+      "title": "La Guía Definitiva para un Diseño de Sonrisa Perfecto en 2025",
+      "description": "Desde la elección de materiales hasta el cuidado post-tratamiento, todo lo que necesitas saber."
+    }
   }
 }

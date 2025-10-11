@@ -1,83 +1,99 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar, User } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
-const blogPosts = [
+interface Post {
+  id: number;
+  imageUrl: string;
+  categoryKey: string;
+  titleKey: string;
+  descriptionKey: string;
+  href: string;
+}
+
+const postsData: Post[] = [
   {
-    title: "Understanding Preventive Care",
-    description: "Learn why regular check-ups are essential for maintaining long-term health.",
-    author: "Dr. Sarah Johnson",
-    date: "March 15, 2025",
-    category: "Wellness"
+    id: 1,
+    imageUrl: 'https://images.pexels.com/photos/5473183/pexels-photo-5473183.jpeg?auto=compress&cs=tinysrgb&w=600',
+    categoryKey: 'blog.category.cosmetic',
+    titleKey: 'blog.post1.title',
+    descriptionKey: 'blog.post1.description',
+    href: '/blog/post-1'
   },
   {
-    title: "Telemedicine: The Future is Here",
-    description: "Discover how virtual consultations are revolutionizing healthcare access.",
-    author: "Dr. Michael Chen",
-    date: "March 10, 2025",
-    category: "Technology"
+    id: 2,
+    imageUrl: 'https://images.pexels.com/photos/7175478/pexels-photo-7175478.jpeg?auto=compress&cs=tinysrgb&w=600',
+    categoryKey: 'blog.category.regenerative',
+    titleKey: 'blog.post2.title',
+    descriptionKey: 'blog.post2.description',
+    href: '/blog/post-2'
   },
   {
-    title: "Nutrition Tips for Better Health",
-    description: "Expert advice on building healthy eating habits that last a lifetime.",
-    author: "Dr. Emily Rodriguez",
-    date: "March 5, 2025",
-    category: "Nutrition"
+    id: 3,
+    imageUrl: 'https://images.pexels.com/photos/6682132/pexels-photo-6682132.jpeg?auto=compress&cs=tinysrgb&w=600',
+    categoryKey: 'blog.category.dental',
+    titleKey: 'blog.post3.title',
+    descriptionKey: 'blog.post3.description',
+    href: '/blog/post-3'
   }
 ];
 
 export const BlogPreview = () => {
+  const { t } = useTranslation();
+
   return (
-    <section className="px-4 sm:px-6 lg:px-8 pb-20">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12 gap-4">
-          <div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">
-              Latest Health Insights
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Stay informed with expert advice and healthcare updates.
-            </p>
-          </div>
-          <Button variant="outline" className="group">
-            View All Articles
-            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Button>
+    <section id="blog" className="bg-white py-20 sm:py-24">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+            {t('blog.section_title')}
+          </h2>
+          <p className="mt-4 text-lg leading-8 text-gray-600">
+            {t('blog.section_subtitle')}
+          </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post, index) => (
-            <Card 
-              key={index} 
-              className="shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 border-border group animate-fade-in-scale"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <CardHeader>
-                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
-                  <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">
-                    {post.category}
-                  </span>
-                </div>
-                <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                  {post.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <CardDescription className="text-base leading-relaxed">
-                  {post.description}
-                </CardDescription>
-                <div className="flex items-center justify-between text-sm text-muted-foreground pt-4 border-t border-border">
-                  <div className="flex items-center gap-2">
-                    <User className="w-4 h-4" />
-                    <span>{post.author}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>{post.date}</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+
+        {/* Grid Container */}
+        <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-20 lg:grid-cols-3">
+          {postsData.map((post) => (
+            <article key={post.id} className="flex flex-col items-start justify-between">
+              {/* Image Wrapper */}
+              <div className="relative w-full">
+                <img
+                  src={post.imageUrl}
+                  alt=""
+                  className="w-full rounded-2xl bg-gray-100 object-cover aspect-[16/9]"
+                />
+                <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
+              </div>
+
+              {/* Category */}
+              <p className="mt-8 text-xs font-medium leading-5 text-gray-500">
+                {t(post.categoryKey)}
+              </p>
+
+              {/* Title */}
+              <h3 className="mt-3 text-lg font-semibold leading-6 text-primary group-hover:text-gray-600">
+                <a href={post.href}>
+                  <span className="absolute inset-0" />
+                  {t(post.titleKey)}
+                </a>
+              </h3>
+
+              {/* Description */}
+              <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
+                {t(post.descriptionKey)}
+              </p>
+
+              {/* Read More Link */}
+              <div className="mt-6">
+                <a
+                  href={post.href}
+                  className="font-semibold text-accent hover:opacity-80 transition-opacity"
+                >
+                  {t('common.read_more')} →
+                </a>
+              </div>
+            </article>
           ))}
         </div>
       </div>

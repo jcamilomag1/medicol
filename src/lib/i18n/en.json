@@ -1,7 +1,8 @@
 {
   "common": {
     "learn_more": "Learn More",
-    "view_profile": "View Profile"
+    "view_profile": "View Profile",
+    "read_more": "Read more"
   },
   "countries": {
     "usa": "United States"
@@ -68,5 +69,26 @@
     "about": "About",
     "contact": "Contact",
     "cta": "Schedule Consultation"
+  },
+  "blog": {
+    "section_title": "From Our Blog",
+    "section_subtitle": "Stay informed with the latest news, trends, and expert advice.",
+    "category": {
+      "cosmetic": "Cosmetic Surgery",
+      "regenerative": "Regenerative Medicine",
+      "dental": "Dental Health"
+    },
+    "post1": {
+      "title": "5 Myths About Fat Transfer You Should Know",
+      "description": "We debunk the most common misconceptions about this procedure so you can make an informed decision."
+    },
+    "post2": {
+      "title": "How Stem Cells Are Revolutionizing Rejuvenation",
+      "description": "We explore the science behind regenerative medicine and its potential to combat aging."
+    },
+    "post3": {
+      "title": "The Ultimate Guide to a Perfect Smile Design in 2025",
+      "description": "From material selection to post-treatment care, everything you need to know."
+    }
   }
 }
