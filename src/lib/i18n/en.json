@@ -32,11 +32,17 @@
   },
   "trust": {
     "section_title": "Meet the Experts Behind Your Transformation",
-    "section_subtitle": "Our team is composed of renowned professionals with over 15 years of experience, dedicated to your safety and achieving exceptional results."
+    "section_subtitle": "Our team is composed of renowned professionals with over 15 years of experience, dedicated to your safety and achieving exceptional results.",
+    "view_full_team": "Meet our full team"
   },
   "team": {
     "preview_title": "Our Medical Team",
-    "preview_description": "Meet the specialists who will make your transformation a reality."
+    "preview_description": "Meet the specialists who will make your transformation a reality.",
+    "specialty": {
+      "plastic_surgeon": "Plastic Surgeon",
+      "regenerative_medicine": "Regenerative Medicine Specialist",
+      "dental_design": "Dentist and Smile Designer"
+    }
   },
   "testimonials": {
     "video_title": "What Our Patients Say",
