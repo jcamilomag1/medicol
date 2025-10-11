@@ -1,33 +1,55 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Heart } from "lucide-react";
 
 export const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-hero py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center animate-fade-in">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
-            <Heart className="w-4 h-4" />
-            <span className="text-sm font-medium">Trusted Healthcare Solutions</span>
-          </div>
-          
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-            Your Health, Our Priority
-          </h1>
-          
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed">
-            Experience comprehensive medical care with cutting-edge technology and compassionate professionals dedicated to your wellbeing.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="bg-gradient-primary shadow-medium hover:shadow-soft transition-all duration-300 hover:scale-105">
-              Get Started
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="hover:bg-muted transition-all duration-300">
-              Learn More
-            </Button>
-          </div>
+    <section id="home" className="relative h-screen">
+      {/* Background Video */}
+      <video
+        className="absolute w-full h-full object-cover -z-10"
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source src="/videos/medicol-hero-video.mp4" type="video/mp4" />
+      </video>
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50" />
+
+      {/* Content Container */}
+      <div className="relative flex flex-col justify-center items-center h-full max-w-4xl mx-auto px-4 md:px-6 text-center">
+        {/* Textual Elements */}
+        <h1 className="text-5xl md:text-6xl font-extrabold text-white tracking-tight">
+          Resultados que transforman. Cuidado que te acompaña en cada paso.
+        </h1>
+
+        <p className="mt-4 text-lg md:text-xl text-neutral-200">
+          Cirugía cosmética de clase mundial, medicina regenerativa de vanguardia y tratamientos dentales premium en Medellín.
+        </p>
+
+        {/* Call to Action */}
+        <Button variant="default" size="lg" className="mt-8 bg-gradient-primary shadow-medium hover:shadow-soft transition-all duration-300 hover:scale-105">
+          Agenda tu Consulta Virtual Gratuita
+        </Button>
+
+        {/* Social Proof Logos */}
+        <div className="mt-12 flex items-center justify-center gap-x-8">
+          <img 
+            src="/logos/jci-logo-white.svg" 
+            alt="Joint Commission International Accreditation" 
+            className="h-10"
+          />
+          <img 
+            src="/logos/medellin-health-city-logo-white.svg" 
+            alt="Cluster Medellín Health City" 
+            className="h-12"
+          />
+          <img 
+            src="/logos/iso-9001-logo-white.svg" 
+            alt="ISO 9001 Certified" 
+            className="h-10"
+          />
         </div>
       </div>
     </section>
