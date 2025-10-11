@@ -1,65 +1,80 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Stethoscope, Activity, Pill, Users } from "lucide-react";
-
-const services = [
-  {
-    icon: Stethoscope,
-    title: "Primary Care",
-    description: "Comprehensive health assessments and preventive care for all ages."
-  },
-  {
-    icon: Activity,
-    title: "Specialist Care",
-    description: "Expert treatment from board-certified specialists across all medical fields."
-  },
-  {
-    icon: Pill,
-    title: "Pharmacy Services",
-    description: "Convenient prescription management and medication counseling."
-  },
-  {
-    icon: Users,
-    title: "Family Medicine",
-    description: "Holistic care for your entire family under one trusted roof."
-  }
-];
+import { useTranslation } from "react-i18next";
 
 export const ServicesHighlight = () => {
+  const { t } = useTranslation();
+
+  const servicesData = [
+    {
+      icon: '/icons/cosmetic-surgery.svg',
+      titleKey: 'services.cosmetic.title',
+      descriptionKey: 'services.cosmetic.description',
+      href: '/procedimientos/cirugia-cosmetica'
+    },
+    {
+      icon: '/icons/regenerative-medicine.svg',
+      titleKey: 'services.regenerative.title',
+      descriptionKey: 'services.regenerative.description',
+      href: '/procedimientos/medicina-regenerativa'
+    },
+    {
+      icon: '/icons/smile-design.svg',
+      titleKey: 'services.dental.title',
+      descriptionKey: 'services.dental.description',
+      href: '/procedimientos/diseno-de-sonrisa'
+    },
+    {
+      icon: '/icons/advanced-diagnostics.svg',
+      titleKey: 'services.diagnostics.title',
+      descriptionKey: 'services.diagnostics.description',
+      href: '/procedimientos/chequeos-avanzados'
+    }
+  ];
+
   return (
-    <section className="px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Our Services
+    <section className="py-20 sm:py-24">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            {t('services.section_title')}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Delivering exceptional healthcare through comprehensive services tailored to your needs.
+          <p className="mt-4 text-lg leading-8 text-gray-600">
+            {t('services.section_subtitle')}
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => {
-            const Icon = service.icon;
-            return (
-              <Card 
-                key={index} 
-                className="shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 border-border animate-fade-in-scale"
-                style={{ animationDelay: `${index * 100}ms` }}
+
+        {/* Services Grid */}
+        <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
+          {servicesData.map((service) => (
+            <div key={service.titleKey} className="text-center">
+              {/* Icon */}
+              <div className="flex items-center justify-center h-16 w-16 rounded-lg bg-indigo-600 mx-auto">
+                <img 
+                  src={service.icon} 
+                  alt={t(service.titleKey)} 
+                  className="h-8 w-8 text-white"
+                />
+              </div>
+
+              {/* Title */}
+              <h3 className="mt-6 text-lg font-semibold leading-7 text-gray-900">
+                {t(service.titleKey)}
+              </h3>
+
+              {/* Description */}
+              <p className="mt-2 text-base leading-7 text-gray-600">
+                {t(service.descriptionKey)}
+              </p>
+
+              {/* Link */}
+              <a 
+                href={service.href} 
+                className="mt-4 inline-block text-indigo-600 font-semibold hover:text-indigo-800"
               >
-                <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">
-                    {service.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            );
-          })}
+                {t('common.learn_more')}
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </section>

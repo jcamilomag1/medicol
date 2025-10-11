@@ -1,4 +1,7 @@
 {
+  "common": {
+    "learn_more": "Learn More"
+  },
   "hero": {
     "title": "Results that transform. Care that accompanies you every step of the way.",
     "subtitle": "World-class cosmetic surgery, cutting-edge regenerative medicine, and premium dental treatments in Medellín.",
@@ -6,5 +9,25 @@
     "jci_alt": "Joint Commission International Accreditation",
     "mhc_alt": "Medellín Health City Cluster",
     "iso_alt": "ISO 9001 Certification"
+  },
+  "services": {
+    "section_title": "Our Procedures",
+    "section_subtitle": "We offer a complete spectrum of care designed to enhance your beauty and wellbeing, with a focus on safety and excellence.",
+    "cosmetic": {
+      "title": "Cosmetic Surgery",
+      "description": "Cutting-edge procedures to sculpt your figure and enhance your natural beauty with harmonious results."
+    },
+    "regenerative": {
+      "title": "Regenerative Medicine",
+      "description": "Advanced cellular treatments that rejuvenate your skin and optimize your vitality from within."
+    },
+    "dental": {
+      "title": "Smile Design",
+      "description": "Precision dental aesthetics for a radiant smile that reflects your best version."
+    },
+    "diagnostics": {
+      "title": "Advanced Checkups",
+      "description": "Comprehensive medical evaluations with state-of-the-art technology for your peace of mind."
+    }
   }
 }

@@ -1,4 +1,7 @@
 {
+  "common": {
+    "learn_more": "Ver más"
+  },
   "hero": {
     "title": "Resultados que transforman. Cuidado que te acompaña en cada paso.",
     "subtitle": "Cirugía cosmética de clase mundial, medicina regenerativa de vanguardia y tratamientos dentales premium en Medellín.",
@@ -6,5 +9,25 @@
     "jci_alt": "Acreditación Joint Commission International",
     "mhc_alt": "Cluster Medellín Health City",
     "iso_alt": "Certificación ISO 9001"
+  },
+  "services": {
+    "section_title": "Nuestros Procedimientos",
+    "section_subtitle": "Ofrecemos un espectro completo de cuidados diseñados para realzar tu belleza y bienestar, con un enfoque en la seguridad y la excelencia.",
+    "cosmetic": {
+      "title": "Cirugía Cosmética",
+      "description": "Procedimientos de vanguardia para esculpir tu figura y realzar tu belleza natural con resultados armónicos."
+    },
+    "regenerative": {
+      "title": "Medicina Regenerativa",
+      "description": "Tratamientos celulares avanzados que rejuvenecen tu piel y optimizan tu vitalidad desde el interior."
+    },
+    "dental": {
+      "title": "Diseño de Sonrisa",
+      "description": "Estética dental de precisión para una sonrisa radiante que refleje tu mejor versión."
+    },
+    "diagnostics": {
+      "title": "Chequeos Avanzados",
+      "description": "Evaluaciones médicas integrales con tecnología de última generación para tu tranquilidad."
+    }
   }
 }
