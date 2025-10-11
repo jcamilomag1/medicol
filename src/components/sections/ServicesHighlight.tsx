@@ -5,25 +5,25 @@ export const ServicesHighlight = () => {
 
   const servicesData = [
     {
-      icon: '/icons/cosmetic-surgery.svg',
+      icon: 'https://placehold.co/64x64/38B6FF/FFFFFF/SVG?text=CS',
       titleKey: 'services.cosmetic.title',
       descriptionKey: 'services.cosmetic.description',
       href: '/procedimientos/cirugia-cosmetica'
     },
     {
-      icon: '/icons/regenerative-medicine.svg',
+      icon: 'https://placehold.co/64x64/38B6FF/FFFFFF/SVG?text=MR',
       titleKey: 'services.regenerative.title',
       descriptionKey: 'services.regenerative.description',
       href: '/procedimientos/medicina-regenerativa'
     },
     {
-      icon: '/icons/smile-design.svg',
+      icon: 'https://placehold.co/64x64/38B6FF/FFFFFF/SVG?text=DS',
       titleKey: 'services.dental.title',
       descriptionKey: 'services.dental.description',
       href: '/procedimientos/diseno-de-sonrisa'
     },
     {
-      icon: '/icons/advanced-diagnostics.svg',
+      icon: 'https://placehold.co/64x64/38B6FF/FFFFFF/SVG?text=AD',
       titleKey: 'services.diagnostics.title',
       descriptionKey: 'services.diagnostics.description',
       href: '/procedimientos/chequeos-avanzados'
@@ -35,9 +35,9 @@ export const ServicesHighlight = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            {t('services.section_title')}
-          </h2>
+        <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+          {t('services.section_title')}
+        </h2>
           <p className="mt-4 text-lg leading-8 text-gray-600">
             {t('services.section_subtitle')}
           </p>
@@ -48,16 +48,16 @@ export const ServicesHighlight = () => {
           {servicesData.map((service) => (
             <div key={service.titleKey} className="text-center">
               {/* Icon */}
-              <div className="flex items-center justify-center h-16 w-16 rounded-lg bg-indigo-600 mx-auto">
+              <div className="flex items-center justify-center h-16 w-16 rounded-lg bg-accent mx-auto">
                 <img 
                   src={service.icon} 
                   alt={t(service.titleKey)} 
-                  className="h-8 w-8 text-white"
+                  className="h-8 w-8"
                 />
               </div>
 
               {/* Title */}
-              <h3 className="mt-6 text-lg font-semibold leading-7 text-gray-900">
+              <h3 className="mt-6 text-lg font-semibold leading-7 text-primary">
                 {t(service.titleKey)}
               </h3>
 
@@ -69,7 +69,7 @@ export const ServicesHighlight = () => {
               {/* Link */}
               <a 
                 href={service.href} 
-                className="mt-4 inline-block text-indigo-600 font-semibold hover:text-indigo-800"
+                className="mt-4 inline-block text-accent font-semibold hover:opacity-80"
               >
                 {t('common.learn_more')}
               </a>
