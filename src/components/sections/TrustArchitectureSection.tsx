@@ -1,62 +1,31 @@
-import { Shield, Award, Users, CheckCircle } from "lucide-react";
-
-const trustPoints = [
-  {
-    icon: Shield,
-    title: "HIPAA Compliant",
-    description: "Your data is protected with enterprise-grade security"
-  },
-  {
-    icon: Award,
-    title: "Award Winning",
-    description: "Recognized for excellence in patient care"
-  },
-  {
-    icon: Users,
-    title: "Expert Team",
-    description: "Board-certified physicians and specialists"
-  },
-  {
-    icon: CheckCircle,
-    title: "Proven Results",
-    description: "Over 50,000 patients treated successfully"
-  }
-];
+import { useTranslation } from 'react-i18next';
+import { TeamPreview } from '@/components/sections/TeamPreview';
+import { VideoTestimonials } from '@/components/sections/VideoTestimonials';
 
 export const TrustArchitectureSection = () => {
+  const { t } = useTranslation();
+
   return (
-    <section className="px-4 sm:px-6 lg:px-8 bg-muted/30 py-20">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Why Choose Medicol
+    <section id="equipo" className="py-20 sm:py-24 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+            {t('trust.section_title')}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Built on a foundation of trust, excellence, and patient-centered care.
+          <p className="mt-4 text-lg leading-8 text-gray-600">
+            {t('trust.section_subtitle')}
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {trustPoints.map((point, index) => {
-            const Icon = point.icon;
-            return (
-              <div 
-                key={index} 
-                className="text-center group animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-soft group-hover:shadow-medium transition-all duration-300 group-hover:scale-110">
-                  <Icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">
-                  {point.title}
-                </h3>
-                <p className="text-muted-foreground">
-                  {point.description}
-                </p>
-              </div>
-            );
-          })}
+
+        {/* Team Preview */}
+        <div className="mt-16">
+          <TeamPreview />
+        </div>
+
+        {/* Video Testimonials */}
+        <div className="mt-20">
+          <VideoTestimonials />
         </div>
       </div>
     </section>

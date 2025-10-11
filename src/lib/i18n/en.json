@@ -29,5 +29,25 @@
       "title": "Advanced Checkups",
       "description": "Comprehensive medical evaluations with state-of-the-art technology for your peace of mind."
     }
+  },
+  "trust": {
+    "section_title": "Meet the Experts Behind Your Transformation",
+    "section_subtitle": "Our team is composed of renowned professionals with over 15 years of experience, dedicated to your safety and achieving exceptional results."
+  },
+  "team": {
+    "preview_title": "Our Medical Team",
+    "preview_description": "Meet the specialists who will make your transformation a reality."
+  },
+  "testimonials": {
+    "video_title": "What Our Patients Say",
+    "video_description": "Hear the real stories of those who trusted us."
+  },
+  "nav": {
+    "home": "Home",
+    "procedures": "Procedures",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Schedule Consultation"
   }
 }

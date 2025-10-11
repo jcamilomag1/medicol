@@ -29,5 +29,25 @@
       "title": "Chequeos Avanzados",
       "description": "Evaluaciones médicas integrales con tecnología de última generación para tu tranquilidad."
     }
+  },
+  "trust": {
+    "section_title": "Conoce a los Expertos Detrás de tu Transformación",
+    "section_subtitle": "Nuestro equipo está compuesto por profesionales reconocidos con más de 15 años de experiencia, dedicados a tu seguridad y a lograr resultados excepcionales."
+  },
+  "team": {
+    "preview_title": "Nuestro Equipo Médico",
+    "preview_description": "Conoce a los especialistas que harán realidad tu transformación."
+  },
+  "testimonials": {
+    "video_title": "Lo que Dicen Nuestros Pacientes",
+    "video_description": "Escucha las historias reales de quienes confiaron en nosotros."
+  },
+  "nav": {
+    "home": "Inicio",
+    "procedures": "Procedimientos",
+    "services": "Servicios",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "cta": "Agenda tu Consulta"
   }
 }
