@@ -1,6 +1,7 @@
 {
   "common": {
-    "learn_more": "Learn More"
+    "learn_more": "Learn More",
+    "view_profile": "View Profile"
   },
   "hero": {
     "title": "Results that transform. Care that accompanies you every step of the way.",
@@ -33,7 +34,8 @@
   "trust": {
     "section_title": "Meet the Experts Behind Your Transformation",
     "section_subtitle": "Our team is composed of renowned professionals with over 15 years of experience, dedicated to your safety and achieving exceptional results.",
-    "view_full_team": "Meet our full team"
+    "view_full_team": "Meet our full team",
+    "our_team": "Our Medical Team"
   },
   "team": {
     "preview_title": "Our Medical Team",
@@ -41,7 +43,14 @@
     "specialty": {
       "plastic_surgeon": "Plastic Surgeon",
       "regenerative_medicine": "Regenerative Medicine Specialist",
-      "dental_design": "Dentist and Smile Designer"
+      "dental_design": "Dentist and Smile Designer",
+      "dermatology": "Aesthetic Dermatologist"
+    },
+    "experience": {
+      "15_years": "Over 15 years of experience",
+      "12_years": "Over 12 years of experience",
+      "18_years": "Over 18 years of experience",
+      "20_years": "Over 20 years of experience"
     }
   },
   "testimonials": {

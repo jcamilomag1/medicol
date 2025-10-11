@@ -1,6 +1,7 @@
 {
   "common": {
-    "learn_more": "Ver más"
+    "learn_more": "Ver más",
+    "view_profile": "Ver Perfil"
   },
   "hero": {
     "title": "Resultados que transforman. Cuidado que te acompaña en cada paso.",
@@ -33,7 +34,8 @@
   "trust": {
     "section_title": "Conoce a los Expertos Detrás de tu Transformación",
     "section_subtitle": "Nuestro equipo está compuesto por profesionales reconocidos con más de 15 años de experiencia, dedicados a tu seguridad y a lograr resultados excepcionales.",
-    "view_full_team": "Conoce a todo nuestro equipo"
+    "view_full_team": "Conoce a todo nuestro equipo",
+    "our_team": "Nuestro Equipo Médico"
   },
   "team": {
     "preview_title": "Nuestro Equipo Médico",
@@ -41,7 +43,14 @@
     "specialty": {
       "plastic_surgeon": "Cirujano Plástico",
       "regenerative_medicine": "Especialista en Medicina Regenerativa",
-      "dental_design": "Odontólogo y Diseñador de Sonrisa"
+      "dental_design": "Odontólogo y Diseñador de Sonrisa",
+      "dermatology": "Dermatóloga Estética"
+    },
+    "experience": {
+      "15_years": "Más de 15 años de experiencia",
+      "12_years": "Más de 12 años de experiencia",
+      "18_years": "Más de 18 años de experiencia",
+      "20_years": "Más de 20 años de experiencia"
     }
   },
   "testimonials": {
