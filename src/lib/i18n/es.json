@@ -3,6 +3,9 @@
     "learn_more": "Ver más",
     "view_profile": "Ver Perfil"
   },
+  "countries": {
+    "usa": "Estados Unidos"
+  },
   "hero": {
     "title": "Resultados que transforman. Cuidado que te acompaña en cada paso.",
     "subtitle": "Cirugía cosmética de clase mundial, medicina regenerativa de vanguardia y tratamientos dentales premium en Medellín.",
@@ -35,7 +38,8 @@
     "section_title": "Conoce a los Expertos Detrás de tu Transformación",
     "section_subtitle": "Nuestro equipo está compuesto por profesionales reconocidos con más de 15 años de experiencia, dedicados a tu seguridad y a lograr resultados excepcionales.",
     "view_full_team": "Conoce a todo nuestro equipo",
-    "our_team": "Nuestro Equipo Médico"
+    "our_team": "Nuestro Equipo Médico",
+    "testimonials_title": "Lo que Dicen Nuestros Pacientes"
   },
   "team": {
     "preview_title": "Nuestro Equipo Médico",
