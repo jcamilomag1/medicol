@@ -22,17 +22,17 @@ export const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
       {/* Content Container */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[70%_30%] gap-8 lg:gap-12 items-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-[70%_30%] gap-6 md:gap-8 lg:gap-12 items-center">
           
           {/* LEFT COLUMN - Main Content (70%) */}
-          <div className="space-y-8 lg:pr-8">
+          <div className="space-y-4 md:space-y-6 lg:space-y-8 lg:pr-8">
             {/* Main Title with Animation */}
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-white tracking-tight leading-tight drop-shadow-2xl"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-extrabold text-white tracking-tight leading-tight drop-shadow-2xl"
             >
               {t('hero.title')}
             </motion.h1>
@@ -42,7 +42,7 @@ export const HeroSection = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-              className="text-lg md:text-xl lg:text-2xl text-white/90 tracking-wide max-w-3xl leading-relaxed"
+              className="text-sm sm:text-base md:text-lg lg:text-2xl text-white/90 tracking-wide max-w-3xl leading-relaxed"
             >
               {t('hero.subtitle')}
             </motion.p>
@@ -52,7 +52,7 @@ export const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-              className="flex flex-wrap items-center pt-4"
+              className="hidden md:flex flex-wrap items-center pt-4"
             >
               <motion.img 
                 src={accreditationsImage} 
@@ -72,11 +72,11 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 100 }}
             className="lg:self-center"
           >
-            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 md:p-8 lg:p-10 shadow-2xl shadow-black/50 hover:shadow-black/70 transition-all duration-300 hover:-translate-y-2">
+            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-5 md:p-8 lg:p-10 shadow-2xl shadow-black/50 hover:shadow-black/70 transition-all duration-300 hover:-translate-y-2">
               
               {/* Card Headline */}
               <motion.h3 
-                className="text-white text-xl md:text-2xl font-bold mb-6 text-center"
+                className="text-white text-lg md:text-xl lg:text-2xl font-bold mb-4 md:mb-6 text-center"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
@@ -97,7 +97,7 @@ export const HeroSection = () => {
               >
                 <Button 
                   size="lg"
-                  className="w-full h-16 lg:h-20 text-base md:text-lg lg:text-xl font-bold bg-accent text-primary hover:bg-accent/90 shadow-lg shadow-accent/50 hover:shadow-xl hover:shadow-accent/60 transition-all duration-300 hover:scale-105 group"
+                  className="w-full h-12 sm:h-14 md:h-16 lg:h-20 text-sm sm:text-base md:text-lg lg:text-xl font-bold bg-accent text-primary hover:bg-accent/90 shadow-lg shadow-accent/50 hover:shadow-xl hover:shadow-accent/60 transition-all duration-300 hover:scale-105 group"
                 >
                   {t('hero.cta')}
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={24} />
@@ -106,28 +106,28 @@ export const HeroSection = () => {
               
               {/* Trust Badges */}
               <motion.div 
-                className="mt-6 space-y-3"
+                className="mt-4 space-y-2 md:mt-6 md:space-y-3"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.7 }}
               >
-                <div className="flex items-center gap-3 text-white/90 text-sm md:text-base">
-                  <Check className="text-accent flex-shrink-0" size={20} />
+                <div className="flex items-center gap-2 text-white/90 text-xs sm:text-sm">
+                  <Check className="text-accent flex-shrink-0" size={16} />
                   <span>{t('hero.cta_benefit_1')}</span>
                 </div>
-                <div className="flex items-center gap-3 text-white/90 text-sm md:text-base">
-                  <Check className="text-accent flex-shrink-0" size={20} />
+                <div className="flex items-center gap-2 text-white/90 text-xs sm:text-sm">
+                  <Check className="text-accent flex-shrink-0" size={16} />
                   <span>{t('hero.cta_benefit_2')}</span>
                 </div>
-                <div className="flex items-center gap-3 text-white/90 text-sm md:text-base">
-                  <Check className="text-accent flex-shrink-0" size={20} />
+                <div className="flex items-center gap-2 text-white/90 text-xs sm:text-sm">
+                  <Check className="text-accent flex-shrink-0" size={16} />
                   <span>{t('hero.cta_benefit_3')}</span>
                 </div>
               </motion.div>
               
               {/* Social Proof */}
               <motion.p 
-                className="text-center text-white/70 text-xs md:text-sm mt-6 pt-6 border-t border-white/10"
+                className="text-center text-white/70 text-xs md:text-sm mt-4 pt-4 md:mt-6 md:pt-6 border-t border-white/10"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.9 }}
