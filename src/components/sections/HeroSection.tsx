@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
+import accreditationsImage from "@/assets/accreditations.png";
 
 export const HeroSection = () => {
   const { t } = useTranslation();
@@ -46,36 +47,20 @@ export const HeroSection = () => {
               {t('hero.subtitle')}
             </motion.p>
             
-            {/* Trust Logos with Stagger Animation */}
+            {/* Trust Logos - Certifications */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-              className="flex flex-wrap items-center gap-6 md:gap-8 pt-4"
+              className="flex flex-wrap items-center pt-4"
             >
               <motion.img 
-                src="/logos/jci-logo-white.svg" 
+                src={accreditationsImage} 
                 alt={t('hero.jci_alt')}
-                className="h-10 md:h-12 opacity-80 hover:opacity-100 transition-all duration-300 hover:scale-105"
+                className="h-14 md:h-16 lg:h-20 opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-105"
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 0.8, scale: 1 }}
+                animate={{ opacity: 0.9, scale: 1 }}
                 transition={{ delay: 0.7, duration: 0.5 }}
-              />
-              <motion.img 
-                src="/logos/medellin-health-city-logo-white.svg" 
-                alt={t('hero.mhc_alt')}
-                className="h-12 md:h-14 opacity-80 hover:opacity-100 transition-all duration-300 hover:scale-105"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 0.8, scale: 1 }}
-                transition={{ delay: 0.8, duration: 0.5 }}
-              />
-              <motion.img 
-                src="/logos/iso-9001-logo-white.svg" 
-                alt={t('hero.iso_alt')}
-                className="h-10 md:h-12 opacity-80 hover:opacity-100 transition-all duration-300 hover:scale-105"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 0.8, scale: 1 }}
-                transition={{ delay: 0.9, duration: 0.5 }}
               />
             </motion.div>
           </div>
