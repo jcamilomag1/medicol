@@ -10,11 +10,11 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { href: '#home', key: 'nav.home' },
-  { href: '#procedimientos', key: 'nav.procedures' },
-  { href: '#servicios', key: 'nav.services' },
-  { href: '#nosotros', key: 'nav.about' },
-  { href: '#contacto', key: 'nav.contact' },
+  { href: '/', key: 'navbar.home' },
+  { href: '/servicios', key: 'navbar.services' },
+  { href: '/experiencia', key: 'navbar.experience' },
+  { href: '/equipo', key: 'navbar.team' },
+  { href: '/contacto', key: 'navbar.contact' },
 ];
 
 export const Navbar = () => {

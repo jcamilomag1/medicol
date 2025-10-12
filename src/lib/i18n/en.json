@@ -74,6 +74,13 @@
     "social": "Follow Us",
     "rights_reserved": "All rights reserved."
   },
+  "navbar": {
+    "home": "Home",
+    "services": "Our Services",
+    "experience": "The Medicol Experience",
+    "team": "Our Team",
+    "contact": "Contact Us"
+  },
   "nav": {
     "home": "Home",
     "procedures": "Procedures",
