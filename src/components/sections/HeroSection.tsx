@@ -57,7 +57,7 @@ export const HeroSection = () => {
               <motion.img 
                 src={accreditationsImage} 
                 alt={t('hero.jci_alt')}
-                className="h-14 md:h-16 lg:h-20 opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-105"
+                className="h-12 md:h-14 lg:h-16 w-auto max-w-full opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-105"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 0.9, scale: 1 }}
                 transition={{ delay: 0.7, duration: 0.5 }}
@@ -70,7 +70,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, x: 50, scale: 0.95 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 100 }}
-            className="lg:self-start lg:sticky lg:top-24"
+            className="lg:self-center"
           >
             <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 md:p-8 lg:p-10 shadow-2xl shadow-black/50 hover:shadow-black/70 transition-all duration-300 hover:-translate-y-2">
               
