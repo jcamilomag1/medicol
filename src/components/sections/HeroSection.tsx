@@ -1,75 +1,158 @@
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import { ArrowRight, Check } from "lucide-react";
 
 export const HeroSection = () => {
   const { t } = useTranslation();
   
   return (
-    <section id="home" className="relative h-screen">
-      {/* Background Image */}
-      <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] bg-cover bg-center" />
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background Image with Animation */}
+      <motion.div 
+        className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] bg-cover bg-center"
+        initial={{ scale: 1.1 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+      />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-transparent" />
+      {/* Enhanced Overlays */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/70 to-primary/50" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
       {/* Content Container */}
-      <div className="relative flex flex-col justify-center items-center h-full max-w-4xl mx-auto px-4 md:px-6 text-center">
-        {/* Textual Elements */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-        >
-          <h1 className="text-5xl md:text-6xl font-extrabold text-white tracking-tighter">
-            {t('hero.title')}
-          </h1>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-        >
-          <p className="mt-4 text-lg md:text-xl text-neutral-200 tracking-wide">
-            {t('hero.subtitle')}
-          </p>
-        </motion.div>
-
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.8 }}
-        >
-          <Button variant="default" size="lg" className="mt-8 bg-accent text-primary hover:bg-accent/90 transition-all duration-300 hover:scale-105">
-            {t('hero.cta')}
-          </Button>
-        </motion.div>
-
-        {/* Social Proof Logos */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.8 }}
-          className="mt-12 flex items-center justify-center gap-x-8"
-        >
-          <img 
-            src="/logos/jci-logo-white.svg" 
-            alt={t('hero.jci_alt')}
-            className="h-10 opacity-80 hover:opacity-100 transition-opacity"
-          />
-          <img 
-            src="/logos/medellin-health-city-logo-white.svg" 
-            alt={t('hero.mhc_alt')}
-            className="h-12 opacity-80 hover:opacity-100 transition-opacity"
-          />
-          <img 
-            src="/logos/iso-9001-logo-white.svg" 
-            alt={t('hero.iso_alt')}
-            className="h-10 opacity-80 hover:opacity-100 transition-opacity"
-          />
-        </motion.div>
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-[70%_30%] gap-8 lg:gap-12 items-center">
+          
+          {/* LEFT COLUMN - Main Content (70%) */}
+          <div className="space-y-8 lg:pr-8">
+            {/* Main Title with Animation */}
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-white tracking-tight leading-tight drop-shadow-2xl"
+            >
+              {t('hero.title')}
+            </motion.h1>
+            
+            {/* Subtitle with Animation */}
+            <motion.p
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+              className="text-lg md:text-xl lg:text-2xl text-white/90 tracking-wide max-w-3xl leading-relaxed"
+            >
+              {t('hero.subtitle')}
+            </motion.p>
+            
+            {/* Trust Logos with Stagger Animation */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+              className="flex flex-wrap items-center gap-6 md:gap-8 pt-4"
+            >
+              <motion.img 
+                src="/logos/jci-logo-white.svg" 
+                alt={t('hero.jci_alt')}
+                className="h-10 md:h-12 opacity-80 hover:opacity-100 transition-all duration-300 hover:scale-105"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 0.8, scale: 1 }}
+                transition={{ delay: 0.7, duration: 0.5 }}
+              />
+              <motion.img 
+                src="/logos/medellin-health-city-logo-white.svg" 
+                alt={t('hero.mhc_alt')}
+                className="h-12 md:h-14 opacity-80 hover:opacity-100 transition-all duration-300 hover:scale-105"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 0.8, scale: 1 }}
+                transition={{ delay: 0.8, duration: 0.5 }}
+              />
+              <motion.img 
+                src="/logos/iso-9001-logo-white.svg" 
+                alt={t('hero.iso_alt')}
+                className="h-10 md:h-12 opacity-80 hover:opacity-100 transition-all duration-300 hover:scale-105"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 0.8, scale: 1 }}
+                transition={{ delay: 0.9, duration: 0.5 }}
+              />
+            </motion.div>
+          </div>
+          
+          {/* RIGHT COLUMN - CTA Card (30%) */}
+          <motion.div
+            initial={{ opacity: 0, x: 50, scale: 0.95 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 100 }}
+            className="lg:self-start lg:sticky lg:top-24"
+          >
+            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 md:p-8 lg:p-10 shadow-2xl shadow-black/50 hover:shadow-black/70 transition-all duration-300 hover:-translate-y-2">
+              
+              {/* Card Headline */}
+              <motion.h3 
+                className="text-white text-xl md:text-2xl font-bold mb-6 text-center"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+              >
+                {t('hero.cta_card_headline')}
+              </motion.h3>
+              
+              {/* CTA Button with Pulse Animation */}
+              <motion.div
+                animate={{ 
+                  scale: [1, 1.02, 1],
+                }}
+                transition={{ 
+                  repeat: Infinity, 
+                  duration: 2, 
+                  ease: "easeInOut" 
+                }}
+              >
+                <Button 
+                  size="lg"
+                  className="w-full h-16 lg:h-20 text-base md:text-lg lg:text-xl font-bold bg-accent text-primary hover:bg-accent/90 shadow-lg shadow-accent/50 hover:shadow-xl hover:shadow-accent/60 transition-all duration-300 hover:scale-105 group"
+                >
+                  {t('hero.cta')}
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={24} />
+                </Button>
+              </motion.div>
+              
+              {/* Trust Badges */}
+              <motion.div 
+                className="mt-6 space-y-3"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.7 }}
+              >
+                <div className="flex items-center gap-3 text-white/90 text-sm md:text-base">
+                  <Check className="text-accent flex-shrink-0" size={20} />
+                  <span>{t('hero.cta_benefit_1')}</span>
+                </div>
+                <div className="flex items-center gap-3 text-white/90 text-sm md:text-base">
+                  <Check className="text-accent flex-shrink-0" size={20} />
+                  <span>{t('hero.cta_benefit_2')}</span>
+                </div>
+                <div className="flex items-center gap-3 text-white/90 text-sm md:text-base">
+                  <Check className="text-accent flex-shrink-0" size={20} />
+                  <span>{t('hero.cta_benefit_3')}</span>
+                </div>
+              </motion.div>
+              
+              {/* Social Proof */}
+              <motion.p 
+                className="text-center text-white/70 text-xs md:text-sm mt-6 pt-6 border-t border-white/10"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.9 }}
+              >
+                ⭐⭐⭐⭐⭐ {t('hero.social_proof')}
+              </motion.p>
+            </div>
+          </motion.div>
+          
+        </div>
       </div>
     </section>
   );
