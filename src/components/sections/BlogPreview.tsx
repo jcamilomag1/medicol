@@ -6,7 +6,6 @@ interface Post {
   categoryKey: string;
   titleKey: string;
   descriptionKey: string;
-  href: string;
 }
 
 const postsData: Post[] = [
@@ -15,24 +14,21 @@ const postsData: Post[] = [
     imageUrl: 'https://images.pexels.com/photos/5473183/pexels-photo-5473183.jpeg?auto=compress&cs=tinysrgb&w=600',
     categoryKey: 'blog.category.cosmetic',
     titleKey: 'blog.post1.title',
-    descriptionKey: 'blog.post1.description',
-    href: '/blog/post-1'
+    descriptionKey: 'blog.post1.description'
   },
   {
     id: 2,
     imageUrl: 'https://images.pexels.com/photos/7175478/pexels-photo-7175478.jpeg?auto=compress&cs=tinysrgb&w=600',
     categoryKey: 'blog.category.regenerative',
     titleKey: 'blog.post2.title',
-    descriptionKey: 'blog.post2.description',
-    href: '/blog/post-2'
+    descriptionKey: 'blog.post2.description'
   },
   {
     id: 3,
     imageUrl: 'https://images.pexels.com/photos/6682132/pexels-photo-6682132.jpeg?auto=compress&cs=tinysrgb&w=600',
     categoryKey: 'blog.category.dental',
     titleKey: 'blog.post3.title',
-    descriptionKey: 'blog.post3.description',
-    href: '/blog/post-3'
+    descriptionKey: 'blog.post3.description'
   }
 ];
 
@@ -72,11 +68,8 @@ export const BlogPreview = () => {
               </p>
 
               {/* Title */}
-              <h3 className="mt-3 text-lg font-semibold leading-6 text-primary group-hover:text-gray-600">
-                <a href={post.href}>
-                  <span className="absolute inset-0" />
-                  {t(post.titleKey)}
-                </a>
+              <h3 className="mt-3 text-lg font-semibold leading-6 text-primary">
+                {t(post.titleKey)}
               </h3>
 
               {/* Description */}
@@ -84,15 +77,6 @@ export const BlogPreview = () => {
                 {t(post.descriptionKey)}
               </p>
 
-              {/* Read More Link */}
-              <div className="mt-6">
-                <a
-                  href={post.href}
-                  className="font-semibold text-accent hover:opacity-80 transition-opacity"
-                >
-                  {t('common.read_more')} →
-                </a>
-              </div>
             </article>
           ))}
         </div>
