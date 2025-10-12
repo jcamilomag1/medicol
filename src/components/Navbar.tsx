@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import medicolLogo from '@/assets/medicol-logo.png';
 
 interface NavLink {
   href: string;
@@ -57,7 +58,7 @@ export const Navbar = () => {
           {/* Logo */}
           <a href="/" className="flex items-center">
             <img
-              src="/logos/medicol-logo-white.svg"
+              src={medicolLogo}
               alt="Medicol Logo"
               className="h-10 w-auto"
             />
