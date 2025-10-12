@@ -66,13 +66,26 @@ export const Navbar = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-x-8">
             {navLinks.map((link) => (
-              <a
-                key={link.key}
-                href={link.href}
-                className="text-white hover:text-accent transition-colors duration-200 font-medium"
-              >
-                {t(link.key)}
-              </a>
+              link.key === 'navbar.experience' ? (
+                <motion.a
+                  key={link.key}
+                  href={link.href}
+                  className="px-5 py-2 bg-accent text-primary font-bold rounded-full shadow-md shadow-accent/40 hover:shadow-lg hover:shadow-accent/60 hover:scale-105 transform transition-all duration-300"
+                  initial={{ scale: 0.95, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  {t(link.key)}
+                </motion.a>
+              ) : (
+                <a
+                  key={link.key}
+                  href={link.href}
+                  className="text-white hover:text-accent transition-colors duration-200 font-medium"
+                >
+                  {t(link.key)}
+                </a>
+              )
             ))}
           </nav>
 
@@ -123,14 +136,28 @@ export const Navbar = () => {
           >
             <nav className="flex flex-col px-6 py-4 space-y-4">
               {navLinks.map((link) => (
-                <a
-                  key={link.key}
-                  href={link.href}
-                  onClick={handleNavClick}
-                  className="text-white hover:text-accent transition-colors duration-200 font-medium py-2"
-                >
-                  {t(link.key)}
-                </a>
+                link.key === 'navbar.experience' ? (
+                  <motion.a
+                    key={link.key}
+                    href={link.href}
+                    onClick={handleNavClick}
+                    className="px-5 py-2 bg-accent text-primary font-bold rounded-full shadow-md shadow-accent/40 hover:shadow-lg hover:shadow-accent/60 text-center transform transition-all duration-300"
+                    initial={{ scale: 0.95, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                  >
+                    {t(link.key)}
+                  </motion.a>
+                ) : (
+                  <a
+                    key={link.key}
+                    href={link.href}
+                    onClick={handleNavClick}
+                    className="text-white hover:text-accent transition-colors duration-200 font-medium py-2"
+                  >
+                    {t(link.key)}
+                  </a>
+                )
               ))}
 
               {/* Mobile Language Switch */}
