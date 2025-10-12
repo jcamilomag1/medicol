@@ -97,10 +97,12 @@ export const HeroSection = () => {
               >
                 <Button 
                   size="lg"
-                  className="w-full h-12 sm:h-14 md:h-16 lg:h-20 text-sm sm:text-base md:text-lg lg:text-xl font-bold bg-accent text-primary hover:bg-accent/90 shadow-lg shadow-accent/50 hover:shadow-xl hover:shadow-accent/60 transition-all duration-300 hover:scale-105 group"
+                  className="w-full h-12 sm:h-14 md:h-16 lg:h-20 px-3 sm:px-4 md:px-6 text-xs sm:text-sm md:text-base lg:text-lg font-bold bg-accent text-primary hover:bg-accent/90 shadow-lg shadow-accent/50 hover:shadow-xl hover:shadow-accent/60 transition-all duration-300 hover:scale-105 group flex items-center justify-center text-center leading-tight"
                 >
-                  {t('hero.cta')}
-                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={24} />
+                  <span className="flex-1 text-center px-1">
+                    {t('hero.cta')}
+                  </span>
+                  <ArrowRight className="ml-1 sm:ml-2 group-hover:translate-x-1 transition-transform flex-shrink-0" size={18} />
                 </Button>
               </motion.div>
               

@@ -114,14 +114,29 @@ export const Navbar = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-white hover:text-accent transition-colors duration-200 p-2"
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+          {/* Mobile Controls: Language + Menu */}
+          <div className="md:hidden flex items-center gap-3">
+            {/* Language Switch (Always Visible) */}
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-1.5 text-white hover:text-accent transition-colors duration-200 px-2 py-1.5 rounded-md"
+              aria-label="Toggle language"
+            >
+              <Globe size={18} />
+              <span className="text-xs font-medium uppercase">
+                {i18n.language === 'es' ? 'EN' : 'ES'}
+              </span>
+            </button>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-white hover:text-accent transition-colors duration-200 p-2"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -161,16 +176,6 @@ export const Navbar = () => {
                 )
               ))}
 
-              {/* Mobile Language Switch */}
-              <button
-                onClick={toggleLanguage}
-                className="flex items-center gap-x-2 text-white hover:text-accent transition-colors duration-200 py-2"
-              >
-                <Globe size={20} />
-                <span className="text-sm font-medium uppercase">
-                  {i18n.language === 'es' ? 'EN' : 'ES'}
-                </span>
-              </button>
 
               {/* Mobile CTA Button */}
               <Button
