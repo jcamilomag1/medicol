@@ -140,6 +140,17 @@ interface ServiceCardProps {
 const MobileServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   const { t } = useTranslation();
   const cardRef = useRef<HTMLDivElement>(null);
+  
+  // Scroll-driven animation para la línea
+  const { scrollYProgress } = useScroll({
+    target: cardRef,
+    offset: ["start end", "end center"]
+  });
+  
+  // Transformar scroll a altura de línea (0% → 100%)
+  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  
+  // Mantener animación de entrada para fade/slide
   const isInView = useInView(cardRef, { once: true, margin: "-50px" });
 
   return (
@@ -150,13 +161,15 @@ const MobileServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
       transition={{ duration: 0.5, delay: 0.1 }}
       className="relative pl-6"
     >
-      {/* Mini Timeline Line */}
+      {/* Mini Timeline Line - AHORA CON SCROLL DINÁMICO */}
       <div className="absolute left-0 top-0 w-0.5 h-full bg-gray-200">
         <motion.div 
           className="w-full bg-accent origin-top"
-          initial={{ height: "0%" }}
-          animate={isInView ? { height: "100%" } : { height: "0%" }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          style={{ 
+            height: lineHeight,
+            willChange: 'height',
+            transform: 'translateZ(0)'
+          }}
         />
       </div>
 
