@@ -79,9 +79,9 @@ export const ServicesHighlight = () => {
           
           {/* LEFT COLUMN: Sticky Procedure Names + Timeline Line */}
           <div className="lg:col-span-5">
-            <div className="sticky top-24 h-screen">
+            <div className="sticky top-24">
               {/* Animated Vertical Timeline Line */}
-              <div className="absolute left-0 top-0 w-1 h-full bg-gray-200">
+              <div className="absolute left-0 top-0 w-1 bg-gray-200" style={{ height: 'calc(100% - 128px)' }}>
                 <motion.div 
                   className="w-full bg-accent origin-top"
                   style={{ 
@@ -93,7 +93,7 @@ export const ServicesHighlight = () => {
               </div>
               
               {/* Sticky Procedure Names */}
-              <div className="pl-8 space-y-64">
+              <div className="pl-8 space-y-48">
                 {servicesData.map((service, index) => (
                   <motion.h3
                     key={service.procedureKey}
@@ -111,7 +111,7 @@ export const ServicesHighlight = () => {
           </div>
 
           {/* RIGHT COLUMN: Content Cards */}
-          <div className="lg:col-span-7 space-y-32">
+          <div className="lg:col-span-7 space-y-48">
             {servicesData.map((service, index) => (
               <ServiceCard 
                 key={service.titleKey}
