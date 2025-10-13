@@ -1,10 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 
 export const ServicesHighlight = () => {
   const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
+  const [activeIndex, setActiveIndex] = useState<number>(0);
   
   // Scroll tracking para la línea animada
   const { scrollYProgress } = useScroll({
@@ -97,11 +98,16 @@ export const ServicesHighlight = () => {
                 {servicesData.map((service, index) => (
                   <motion.h3
                     key={service.procedureKey}
-                    className="text-6xl font-extrabold text-gray-300 tracking-tight"
+                    className="text-6xl font-extrabold tracking-tight transition-all duration-500"
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.2 }}
                     viewport={{ once: true, margin: "-100px" }}
+                    animate={{
+                      opacity: activeIndex === index ? 1 : 0.3,
+                      color: activeIndex === index ? "hsl(var(--primary))" : "hsl(var(--muted-foreground) / 0.3)",
+                      scale: activeIndex === index ? 1.05 : 1
+                    }}
                   >
                     {t(service.procedureKey)}
                   </motion.h3>
@@ -117,6 +123,9 @@ export const ServicesHighlight = () => {
                 key={service.titleKey}
                 service={service}
                 index={index}
+                onVisibilityChange={(idx, isVisible) => {
+                  if (isVisible) setActiveIndex(idx);
+                }}
               />
             ))}
           </div>
@@ -135,6 +144,7 @@ interface ServiceCardProps {
     href: string;
   };
   index: number;
+  onVisibilityChange?: (index: number, isVisible: boolean) => void;
 }
 
 const MobileServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
@@ -224,10 +234,21 @@ const MobileServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   );
 };
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, onVisibilityChange }) => {
   const { t } = useTranslation();
   const cardRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(cardRef, { once: true, margin: "-100px" });
+  
+  // Detectar visibilidad en tiempo real (no solo "once")
+  const isInView = useInView(cardRef, { 
+    margin: "-200px 0px -200px 0px"
+  });
+
+  // Notificar cambios de visibilidad
+  useEffect(() => {
+    if (onVisibilityChange) {
+      onVisibilityChange(index, isInView);
+    }
+  }, [isInView, index, onVisibilityChange]);
 
   return (
     <motion.div
