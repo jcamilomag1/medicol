@@ -5,16 +5,26 @@ import { useRef, useState, useEffect } from "react";
 export const ServicesHighlight = () => {
   const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState<number>(0);
+  const [height, setHeight] = useState(0);
+
+  // Calcular altura real del contenido
+  useEffect(() => {
+    if (contentRef.current) {
+      const rect = contentRef.current.getBoundingClientRect();
+      setHeight(rect.height);
+    }
+  }, []);
   
   // Scroll tracking para la línea animada
   const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start center", "end center"]
+    target: contentRef,
+    offset: ["start 10%", "end 50%"]
   });
   
-  // Transform scroll progress a altura de línea (0% -> 100%)
-  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  // Transform scroll progress a altura de línea
+  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
 
   const servicesData = [
     {
@@ -75,59 +85,61 @@ export const ServicesHighlight = () => {
           ))}
         </div>
 
-        {/* DESKTOP VERSION - Timeline Separado */}
-        <div className="hidden lg:grid lg:grid-cols-12 gap-8 lg:gap-12">
-          
-          {/* LEFT COLUMN: Sticky Procedure Names + Timeline Line */}
-          <div className="lg:col-span-5">
-            <div className="sticky top-24">
-              {/* Animated Vertical Timeline Line */}
-              <div className="absolute left-0 top-0 w-1 bg-gray-200" style={{ height: 'calc(100% - 128px)' }}>
-                <motion.div 
-                  className="w-full bg-accent origin-top"
-                  style={{ 
-                    height: lineHeight,
-                    willChange: 'height',
-                    transform: 'translateZ(0)'
+        {/* DESKTOP VERSION - Timeline con sticky individual */}
+        <div ref={contentRef} className="hidden lg:block relative pb-20">
+          {servicesData.map((service, index) => (
+            <div 
+              key={service.titleKey}
+              className="flex justify-start pt-10 md:pt-40 md:gap-10"
+            >
+              {/* Título individual sticky con dot */}
+              <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
+                {/* Timeline dot */}
+                <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white flex items-center justify-center">
+                  <motion.div 
+                    className="h-4 w-4 rounded-full border-2 transition-all duration-300"
+                    animate={{
+                      backgroundColor: activeIndex === index ? "hsl(var(--primary))" : "hsl(var(--primary) / 0.2)",
+                      borderColor: activeIndex === index ? "hsl(var(--primary))" : "hsl(var(--primary) / 0.3)",
+                      scale: activeIndex === index ? 1.2 : 1
+                    }}
+                  />
+                </div>
+                
+                {/* Título sticky */}
+                <motion.h3 
+                  className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold tracking-tight transition-all duration-500"
+                  animate={{
+                    opacity: activeIndex === index ? 1 : 0.3,
+                    color: activeIndex === index ? "hsl(var(--primary))" : "hsl(var(--muted-foreground) / 0.3)",
+                  }}
+                >
+                  {t(service.procedureKey)}
+                </motion.h3>
+              </div>
+
+              {/* Card individual */}
+              <div className="relative pl-20 pr-4 md:pl-4 w-full">
+                <ServiceCard 
+                  service={service}
+                  index={index}
+                  onVisibilityChange={(idx, isVisible) => {
+                    if (isVisible) setActiveIndex(idx);
                   }}
                 />
               </div>
-              
-              {/* Sticky Procedure Names */}
-              <div className="pl-8 space-y-48">
-                {servicesData.map((service, index) => (
-                  <motion.h3
-                    key={service.procedureKey}
-                    className="text-6xl font-extrabold tracking-tight transition-all duration-500"
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.2 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    animate={{
-                      opacity: activeIndex === index ? 1 : 0.3,
-                      color: activeIndex === index ? "hsl(var(--primary))" : "hsl(var(--muted-foreground) / 0.3)",
-                      scale: activeIndex === index ? 1.05 : 1
-                    }}
-                  >
-                    {t(service.procedureKey)}
-                  </motion.h3>
-                ))}
-              </div>
             </div>
-          </div>
-
-          {/* RIGHT COLUMN: Content Cards */}
-          <div className="lg:col-span-7 space-y-48">
-            {servicesData.map((service, index) => (
-              <ServiceCard 
-                key={service.titleKey}
-                service={service}
-                index={index}
-                onVisibilityChange={(idx, isVisible) => {
-                  if (isVisible) setActiveIndex(idx);
-                }}
-              />
-            ))}
+          ))}
+          
+          {/* Timeline line con altura calculada */}
+          <div
+            style={{ height: height + "px" }}
+            className="absolute md:left-8 left-8 top-0 w-[2px] bg-gray-200 overflow-hidden"
+          >
+            <motion.div
+              style={{ height: heightTransform }}
+              className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-b from-accent via-accent to-accent/50"
+            />
           </div>
         </div>
       </div>
@@ -238,9 +250,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, onVisibilityC
   const { t } = useTranslation();
   const cardRef = useRef<HTMLDivElement>(null);
   
-  // Detectar visibilidad en tiempo real (no solo "once")
+  // Detectar cuando la card está centrada en viewport
   const isInView = useInView(cardRef, { 
-    margin: "-200px 0px -200px 0px"
+    margin: "-40% 0px -40% 0px"
   });
 
   // Notificar cambios de visibilidad
@@ -251,13 +263,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, onVisibilityC
   }, [isInView, index, onVisibilityChange]);
 
   return (
-    <motion.div
-      ref={cardRef}
-      initial={{ opacity: 0, y: 60 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
-      transition={{ duration: 0.6, delay: 0.2 }}
-      className="group"
-    >
+    <div ref={cardRef} className="group">
       {/* Image Container con Aspect Ratio */}
       <div className="relative aspect-[16/9] overflow-hidden rounded-2xl bg-gray-100">
         <img 
@@ -288,6 +294,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, onVisibilityC
           </svg>
         </a>
       </div>
-    </motion.div>
+    </div>
   );
 };
