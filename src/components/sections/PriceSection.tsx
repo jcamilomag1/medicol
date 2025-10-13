@@ -131,41 +131,6 @@ const PriceCard: React.FC<PriceCardProps> = ({ country, featured = false }) => {
   );
 };
 
-const CTASection = () => {
-  const { t } = useTranslation();
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      className="mt-16 text-center"
-    >
-      {/* CTA Button */}
-      <a
-        href="/contacto"
-        className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-accent-foreground bg-accent rounded-full shadow-lg hover:bg-accent/90 hover:scale-105 transition-all duration-300"
-      >
-        {t('pricing.cta.button')}
-        <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-        </svg>
-      </a>
-
-      {/* Subtitle */}
-      <p className="mt-4 text-base text-muted-foreground">
-        {t('pricing.cta.subtitle')}
-      </p>
-
-      {/* Disclaimer */}
-      <p className="mt-8 text-xs text-muted-foreground/60 max-w-2xl mx-auto">
-        {t('pricing.disclaimer')}
-      </p>
-    </motion.div>
-  );
-};
-
 export const PriceSection = () => {
   const { t } = useTranslation();
 
@@ -183,14 +148,11 @@ export const PriceSection = () => {
         </div>
 
         {/* Price Comparison Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <PriceCard country="spain" />
           <PriceCard country="usa" />
           <PriceCard country="colombia" featured={true} />
         </div>
-
-        {/* CTA */}
-        <CTASection />
       </div>
     </section>
   );
