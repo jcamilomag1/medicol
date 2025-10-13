@@ -54,17 +54,27 @@
   "team": {
     "preview_title": "Nuestro Equipo Médico",
     "preview_description": "Conoce a los especialistas que harán realidad tu transformación.",
-    "specialty": {
-      "plastic_surgeon": "Cirujano Plástico",
-      "regenerative_medicine": "Especialista en Medicina Regenerativa",
-      "dental_design": "Odontólogo y Diseñador de Sonrisa",
-      "dermatology": "Dermatóloga Estética"
-    },
-    "experience": {
-      "15_years": "Más de 15 años de experiencia",
-      "12_years": "Más de 12 años de experiencia",
-      "18_years": "Más de 18 años de experiencia",
-      "20_years": "Más de 20 años de experiencia"
+    "doctors": {
+      "alejandro": {
+        "specialty": "Cirujano Plástico Reconstructivo",
+        "experience": "Más de 15 años de experiencia",
+        "bio": "Especialista en procedimientos de lipotransferencia y cirugía reconstructiva. Certificado por la Sociedad Internacional de Cirugía Plástica Estética con más de 2,000 procedimientos exitosos."
+      },
+      "carolina": {
+        "specialty": "Especialista en Medicina Regenerativa",
+        "experience": "Más de 12 años de experiencia",
+        "bio": "Pionera en terapias con células madre y tratamientos anti-aging. Formación en las mejores clínicas de Europa y Estados Unidos con resultados excepcionales."
+      },
+      "juan": {
+        "specialty": "Odontólogo y Diseñador de Sonrisa",
+        "experience": "Más de 18 años de experiencia",
+        "bio": "Experto en diseño de sonrisa digital y rehabilitación oral completa. Certificado en implantología avanzada y estética dental con tecnología de última generación."
+      },
+      "maria": {
+        "specialty": "Dermatóloga Estética",
+        "experience": "Más de 20 años de experiencia",
+        "bio": "Especialista en tratamientos láser, rejuvenecimiento facial y medicina estética. Miembro activo de la Academia Americana de Dermatología con enfoque en resultados naturales."
+      }
     }
   },
   "testimonials": {

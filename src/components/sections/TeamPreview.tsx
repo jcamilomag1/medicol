@@ -1,142 +1,349 @@
 import { useTranslation } from 'react-i18next';
-import { useState, useEffect } from 'react';
-import useEmblaCarousel from 'embla-carousel-react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronLeft, ChevronRight, Linkedin, Instagram } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 interface Doctor {
   name: string;
   specialtyKey: string;
   experienceKey: string;
+  bioKey: string;
   imageUrl: string;
   profileUrl: string;
+  linkedinUrl?: string;
+  instagramUrl?: string;
 }
 
-const teamData: Doctor[] = [
+const teamMembers: Doctor[] = [
   {
-    name: 'Dr. Alejandro Guerra',
-    specialtyKey: 'team.specialty.plastic_surgeon',
-    experienceKey: 'team.experience.15_years',
-    imageUrl: 'https://images.unsplash.com/photo-1622253692010-33352da55e0d?q=80&w=300&auto=format&fit=crop',
-    profileUrl: '/nuestro-equipo/alejandro-guerra'
+    name: 'Dr. Alejandro Guerra Ruiz',
+    specialtyKey: 'team.doctors.alejandro.specialty',
+    experienceKey: 'team.doctors.alejandro.experience',
+    bioKey: 'team.doctors.alejandro.bio',
+    imageUrl: 'https://images.unsplash.com/photo-1622253692010-33352da55e0d?q=80&w=600&auto=format&fit=crop',
+    profileUrl: '/nuestro-equipo/alejandro-guerra',
+    linkedinUrl: '#',
+    instagramUrl: '#'
   },
   {
-    name: 'Dra. Carolina Botero',
-    specialtyKey: 'team.specialty.regenerative_medicine',
-    experienceKey: 'team.experience.12_years',
-    imageUrl: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=300&auto=format&fit=crop',
-    profileUrl: '/nuestro-equipo/carolina-botero'
+    name: 'Dra. Carolina Botero Vélez',
+    specialtyKey: 'team.doctors.carolina.specialty',
+    experienceKey: 'team.doctors.carolina.experience',
+    bioKey: 'team.doctors.carolina.bio',
+    imageUrl: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=600&auto=format&fit=crop',
+    profileUrl: '/nuestro-equipo/carolina-botero',
+    linkedinUrl: '#',
+    instagramUrl: '#'
   },
   {
-    name: 'Dr. Juan Vélez',
-    specialtyKey: 'team.specialty.dental_design',
-    experienceKey: 'team.experience.18_years',
-    imageUrl: 'https://images.unsplash.com/photo-1629425733761-caae3b5f2e50?q=80&w=300&auto=format&fit=crop',
-    profileUrl: '/nuestro-equipo/juan-velez'
+    name: 'Dr. Juan Vélez Martínez',
+    specialtyKey: 'team.doctors.juan.specialty',
+    experienceKey: 'team.doctors.juan.experience',
+    bioKey: 'team.doctors.juan.bio',
+    imageUrl: 'https://images.unsplash.com/photo-1629425733761-caae3b5f2e50?q=80&w=600&auto=format&fit=crop',
+    profileUrl: '/nuestro-equipo/juan-velez',
+    linkedinUrl: '#',
+    instagramUrl: '#'
   },
   {
-    name: 'Dra. María Fernández',
-    specialtyKey: 'team.specialty.dermatology',
-    experienceKey: 'team.experience.20_years',
-    imageUrl: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=300&auto=format&fit=crop',
-    profileUrl: '/nuestro-equipo/maria-fernandez'
+    name: 'Dra. María Fernández López',
+    specialtyKey: 'team.doctors.maria.specialty',
+    experienceKey: 'team.doctors.maria.experience',
+    bioKey: 'team.doctors.maria.bio',
+    imageUrl: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=600&auto=format&fit=crop',
+    profileUrl: '/nuestro-equipo/maria-fernandez',
+    linkedinUrl: '#',
+    instagramUrl: '#'
   }
 ];
 
 export const TeamPreview = () => {
   const { t } = useTranslation();
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' });
-  const [canScrollPrev, setCanScrollPrev] = useState(false);
-  const [canScrollNext, setCanScrollNext] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const scrollPrev = () => emblaApi?.scrollPrev();
-  const scrollNext = () => emblaApi?.scrollNext();
+  const handleNext = () =>
+    setCurrentIndex((index) => (index + 1) % teamMembers.length);
+  
+  const handlePrevious = () =>
+    setCurrentIndex(
+      (index) => (index - 1 + teamMembers.length) % teamMembers.length
+    );
 
-  useEffect(() => {
-    if (!emblaApi) return;
-
-    const updateButtons = () => {
-      setCanScrollPrev(emblaApi.canScrollPrev());
-      setCanScrollNext(emblaApi.canScrollNext());
-    };
-
-    emblaApi.on('select', updateButtons);
-    emblaApi.on('reInit', updateButtons);
-    updateButtons();
-
-    return () => {
-      emblaApi.off('select', updateButtons);
-      emblaApi.off('reInit', updateButtons);
-    };
-  }, [emblaApi]);
+  const currentDoctor = teamMembers[currentIndex];
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-8">
-      <div className="flex justify-between items-center mb-8">
-        <h3 className="text-2xl font-bold text-primary">
-          {t('trust.our_team')}
-        </h3>
-        <div className="flex gap-x-4">
-          <button
-            onClick={scrollPrev}
-            disabled={!canScrollPrev}
-            className="p-2 rounded-full bg-primary text-white hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-            aria-label="Previous"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-          <button
-            onClick={scrollNext}
-            disabled={!canScrollNext}
-            className="p-2 rounded-full bg-primary text-white hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-            aria-label="Next"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
+    <motion.div
+      className="w-full max-w-6xl mx-auto px-4"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{
+        duration: 0.6,
+        ease: "easeOut"
+      }}
+    >
+      {/* Desktop Layout */}
+      <div className="hidden md:flex relative items-center gap-8">
+        {/* Doctor Image */}
+        <motion.div 
+          className="w-[470px] h-[470px] rounded-3xl overflow-hidden flex-shrink-0 shadow-2xl"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={currentDoctor.imageUrl}
+              src={currentDoctor.imageUrl}
+              alt={currentDoctor.name}
+              className="w-full h-full object-cover"
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.5 }}
+            />
+          </AnimatePresence>
+        </motion.div>
+
+        {/* Card with Glassmorphism */}
+        <motion.div 
+          className="
+            relative ml-[-80px] z-10 max-w-xl flex-1 p-8 rounded-3xl
+            bg-gradient-to-br from-white/90 via-white/80 to-background/90
+            backdrop-blur-xl
+            border border-border/50
+            shadow-2xl shadow-primary/10
+          "
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentDoctor.name}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+            >
+              {/* Name */}
+              <h3 className="text-3xl font-bold text-primary mb-2">
+                {currentDoctor.name}
+              </h3>
+              
+              {/* Specialty */}
+              <p className="text-lg font-semibold text-accent mb-1">
+                {t(currentDoctor.specialtyKey)}
+              </p>
+              
+              {/* Experience */}
+              <p className="text-sm text-muted-foreground mb-4">
+                {t(currentDoctor.experienceKey)}
+              </p>
+              
+              {/* Bio */}
+              <p className="text-foreground leading-relaxed mb-6">
+                {t(currentDoctor.bioKey)}
+              </p>
+              
+              {/* Social Links + View Profile */}
+              <div className="flex items-center gap-4">
+                {/* Social Icons */}
+                {currentDoctor.linkedinUrl && (
+                  <motion.a
+                    href={currentDoctor.linkedinUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-primary hover:bg-primary/90 flex items-center justify-center transition-all"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="w-5 h-5 text-white" />
+                  </motion.a>
+                )}
+                {currentDoctor.instagramUrl && (
+                  <motion.a
+                    href={currentDoctor.instagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-primary hover:bg-primary/90 flex items-center justify-center transition-all"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    aria-label="Instagram"
+                  >
+                    <Instagram className="w-5 h-5 text-white" />
+                  </motion.a>
+                )}
+                
+                {/* View Profile Button */}
+                <motion.a
+                  href={currentDoctor.profileUrl}
+                  className="
+                    flex-1 px-6 py-3 bg-accent hover:bg-accent/90 
+                    text-white font-semibold rounded-full text-center
+                    transition-all
+                  "
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  {t('common.view_profile')} →
+                </motion.a>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </motion.div>
+      </div>
+
+      {/* Mobile Layout */}
+      <div className="md:hidden max-w-sm mx-auto">
+        {/* Doctor Image */}
+        <motion.div 
+          className="w-full aspect-square rounded-3xl overflow-hidden mb-6 shadow-xl"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+        >
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={currentDoctor.imageUrl}
+              src={currentDoctor.imageUrl}
+              alt={currentDoctor.name}
+              className="w-full h-full object-cover"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+            />
+          </AnimatePresence>
+        </motion.div>
+
+        {/* Card Content */}
+        <div className="px-4">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentDoctor.name}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+            >
+              <h3 className="text-2xl font-bold text-primary text-center mb-2">
+                {currentDoctor.name}
+              </h3>
+              <p className="text-lg font-semibold text-accent text-center mb-1">
+                {t(currentDoctor.specialtyKey)}
+              </p>
+              <p className="text-sm text-muted-foreground text-center mb-4">
+                {t(currentDoctor.experienceKey)}
+              </p>
+              <p className="text-foreground text-center leading-relaxed mb-6">
+                {t(currentDoctor.bioKey)}
+              </p>
+              
+              {/* Social Links + View Profile */}
+              <div className="flex justify-center items-center gap-3 mb-4">
+                {currentDoctor.linkedinUrl && (
+                  <motion.a
+                    href={currentDoctor.linkedinUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-primary hover:bg-primary/90 flex items-center justify-center transition-all"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="w-5 h-5 text-white" />
+                  </motion.a>
+                )}
+                {currentDoctor.instagramUrl && (
+                  <motion.a
+                    href={currentDoctor.instagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-primary hover:bg-primary/90 flex items-center justify-center transition-all"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    aria-label="Instagram"
+                  >
+                    <Instagram className="w-5 h-5 text-white" />
+                  </motion.a>
+                )}
+              </div>
+              
+              <motion.a
+                href={currentDoctor.profileUrl}
+                className="
+                  block w-full px-6 py-3 bg-accent hover:bg-accent/90 
+                  text-white font-semibold rounded-full text-center
+                  transition-all
+                "
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                {t('common.view_profile')} →
+              </motion.a>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
 
-      <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex">
-          {teamData.map((doctor) => (
-            <div
-              key={doctor.name}
-              className="flex-shrink-0 flex-grow-0 basis-full sm:basis-1/2 md:basis-1/3 p-4"
-            >
-              <div className="bg-white rounded-lg shadow-md overflow-hidden h-full hover:shadow-xl transition-shadow">
-                <img
-                  src={doctor.imageUrl}
-                  alt={doctor.name}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-6">
-                  <h4 className="text-xl font-bold text-primary">
-                    {doctor.name}
-                  </h4>
-                  <p className="text-accent font-semibold mt-1">
-                    {t(doctor.specialtyKey)}
-                  </p>
-                  <p className="text-gray-600 mt-2">
-                    {t(doctor.experienceKey)}
-                  </p>
-                  <a
-                    href={doctor.profileUrl}
-                    className="mt-4 inline-block font-semibold text-primary hover:text-accent transition-colors"
-                  >
-                    {t('common.view_profile')} →
-                  </a>
-                </div>
-              </div>
-            </div>
+      {/* Navigation */}
+      <div className="flex justify-center items-center gap-6 mt-8">
+        {/* Previous Button */}
+        <motion.button
+          onClick={handlePrevious}
+          className="
+            w-12 h-12 rounded-full 
+            bg-white/80 backdrop-blur-md
+            border border-border/50
+            shadow-md hover:shadow-xl
+            flex items-center justify-center
+            hover:bg-white transition-all
+          "
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          aria-label="Previous doctor"
+        >
+          <ChevronLeft className="w-6 h-6 text-primary" />
+        </motion.button>
+
+        {/* Dots */}
+        <div className="flex gap-2">
+          {teamMembers.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={cn(
+                "h-3 rounded-full transition-all duration-300",
+                index === currentIndex
+                  ? "bg-accent w-8"
+                  : "bg-muted-foreground/30 hover:bg-muted-foreground/50 w-3"
+              )}
+              aria-label={`Go to doctor ${index + 1}`}
+            />
           ))}
         </div>
-      </div>
 
-      <div className="mt-12 text-center">
-        <Button variant="outline">
-          {t('trust.view_full_team')}
-        </Button>
+        {/* Next Button */}
+        <motion.button
+          onClick={handleNext}
+          className="
+            w-12 h-12 rounded-full 
+            bg-white/80 backdrop-blur-md
+            border border-border/50
+            shadow-md hover:shadow-xl
+            flex items-center justify-center
+            hover:bg-white transition-all
+          "
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          aria-label="Next doctor"
+        >
+          <ChevronRight className="w-6 h-6 text-primary" />
+        </motion.button>
       </div>
-    </div>
+    </motion.div>
   );
 };

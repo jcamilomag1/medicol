@@ -54,17 +54,27 @@
   "team": {
     "preview_title": "Our Medical Team",
     "preview_description": "Meet the specialists who will make your transformation a reality.",
-    "specialty": {
-      "plastic_surgeon": "Plastic Surgeon",
-      "regenerative_medicine": "Regenerative Medicine Specialist",
-      "dental_design": "Dentist and Smile Designer",
-      "dermatology": "Aesthetic Dermatologist"
-    },
-    "experience": {
-      "15_years": "Over 15 years of experience",
-      "12_years": "Over 12 years of experience",
-      "18_years": "Over 18 years of experience",
-      "20_years": "Over 20 years of experience"
+    "doctors": {
+      "alejandro": {
+        "specialty": "Reconstructive Plastic Surgeon",
+        "experience": "Over 15 years of experience",
+        "bio": "Specialist in fat transfer procedures and reconstructive surgery. Certified by the International Society of Aesthetic Plastic Surgery with over 2,000 successful procedures."
+      },
+      "carolina": {
+        "specialty": "Regenerative Medicine Specialist",
+        "experience": "Over 12 years of experience",
+        "bio": "Pioneer in stem cell therapies and anti-aging treatments. Trained at the best clinics in Europe and the United States with exceptional results."
+      },
+      "juan": {
+        "specialty": "Dentist and Smile Designer",
+        "experience": "Over 18 years of experience",
+        "bio": "Expert in digital smile design and complete oral rehabilitation. Certified in advanced implantology and dental aesthetics with cutting-edge technology."
+      },
+      "maria": {
+        "specialty": "Aesthetic Dermatologist",
+        "experience": "Over 20 years of experience",
+        "bio": "Specialist in laser treatments, facial rejuvenation, and aesthetic medicine. Active member of the American Academy of Dermatology with a focus on natural results."
+      }
     }
   },
   "testimonials": {
