@@ -51,10 +51,10 @@ export const ServicesHighlight = () => {
       {/* Section Header */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-20">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+          <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl lg:text-6xl">
             {t('services.section_title')}
-          </h2>
-          <p className="mt-4 text-lg leading-8 text-gray-600">
+          </h1>
+          <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-xl sm:leading-9">
             {t('services.section_subtitle')}
           </p>
         </div>
