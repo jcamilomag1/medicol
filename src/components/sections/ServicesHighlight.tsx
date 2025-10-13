@@ -62,10 +62,23 @@ export const ServicesHighlight = () => {
 
       {/* Timeline Container */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+        
+        {/* MOBILE VERSION - Timeline Integrado */}
+        <div className="lg:hidden space-y-12">
+          {servicesData.map((service, index) => (
+            <MobileServiceCard 
+              key={service.titleKey}
+              service={service}
+              index={index}
+            />
+          ))}
+        </div>
+
+        {/* DESKTOP VERSION - Timeline Separado */}
+        <div className="hidden lg:grid lg:grid-cols-12 gap-8 lg:gap-12">
           
           {/* LEFT COLUMN: Sticky Procedure Names + Timeline Line */}
-          <div className="hidden lg:block lg:col-span-5">
+          <div className="lg:col-span-5">
             <div className="sticky top-24 h-screen">
               {/* Animated Vertical Timeline Line */}
               <div className="absolute left-0 top-0 w-1 h-full bg-gray-200">
@@ -123,6 +136,80 @@ interface ServiceCardProps {
   };
   index: number;
 }
+
+const MobileServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
+  const { t } = useTranslation();
+  const cardRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(cardRef, { once: true, margin: "-50px" });
+
+  return (
+    <motion.div
+      ref={cardRef}
+      initial={{ opacity: 0, y: 40 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+      transition={{ duration: 0.5, delay: 0.1 }}
+      className="relative pl-6"
+    >
+      {/* Mini Timeline Line */}
+      <div className="absolute left-0 top-0 w-0.5 h-full bg-gray-200">
+        <motion.div 
+          className="w-full bg-accent origin-top"
+          initial={{ height: "0%" }}
+          animate={isInView ? { height: "100%" } : { height: "0%" }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        />
+      </div>
+
+      {/* Timeline Dot */}
+      <motion.div 
+        className="absolute left-[-4px] top-6 w-2.5 h-2.5 rounded-full bg-accent border-2 border-white"
+        initial={{ scale: 0 }}
+        animate={isInView ? { scale: 1 } : { scale: 0 }}
+        transition={{ duration: 0.3, delay: 0.5 }}
+      />
+
+      {/* Card Content */}
+      <div>
+        {/* Procedure Name - Mobile Version */}
+        <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+          {t(service.procedureKey)}
+        </h3>
+
+        {/* Image */}
+        <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-gray-100 mb-4">
+          <img 
+            src={service.imageUrl}
+            alt={t(service.titleKey)}
+            loading="lazy"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
+        </div>
+
+        {/* Title */}
+        <h4 className="text-xl font-bold text-primary mb-2">
+          {t(service.titleKey)}
+        </h4>
+
+        {/* Description */}
+        <p className="text-sm text-gray-600 leading-relaxed mb-3">
+          {t(service.descriptionKey)}
+        </p>
+
+        {/* Learn More Link */}
+        <a 
+          href={service.href}
+          className="inline-flex items-center text-accent font-semibold text-sm hover:opacity-80 transition-opacity"
+        >
+          {t('common.learn_more')}
+          <svg className="ml-2 w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </motion.div>
+  );
+};
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   const { t } = useTranslation();
