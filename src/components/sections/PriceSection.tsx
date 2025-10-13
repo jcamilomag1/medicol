@@ -33,13 +33,21 @@ const PriceCard: React.FC<PriceCardProps> = ({ country, featured = false }) => {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
       className={`
-        relative rounded-2xl p-8 pb-6 transition-all duration-300 h-full flex flex-col
+        relative rounded-3xl p-8 pb-6 h-full flex flex-col
         ${featured 
-          ? 'bg-background border-2 border-accent shadow-xl scale-105 ring-4 ring-accent/10' 
-          : 'bg-background border border-border shadow-md hover:shadow-lg'
+          ? 'bg-gradient-to-br from-accent/5 via-white/70 to-accent/10 backdrop-blur-2xl border-2 border-accent/30 shadow-2xl shadow-accent/20 hover:shadow-[0_20px_80px_-15px] hover:shadow-accent/40 ring-4 ring-accent/10 transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02] scale-105' 
+          : 'bg-gradient-to-br from-gray-100/80 via-white/60 to-gray-50/80 backdrop-blur-xl border border-gray-200/50 shadow-xl shadow-gray-300/40 hover:shadow-2xl hover:shadow-gray-400/50 transition-all duration-500 hover:-translate-y-1'
         }
       `}
     >
+      {/* Noise/Grain Texture */}
+      <div 
+        className="absolute inset-0 opacity-[0.015] pointer-events-none rounded-3xl mix-blend-overlay"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
+        }}
+      />
+
       {/* Badge "Mejor Valor" solo para Colombia */}
       {featured && (
         <div className="absolute -top-4 left-1/2 -translate-x-1/2">
@@ -135,8 +143,15 @@ export const PriceSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="py-20 sm:py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="py-20 sm:py-24 bg-gradient-to-b from-gray-50 via-white to-gray-100 relative overflow-hidden">
+      {/* Elementos decorativos de fondo */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 -left-20 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 -right-20 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
+      </div>
+      
+      {/* Contenedor relativo para que el contenido esté encima */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl lg:text-6xl">
