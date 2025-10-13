@@ -24,18 +24,22 @@
     "section_title": "Our Procedures",
     "section_subtitle": "We offer a complete spectrum of care designed to enhance your beauty and wellbeing, with a focus on safety and excellence.",
     "cosmetic": {
+      "procedure_name": "Cosmetic Surgery",
       "title": "Cosmetic Surgery",
       "description": "Cutting-edge procedures to sculpt your figure and enhance your natural beauty with harmonious results."
     },
     "regenerative": {
+      "procedure_name": "Regenerative Medicine",
       "title": "Regenerative Medicine",
       "description": "Advanced cellular treatments that rejuvenate your skin and optimize your vitality from within."
     },
     "dental": {
+      "procedure_name": "Smile Design",
       "title": "Smile Design",
       "description": "Precision dental aesthetics for a radiant smile that reflects your best version."
     },
     "diagnostics": {
+      "procedure_name": "Advanced Checkups",
       "title": "Advanced Checkups",
       "description": "Comprehensive medical evaluations with state-of-the-art technology for your peace of mind."
     }

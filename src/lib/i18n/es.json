@@ -24,18 +24,22 @@
     "section_title": "Nuestros Procedimientos",
     "section_subtitle": "Ofrecemos un espectro completo de cuidados diseñados para realzar tu belleza y bienestar, con un enfoque en la seguridad y la excelencia.",
     "cosmetic": {
+      "procedure_name": "Cirugía Cosmética",
       "title": "Cirugía Cosmética",
       "description": "Procedimientos de vanguardia para esculpir tu figura y realzar tu belleza natural con resultados armónicos."
     },
     "regenerative": {
+      "procedure_name": "Medicina Regenerativa",
       "title": "Medicina Regenerativa",
       "description": "Tratamientos celulares avanzados que rejuvenecen tu piel y optimizan tu vitalidad desde el interior."
     },
     "dental": {
+      "procedure_name": "Diseño de Sonrisa",
       "title": "Diseño de Sonrisa",
       "description": "Estética dental de precisión para una sonrisa radiante que refleje tu mejor versión."
     },
     "diagnostics": {
+      "procedure_name": "Chequeos Avanzados",
       "title": "Chequeos Avanzados",
       "description": "Evaluaciones médicas integrales con tecnología de última generación para tu tranquilidad."
     }
