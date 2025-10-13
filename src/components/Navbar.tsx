@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import medicolLogo from '@/assets/medicol-logo.png';
+import medicolLogo from '@/assets/medicol-logo-blanco.png';
 
 interface NavLink {
   href: string;
