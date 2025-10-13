@@ -1,21 +1,18 @@
 import { useTranslation } from 'react-i18next';
 import { TeamPreview } from '@/components/sections/TeamPreview';
 import { VideoTestimonials } from '@/components/sections/VideoTestimonials';
-
 export const TrustArchitectureSection = () => {
-  const { t } = useTranslation();
-
-  return (
-    <section id="equipo" className="py-20 sm:py-24 bg-gray-50">
+  const {
+    t
+  } = useTranslation();
+  return <section id="equipo" className="py-20 sm:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
             {t('trust.section_title')}
           </h2>
-          <p className="mt-4 text-lg leading-8 text-gray-600">
-            {t('trust.section_subtitle')}
-          </p>
+          
         </div>
 
         {/* Team Preview */}
@@ -28,6 +25,5 @@ export const TrustArchitectureSection = () => {
           <VideoTestimonials />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
