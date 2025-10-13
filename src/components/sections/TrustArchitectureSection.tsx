@@ -21,9 +21,7 @@ export const TrustArchitectureSection = () => {
         </div>
 
         {/* Video Testimonials */}
-        <div className="mt-20">
-          <VideoTestimonials />
-        </div>
+        
       </div>
     </section>;
 };
