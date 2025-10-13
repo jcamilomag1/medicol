@@ -47,7 +47,7 @@ export const ServicesHighlight = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-20 sm:py-24 bg-white">
+    <section ref={sectionRef} className="pt-12 sm:pt-16 pb-20 sm:pb-24 bg-white">
       {/* Section Header */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-20">
         <div className="max-w-2xl mx-auto text-center">

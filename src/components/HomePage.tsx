@@ -6,7 +6,7 @@ import { BlogPreview } from './sections/BlogPreview';
 
 export const HomePage = () => {
   return (
-    <main className="flex flex-col gap-y-32">
+    <main className="flex flex-col gap-y-20">
       <HeroSection />
       <ServicesHighlight />
       <TrustArchitectureSection />
