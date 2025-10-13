@@ -26,22 +26,22 @@
     "cosmetic": {
       "procedure_name": "Cosmetic Surgery",
       "title": "Cosmetic Surgery",
-      "description": "Cutting-edge procedures to sculpt your figure and enhance your natural beauty with harmonious results."
+      "description": "Lipotransfer to abdomen and glutes, breast implants, and other advanced procedures."
     },
     "regenerative": {
       "procedure_name": "Regenerative Medicine",
       "title": "Regenerative Medicine",
-      "description": "Advanced cellular treatments that rejuvenate your skin and optimize your vitality from within."
+      "description": "Cutting-edge stem cell therapies for healing and rejuvenation."
     },
     "dental": {
-      "procedure_name": "Smile Design",
-      "title": "Smile Design",
-      "description": "Precision dental aesthetics for a radiant smile that reflects your best version."
+      "procedure_name": "Dental Treatments",
+      "title": "Dental Treatments",
+      "description": "Comprehensive solutions for a healthy, confident smile."
     },
     "diagnostics": {
-      "procedure_name": "Advanced Checkups",
-      "title": "Advanced Checkups",
-      "description": "Comprehensive medical evaluations with state-of-the-art technology for your peace of mind."
+      "procedure_name": "Executive Check-Ups",
+      "title": "Executive Check-Ups & Medical Diagnostics",
+      "description": "Early detection programs and personalized health assessments."
     }
   },
   "trust": {

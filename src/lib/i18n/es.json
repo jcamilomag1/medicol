@@ -22,26 +22,26 @@
   },
   "services": {
     "section_title": "Nuestros Servicios",
-    "section_subtitle": "Especialistas certificados internacionalmente con resultados excepcionales. Ahorra entre 50% y 60% comparado con Estados Unidos y Europa, sin comprometer la calidad.",
+    "section_subtitle": "Especialistas certificados internacionalmente con resultados excepcionales. Ahorra del 50% al 60% en comparación con Estados Unidos y Europa, sin comprometer la calidad.",
     "cosmetic": {
-      "procedure_name": "Cirugía Cosmética",
-      "title": "Cirugía Cosmética",
-      "description": "Procedimientos de vanguardia para esculpir tu figura y realzar tu belleza natural con resultados armónicos."
+      "procedure_name": "Cirugía Plástica",
+      "title": "Cirugía Plástica, Reconstructiva y Funcional",
+      "description": "Lipotransferencia a abdomen y glúteos, implantes mamarios y otros procedimientos avanzados."
     },
     "regenerative": {
       "procedure_name": "Medicina Regenerativa",
-      "title": "Medicina Regenerativa",
-      "description": "Tratamientos celulares avanzados que rejuvenecen tu piel y optimizan tu vitalidad desde el interior."
+      "title": "Procedimientos con Células Madre (Stem Cells)",
+      "description": "Terapias avanzadas con células madre para sanación y rejuvenecimiento."
     },
     "dental": {
-      "procedure_name": "Diseño de Sonrisa",
-      "title": "Diseño de Sonrisa",
-      "description": "Estética dental de precisión para una sonrisa radiante que refleje tu mejor versión."
+      "procedure_name": "Procedimientos Dentales",
+      "title": "Procedimientos Dentales",
+      "description": "Soluciones integrales para una sonrisa saludable y segura."
     },
     "diagnostics": {
-      "procedure_name": "Chequeos Avanzados",
-      "title": "Chequeos Avanzados",
-      "description": "Evaluaciones médicas integrales con tecnología de última generación para tu tranquilidad."
+      "procedure_name": "Diagnósticos Médicos",
+      "title": "Diagnósticos Médicos y Chequeos Ejecutivos",
+      "description": "Programas de detección temprana y evaluaciones de salud personalizadas."
     }
   },
   "trust": {
