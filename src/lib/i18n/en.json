@@ -126,5 +126,42 @@
       "title": "The Ultimate Guide to a Perfect Smile Design in 2025",
       "description": "From material selection to post-treatment care, everything you need to know."
     }
+  },
+  "pricing": {
+    "section_title": "World-Class Quality, Smart Prices",
+    "section_subtitle": "Access world-class medical procedures with significant savings. Without compromising your safety or the results you deserve.",
+    "spain": {
+      "country": "Spain",
+      "price_range": "€8,000 - €12,000",
+      "note": "Average price for cosmetic procedures"
+    },
+    "usa": {
+      "country": "United States",
+      "price_range": "$10,000 - $15,000",
+      "note": "Average price for cosmetic procedures"
+    },
+    "colombia": {
+      "country": "Colombia",
+      "price_range": "$4,000 - $6,000",
+      "badge_best_value": "Best Value",
+      "badge_savings": "Save 50-60%",
+      "vs_others": "vs. USA & Europe",
+      "note": "Average price for cosmetic procedures"
+    },
+    "benefits": {
+      "title": "All Inclusive in Colombia",
+      "subtitle": "Benefits that make the difference",
+      "insurance": "Medical insurance for surgery",
+      "transport": "Airport-accommodation transport and return",
+      "medications": "Complete post-operative medications",
+      "massage": "Specialized massages and lymphatic drainage",
+      "garments": "Post-surgical compression garments",
+      "garments_details": "Bras, girdles, sleeves and more according to your procedure"
+    },
+    "cta": {
+      "button": "Schedule Your Free Consultation",
+      "subtitle": "Get your personalized quote within 24 hours"
+    },
+    "disclaimer": "Prices are estimates and may vary depending on the specific procedure. Consultation included at no cost."
   }
 }

@@ -126,5 +126,42 @@
       "title": "La Guía Definitiva para un Diseño de Sonrisa Perfecto en 2025",
       "description": "Desde la elección de materiales hasta el cuidado post-tratamiento, todo lo que necesitas saber."
     }
+  },
+  "pricing": {
+    "section_title": "Calidad Mundial, Precios Inteligentes",
+    "section_subtitle": "Accede a procedimientos médicos de clase mundial con ahorros significativos. Sin comprometer tu seguridad ni los resultados que mereces.",
+    "spain": {
+      "country": "España",
+      "price_range": "€8,000 - €12,000",
+      "note": "Precio promedio para procedimientos cosméticos"
+    },
+    "usa": {
+      "country": "Estados Unidos",
+      "price_range": "$10,000 - $15,000",
+      "note": "Precio promedio para procedimientos cosméticos"
+    },
+    "colombia": {
+      "country": "Colombia",
+      "price_range": "$4,000 - $6,000",
+      "badge_best_value": "Mejor Valor",
+      "badge_savings": "Ahorra 50-60%",
+      "vs_others": "vs. USA y Europa",
+      "note": "Precio promedio para procedimientos cosméticos"
+    },
+    "benefits": {
+      "title": "Todo Incluido en Colombia",
+      "subtitle": "Beneficios que hacen la diferencia",
+      "insurance": "Seguro médico para la cirugía",
+      "transport": "Transporte aeropuerto-hospedaje y retorno",
+      "medications": "Medicamentos postoperatorios completos",
+      "massage": "Masajes y drenajes linfáticos especializados",
+      "garments": "Prendas de compresión postquirúrgicas",
+      "garments_details": "Brassieres, fajas, manguitos y más según tu procedimiento"
+    },
+    "cta": {
+      "button": "Agenda tu Consulta Gratis",
+      "subtitle": "Descubre tu presupuesto personalizado en 24 horas"
+    },
+    "disclaimer": "Los precios son estimados y pueden variar según el procedimiento específico. Consulta incluida sin costo."
   }
 }
