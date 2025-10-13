@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Check, Sparkles } from 'lucide-react';
+import { Check, Sparkles, X } from 'lucide-react';
 
 interface PriceCardProps {
   country: 'spain' | 'usa' | 'colombia';
@@ -16,6 +16,16 @@ const PriceCard: React.FC<PriceCardProps> = ({ country, featured = false }) => {
     colombia: '🇨🇴'
   };
 
+  const includesBenefits = country === 'colombia';
+
+  const benefits = [
+    { key: 'insurance', icon: '🛡️' },
+    { key: 'transport', icon: '✈️' },
+    { key: 'medications', icon: '💊' },
+    { key: 'massage', icon: '💆' },
+    { key: 'garments', icon: '👔' }
+  ];
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -23,7 +33,7 @@ const PriceCard: React.FC<PriceCardProps> = ({ country, featured = false }) => {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
       className={`
-        relative rounded-2xl p-8 transition-all duration-300
+        relative rounded-2xl p-8 pb-6 transition-all duration-300 h-full flex flex-col
         ${featured 
           ? 'bg-background border-2 border-accent shadow-xl scale-105 ring-4 ring-accent/10' 
           : 'bg-background border border-border shadow-md hover:shadow-lg'
@@ -60,7 +70,7 @@ const PriceCard: React.FC<PriceCardProps> = ({ country, featured = false }) => {
 
       {/* Badge Ahorro para Colombia */}
       {featured && (
-        <div className="bg-accent/10 border border-accent/30 rounded-xl p-4 text-center">
+        <div className="bg-accent/10 border border-accent/30 rounded-xl p-4 text-center mb-6">
           <p className="text-2xl font-bold text-accent mb-1">
             {t('pricing.colombia.badge_savings')}
           </p>
@@ -69,82 +79,55 @@ const PriceCard: React.FC<PriceCardProps> = ({ country, featured = false }) => {
           </p>
         </div>
       )}
-    </motion.div>
-  );
-};
 
-const BenefitsGrid = () => {
-  const { t } = useTranslation();
+      {/* Separador */}
+      <div className="border-t border-border/50 my-6" />
 
-  const benefits = [
-    {
-      key: 'insurance',
-      icon: '🛡️'
-    },
-    {
-      key: 'transport',
-      icon: '✈️'
-    },
-    {
-      key: 'medications',
-      icon: '💊'
-    },
-    {
-      key: 'massage',
-      icon: '💆'
-    },
-    {
-      key: 'garments',
-      icon: '👔'
-    }
-  ];
-
-  return (
-    <div className="bg-background rounded-2xl p-8 md:p-12 shadow-lg border border-border">
-      {/* Header */}
-      <div className="text-center mb-10">
-        <h3 className="text-3xl font-bold text-primary mb-3">
-          {t('pricing.benefits.title')}
-        </h3>
-        <p className="text-lg text-muted-foreground">
-          {t('pricing.benefits.subtitle')}
-        </p>
-      </div>
-
-      {/* Grid de beneficios */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {benefits.map((benefit, index) => (
-          <motion.div
-            key={benefit.key}
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: index * 0.1 }}
-            className="flex items-start gap-4"
-          >
-            {/* Icon */}
-            <div className="flex-shrink-0 w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center text-2xl">
-              {benefit.icon}
-            </div>
-
-            {/* Text */}
-            <div>
-              <div className="flex items-start gap-2">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                <p className="font-semibold text-foreground">
-                  {t(`pricing.benefits.${benefit.key}`)}
-                </p>
-              </div>
-              {benefit.key === 'garments' && (
-                <p className="text-sm text-muted-foreground mt-1 ml-7">
-                  {t('pricing.benefits.garments_details')}
-                </p>
-              )}
-            </div>
-          </motion.div>
+      {/* Benefits List - Flex grow para empujar el botón hacia abajo */}
+      <div className="flex-grow space-y-3 mb-6">
+        {benefits.map((benefit) => (
+          <div key={benefit.key} className="flex items-start gap-3">
+            {/* Checkmark o X */}
+            {includesBenefits ? (
+              <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+            ) : (
+              <X className="w-5 h-5 text-muted-foreground/40 flex-shrink-0 mt-0.5" />
+            )}
+            
+            {/* Texto del beneficio */}
+            <p className={`text-sm ${
+              includesBenefits 
+                ? 'text-foreground font-medium' 
+                : 'text-muted-foreground/60 line-through'
+            }`}>
+              {t(`pricing.benefits.${benefit.key}`)}
+            </p>
+          </div>
         ))}
       </div>
-    </div>
+
+      {/* Separador */}
+      <div className="border-t border-border/50 my-6" />
+
+      {/* CTA Button */}
+      <a
+        href="/contacto"
+        className={`
+          w-full inline-flex items-center justify-center 
+          px-6 py-3 rounded-lg font-semibold 
+          transition-all duration-300 hover:scale-105
+          ${featured
+            ? 'bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg'
+            : 'bg-background border border-border hover:bg-accent/5 text-foreground'
+          }
+        `}
+      >
+        {featured ? t('pricing.cta.button') : t('pricing.view_details')}
+        <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </motion.div>
   );
 };
 
@@ -205,9 +188,6 @@ export const PriceSection = () => {
           <PriceCard country="usa" />
           <PriceCard country="colombia" featured={true} />
         </div>
-
-        {/* Benefits Section */}
-        <BenefitsGrid />
 
         {/* CTA */}
         <CTASection />
