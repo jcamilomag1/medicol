@@ -11,15 +11,30 @@ export const HeroSection = () => {
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image with Animation */}
       <motion.div 
-        className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] bg-cover bg-center"
+        className="absolute inset-0 z-0 bg-[url('https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] bg-cover bg-center"
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
+        style={{ backfaceVisibility: 'hidden' }}
       />
 
       {/* Enhanced Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/70 to-primary/50" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+      <div 
+        className="absolute inset-0 z-[1] bg-gradient-to-br from-primary/90 via-primary/70 to-primary/50" 
+        style={{ 
+          willChange: 'transform',
+          transform: 'translateZ(0)',
+          backfaceVisibility: 'hidden'
+        }}
+      />
+      <div 
+        className="absolute inset-0 z-[2] bg-gradient-to-t from-black/40 via-transparent to-transparent" 
+        style={{ 
+          willChange: 'transform',
+          transform: 'translateZ(0)',
+          backfaceVisibility: 'hidden'
+        }}
+      />
 
       {/* Content Container */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
