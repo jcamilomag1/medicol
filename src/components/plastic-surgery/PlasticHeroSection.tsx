@@ -91,7 +91,7 @@ export const PlasticHeroSection = () => {
             <Button size="lg" onClick={handleCTAClick} className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all">
               {t('plastic_surgery.hero.cta_button')}
             </Button>
-            <Button size="lg" variant="outline" onClick={scrollToProcedures} className="border-white text-white hover:bg-white/10 font-bold text-lg px-8 py-6">
+            <Button size="lg" variant="outline" onClick={scrollToProcedures} className="bg-blue-900 border-blue-900 text-white hover:bg-white hover:text-blue-900 hover:border-white font-bold text-lg px-8 py-6 transition-all">
               {t('plastic_surgery.hero.cta_secondary')}
             </Button>
           </motion.div>
