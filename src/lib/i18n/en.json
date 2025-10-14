@@ -141,6 +141,12 @@
     "section_title": "World-Class Quality, Smart Prices",
     "section_subtitle": "Access world-class medical procedures with significant savings. Without compromising your safety or the results you deserve.",
     "view_details": "View Details",
+    "comparison": {
+      "title": "Other Options",
+      "no_extras": "No extras included",
+      "spain_note": "Price without additional benefits",
+      "usa_note": "Price without additional benefits"
+    },
     "spain": {
       "country": "Spain",
       "price_range": "€8,000 - €12,000",
@@ -154,10 +160,12 @@
     "colombia": {
       "country": "Colombia",
       "price_range": "$4,000 - $6,000",
+      "hero_title": "The Best Choice 🏆",
       "badge_best_value": "Best Value",
       "badge_savings": "Save 50-60%",
       "vs_others": "vs. USA & Europe",
-      "note": "Average price for cosmetic procedures"
+      "note": "Average price for cosmetic procedures",
+      "all_inclusive": "All Inclusive"
     },
     "benefits": {
       "title": "All Inclusive in Colombia",

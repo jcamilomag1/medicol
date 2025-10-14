@@ -1,14 +1,13 @@
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
-import { Check, Sparkles, X } from 'lucide-react';
+import { Check, Sparkles } from 'lucide-react';
 
 interface PriceCardProps {
   country: 'spain' | 'usa' | 'colombia';
   featured?: boolean;
-  index: number;
+  variant?: 'hero' | 'standard';
 }
 
-const PriceCard: React.FC<PriceCardProps> = ({ country, featured = false, index }) => {
+const PriceCard: React.FC<PriceCardProps> = ({ country, featured = false, variant = 'standard' }) => {
   const { t } = useTranslation();
   
   const countryFlags = {
@@ -27,13 +26,104 @@ const PriceCard: React.FC<PriceCardProps> = ({ country, featured = false, index 
     { key: 'garments', icon: '👔' }
   ];
 
+  // Hero variant para móvil - Colombia destacado
+  if (variant === 'hero') {
+    return (
+      <div className="relative rounded-3xl p-8 bg-gradient-to-br from-accent/10 via-white to-accent/15 backdrop-blur-xl border-2 border-accent/40 shadow-2xl shadow-accent/30 overflow-hidden">
+        {/* Glow effect decorativo */}
+        <div className="absolute -top-20 -right-20 w-40 h-40 bg-accent/20 rounded-full blur-3xl" />
+        <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-accent/20 rounded-full blur-3xl" />
+        
+        {/* Badge Mejor Valor */}
+        <div className="relative flex justify-center mb-4">
+          <span className="bg-gradient-to-r from-accent to-accent/80 text-accent-foreground px-6 py-2 rounded-full text-sm font-bold shadow-lg flex items-center gap-2">
+            <Sparkles className="w-4 h-4" />
+            {t('pricing.colombia.badge_best_value')}
+          </span>
+        </div>
+
+        {/* Flag y Título */}
+        <div className="text-center mb-6 relative">
+          <div className="text-6xl mb-3">{countryFlags[country]}</div>
+          <h3 className="text-3xl font-black text-foreground mb-2">
+            {t(`pricing.${country}.country`)}
+          </h3>
+          <p className="text-lg font-semibold text-accent">
+            {t('pricing.colombia.hero_title')}
+          </p>
+        </div>
+
+        {/* Precio más grande */}
+        <div className="text-center mb-6 relative">
+          <p className="text-5xl font-black text-accent mb-2">
+            {t(`pricing.${country}.price_range`)}
+          </p>
+          <p className="text-sm text-muted-foreground">
+            {t(`pricing.${country}.note`)}
+          </p>
+        </div>
+
+        {/* Badge Ahorro prominente */}
+        <div className="bg-gradient-to-r from-accent to-accent/80 rounded-2xl p-6 text-center mb-6 shadow-xl relative overflow-hidden">
+          <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />
+          <div className="relative">
+            <p className="text-3xl font-black text-accent-foreground mb-1">
+              {t('pricing.colombia.badge_savings')}
+            </p>
+            <p className="text-sm font-semibold text-accent-foreground/90">
+              {t('pricing.colombia.vs_others')}
+            </p>
+          </div>
+        </div>
+
+        {/* Separador */}
+        <div className="border-t border-accent/20 my-6" />
+
+        {/* Benefits visibles completos */}
+        <div className="space-y-4 mb-6">
+          <h4 className="font-bold text-lg text-center text-accent mb-4">
+            ✨ {t('pricing.colombia.all_inclusive')}
+          </h4>
+          {benefits.map((benefit) => (
+            <div key={benefit.key} className="flex items-start gap-3 bg-white/50 rounded-xl p-3">
+              <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+              <p className="text-sm font-medium text-foreground">
+                {t(`pricing.benefits.${benefit.key}`)}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Separador */}
+        <div className="border-t border-accent/20 my-6" />
+
+        {/* CTA prominente */}
+        <a
+          href="/contacto"
+          className="w-full inline-flex items-center justify-center px-6 py-4 rounded-xl font-bold text-lg bg-accent text-accent-foreground hover:bg-accent/90 shadow-xl transition-all duration-300 hover:scale-105"
+        >
+          {t('pricing.cta.button')}
+          <svg 
+            className="ml-2 w-5 h-5" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    );
+  }
+
+  // Standard variant para desktop
   return (
     <div
       className={`
-        relative rounded-3xl p-8 pb-6 h-full flex flex-col
+        relative rounded-3xl p-8 h-full flex flex-col
         ${featured 
-          ? 'bg-gradient-to-br from-accent/5 via-white/70 to-accent/10 backdrop-blur-2xl border-2 border-accent/30 shadow-2xl shadow-accent/20 hover:shadow-[0_20px_80px_-15px] hover:shadow-accent/40 ring-4 ring-accent/10 transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02] scale-105' 
-          : 'bg-gradient-to-br from-gray-100/80 via-white/60 to-gray-50/80 backdrop-blur-xl border border-gray-200/50 shadow-xl shadow-gray-300/40 hover:shadow-2xl hover:shadow-gray-400/50 transition-all duration-500 hover:-translate-y-1'
+          ? 'bg-gradient-to-br from-accent/10 via-white to-accent/15 backdrop-blur-xl border-2 border-accent/40 shadow-2xl shadow-accent/30 ring-4 ring-accent/10' 
+          : 'bg-gradient-to-br from-gray-100/80 via-white/60 to-gray-50/80 backdrop-blur-xl border border-gray-200/50 shadow-lg'
         }
       `}
     >
@@ -49,9 +139,7 @@ const PriceCard: React.FC<PriceCardProps> = ({ country, featured = false, index 
       {featured && (
         <div className="absolute -top-4 left-1/2 -translate-x-1/2">
           <span className="bg-accent text-accent-foreground px-6 py-2 rounded-full text-sm font-bold shadow-lg flex items-center gap-2">
-            <div>
-              <Sparkles className="w-4 h-4" />
-            </div>
+            <Sparkles className="w-4 h-4" />
             {t('pricing.colombia.badge_best_value')}
           </span>
         </div>
@@ -81,43 +169,38 @@ const PriceCard: React.FC<PriceCardProps> = ({ country, featured = false, index 
       {/* Badge Ahorro para Colombia */}
       {featured && (
         <div className="bg-accent/10 border border-accent/30 rounded-xl p-4 text-center mb-6">
-          <div>
-            <p className="text-2xl font-bold text-accent mb-1">
-              {t('pricing.colombia.badge_savings')}
-            </p>
-            <p className="text-sm text-muted-foreground">
-              {t('pricing.colombia.vs_others')}
-            </p>
-          </div>
+          <p className="text-2xl font-bold text-accent mb-1">
+            {t('pricing.colombia.badge_savings')}
+          </p>
+          <p className="text-sm text-muted-foreground">
+            {t('pricing.colombia.vs_others')}
+          </p>
         </div>
       )}
 
       {/* Separador */}
       <div className="border-t border-border/50 my-6" />
 
-      {/* Benefits List - Flex grow para empujar el botón hacia abajo */}
-      <div className="flex-grow space-y-3 mb-6">
-        {benefits.map((benefit, idx) => (
-          <div key={benefit.key} className="flex items-start gap-3">
-            {/* Checkmark o X */}
-            <div>
-              {includesBenefits ? (
+      {/* Benefits List */}
+      <div className="flex-grow mb-6">
+        {includesBenefits ? (
+          <div className="space-y-3">
+            {benefits.map((benefit) => (
+              <div key={benefit.key} className="flex items-start gap-3">
                 <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-              ) : (
-                <X className="w-5 h-5 text-muted-foreground/40 flex-shrink-0 mt-0.5" />
-              )}
-            </div>
-            
-            {/* Texto del beneficio */}
-            <p className={`text-sm ${
-              includesBenefits 
-                ? 'text-foreground font-medium' 
-                : 'text-muted-foreground/60 line-through'
-            }`}>
-              {t(`pricing.benefits.${benefit.key}`)}
+                <p className="text-sm font-medium text-foreground">
+                  {t(`pricing.benefits.${benefit.key}`)}
+                </p>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-8">
+            <p className="text-sm text-muted-foreground/60 italic">
+              {t('pricing.comparison.no_extras')}
             </p>
           </div>
-        ))}
+        )}
       </div>
 
       {/* Separador */}
@@ -131,8 +214,8 @@ const PriceCard: React.FC<PriceCardProps> = ({ country, featured = false, index 
           px-6 py-3 rounded-lg font-semibold 
           transition-all duration-300
           ${featured
-            ? 'bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg'
-            : 'bg-background border border-border hover:bg-accent/5 text-foreground'
+            ? 'bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg hover:scale-105'
+            : 'bg-background border border-border hover:bg-accent/5 text-foreground hover:scale-105'
           }
         `}
       >
@@ -150,6 +233,45 @@ const PriceCard: React.FC<PriceCardProps> = ({ country, featured = false, index 
   );
 };
 
+// Tabla de comparación compacta para móvil
+const PriceComparisonTable: React.FC = () => {
+  const { t } = useTranslation();
+
+  return (
+    <div className="md:hidden bg-white/80 backdrop-blur-lg rounded-2xl p-6 border border-gray-200 shadow-lg">
+      <h3 className="text-xl font-bold text-center mb-5 text-foreground">
+        💰 {t('pricing.comparison.title')}
+      </h3>
+      
+      <div className="space-y-4">
+        {/* España */}
+        <div className="flex justify-between items-center py-4 border-b border-gray-200">
+          <div className="flex items-center gap-3">
+            <span className="text-4xl">🇪🇸</span>
+            <span className="font-semibold text-lg">{t('pricing.spain.country')}</span>
+          </div>
+          <div className="text-right">
+            <p className="font-bold text-lg text-primary">{t('pricing.spain.price_range')}</p>
+            <p className="text-xs text-red-600 font-medium mt-1">{t('pricing.comparison.no_extras')}</p>
+          </div>
+        </div>
+        
+        {/* USA */}
+        <div className="flex justify-between items-center py-4">
+          <div className="flex items-center gap-3">
+            <span className="text-4xl">🇺🇸</span>
+            <span className="font-semibold text-lg">{t('pricing.usa.country')}</span>
+          </div>
+          <div className="text-right">
+            <p className="font-bold text-lg text-primary">{t('pricing.usa.price_range')}</p>
+            <p className="text-xs text-red-600 font-medium mt-1">{t('pricing.comparison.no_extras')}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export const PriceSection = () => {
   const { t } = useTranslation();
 
@@ -161,10 +283,10 @@ export const PriceSection = () => {
         <div className="absolute bottom-20 -right-20 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
       </div>
       
-      {/* Contenedor relativo para que el contenido esté encima */}
+      {/* Contenedor relativo */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl lg:text-6xl">
             {t('pricing.section_title')}
           </h2>
@@ -173,11 +295,28 @@ export const PriceSection = () => {
           </p>
         </div>
 
-        {/* Price Comparison Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <PriceCard country="spain" index={0} />
-          <PriceCard country="usa" index={1} />
-          <PriceCard country="colombia" featured={true} index={2} />
+        {/* MÓVIL: Hero Card Colombia + Tabla Comparación */}
+        <div className="md:hidden space-y-6">
+          <PriceCard country="colombia" featured={true} variant="hero" />
+          <PriceComparisonTable />
+        </div>
+
+        {/* DESKTOP: 3 Cards con Colombia destacado */}
+        <div className="hidden md:grid md:grid-cols-3 gap-6 items-center">
+          {/* España - Opaco y escala normal */}
+          <div className="opacity-75 hover:opacity-100 transition-opacity duration-300">
+            <PriceCard country="spain" variant="standard" />
+          </div>
+          
+          {/* Colombia - Destacado con scale y z-index */}
+          <div className="scale-110 z-10 -mt-6">
+            <PriceCard country="colombia" featured={true} variant="standard" />
+          </div>
+          
+          {/* USA - Opaco y escala normal */}
+          <div className="opacity-75 hover:opacity-100 transition-opacity duration-300">
+            <PriceCard country="usa" variant="standard" />
+          </div>
         </div>
       </div>
     </section>

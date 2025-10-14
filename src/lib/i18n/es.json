@@ -141,6 +141,12 @@
     "section_title": "Calidad Mundial, Precios Inteligentes",
     "section_subtitle": "Accede a procedimientos médicos de clase mundial con ahorros significativos. Sin comprometer tu seguridad ni los resultados que mereces.",
     "view_details": "Ver Detalles",
+    "comparison": {
+      "title": "Otras Opciones",
+      "no_extras": "Sin extras incluidos",
+      "spain_note": "Precio sin beneficios adicionales",
+      "usa_note": "Precio sin beneficios adicionales"
+    },
     "spain": {
       "country": "España",
       "price_range": "€8,000 - €12,000",
@@ -154,10 +160,12 @@
     "colombia": {
       "country": "Colombia",
       "price_range": "$4,000 - $6,000",
+      "hero_title": "La Mejor Opción 🏆",
       "badge_best_value": "Mejor Valor",
       "badge_savings": "Ahorra 50-60%",
       "vs_others": "vs. USA y Europa",
-      "note": "Precio promedio para procedimientos cosméticos"
+      "note": "Precio promedio para procedimientos cosméticos",
+      "all_inclusive": "Todo Incluido"
     },
     "benefits": {
       "title": "Todo Incluido en Colombia",
