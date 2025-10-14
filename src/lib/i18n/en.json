@@ -288,19 +288,9 @@
     },
     "final_cta": {
       "title": "Ready for the Next Step?",
-      "subtitle": "Complete the form and one of our bilingual coordinators will contact you to schedule your free virtual consultation",
-      "form_name": "Full name",
-      "form_name_placeholder": "Your name",
-      "form_email": "Email or WhatsApp",
-      "form_email_placeholder": "email@example.com or +1234567890",
-      "form_procedure": "Procedure of interest",
-      "form_procedure_placeholder": "Select a procedure",
-      "form_message": "Message (optional)",
-      "form_message_placeholder": "Tell us more about what you're looking for...",
-      "form_submit": "Request Free Consultation",
-      "form_submitting": "Sending...",
-      "form_success": "Thank you! We'll contact you soon.",
-      "form_error": "There was an error. Please try again."
+      "subtitle": "Schedule your free virtual consultation with one of our specialists",
+      "cta_primary": "Schedule Your Free Consultation",
+      "cta_secondary": "More Information"
     }
   }
 }

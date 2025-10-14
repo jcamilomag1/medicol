@@ -288,19 +288,9 @@
     },
     "final_cta": {
       "title": "¿Lista para el Siguiente Paso?",
-      "subtitle": "Completa el formulario y una de nuestras coordinadoras bilingües te contactará para agendar tu consulta virtual gratuita",
-      "form_name": "Nombre completo",
-      "form_name_placeholder": "Tu nombre",
-      "form_email": "Email o WhatsApp",
-      "form_email_placeholder": "correo@ejemplo.com o +1234567890",
-      "form_procedure": "Procedimiento de interés",
-      "form_procedure_placeholder": "Selecciona un procedimiento",
-      "form_message": "Mensaje (opcional)",
-      "form_message_placeholder": "Cuéntanos más sobre lo que buscas...",
-      "form_submit": "Solicitar Consulta Gratuita",
-      "form_submitting": "Enviando...",
-      "form_success": "¡Gracias! Te contactaremos pronto.",
-      "form_error": "Hubo un error. Por favor intenta de nuevo."
+      "subtitle": "Agenda tu consulta virtual gratuita con uno de nuestros especialistas",
+      "cta_primary": "Agenda tu Consulta Gratuita",
+      "cta_secondary": "Más Información"
     }
   }
 }
