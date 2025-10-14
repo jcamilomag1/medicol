@@ -4,8 +4,7 @@ import { PlasticHeroSection } from '@/components/plastic-surgery/PlasticHeroSect
 import { ValuePropositionSection } from '@/components/plastic-surgery/ValuePropositionSection';
 import { ProceduresGrid } from '@/components/plastic-surgery/ProceduresGrid';
 import { TestimonialsSection } from '@/components/plastic-surgery/TestimonialsSection';
-import { FAQSection } from '@/components/plastic-surgery/FAQSection';
-import { FinalCTASection } from '@/components/plastic-surgery/FinalCTASection';
+import { FAQWithCTASection } from '@/components/plastic-surgery/FAQWithCTASection';
 
 const PlasticSurgeryPage = () => {
   return (
@@ -14,8 +13,7 @@ const PlasticSurgeryPage = () => {
       <ValuePropositionSection />
       <ProceduresGrid />
       <TestimonialsSection />
-      <FAQSection />
-      <FinalCTASection />
+      <FAQWithCTASection />
     </Layout>
   );
 };
