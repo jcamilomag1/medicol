@@ -1,5 +1,17 @@
 import { useTranslation } from 'react-i18next';
-import { Check, Sparkles } from 'lucide-react';
+import { 
+  Check, 
+  Award,
+  Globe,
+  Flag,
+  MapPin,
+  Shield,
+  Plane,
+  Pill,
+  Hand,
+  Shirt,
+  DollarSign
+} from 'lucide-react';
 
 interface PriceCardProps {
   country: 'spain' | 'usa' | 'colombia';
@@ -10,20 +22,22 @@ interface PriceCardProps {
 const PriceCard: React.FC<PriceCardProps> = ({ country, featured = false, variant = 'standard' }) => {
   const { t } = useTranslation();
   
-  const countryFlags = {
-    spain: '🇪🇸',
-    usa: '🇺🇸',
-    colombia: '🇨🇴'
+  const countryIcons = {
+    spain: Globe,
+    usa: Flag,
+    colombia: MapPin
   };
+  
+  const CountryIcon = countryIcons[country];
 
   const includesBenefits = country === 'colombia';
 
   const benefits = [
-    { key: 'insurance', icon: '🛡️' },
-    { key: 'transport', icon: '✈️' },
-    { key: 'medications', icon: '💊' },
-    { key: 'massage', icon: '💆' },
-    { key: 'garments', icon: '👔' }
+    { key: 'insurance', Icon: Shield },
+    { key: 'transport', Icon: Plane },
+    { key: 'medications', Icon: Pill },
+    { key: 'massage', Icon: Hand },
+    { key: 'garments', Icon: Shirt }
   ];
 
   // Hero variant para móvil - Colombia destacado
@@ -37,14 +51,18 @@ const PriceCard: React.FC<PriceCardProps> = ({ country, featured = false, varian
         {/* Badge Mejor Valor */}
         <div className="relative flex justify-center mb-4">
           <span className="bg-gradient-to-r from-accent to-accent/80 text-accent-foreground px-6 py-2 rounded-full text-sm font-bold shadow-lg flex items-center gap-2">
-            <Sparkles className="w-4 h-4" />
+            <Award className="w-4 h-4" />
             {t('pricing.colombia.badge_best_value')}
           </span>
         </div>
 
         {/* Flag y Título */}
         <div className="text-center mb-6 relative">
-          <div className="text-6xl mb-3">{countryFlags[country]}</div>
+          <div className="flex justify-center mb-3">
+            <div className="bg-accent/10 p-6 rounded-full">
+              <CountryIcon className="w-16 h-16 text-accent" strokeWidth={1.5} />
+            </div>
+          </div>
           <h3 className="text-3xl font-black text-foreground mb-2">
             {t(`pricing.${country}.country`)}
           </h3>
@@ -81,17 +99,23 @@ const PriceCard: React.FC<PriceCardProps> = ({ country, featured = false, varian
 
         {/* Benefits visibles completos */}
         <div className="space-y-4 mb-6">
-          <h4 className="font-bold text-lg text-center text-accent mb-4">
-            ✨ {t('pricing.colombia.all_inclusive')}
+          <h4 className="font-bold text-lg text-center text-accent mb-4 flex items-center justify-center gap-2">
+            <Award className="w-5 h-5" />
+            {t('pricing.colombia.all_inclusive')}
           </h4>
-          {benefits.map((benefit) => (
-            <div key={benefit.key} className="flex items-start gap-3 bg-white/50 rounded-xl p-3">
-              <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-              <p className="text-sm font-medium text-foreground">
-                {t(`pricing.benefits.${benefit.key}`)}
-              </p>
-            </div>
-          ))}
+          {benefits.map((benefit) => {
+            const BenefitIcon = benefit.Icon;
+            return (
+              <div key={benefit.key} className="flex items-start gap-3 bg-white/50 rounded-xl p-3">
+                <div className="bg-accent/10 p-2 rounded-lg">
+                  <BenefitIcon className="w-5 h-5 text-accent flex-shrink-0" />
+                </div>
+                <p className="text-sm font-medium text-foreground">
+                  {t(`pricing.benefits.${benefit.key}`)}
+                </p>
+              </div>
+            );
+          })}
         </div>
 
         {/* Separador */}
@@ -138,17 +162,22 @@ const PriceCard: React.FC<PriceCardProps> = ({ country, featured = false, varian
       {/* Badge "Mejor Valor" solo para Colombia */}
       {featured && (
         <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-          <span className="bg-accent text-accent-foreground px-6 py-2 rounded-full text-sm font-bold shadow-lg flex items-center gap-2">
-            <Sparkles className="w-4 h-4" />
-            {t('pricing.colombia.badge_best_value')}
-          </span>
+        <span className="bg-accent text-accent-foreground px-6 py-2 rounded-full text-sm font-bold shadow-lg flex items-center gap-2">
+          <Award className="w-4 h-4" />
+          {t('pricing.colombia.badge_best_value')}
+        </span>
         </div>
       )}
 
       {/* Country Flag & Name */}
       <div className="text-center mb-6">
-        <div className="text-5xl mb-3">
-          {countryFlags[country]}
+        <div className="flex justify-center mb-3">
+          <div className={`p-5 rounded-full ${featured ? 'bg-accent/10' : 'bg-gray-100'}`}>
+            <CountryIcon 
+              className={`w-12 h-12 ${featured ? 'text-accent' : 'text-gray-600'}`} 
+              strokeWidth={1.5} 
+            />
+          </div>
         </div>
         
         <h3 className="text-2xl font-bold text-foreground">
@@ -184,16 +213,21 @@ const PriceCard: React.FC<PriceCardProps> = ({ country, featured = false, varian
       {/* Benefits List */}
       <div className="flex-grow mb-6">
         {includesBenefits ? (
-          <div className="space-y-3">
-            {benefits.map((benefit) => (
+        <div className="space-y-3">
+          {benefits.map((benefit) => {
+            const BenefitIcon = benefit.Icon;
+            return (
               <div key={benefit.key} className="flex items-start gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                <div className="bg-accent/10 p-1.5 rounded-lg">
+                  <BenefitIcon className="w-4 h-4 text-accent flex-shrink-0" />
+                </div>
                 <p className="text-sm font-medium text-foreground">
                   {t(`pricing.benefits.${benefit.key}`)}
                 </p>
               </div>
-            ))}
-          </div>
+            );
+          })}
+        </div>
         ) : (
           <div className="text-center py-8">
             <p className="text-sm text-muted-foreground/60 italic">
@@ -239,15 +273,18 @@ const PriceComparisonTable: React.FC = () => {
 
   return (
     <div className="md:hidden bg-white/80 backdrop-blur-lg rounded-2xl p-6 border border-gray-200 shadow-lg">
-      <h3 className="text-xl font-bold text-center mb-5 text-foreground">
-        💰 {t('pricing.comparison.title')}
+      <h3 className="text-xl font-bold text-center mb-5 text-foreground flex items-center justify-center gap-2">
+        <DollarSign className="w-5 h-5 text-accent" />
+        {t('pricing.comparison.title')}
       </h3>
       
       <div className="space-y-4">
         {/* España */}
         <div className="flex justify-between items-center py-4 border-b border-gray-200">
           <div className="flex items-center gap-3">
-            <span className="text-4xl">🇪🇸</span>
+            <div className="bg-gray-100 p-3 rounded-full">
+              <Globe className="w-7 h-7 text-gray-600" strokeWidth={1.5} />
+            </div>
             <span className="font-semibold text-lg">{t('pricing.spain.country')}</span>
           </div>
           <div className="text-right">
@@ -259,7 +296,9 @@ const PriceComparisonTable: React.FC = () => {
         {/* USA */}
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center gap-3">
-            <span className="text-4xl">🇺🇸</span>
+            <div className="bg-gray-100 p-3 rounded-full">
+              <Flag className="w-7 h-7 text-gray-600" strokeWidth={1.5} />
+            </div>
             <span className="font-semibold text-lg">{t('pricing.usa.country')}</span>
           </div>
           <div className="text-right">
@@ -296,10 +335,10 @@ export const PriceSection = () => {
         </div>
 
         {/* MÓVIL: Hero Card Colombia + Tabla Comparación */}
-        <div className="md:hidden space-y-6">
-          <PriceCard country="colombia" featured={true} variant="hero" />
-          <PriceComparisonTable />
-        </div>
+      <div className="md:hidden space-y-6 mt-16">
+        <PriceCard country="colombia" featured={true} variant="hero" />
+        <PriceComparisonTable />
+      </div>
 
         {/* DESKTOP: 3 Cards con Colombia destacado */}
         <div className="hidden md:grid md:grid-cols-3 gap-6 items-center">
