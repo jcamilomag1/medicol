@@ -174,5 +174,38 @@
       "subtitle": "Get your personalized quote within 24 hours"
     },
     "disclaimer": "Prices are estimates and may vary depending on the specific procedure. Consultation included at no cost."
+  },
+  "reviews": {
+    "section_title": "What our patients say",
+    "section_subtitle": "Real reviews from satisfied patients who transformed their lives with Medicol",
+    "review1": {
+      "name": "María González",
+      "comment": "Excellent care from the first moment. The medical team is very professional and the results exceeded my expectations. 100% recommended.",
+      "procedure": "Liposuction and Liposculpture"
+    },
+    "review2": {
+      "name": "John Smith",
+      "comment": "Amazing experience from consultation to recovery. The doctors are world-class and the facilities are top-notch. Worth every penny.",
+      "procedure": "Rhinoplasty"
+    },
+    "review3": {
+      "name": "Carlos Ramírez",
+      "country": "Spain",
+      "comment": "I came from Spain and was impressed with the quality of service. Everything was perfect, from transportation to post-operative follow-up.",
+      "procedure": "Hair Transplant"
+    },
+    "review4": {
+      "name": "Jennifer Lee",
+      "comment": "Best decision of my life! The team made me feel safe and comfortable throughout the entire process. Results are natural and beautiful.",
+      "procedure": "Brazilian Butt Lift"
+    },
+    "verified_patient": "Verified Patient",
+    "procedure_label": "Procedure",
+    "date_label": "Date",
+    "cta_badge": "Watch video testimonials",
+    "cta_title": "Want to see more real stories?",
+    "cta_description": "Discover the complete experiences of our patients on video. Real stories, real transformations.",
+    "cta_button": "See The Medicol Experience",
+    "cta_trust_badge": "Over 500 video testimonials from real patients"
   }
 }

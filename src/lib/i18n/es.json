@@ -174,5 +174,38 @@
       "subtitle": "Descubre tu presupuesto personalizado en 24 horas"
     },
     "disclaimer": "Los precios son estimados y pueden variar según el procedimiento específico. Consulta incluida sin costo."
+  },
+  "reviews": {
+    "section_title": "Lo que dicen nuestros pacientes",
+    "section_subtitle": "Reseñas reales de pacientes satisfechos que transformaron su vida con Medicol",
+    "review1": {
+      "name": "María González",
+      "comment": "Excelente atención desde el primer momento. El equipo médico es muy profesional y los resultados superaron mis expectativas. 100% recomendado.",
+      "procedure": "Liposucción y Lipoescultura"
+    },
+    "review2": {
+      "name": "John Smith",
+      "comment": "Amazing experience from consultation to recovery. The doctors are world-class and the facilities are top-notch. Worth every penny.",
+      "procedure": "Rinoplastia"
+    },
+    "review3": {
+      "name": "Carlos Ramírez",
+      "country": "España",
+      "comment": "Vine desde España y quedé impresionado con la calidad del servicio. Todo fue perfecto, desde el traslado hasta el seguimiento post-operatorio.",
+      "procedure": "Implante Capilar"
+    },
+    "review4": {
+      "name": "Jennifer Lee",
+      "comment": "Best decision of my life! The team made me feel safe and comfortable throughout the entire process. Results are natural and beautiful.",
+      "procedure": "Brazilian Butt Lift"
+    },
+    "verified_patient": "Paciente Verificado",
+    "procedure_label": "Procedimiento",
+    "date_label": "Fecha",
+    "cta_badge": "Mira los testimonios en video",
+    "cta_title": "¿Quieres ver más historias reales?",
+    "cta_description": "Conoce las experiencias completas de nuestros pacientes en video. Historias reales, transformaciones reales.",
+    "cta_button": "Ver La Experiencia Medicol",
+    "cta_trust_badge": "Más de 500 testimonios en video de pacientes reales"
   }
 }
