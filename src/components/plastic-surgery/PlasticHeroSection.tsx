@@ -3,97 +3,110 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Shield, Award, Star } from 'lucide-react';
-
 export const PlasticHeroSection = () => {
-  const { t } = useTranslation();
-
+  const {
+    t
+  } = useTranslation();
   const scrollToProcedures = () => {
-    document.getElementById('procedures')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('procedures')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
   const handleCTAClick = () => {
     const whatsappNumber = "573001234567"; // Replace with actual number
     const message = encodeURIComponent(t('plastic_surgery.hero.cta_button'));
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
   };
-
-  return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-primary-light to-accent">
+  return <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-primary-light to-accent">
       {/* Animated background overlay */}
       <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-cover bg-center opacity-10" />
       <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/70 to-transparent" />
       
       {/* Content */}
       <div className="container relative z-10 px-6 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto text-center"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 30
+      }} animate={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.8
+      }} className="max-w-4xl mx-auto text-center">
           {/* Title */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
-          >
+          <motion.h1 initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          delay: 0.2,
+          duration: 0.8
+        }} className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             {t('plastic_surgery.hero.title')}
           </motion.h1>
 
           {/* Highlight Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="mb-6"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          scale: 0.8
+        }} animate={{
+          opacity: 1,
+          scale: 1
+        }} transition={{
+          delay: 0.4,
+          duration: 0.6
+        }} className="mb-6">
             <Badge className="bg-accent text-accent-foreground text-lg px-6 py-2 font-bold">
               {t('plastic_surgery.hero.subtitle_highlight')}
             </Badge>
           </motion.div>
 
           {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto"
-          >
+          <motion.p initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          delay: 0.6,
+          duration: 0.8
+        }} className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto">
             {t('plastic_surgery.hero.subtitle')}
           </motion.p>
 
           {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
-          >
-            <Button
-              size="lg"
-              onClick={handleCTAClick}
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
-            >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          delay: 0.8,
+          duration: 0.8
+        }} className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Button size="lg" onClick={handleCTAClick} className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all">
               {t('plastic_surgery.hero.cta_button')}
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={scrollToProcedures}
-              className="border-white text-white hover:bg-white/10 font-bold text-lg px-8 py-6"
-            >
+            <Button size="lg" variant="outline" onClick={scrollToProcedures} className="border-white text-white hover:bg-white/10 font-bold text-lg px-8 py-6">
               {t('plastic_surgery.hero.cta_secondary')}
             </Button>
           </motion.div>
 
           {/* Trust Badges */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.8 }}
-            className="flex flex-wrap items-center justify-center gap-6 md:gap-8"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          delay: 1,
+          duration: 0.8
+        }} className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
             <div className="flex items-center gap-2 text-white/90">
               <Star className="w-5 h-5 fill-accent text-accent" />
               <span className="text-sm md:text-base font-medium">
@@ -117,7 +130,6 @@ export const PlasticHeroSection = () => {
       </div>
 
       {/* Decorative elements */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
-    </section>
-  );
+      
+    </section>;
 };
