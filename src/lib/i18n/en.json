@@ -138,8 +138,8 @@
     }
   },
   "pricing": {
-    "section_title": "World-Class Quality, Smart Prices",
-    "section_subtitle": "Access world-class medical procedures with significant savings. Without compromising your safety or the results you deserve.",
+    "section_title": "Save up to 60% in Colombia",
+    "section_subtitle": "Same international quality, better prices and exclusive benefits included",
     "view_details": "View Details",
     "spain": {
       "country": "Spain",
@@ -167,7 +167,14 @@
       "medications": "Complete post-operative medications",
       "massage": "Specialized massages and lymphatic drainage",
       "garments": "Post-surgical compression garments",
-      "garments_details": "Bras, girdles, sleeves and more according to your procedure"
+      "garments_details": "Bras, girdles, sleeves and more according to your procedure",
+      "not_included": "Benefits not included in base price"
+    },
+    "comparison": {
+      "title": "Quick Comparison",
+      "no_extras": "No extras included",
+      "with_extras": "5 benefits included",
+      "extras_note": "Accommodation, transport and insurance costs not included"
     },
     "cta": {
       "button": "Schedule Your Free Consultation",
