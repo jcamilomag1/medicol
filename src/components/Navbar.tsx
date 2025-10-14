@@ -108,13 +108,13 @@ export const Navbar = () => {
                     </DropdownMenuTrigger>
                     <DropdownMenuContent 
                       align="start" 
-                      className="w-[320px] bg-background border border-border shadow-xl z-[100]"
+                      className="w-[320px] bg-primary border border-primary shadow-xl z-[100]"
                     >
                       {link.submenu.map((subLink) => (
                         <DropdownMenuItem key={subLink.key} asChild>
                           <a
                             href={subLink.href}
-                            className="cursor-pointer text-foreground hover:bg-accent/10 px-4 py-3 text-sm font-medium"
+                            className="cursor-pointer text-white hover:bg-accent hover:text-primary px-4 py-3 text-sm font-medium transition-colors duration-200"
                           >
                             {t(subLink.key)}
                           </a>
