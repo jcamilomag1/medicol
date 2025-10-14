@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Star, Check, Play, ArrowRight } from 'lucide-react';
-
 interface Review {
   id: string;
   nameKey: string;
@@ -13,56 +12,51 @@ interface Review {
   date: string;
   verified: boolean;
 }
-
-const reviews: Review[] = [
-  {
-    id: '1',
-    nameKey: 'reviews.review1.name',
-    countryKey: 'countries.colombia',
-    countryFlag: '🇨🇴',
-    rating: 5,
-    commentKey: 'reviews.review1.comment',
-    procedureKey: 'reviews.review1.procedure',
-    date: 'Marzo 2024',
-    verified: true
-  },
-  {
-    id: '2',
-    nameKey: 'reviews.review2.name',
-    countryKey: 'countries.usa',
-    countryFlag: '🇺🇸',
-    rating: 5,
-    commentKey: 'reviews.review2.comment',
-    procedureKey: 'reviews.review2.procedure',
-    date: 'Febrero 2024',
-    verified: true
-  },
-  {
-    id: '3',
-    nameKey: 'reviews.review3.name',
-    countryKey: 'reviews.review3.country',
-    countryFlag: '🇪🇸',
-    rating: 5,
-    commentKey: 'reviews.review3.comment',
-    procedureKey: 'reviews.review3.procedure',
-    date: 'Enero 2024',
-    verified: true
-  },
-  {
-    id: '4',
-    nameKey: 'reviews.review4.name',
-    countryKey: 'countries.usa',
-    countryFlag: '🇺🇸',
-    rating: 5,
-    commentKey: 'reviews.review4.comment',
-    procedureKey: 'reviews.review4.procedure',
-    date: 'Abril 2024',
-    verified: true
-  }
-];
-
+const reviews: Review[] = [{
+  id: '1',
+  nameKey: 'reviews.review1.name',
+  countryKey: 'countries.colombia',
+  countryFlag: '🇨🇴',
+  rating: 5,
+  commentKey: 'reviews.review1.comment',
+  procedureKey: 'reviews.review1.procedure',
+  date: 'Marzo 2024',
+  verified: true
+}, {
+  id: '2',
+  nameKey: 'reviews.review2.name',
+  countryKey: 'countries.usa',
+  countryFlag: '🇺🇸',
+  rating: 5,
+  commentKey: 'reviews.review2.comment',
+  procedureKey: 'reviews.review2.procedure',
+  date: 'Febrero 2024',
+  verified: true
+}, {
+  id: '3',
+  nameKey: 'reviews.review3.name',
+  countryKey: 'reviews.review3.country',
+  countryFlag: '🇪🇸',
+  rating: 5,
+  commentKey: 'reviews.review3.comment',
+  procedureKey: 'reviews.review3.procedure',
+  date: 'Enero 2024',
+  verified: true
+}, {
+  id: '4',
+  nameKey: 'reviews.review4.name',
+  countryKey: 'countries.usa',
+  countryFlag: '🇺🇸',
+  rating: 5,
+  commentKey: 'reviews.review4.comment',
+  procedureKey: 'reviews.review4.procedure',
+  date: 'Abril 2024',
+  verified: true
+}];
 const containerVariants = {
-  hidden: { opacity: 0 },
+  hidden: {
+    opacity: 0
+  },
   visible: {
     opacity: 1,
     transition: {
@@ -70,9 +64,12 @@ const containerVariants = {
     }
   }
 };
-
 const cardVariants = {
-  hidden: { opacity: 0, y: 30, scale: 0.95 },
+  hidden: {
+    opacity: 0,
+    y: 30,
+    scale: 0.95
+  },
   visible: {
     opacity: 1,
     y: 0,
@@ -84,21 +81,24 @@ const cardVariants = {
     }
   }
 };
-
 export const ReviewSection = () => {
-  const { t } = useTranslation();
-
-  return (
-    <section className="py-20 sm:py-24 bg-gradient-to-b from-background to-secondary/20">
+  const {
+    t
+  } = useTranslation();
+  return <section className="py-20 sm:py-24 bg-gradient-to-b from-background to-secondary/20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          className="max-w-3xl mx-auto text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
+        <motion.div className="max-w-3xl mx-auto text-center mb-16" initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.6
+      }}>
           <h2 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl lg:text-6xl mb-6">
             {t('reviews.section_title')}
           </h2>
@@ -108,20 +108,13 @@ export const ReviewSection = () => {
         </motion.div>
 
         {/* Review Cards Grid */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={containerVariants}
-        >
-          {reviews.map((review) => (
-            <motion.div
-              key={review.id}
-              className="relative p-6 rounded-2xl bg-gradient-to-br from-card/80 via-card/60 to-background/80 backdrop-blur-xl border border-border/50 shadow-lg hover:shadow-2xl transition-all duration-300"
-              variants={cardVariants}
-              whileHover={{ y: -8, scale: 1.02 }}
-            >
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16" initial="hidden" whileInView="visible" viewport={{
+        once: true
+      }} variants={containerVariants}>
+          {reviews.map(review => <motion.div key={review.id} className="relative p-6 rounded-2xl bg-gradient-to-br from-card/80 via-card/60 to-background/80 backdrop-blur-xl border border-border/50 shadow-lg hover:shadow-2xl transition-all duration-300" variants={cardVariants} whileHover={{
+          y: -8,
+          scale: 1.02
+        }}>
               {/* Header with Avatar and Name */}
               <div className="flex items-start gap-4 mb-4">
                 {/* Avatar */}
@@ -140,26 +133,26 @@ export const ReviewSection = () => {
                 </div>
 
                 {/* Verified Badge */}
-                {review.verified && (
-                  <div className="flex items-center gap-1 text-xs bg-green-50 dark:bg-green-950/30 text-green-700 dark:text-green-400 px-2 py-1 rounded-full shrink-0">
+                {review.verified && <div className="flex items-center gap-1 text-xs bg-green-50 dark:bg-green-950/30 text-green-700 dark:text-green-400 px-2 py-1 rounded-full shrink-0">
                     <Check className="w-3 h-3" />
-                  </div>
-                )}
+                  </div>}
               </div>
 
               {/* Stars */}
               <div className="flex gap-1 mb-4">
-                {[...Array(review.rating)].map((_, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.5 + (i * 0.05) }}
-                  >
+                {[...Array(review.rating)].map((_, i) => <motion.div key={i} initial={{
+              opacity: 0,
+              scale: 0
+            }} whileInView={{
+              opacity: 1,
+              scale: 1
+            }} viewport={{
+              once: true
+            }} transition={{
+              delay: 0.5 + i * 0.05
+            }}>
                     <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  </motion.div>
-                ))}
+                  </motion.div>)}
               </div>
 
               {/* Comment */}
@@ -176,24 +169,29 @@ export const ReviewSection = () => {
                   <span className="font-semibold">{t('reviews.date_label')}:</span> {review.date}
                 </p>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>)}
         </motion.div>
 
         {/* Call to Action */}
-        <motion.div
-          className="mt-16 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6 }}
-        >
+        <motion.div className="mt-16 text-center" initial={{
+        opacity: 0,
+        y: 30
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} transition={{
+        delay: 0.6
+      }}>
           {/* Badge superior */}
-          <motion.div
-            className="inline-flex items-center gap-2 mb-6 px-6 py-2 bg-accent/10 border border-accent/30 rounded-full"
-            animate={{ scale: [1, 1.05, 1] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          >
+          <motion.div className="inline-flex items-center gap-2 mb-6 px-6 py-2 bg-accent/10 border border-accent/30 rounded-full" animate={{
+          scale: [1, 1.05, 1]
+        }} transition={{
+          duration: 2,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}>
             <Play className="w-5 h-5 text-accent" />
             <span className="text-accent font-semibold text-sm">
               {t('reviews.cta_badge')}
@@ -211,23 +209,19 @@ export const ReviewSection = () => {
           </p>
 
           {/* Botón Principal */}
-          <motion.a
-            href="/experiencia"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-accent hover:bg-accent/90 text-white font-bold rounded-full text-lg shadow-xl hover:shadow-2xl transition-all"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-          >
+          <motion.a href="/experiencia" className="inline-flex items-center gap-3 px-10 py-5 bg-accent hover:bg-accent/90 text-white font-bold rounded-full text-lg shadow-xl hover:shadow-2xl transition-all" whileHover={{
+          scale: 1.05
+        }} whileTap={{
+          scale: 0.98
+        }}>
             <Play className="w-6 h-6" />
             {t('reviews.cta_button')}
             <ArrowRight className="w-5 h-5" />
           </motion.a>
 
           {/* Trust badge */}
-          <p className="text-sm text-muted-foreground mt-6">
-            ⭐ {t('reviews.cta_trust_badge')}
-          </p>
+          
         </motion.div>
       </div>
-    </section>
-  );
+    </section>;
 };
