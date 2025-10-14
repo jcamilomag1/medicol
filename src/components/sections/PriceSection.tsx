@@ -341,7 +341,7 @@ export const PriceSection = () => {
       </div>
 
         {/* DESKTOP: 3 Cards con Colombia destacado */}
-        <div className="hidden md:grid md:grid-cols-3 gap-6 items-center">
+        <div className="hidden md:grid md:grid-cols-3 gap-6 items-center mt-16">
           {/* España - Opaco y escala normal */}
           <div className="opacity-75 hover:opacity-100 transition-opacity duration-300">
             <PriceCard country="spain" variant="standard" />
