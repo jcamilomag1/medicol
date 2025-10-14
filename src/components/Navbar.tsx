@@ -114,7 +114,7 @@ export const Navbar = () => {
                         <DropdownMenuItem key={subLink.key} asChild>
                           <a
                             href={subLink.href}
-                            className="cursor-pointer text-white hover:bg-accent hover:text-primary px-4 py-3 text-sm font-medium transition-colors duration-200"
+                            className="cursor-pointer text-white hover:bg-accent hover:text-primary px-4 py-3 text-sm font-medium transition-colors duration-200 border-b border-white/10"
                           >
                             {t(subLink.key)}
                           </a>
