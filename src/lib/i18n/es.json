@@ -138,8 +138,8 @@
     }
   },
   "pricing": {
-    "section_title": "Ahorra hasta 60% en Colombia",
-    "section_subtitle": "Misma calidad internacional, mejores precios y beneficios exclusivos incluidos",
+    "section_title": "Calidad Mundial, Precios Inteligentes",
+    "section_subtitle": "Accede a procedimientos médicos de clase mundial con ahorros significativos. Sin comprometer tu seguridad ni los resultados que mereces.",
     "view_details": "Ver Detalles",
     "spain": {
       "country": "España",
@@ -167,14 +167,7 @@
       "medications": "Medicamentos postoperatorios completos",
       "massage": "Masajes y drenajes linfáticos especializados",
       "garments": "Prendas de compresión postquirúrgicas",
-      "garments_details": "Brassieres, fajas, manguitos y más según tu procedimiento",
-      "not_included": "Beneficios no incluidos en el precio base"
-    },
-    "comparison": {
-      "title": "Comparación Rápida",
-      "no_extras": "Sin extras incluidos",
-      "with_extras": "5 beneficios incluidos",
-      "extras_note": "Costos de hospedaje, transporte y seguros no incluidos"
+      "garments_details": "Brassieres, fajas, manguitos y más según tu procedimiento"
     },
     "cta": {
       "button": "Agenda tu Consulta Gratis",
