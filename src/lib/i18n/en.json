@@ -221,5 +221,86 @@
     "cta_description": "Discover the complete experiences of our patients on video. Real stories, real transformations.",
     "cta_button": "See The Medicol Experience",
     "cta_trust_badge": "Over 500 video testimonials from real patients"
+  },
+  "plastic_surgery": {
+    "hero": {
+      "title": "World-Class Plastic Surgery in Colombia",
+      "subtitle_highlight": "Save up to 70%",
+      "subtitle": "Certified surgeons, cutting-edge technology, and the personalized care you deserve",
+      "cta_button": "Schedule Your Free Virtual Consultation",
+      "cta_secondary": "View Procedures",
+      "trust_badge_reviews": "4.9/5 in Reviews",
+      "trust_badge_certified": "Accredited Clinics",
+      "trust_badge_surgeons": "Certified Surgeons"
+    },
+    "value_proposition": {
+      "title": "Your Beauty and Safety are Our Priority",
+      "savings": {
+        "title": "Smart Savings",
+        "description": "Access premium procedures saving up to 70% compared to the U.S. and Europe. Invest in yourself, not in overcharges."
+      },
+      "excellence": {
+        "title": "Certified Excellence",
+        "description": "We work exclusively with plastic surgeons who are members of the Colombian Society of Plastic Surgery and in clinics with the highest quality standards."
+      },
+      "experience": {
+        "title": "Complete Experience",
+        "description": "We accompany you every step of the way: from virtual consultation to your recovery in Colombia. We handle the logistics so you only worry about your well-being."
+      }
+    },
+    "procedures": {
+      "title": "Our Procedures",
+      "subtitle": "Explore our wide range of plastic surgeries performed by certified experts",
+      "filter_all": "All",
+      "filter_face": "Face & Neck",
+      "filter_body": "Body Contouring",
+      "filter_breast": "Breast",
+      "filter_reconstructive": "Reconstructive",
+      "from_price": "From",
+      "save_up_to": "Save up to",
+      "view_details": "View Details",
+      "learn_more": "Learn More"
+    },
+    "modal": {
+      "surgery_time": "Surgery Time",
+      "anesthesia": "Anesthesia",
+      "recovery": "Recovery",
+      "final_results": "Final Results",
+      "ideal_for": "Ideal for candidates who...",
+      "package_includes": "Package Includes",
+      "price_in_medicol": "Price at Medicol",
+      "price_in_us": "Average Price in U.S.",
+      "your_savings": "Your Potential Savings",
+      "cta_button": "Request Quote",
+      "cta_whatsapp": "Consult via WhatsApp",
+      "before_after": "Before & After",
+      "close": "Close"
+    },
+    "testimonials": {
+      "title": "Real Patients, Life-Changing Results",
+      "subtitle": "Discover the experiences of those who trusted us",
+      "watch_video": "Watch Video",
+      "read_more": "Read more"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "We answer your questions about plastic surgery in Colombia"
+    },
+    "final_cta": {
+      "title": "Ready for the Next Step?",
+      "subtitle": "Complete the form and one of our bilingual coordinators will contact you to schedule your free virtual consultation",
+      "form_name": "Full name",
+      "form_name_placeholder": "Your name",
+      "form_email": "Email or WhatsApp",
+      "form_email_placeholder": "email@example.com or +1234567890",
+      "form_procedure": "Procedure of interest",
+      "form_procedure_placeholder": "Select a procedure",
+      "form_message": "Message (optional)",
+      "form_message_placeholder": "Tell us more about what you're looking for...",
+      "form_submit": "Request Free Consultation",
+      "form_submitting": "Sending...",
+      "form_success": "Thank you! We'll contact you soon.",
+      "form_error": "There was an error. Please try again."
+    }
   }
 }

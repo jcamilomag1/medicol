@@ -221,5 +221,86 @@
     "cta_description": "Conoce las experiencias completas de nuestros pacientes en video. Historias reales, transformaciones reales.",
     "cta_button": "Ver La Experiencia Medicol",
     "cta_trust_badge": "Más de 500 testimonios en video de pacientes reales"
+  },
+  "plastic_surgery": {
+    "hero": {
+      "title": "Cirugía Plástica de Clase Mundial en Colombia",
+      "subtitle_highlight": "Ahorra hasta un 70%",
+      "subtitle": "Cirujanos certificados, tecnología de punta y la atención personalizada que mereces",
+      "cta_button": "Agenda tu Consulta Virtual Gratis",
+      "cta_secondary": "Ver Procedimientos",
+      "trust_badge_reviews": "4.9/5 en Reseñas",
+      "trust_badge_certified": "Clínicas Acreditadas",
+      "trust_badge_surgeons": "Cirujanos Certificados"
+    },
+    "value_proposition": {
+      "title": "Tu Belleza y Seguridad son Nuestra Prioridad",
+      "savings": {
+        "title": "Ahorro Inteligente",
+        "description": "Accede a procedimientos premium ahorrando hasta un 70% comparado con EE.UU. y Europa. Invierte en ti, no en sobrecostos."
+      },
+      "excellence": {
+        "title": "Excelencia Certificada",
+        "description": "Operamos únicamente con cirujanos plásticos miembros de la Sociedad Colombiana de Cirugía Plástica y en clínicas con los más altos estándares de calidad."
+      },
+      "experience": {
+        "title": "Experiencia Completa",
+        "description": "Te acompañamos en cada paso: desde la consulta virtual hasta tu recuperación en Colombia. Nos encargamos de la logística para que tú solo te preocupes por tu bienestar."
+      }
+    },
+    "procedures": {
+      "title": "Nuestros Procedimientos",
+      "subtitle": "Explora nuestra amplia gama de cirugías plásticas realizadas por expertos certificados",
+      "filter_all": "Todos",
+      "filter_face": "Rostro y Cuello",
+      "filter_body": "Contorno Corporal",
+      "filter_breast": "Senos",
+      "filter_reconstructive": "Reconstructivo",
+      "from_price": "Desde",
+      "save_up_to": "Ahorra hasta",
+      "view_details": "Ver Detalles",
+      "learn_more": "Más Información"
+    },
+    "modal": {
+      "surgery_time": "Tiempo de Cirugía",
+      "anesthesia": "Anestesia",
+      "recovery": "Recuperación",
+      "final_results": "Resultados Finales",
+      "ideal_for": "Ideal para candidatos que...",
+      "package_includes": "El Paquete Incluye",
+      "price_in_medicol": "Precio en Medicol",
+      "price_in_us": "Precio promedio en EE.UU.",
+      "your_savings": "Tu Ahorro Potencial",
+      "cta_button": "Solicitar Presupuesto",
+      "cta_whatsapp": "Consultar por WhatsApp",
+      "before_after": "Antes y Después",
+      "close": "Cerrar"
+    },
+    "testimonials": {
+      "title": "Pacientes Reales, Resultados que Cambian Vidas",
+      "subtitle": "Descubre las experiencias de quienes confiaron en nosotros",
+      "watch_video": "Ver Video",
+      "read_more": "Leer más"
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Resolvemos tus dudas sobre cirugía plástica en Colombia"
+    },
+    "final_cta": {
+      "title": "¿Lista para el Siguiente Paso?",
+      "subtitle": "Completa el formulario y una de nuestras coordinadoras bilingües te contactará para agendar tu consulta virtual gratuita",
+      "form_name": "Nombre completo",
+      "form_name_placeholder": "Tu nombre",
+      "form_email": "Email o WhatsApp",
+      "form_email_placeholder": "correo@ejemplo.com o +1234567890",
+      "form_procedure": "Procedimiento de interés",
+      "form_procedure_placeholder": "Selecciona un procedimiento",
+      "form_message": "Mensaje (opcional)",
+      "form_message_placeholder": "Cuéntanos más sobre lo que buscas...",
+      "form_submit": "Solicitar Consulta Gratuita",
+      "form_submitting": "Enviando...",
+      "form_success": "¡Gracias! Te contactaremos pronto.",
+      "form_error": "Hubo un error. Por favor intenta de nuevo."
+    }
   }
 }
