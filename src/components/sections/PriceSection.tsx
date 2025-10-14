@@ -90,7 +90,7 @@ const PriceCard: React.FC<PriceCardProps> = ({ country, featured = false, index,
           <motion.div
             className="absolute inset-0 rounded-3xl"
             style={{
-              background: 'radial-gradient(circle at 50% 50%, hsl(var(--accent) / 0.3), transparent 70%)',
+              background: 'radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.3), transparent 70%)',
               filter: 'blur(30px)',
             }}
             animate={{
@@ -211,10 +211,15 @@ const PriceCard: React.FC<PriceCardProps> = ({ country, featured = false, index,
           animate={isHero ? {
             scale: [1, 1.03, 1],
             boxShadow: [
-              '0 10px 30px -10px hsl(var(--accent) / 0.3)',
-              '0 15px 50px -10px hsl(var(--accent) / 0.5)',
-              '0 10px 30px -10px hsl(var(--accent) / 0.3)'
-            ]
+              '0 10px 30px -10px rgba(59, 130, 246, 0.3)',
+              '0 15px 50px -10px rgba(59, 130, 246, 0.5)',
+              '0 10px 30px -10px rgba(59, 130, 246, 0.3)'
+            ],
+            transition: {
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }
           } : undefined}
         >
           <p className={`font-black text-accent-foreground ${isHero ? 'text-3xl' : 'text-2xl'} mb-1`}>
