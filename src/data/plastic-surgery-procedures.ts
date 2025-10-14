@@ -1,6 +1,6 @@
 export interface Procedure {
   id: string;
-  category: 'face' | 'body' | 'breast' | 'reconstructive';
+  category: 'face' | 'body' | 'breast' | 'buttocks' | 'combined' | 'specialized';
   name_es: string;
   name_en: string;
   description_es: string;
@@ -22,32 +22,32 @@ export interface Procedure {
 }
 
 export const procedures: Procedure[] = [
-  // Face & Neck
+  // Face & Neck (6 procedures)
   {
     id: 'rhinoplasty',
     category: 'face',
     name_es: 'Rinoplastia',
     name_en: 'Rhinoplasty',
-    description_es: 'Remodelación de la nariz para mejorar su apariencia y función respiratoria.',
-    description_en: 'Nose reshaping to improve appearance and breathing function.',
+    description_es: 'Mejora la armonía facial con una remodelación precisa de la nariz.',
+    description_en: 'Enhance facial harmony with precise nose reshaping.',
     price_usd: 2500,
-    price_comparison_us: 8000,
-    savings_percentage: 69,
+    price_comparison_us: 8333,
+    savings_percentage: 70,
     image: '/placeholder.svg',
     surgery_time: '2-3 horas',
-    anesthesia_es: 'General o Local con Sedación',
-    anesthesia_en: 'General or Local with Sedation',
+    anesthesia_es: 'General',
+    anesthesia_en: 'General',
     recovery_days: '7-10 días',
     final_results_timeline_es: '6-12 meses',
     final_results_timeline_en: '6-12 months',
     ideal_candidates_es: [
-      'Desean mejorar la forma de su nariz',
+      'Desean mejorar la forma o tamaño de su nariz',
       'Buscan corregir problemas respiratorios',
       'Tienen expectativas realistas',
       'Gozan de buena salud general'
     ],
     ideal_candidates_en: [
-      'Want to improve their nose shape',
+      'Want to improve the shape or size of their nose',
       'Seek to correct breathing problems',
       'Have realistic expectations',
       'Enjoy good general health'
@@ -68,15 +68,59 @@ export const procedures: Procedure[] = [
     ]
   },
   {
+    id: 'tip-rhinoplasty',
+    category: 'face',
+    name_es: 'Rinoplastia de Punta',
+    name_en: 'Tip Rhinoplasty',
+    description_es: 'Refina la punta nasal para un mejor equilibrio facial.',
+    description_en: 'Refine the nasal tip for better facial balance.',
+    price_usd: 1650,
+    price_comparison_us: 4714,
+    savings_percentage: 65,
+    image: '/placeholder.svg',
+    surgery_time: '1-2 horas',
+    anesthesia_es: 'General o Local con Sedación',
+    anesthesia_en: 'General or Local with Sedation',
+    recovery_days: '5-7 días',
+    final_results_timeline_es: '6-12 meses',
+    final_results_timeline_en: '6-12 months',
+    ideal_candidates_es: [
+      'Desean mejorar solo la punta de la nariz',
+      'Tienen buena estructura nasal en general',
+      'Buscan resultados naturales',
+      'No requieren corrección del puente nasal'
+    ],
+    ideal_candidates_en: [
+      'Want to improve only the nose tip',
+      'Have good overall nasal structure',
+      'Seek natural results',
+      'Do not require nasal bridge correction'
+    ],
+    package_includes_es: [
+      'Honorarios del Cirujano Especialista',
+      'Costos de la Clínica',
+      'Anestesia y medicamentos',
+      'Seguimiento post-operatorio',
+      'Kit de cuidados iniciales'
+    ],
+    package_includes_en: [
+      'Specialist Surgeon Fees',
+      'Clinic Costs',
+      'Anesthesia and medications',
+      'Post-operative follow-up',
+      'Initial care kit'
+    ]
+  },
+  {
     id: 'blepharoplasty',
     category: 'face',
     name_es: 'Blefaroplastia',
     name_en: 'Blepharoplasty',
-    description_es: 'Cirugía de párpados para rejuvenecer la mirada eliminando exceso de piel y grasa.',
-    description_en: 'Eyelid surgery to rejuvenate the look by removing excess skin and fat.',
-    price_usd: 2200,
-    price_comparison_us: 6500,
-    savings_percentage: 66,
+    description_es: 'Rejuvenece los ojos para una apariencia más alerta y juvenil.',
+    description_en: 'Rejuvenate the eyes for a more alert and youthful appearance.',
+    price_usd: 1500,
+    price_comparison_us: 3750,
+    savings_percentage: 60,
     image: '/placeholder.svg',
     surgery_time: '1-2 horas',
     anesthesia_es: 'Local con Sedación',
@@ -114,15 +158,15 @@ export const procedures: Procedure[] = [
   {
     id: 'facelift',
     category: 'face',
-    name_es: 'Lifting Facial',
-    name_en: 'Facelift',
-    description_es: 'Rejuvenecimiento facial completo para reducir arrugas y tensar la piel.',
-    description_en: 'Complete facial rejuvenation to reduce wrinkles and tighten skin.',
-    price_usd: 4500,
-    price_comparison_us: 15000,
-    savings_percentage: 70,
+    name_es: 'Estiramiento Facial (Ritidectomía)',
+    name_en: 'Facelift (Rhytidectomy)',
+    description_es: 'Rejuvenecimiento facial completo para resultados duraderos.',
+    description_en: 'Complete facial rejuvenation for long-lasting results.',
+    price_usd: 9500,
+    price_comparison_us: 21111,
+    savings_percentage: 55,
     image: '/placeholder.svg',
-    surgery_time: '3-4 horas',
+    surgery_time: '3-5 horas',
     anesthesia_es: 'General',
     anesthesia_en: 'General',
     recovery_days: '14-21 días',
@@ -130,13 +174,13 @@ export const procedures: Procedure[] = [
     final_results_timeline_en: '6-12 months',
     ideal_candidates_es: [
       'Tienen flacidez en rostro y cuello',
-      'Presentan arrugas profundas',
+      'Presentan arrugas profundas y surcos',
       'Desean un rejuvenecimiento facial significativo',
       'Están en buenas condiciones de salud'
     ],
     ideal_candidates_en: [
       'Have sagging in face and neck',
-      'Present deep wrinkles',
+      'Present deep wrinkles and folds',
       'Want significant facial rejuvenation',
       'Are in good health'
     ],
@@ -155,7 +199,95 @@ export const procedures: Procedure[] = [
       'Specialized garments and bandages'
     ]
   },
-  // Body Contouring
+  {
+    id: 'lateral-brow-lift',
+    category: 'face',
+    name_es: 'Levantamiento de Cejas Lateral',
+    name_en: 'Lateral Brow Lift',
+    description_es: 'Levanta y rejuvenece el área de las cejas para una apariencia más juvenil.',
+    description_en: 'Lifts and rejuvenates the brow area for a more youthful appearance.',
+    price_usd: 2050,
+    price_comparison_us: 5125,
+    savings_percentage: 60,
+    image: '/placeholder.svg',
+    surgery_time: '1-2 horas',
+    anesthesia_es: 'Local con Sedación',
+    anesthesia_en: 'Local with Sedation',
+    recovery_days: '5-7 días',
+    final_results_timeline_es: '3-6 meses',
+    final_results_timeline_en: '3-6 months',
+    ideal_candidates_es: [
+      'Tienen cejas caídas o asimétricas',
+      'Presentan arrugas en la frente',
+      'Desean una mirada más abierta y juvenil',
+      'Buscan procedimiento menos invasivo'
+    ],
+    ideal_candidates_en: [
+      'Have drooping or asymmetric eyebrows',
+      'Present forehead wrinkles',
+      'Want a more open and youthful look',
+      'Seek less invasive procedure'
+    ],
+    package_includes_es: [
+      'Procedimiento quirúrgico completo',
+      'Honorarios del cirujano',
+      'Anestesia y medicamentos',
+      'Seguimiento post-operatorio',
+      'Kit de recuperación'
+    ],
+    package_includes_en: [
+      'Complete surgical procedure',
+      'Surgeon fees',
+      'Anesthesia and medications',
+      'Post-operative follow-up',
+      'Recovery kit'
+    ]
+  },
+  {
+    id: 'otoplasty',
+    category: 'face',
+    name_es: 'Otoplastia',
+    name_en: 'Otoplasty',
+    description_es: 'Corrige la forma y posición de las orejas para una mejor armonía facial.',
+    description_en: 'Correct the shape and position of ears for better facial harmony.',
+    price_usd: 1900,
+    price_comparison_us: 5429,
+    savings_percentage: 65,
+    image: '/placeholder.svg',
+    surgery_time: '1-2 horas',
+    anesthesia_es: 'General o Local con Sedación',
+    anesthesia_en: 'General or Local with Sedation',
+    recovery_days: '7-10 días',
+    final_results_timeline_es: '3-6 meses',
+    final_results_timeline_en: '3-6 months',
+    ideal_candidates_es: [
+      'Tienen orejas prominentes o asimétricas',
+      'Desean mejorar la forma de sus orejas',
+      'Buscan mayor confianza personal',
+      'Son adultos o niños mayores de 5 años'
+    ],
+    ideal_candidates_en: [
+      'Have prominent or asymmetric ears',
+      'Want to improve ear shape',
+      'Seek greater personal confidence',
+      'Are adults or children over 5 years old'
+    ],
+    package_includes_es: [
+      'Cirugía completa con especialista',
+      'Costos de clínica y anestesia',
+      'Medicamentos post-operatorios',
+      'Banda de compresión',
+      'Seguimiento médico'
+    ],
+    package_includes_en: [
+      'Complete surgery with specialist',
+      'Clinic and anesthesia costs',
+      'Post-operative medications',
+      'Compression headband',
+      'Medical follow-up'
+    ]
+  },
+  // Body Contouring (6 procedures)
   {
     id: 'liposuction',
     category: 'body',
@@ -204,12 +336,12 @@ export const procedures: Procedure[] = [
     id: 'tummy-tuck',
     category: 'body',
     name_es: 'Abdominoplastia',
-    name_en: 'Tummy Tuck',
-    description_es: 'Eliminación de piel y grasa excedente del abdomen para un vientre plano y firme.',
-    description_en: 'Removal of excess skin and fat from abdomen for a flat, firm belly.',
-    price_usd: 3800,
-    price_comparison_us: 12000,
-    savings_percentage: 68,
+    name_en: 'Abdominoplasty (Tummy Tuck)',
+    description_es: 'Logra un perfil abdominal más plano y tonificado.',
+    description_en: 'Achieve a flatter and more toned abdominal profile.',
+    price_usd: 5500,
+    price_comparison_us: 15714,
+    savings_percentage: 65,
     image: '/placeholder.svg',
     surgery_time: '2-4 horas',
     anesthesia_es: 'General',
@@ -245,15 +377,103 @@ export const procedures: Procedure[] = [
     ]
   },
   {
+    id: 'mini-tummy-tuck',
+    category: 'body',
+    name_es: 'Mini Abdominoplastia',
+    name_en: 'Mini Abdominoplasty',
+    description_es: 'Contorno abdominal dirigido a preocupaciones moderadas.',
+    description_en: 'Targeted abdominal contouring for moderate concerns.',
+    price_usd: 3500,
+    price_comparison_us: 8750,
+    savings_percentage: 60,
+    image: '/placeholder.svg',
+    surgery_time: '1.5-2.5 horas',
+    anesthesia_es: 'General',
+    anesthesia_en: 'General',
+    recovery_days: '7-14 días',
+    final_results_timeline_es: '3-6 meses',
+    final_results_timeline_en: '3-6 months',
+    ideal_candidates_es: [
+      'Tienen exceso de piel moderado en abdomen bajo',
+      'No requieren reparación muscular extensa',
+      'Buscan recuperación más rápida',
+      'Tienen buena salud general'
+    ],
+    ideal_candidates_en: [
+      'Have moderate excess skin in lower abdomen',
+      'Do not require extensive muscle repair',
+      'Seek faster recovery',
+      'Have good general health'
+    ],
+    package_includes_es: [
+      'Cirugía con cirujano certificado',
+      'Costos de clínica y anestesia',
+      'Medicamentos post-operatorios',
+      'Faja de compresión',
+      'Seguimiento médico'
+    ],
+    package_includes_en: [
+      'Surgery with certified surgeon',
+      'Clinic and anesthesia costs',
+      'Post-operative medications',
+      'Compression garment',
+      'Medical follow-up'
+    ]
+  },
+  {
+    id: 'thigh-lift',
+    category: 'body',
+    name_es: 'Estiramiento de Muslos (Cruroplastia)',
+    name_en: 'Thigh Lift (Cruroplasty)',
+    description_es: 'Esculpe y levanta los muslos para mejorar los contornos.',
+    description_en: 'Sculpt and lift thighs to improve contours.',
+    price_usd: 2800,
+    price_comparison_us: 6222,
+    savings_percentage: 55,
+    image: '/placeholder.svg',
+    surgery_time: '2-3 horas',
+    anesthesia_es: 'General',
+    anesthesia_en: 'General',
+    recovery_days: '14-21 días',
+    final_results_timeline_es: '3-6 meses',
+    final_results_timeline_en: '3-6 months',
+    ideal_candidates_es: [
+      'Tienen exceso de piel en los muslos',
+      'Han perdido peso significativo',
+      'Buscan muslos más firmes y tonificados',
+      'Tienen peso estable'
+    ],
+    ideal_candidates_en: [
+      'Have excess skin on thighs',
+      'Have lost significant weight',
+      'Seek firmer and more toned thighs',
+      'Have stable weight'
+    ],
+    package_includes_es: [
+      'Procedimiento quirúrgico completo',
+      'Honorarios del cirujano plástico',
+      'Instalaciones y anestesia',
+      'Prendas de compresión',
+      'Seguimiento post-operatorio'
+    ],
+    package_includes_en: [
+      'Complete surgical procedure',
+      'Plastic surgeon fees',
+      'Facilities and anesthesia',
+      'Compression garments',
+      'Post-operative follow-up'
+    ]
+  },
+  {
     id: 'arm-lift',
     category: 'body',
-    name_es: 'Lifting de Brazos',
-    name_en: 'Arm Lift',
-    description_es: 'Eliminación de piel flácida en brazos para lucir contornos definidos.',
-    description_en: 'Removal of sagging skin on arms for defined contours.',
-    price_usd: 3200,
-    price_comparison_us: 9500,
-    savings_percentage: 66,
+    name_es: 'Braquioplastia',
+    name_en: 'Brachioplasty (Arm Lift)',
+    description_es: 'Elimina el exceso de piel en los brazos para lograr brazos tonificados y definidos.',
+    description_en: 'Remove excess skin on arms to achieve toned and defined arms.',
+    price_usd: 3500,
+    price_comparison_us: 8750,
+    savings_percentage: 60,
     image: '/placeholder.svg',
     surgery_time: '2-3 horas',
     anesthesia_es: 'General',
@@ -288,17 +508,61 @@ export const procedures: Procedure[] = [
       'Post-operative follow-up'
     ]
   },
-  // Breast
+  {
+    id: 'body-lift',
+    category: 'body',
+    name_es: 'Celuloplastia',
+    name_en: 'Body Lift (Celluloplasty)',
+    description_es: 'Contorno corporal completo y estiramiento de la piel.',
+    description_en: 'Complete body contouring and skin tightening.',
+    price_usd: 4400,
+    price_comparison_us: 9778,
+    savings_percentage: 55,
+    image: '/placeholder.svg',
+    surgery_time: '4-6 horas',
+    anesthesia_es: 'General',
+    anesthesia_en: 'General',
+    recovery_days: '21-30 días',
+    final_results_timeline_es: '6-12 meses',
+    final_results_timeline_en: '6-12 months',
+    ideal_candidates_es: [
+      'Han perdido peso significativo',
+      'Tienen exceso de piel colgante en múltiples áreas',
+      'Peso estable por al menos 6 meses',
+      'Comprometidos con mantener peso saludable'
+    ],
+    ideal_candidates_en: [
+      'Have lost significant weight',
+      'Have excess hanging skin in multiple areas',
+      'Stable weight for at least 6 months',
+      'Committed to maintaining healthy weight'
+    ],
+    package_includes_es: [
+      'Cirugía completa de contorno corporal',
+      'Equipo quirúrgico especializado',
+      'Estancia en clínica',
+      'Fajas de compresión especializadas',
+      'Seguimiento prolongado'
+    ],
+    package_includes_en: [
+      'Complete body contouring surgery',
+      'Specialized surgical team',
+      'Clinic stay',
+      'Specialized compression garments',
+      'Extended follow-up'
+    ]
+  },
+  // Breast (4 procedures)
   {
     id: 'breast-augmentation',
     category: 'breast',
-    name_es: 'Aumento de Senos',
-    name_en: 'Breast Augmentation',
-    description_es: 'Aumento del tamaño y mejora de la forma de los senos con implantes.',
-    description_en: 'Increase breast size and improve shape with implants.',
-    price_usd: 3500,
+    name_es: 'Implantes de Senos',
+    name_en: 'Breast Implants',
+    description_es: 'Mejora las curvas naturales con implantes de primera calidad.',
+    description_en: 'Enhance natural curves with premium implants.',
+    price_usd: 4000,
     price_comparison_us: 10000,
-    savings_percentage: 65,
+    savings_percentage: 60,
     image: '/placeholder.svg',
     surgery_time: '1-2 horas',
     anesthesia_es: 'General',
@@ -334,15 +598,59 @@ export const procedures: Procedure[] = [
     ]
   },
   {
+    id: 'breast-lift',
+    category: 'breast',
+    name_es: 'Mastopexia (con/sin implantes)',
+    name_en: 'Mastopexy (with/without implants)',
+    description_es: 'Levanta y remodela los senos para mejorar su posición.',
+    description_en: 'Lift and reshape breasts to improve their position.',
+    price_usd: 4300,
+    price_comparison_us: 9556,
+    savings_percentage: 55,
+    image: '/placeholder.svg',
+    surgery_time: '2-3 horas',
+    anesthesia_es: 'General',
+    anesthesia_en: 'General',
+    recovery_days: '10-14 días',
+    final_results_timeline_es: '3-6 meses',
+    final_results_timeline_en: '3-6 months',
+    ideal_candidates_es: [
+      'Tienen senos caídos o con pérdida de firmeza',
+      'Los pezones apuntan hacia abajo',
+      'Buscan una apariencia más juvenil',
+      'No planean embarazos futuros cercanos'
+    ],
+    ideal_candidates_en: [
+      'Have sagging breasts or loss of firmness',
+      'Nipples point downward',
+      'Seek a more youthful appearance',
+      'Do not plan future pregnancies soon'
+    ],
+    package_includes_es: [
+      'Procedimiento de lifting completo',
+      'Cirujano certificado',
+      'Instalaciones acreditadas',
+      'Sostén post-quirúrgico',
+      'Seguimiento médico'
+    ],
+    package_includes_en: [
+      'Complete lifting procedure',
+      'Certified surgeon',
+      'Accredited facilities',
+      'Post-surgical bra',
+      'Medical follow-up'
+    ]
+  },
+  {
     id: 'breast-reduction',
     category: 'breast',
     name_es: 'Reducción de Senos',
     name_en: 'Breast Reduction',
-    description_es: 'Reducción del tamaño de los senos para aliviar molestias y mejorar proporción.',
-    description_en: 'Reduce breast size to relieve discomfort and improve proportion.',
-    price_usd: 3800,
-    price_comparison_us: 11000,
-    savings_percentage: 65,
+    description_es: 'Encuentra alivio y logra proporciones equilibradas.',
+    description_en: 'Find relief and achieve balanced proportions.',
+    price_usd: 4300,
+    price_comparison_us: 10750,
+    savings_percentage: 60,
     image: '/placeholder.svg',
     surgery_time: '2-4 horas',
     anesthesia_es: 'General',
@@ -378,15 +686,148 @@ export const procedures: Procedure[] = [
     ]
   },
   {
-    id: 'breast-lift',
+    id: 'breast-implant-replacement',
     category: 'breast',
-    name_es: 'Levantamiento de Senos',
-    name_en: 'Breast Lift',
-    description_es: 'Elevación y remodelación de senos caídos para una apariencia más juvenil.',
-    description_en: 'Lift and reshape sagging breasts for a more youthful appearance.',
-    price_usd: 3300,
-    price_comparison_us: 9500,
+    name_es: 'Reemplazo de Implantes de Senos',
+    name_en: 'Breast Implant Replacement',
+    description_es: 'Actualiza o reemplaza los implantes existentes para obtener mejores resultados.',
+    description_en: 'Update or replace existing implants for better results.',
+    price_usd: 3800,
+    price_comparison_us: 8444,
+    savings_percentage: 55,
+    image: '/placeholder.svg',
+    surgery_time: '1-2 horas',
+    anesthesia_es: 'General',
+    anesthesia_en: 'General',
+    recovery_days: '7-10 días',
+    final_results_timeline_es: '2-3 meses',
+    final_results_timeline_en: '2-3 months',
+    ideal_candidates_es: [
+      'Tienen implantes antiguos que necesitan reemplazo',
+      'Desean cambiar tamaño o tipo de implante',
+      'Experimentan complicaciones con implantes actuales',
+      'Buscan actualizar sus implantes'
+    ],
+    ideal_candidates_en: [
+      'Have old implants that need replacement',
+      'Want to change implant size or type',
+      'Experience complications with current implants',
+      'Seek to update their implants'
+    ],
+    package_includes_es: [
+      'Nuevos implantes de alta calidad',
+      'Remoción de implantes anteriores',
+      'Cirugía con cirujano certificado',
+      'Costos de clínica y anestesia',
+      'Seguimiento post-operatorio'
+    ],
+    package_includes_en: [
+      'New high-quality implants',
+      'Removal of previous implants',
+      'Surgery with certified surgeon',
+      'Clinic and anesthesia costs',
+      'Post-operative follow-up'
+    ]
+  },
+  // Buttocks (3 procedures)
+  {
+    id: 'butt-implants',
+    category: 'buttocks',
+    name_es: 'Implantes de Glúteos',
+    name_en: 'Butt Implants',
+    description_es: 'Logra curvas mejoradas con implantes de primera calidad.',
+    description_en: 'Achieve enhanced curves with premium implants.',
+    price_usd: 5800,
+    price_comparison_us: 16571,
     savings_percentage: 65,
+    image: '/placeholder.svg',
+    surgery_time: '2-3 horas',
+    anesthesia_es: 'General',
+    anesthesia_en: 'General',
+    recovery_days: '14-21 días',
+    final_results_timeline_es: '3-6 meses',
+    final_results_timeline_en: '3-6 months',
+    ideal_candidates_es: [
+      'Desean aumentar el volumen de los glúteos',
+      'No tienen suficiente grasa para lipoescultura',
+      'Buscan resultados permanentes',
+      'Gozan de buena salud general'
+    ],
+    ideal_candidates_en: [
+      'Want to increase buttock volume',
+      'Do not have enough fat for fat transfer',
+      'Seek permanent results',
+      'Enjoy good general health'
+    ],
+    package_includes_es: [
+      'Implantes de silicona de alta calidad',
+      'Cirugía con cirujano certificado',
+      'Costos de clínica y anestesia',
+      'Faja de compresión especializada',
+      'Seguimiento post-operatorio completo'
+    ],
+    package_includes_en: [
+      'High-quality silicone implants',
+      'Surgery with certified surgeon',
+      'Clinic and anesthesia costs',
+      'Specialized compression garment',
+      'Complete post-operative follow-up'
+    ]
+  },
+  {
+    id: 'gluteoplasty',
+    category: 'buttocks',
+    name_es: 'Gluteoplastia',
+    name_en: 'Gluteoplasty',
+    description_es: 'Mejora y moldea integralmente los glúteos.',
+    description_en: 'Comprehensively enhance and shape the buttocks.',
+    price_usd: 5999,
+    price_comparison_us: 14998,
+    savings_percentage: 60,
+    image: '/placeholder.svg',
+    surgery_time: '2-4 horas',
+    anesthesia_es: 'General',
+    anesthesia_en: 'General',
+    recovery_days: '14-21 días',
+    final_results_timeline_es: '3-6 meses',
+    final_results_timeline_en: '3-6 months',
+    ideal_candidates_es: [
+      'Buscan remodelación completa de glúteos',
+      'Desean mejorar forma y proyección',
+      'Tienen exceso de piel o flacidez',
+      'Quieren resultados naturales y duraderos'
+    ],
+    ideal_candidates_en: [
+      'Seek complete buttock reshaping',
+      'Want to improve shape and projection',
+      'Have excess skin or sagging',
+      'Want natural and lasting results'
+    ],
+    package_includes_es: [
+      'Procedimiento completo de remodelación',
+      'Cirujano plástico certificado',
+      'Costos de clínica y anestesia',
+      'Fajas post-operatorias',
+      'Seguimiento médico especializado'
+    ],
+    package_includes_en: [
+      'Complete reshaping procedure',
+      'Board certified plastic surgeon',
+      'Clinic and anesthesia costs',
+      'Post-operative garments',
+      'Specialized medical follow-up'
+    ]
+  },
+  {
+    id: 'biopolymer-removal-buttocks',
+    category: 'buttocks',
+    name_es: 'Eliminación de Biopolímeros de Glúteos',
+    name_en: 'Buttock Biopolymer Removal',
+    description_es: 'Eliminación segura de rellenos de biopolímeros con reconstrucción.',
+    description_en: 'Safe removal of biopolymer fillers with reconstruction.',
+    price_usd: 1200,
+    price_comparison_us: 4000,
+    savings_percentage: 70,
     image: '/placeholder.svg',
     surgery_time: '2-3 horas',
     anesthesia_es: 'General',
@@ -395,75 +836,392 @@ export const procedures: Procedure[] = [
     final_results_timeline_es: '3-6 meses',
     final_results_timeline_en: '3-6 months',
     ideal_candidates_es: [
-      'Tienen senos caídos o con pérdida de firmeza',
-      'Los pezones apuntan hacia abajo',
-      'Buscan una apariencia más juvenil',
-      'No planean embarazos futuros'
+      'Tienen biopolímeros inyectados previamente',
+      'Experimentan complicaciones o malestar',
+      'Buscan eliminar sustancias peligrosas',
+      'Desean reconstrucción segura'
     ],
     ideal_candidates_en: [
-      'Have sagging breasts or loss of firmness',
-      'Nipples point downward',
-      'Seek a more youthful appearance',
-      'Do not plan future pregnancies'
+      'Have previously injected biopolymers',
+      'Experience complications or discomfort',
+      'Seek to remove dangerous substances',
+      'Want safe reconstruction'
     ],
     package_includes_es: [
-      'Procedimiento de lifting completo',
-      'Cirujano certificado',
-      'Instalaciones acreditadas',
-      'Sostén post-quirúrgico',
-      'Seguimiento médico'
+      'Procedimiento de eliminación completo',
+      'Cirujano especialista en reconstrucción',
+      'Costos de clínica y anestesia',
+      'Seguimiento post-operatorio',
+      'Valoración de reconstrucción'
     ],
     package_includes_en: [
-      'Complete lifting procedure',
-      'Certified surgeon',
-      'Accredited facilities',
-      'Post-surgical bra',
-      'Medical follow-up'
+      'Complete removal procedure',
+      'Reconstruction specialist surgeon',
+      'Clinic and anesthesia costs',
+      'Post-operative follow-up',
+      'Reconstruction assessment'
     ]
   },
-  // Reconstructive
+  // Combined Procedures (3 procedures)
   {
-    id: 'post-bariatric',
-    category: 'reconstructive',
-    name_es: 'Cirugía Post-Bariátrica',
-    name_en: 'Post-Bariatric Surgery',
-    description_es: 'Eliminación de exceso de piel después de pérdida masiva de peso.',
-    description_en: 'Removal of excess skin after massive weight loss.',
-    price_usd: 6500,
-    price_comparison_us: 20000,
-    savings_percentage: 68,
+    id: 'lipo-breast-implants',
+    category: 'combined',
+    name_es: 'Liposucción + Implantes de Senos',
+    name_en: 'Liposuction + Breast Implants',
+    description_es: 'Mejora completa del cuerpo y los senos.',
+    description_en: 'Complete body and breast enhancement.',
+    price_usd: 8800,
+    price_comparison_us: 25143,
+    savings_percentage: 65,
+    image: '/placeholder.svg',
+    surgery_time: '3-5 horas',
+    anesthesia_es: 'General',
+    anesthesia_en: 'General',
+    recovery_days: '14-21 días',
+    final_results_timeline_es: '3-6 meses',
+    final_results_timeline_en: '3-6 months',
+    ideal_candidates_es: [
+      'Desean mejorar cuerpo y senos simultáneamente',
+      'Buscan transformación completa',
+      'Tienen buena salud general',
+      'Están dispuestos a recuperación prolongada'
+    ],
+    ideal_candidates_en: [
+      'Want to improve body and breasts simultaneously',
+      'Seek complete transformation',
+      'Have good general health',
+      'Are willing to extended recovery'
+    ],
+    package_includes_es: [
+      'Liposucción de áreas múltiples',
+      'Implantes de senos de alta calidad',
+      'Cirugía con cirujano certificado',
+      'Costos de clínica y anestesia',
+      'Fajas y sostenes post-operatorios',
+      'Seguimiento médico completo'
+    ],
+    package_includes_en: [
+      'Multiple area liposuction',
+      'High-quality breast implants',
+      'Surgery with certified surgeon',
+      'Clinic and anesthesia costs',
+      'Post-operative garments and bras',
+      'Complete medical follow-up'
+    ]
+  },
+  {
+    id: 'lipo-rhinoplasty',
+    category: 'combined',
+    name_es: 'Liposucción + Rinoplastia',
+    name_en: 'Liposuction + Rhinoplasty',
+    description_es: 'Contorno facial y corporal combinado.',
+    description_en: 'Combined facial and body contouring.',
+    price_usd: 7500,
+    price_comparison_us: 18750,
+    savings_percentage: 60,
     image: '/placeholder.svg',
     surgery_time: '4-6 horas',
     anesthesia_es: 'General',
     anesthesia_en: 'General',
-    recovery_days: '21-30 días',
-    final_results_timeline_es: '12-18 meses',
-    final_results_timeline_en: '12-18 months',
+    recovery_days: '10-14 días',
+    final_results_timeline_es: '6-12 meses',
+    final_results_timeline_en: '6-12 months',
     ideal_candidates_es: [
-      'Han perdido peso significativo',
-      'Tienen peso estable por al menos 6 meses',
-      'Presentan exceso de piel colgante',
-      'Están comprometidos con mantener peso saludable'
+      'Buscan mejorar rostro y cuerpo a la vez',
+      'Desean una transformación integral',
+      'Tienen expectativas realistas',
+      'Gozan de buena salud'
     ],
     ideal_candidates_en: [
-      'Have lost significant weight',
-      'Have stable weight for at least 6 months',
-      'Present excess hanging skin',
-      'Are committed to maintaining healthy weight'
+      'Seek to improve face and body at once',
+      'Want comprehensive transformation',
+      'Have realistic expectations',
+      'Enjoy good health'
     ],
     package_includes_es: [
-      'Cirugía completa de contorno corporal',
-      'Equipo quirúrgico especializado',
-      'Estancia en clínica',
-      'Fajas de compresión especializadas',
-      'Seguimiento prolongado'
+      'Rinoplastia completa',
+      'Liposucción de áreas seleccionadas',
+      'Cirujano plástico certificado',
+      'Costos de clínica y anestesia',
+      'Faja de compresión',
+      'Seguimiento post-operatorio'
     ],
     package_includes_en: [
-      'Complete body contouring surgery',
-      'Specialized surgical team',
-      'Clinic stay',
-      'Specialized compression garments',
-      'Extended follow-up'
+      'Complete rhinoplasty',
+      'Liposuction of selected areas',
+      'Board certified plastic surgeon',
+      'Clinic and anesthesia costs',
+      'Compression garment',
+      'Post-operative follow-up'
+    ]
+  },
+  {
+    id: 'mommy-makeover',
+    category: 'combined',
+    name_es: 'Abdominoplastia + Mastopexia + Liposucción',
+    name_en: 'Abdominoplasty + Mastopexy + Liposuction',
+    description_es: 'Paquete completo de transformación corporal.',
+    description_en: 'Complete body transformation package.',
+    price_usd: 11500,
+    price_comparison_us: 38333,
+    savings_percentage: 70,
+    image: '/placeholder.svg',
+    surgery_time: '5-7 horas',
+    anesthesia_es: 'General',
+    anesthesia_en: 'General',
+    recovery_days: '21-30 días',
+    final_results_timeline_es: '6-12 meses',
+    final_results_timeline_en: '6-12 months',
+    ideal_candidates_es: [
+      'Han completado su planificación familiar',
+      'Buscan transformación post-embarazo completa',
+      'Tienen buena salud general',
+      'Están comprometidas con el proceso de recuperación'
+    ],
+    ideal_candidates_en: [
+      'Have completed family planning',
+      'Seek complete post-pregnancy transformation',
+      'Have good general health',
+      'Are committed to recovery process'
+    ],
+    package_includes_es: [
+      'Abdominoplastia completa',
+      'Levantamiento de senos',
+      'Liposucción de áreas múltiples',
+      'Cirujano plástico certificado',
+      'Costos de clínica y anestesia',
+      'Fajas y sostenes post-operatorios',
+      'Seguimiento médico prolongado'
+    ],
+    package_includes_en: [
+      'Complete abdominoplasty',
+      'Breast lift',
+      'Multiple area liposuction',
+      'Board certified plastic surgeon',
+      'Clinic and anesthesia costs',
+      'Post-operative garments and bras',
+      'Extended medical follow-up'
+    ]
+  },
+  // Specialized (5 procedures)
+  {
+    id: 'gynecomastia',
+    category: 'specialized',
+    name_es: 'Cirugía de Ginecomastia',
+    name_en: 'Gynecomastia Surgery',
+    description_es: 'Elimina el exceso de tejido mamario en hombres.',
+    description_en: 'Remove excess breast tissue in men.',
+    price_usd: 3100,
+    price_comparison_us: 7750,
+    savings_percentage: 60,
+    image: '/placeholder.svg',
+    surgery_time: '1.5-2.5 horas',
+    anesthesia_es: 'General',
+    anesthesia_en: 'General',
+    recovery_days: '7-10 días',
+    final_results_timeline_es: '3-6 meses',
+    final_results_timeline_en: '3-6 months',
+    ideal_candidates_es: [
+      'Tienen agrandamiento del tejido mamario masculino',
+      'Buscan un pecho más masculino y plano',
+      'No responden a dieta y ejercicio',
+      'Tienen buena salud general'
+    ],
+    ideal_candidates_en: [
+      'Have male breast tissue enlargement',
+      'Seek a more masculine, flat chest',
+      'Do not respond to diet and exercise',
+      'Have good general health'
+    ],
+    package_includes_es: [
+      'Cirugía completa con especialista',
+      'Costos de clínica y anestesia',
+      'Medicamentos post-operatorios',
+      'Faja de compresión masculina',
+      'Seguimiento médico'
+    ],
+    package_includes_en: [
+      'Complete surgery with specialist',
+      'Clinic and anesthesia costs',
+      'Post-operative medications',
+      'Male compression garment',
+      'Medical follow-up'
+    ]
+  },
+  {
+    id: 'bichectomy',
+    category: 'specialized',
+    name_es: 'Bichectomía',
+    name_en: 'Bichectomy',
+    description_es: 'Adelgaza el rostro con la eliminación de la grasa bucal.',
+    description_en: 'Slim the face with buccal fat removal.',
+    price_usd: 1300,
+    price_comparison_us: 3714,
+    savings_percentage: 65,
+    image: '/placeholder.svg',
+    surgery_time: '30-60 minutos',
+    anesthesia_es: 'Local con Sedación',
+    anesthesia_en: 'Local with Sedation',
+    recovery_days: '3-5 días',
+    final_results_timeline_es: '3-6 meses',
+    final_results_timeline_en: '3-6 months',
+    ideal_candidates_es: [
+      'Desean un rostro más delgado y definido',
+      'Tienen mejillas prominentes',
+      'Buscan contornos faciales más marcados',
+      'Son mayores de 25 años'
+    ],
+    ideal_candidates_en: [
+      'Want a slimmer and more defined face',
+      'Have prominent cheeks',
+      'Seek more defined facial contours',
+      'Are over 25 years old'
+    ],
+    package_includes_es: [
+      'Procedimiento completo',
+      'Honorarios del cirujano',
+      'Anestesia y medicamentos',
+      'Seguimiento post-operatorio',
+      'Instrucciones de cuidado'
+    ],
+    package_includes_en: [
+      'Complete procedure',
+      'Surgeon fees',
+      'Anesthesia and medications',
+      'Post-operative follow-up',
+      'Care instructions'
+    ]
+  },
+  {
+    id: 'cheek-surgery',
+    category: 'specialized',
+    name_es: 'Cirugía de Mejillas (Meloplastia)',
+    name_en: 'Cheek Surgery (Meloplasty)',
+    description_es: 'Mejora los contornos faciales con el aumento de mejillas.',
+    description_en: 'Enhance facial contours with cheek augmentation.',
+    price_usd: 5600,
+    price_comparison_us: 12444,
+    savings_percentage: 55,
+    image: '/placeholder.svg',
+    surgery_time: '1.5-2.5 horas',
+    anesthesia_es: 'General o Local con Sedación',
+    anesthesia_en: 'General or Local with Sedation',
+    recovery_days: '7-10 días',
+    final_results_timeline_es: '3-6 meses',
+    final_results_timeline_en: '3-6 months',
+    ideal_candidates_es: [
+      'Desean mejillas más prominentes o definidas',
+      'Tienen pérdida de volumen facial',
+      'Buscan mejorar armonía facial',
+      'Gozan de buena salud'
+    ],
+    ideal_candidates_en: [
+      'Want more prominent or defined cheeks',
+      'Have facial volume loss',
+      'Seek to improve facial harmony',
+      'Enjoy good health'
+    ],
+    package_includes_es: [
+      'Implantes de mejilla o grasa autóloga',
+      'Cirugía con cirujano certificado',
+      'Costos de clínica y anestesia',
+      'Medicamentos post-operatorios',
+      'Seguimiento médico'
+    ],
+    package_includes_en: [
+      'Cheek implants or autologous fat',
+      'Surgery with certified surgeon',
+      'Clinic and anesthesia costs',
+      'Post-operative medications',
+      'Medical follow-up'
+    ]
+  },
+  {
+    id: 'scar-revision',
+    category: 'specialized',
+    name_es: 'Cirugía de Revisión de Cicatrices',
+    name_en: 'Scar Revision Surgery',
+    description_es: 'Mejora la apariencia de las cicatrices.',
+    description_en: 'Improve the appearance of scars.',
+    price_usd: 1600,
+    price_comparison_us: 4000,
+    savings_percentage: 60,
+    image: '/placeholder.svg',
+    surgery_time: '1-2 horas',
+    anesthesia_es: 'Local con Sedación',
+    anesthesia_en: 'Local with Sedation',
+    recovery_days: '7-10 días',
+    final_results_timeline_es: '6-12 meses',
+    final_results_timeline_en: '6-12 months',
+    ideal_candidates_es: [
+      'Tienen cicatrices visibles o molestas',
+      'Desean mejorar apariencia de cicatrices',
+      'Cicatrices han madurado (más de 1 año)',
+      'Tienen expectativas realistas'
+    ],
+    ideal_candidates_en: [
+      'Have visible or bothersome scars',
+      'Want to improve scar appearance',
+      'Scars have matured (over 1 year)',
+      'Have realistic expectations'
+    ],
+    package_includes_es: [
+      'Evaluación completa de cicatrices',
+      'Procedimiento de revisión',
+      'Costos de clínica y anestesia',
+      'Tratamientos post-operatorios',
+      'Seguimiento hasta resultados finales'
+    ],
+    package_includes_en: [
+      'Complete scar evaluation',
+      'Revision procedure',
+      'Clinic and anesthesia costs',
+      'Post-operative treatments',
+      'Follow-up until final results'
+    ]
+  },
+  {
+    id: 'biopolymer-removal',
+    category: 'specialized',
+    name_es: 'Cirugía de Eliminación de Biopolímeros',
+    name_en: 'Biopolymer Removal Surgery',
+    description_es: 'Eliminación segura de rellenos de biopolímeros.',
+    description_en: 'Safe removal of biopolymer fillers.',
+    price_usd: 1500,
+    price_comparison_us: 5000,
+    savings_percentage: 70,
+    image: '/placeholder.svg',
+    surgery_time: '1-3 horas',
+    anesthesia_es: 'General o Local con Sedación',
+    anesthesia_en: 'General or Local with Sedation',
+    recovery_days: '7-14 días',
+    final_results_timeline_es: '3-6 meses',
+    final_results_timeline_en: '3-6 months',
+    ideal_candidates_es: [
+      'Tienen biopolímeros inyectados previamente',
+      'Experimentan complicaciones',
+      'Buscan eliminar sustancias peligrosas',
+      'Desean reconstrucción segura'
+    ],
+    ideal_candidates_en: [
+      'Have previously injected biopolymers',
+      'Experience complications',
+      'Seek to remove dangerous substances',
+      'Want safe reconstruction'
+    ],
+    package_includes_es: [
+      'Procedimiento de eliminación completo',
+      'Cirujano especialista',
+      'Costos de clínica y anestesia',
+      'Seguimiento post-operatorio',
+      'Valoración de reconstrucción'
+    ],
+    package_includes_en: [
+      'Complete removal procedure',
+      'Specialist surgeon',
+      'Clinic and anesthesia costs',
+      'Post-operative follow-up',
+      'Reconstruction assessment'
     ]
   }
 ];

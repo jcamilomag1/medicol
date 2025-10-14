@@ -46,21 +46,27 @@ export const ProceduresGrid = () => {
           onValueChange={(value) => setSelectedCategory(value as CategoryFilter)}
           className="mb-12"
         >
-          <TabsList className="grid w-full max-w-3xl mx-auto grid-cols-2 md:grid-cols-5 h-auto">
-            <TabsTrigger value="all" className="text-sm md:text-base py-3">
+          <TabsList className="grid w-full max-w-5xl mx-auto grid-cols-2 md:grid-cols-4 lg:grid-cols-7 h-auto gap-2">
+            <TabsTrigger value="all" className="text-xs md:text-sm py-2 md:py-3">
               {t('plastic_surgery.procedures.filter_all')}
             </TabsTrigger>
-            <TabsTrigger value="face" className="text-sm md:text-base py-3">
+            <TabsTrigger value="face" className="text-xs md:text-sm py-2 md:py-3">
               {t('plastic_surgery.procedures.filter_face')}
             </TabsTrigger>
-            <TabsTrigger value="body" className="text-sm md:text-base py-3">
+            <TabsTrigger value="body" className="text-xs md:text-sm py-2 md:py-3">
               {t('plastic_surgery.procedures.filter_body')}
             </TabsTrigger>
-            <TabsTrigger value="breast" className="text-sm md:text-base py-3">
+            <TabsTrigger value="breast" className="text-xs md:text-sm py-2 md:py-3">
               {t('plastic_surgery.procedures.filter_breast')}
             </TabsTrigger>
-            <TabsTrigger value="reconstructive" className="text-sm md:text-base py-3">
-              {t('plastic_surgery.procedures.filter_reconstructive')}
+            <TabsTrigger value="buttocks" className="text-xs md:text-sm py-2 md:py-3">
+              {t('plastic_surgery.procedures.filter_buttocks')}
+            </TabsTrigger>
+            <TabsTrigger value="combined" className="text-xs md:text-sm py-2 md:py-3">
+              {t('plastic_surgery.procedures.filter_combined')}
+            </TabsTrigger>
+            <TabsTrigger value="specialized" className="text-xs md:text-sm py-2 md:py-3">
+              {t('plastic_surgery.procedures.filter_specialized')}
             </TabsTrigger>
           </TabsList>
         </Tabs>
