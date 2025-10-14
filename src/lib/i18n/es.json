@@ -96,6 +96,12 @@
   "navbar": {
     "home": "Inicio",
     "services": "Servicios",
+    "services_submenu": {
+      "plastic_surgery": "Cirugía Plástica, Reconstructiva y Funcional",
+      "stem_cells": "Procedimientos con Células Madre (Stem Cells)",
+      "dental": "Procedimientos Dentales",
+      "diagnostics": "Diagnósticos Médicos"
+    },
     "experience": "La Experiencia Medicol",
     "team": "Nuestro Equipo",
     "contact": "Contacto"

@@ -96,6 +96,12 @@
   "navbar": {
     "home": "Home",
     "services": "Our Services",
+    "services_submenu": {
+      "plastic_surgery": "Plastic, Reconstructive and Functional Surgery",
+      "stem_cells": "Stem Cell Procedures",
+      "dental": "Dental Procedures",
+      "diagnostics": "Medical Diagnostics"
+    },
     "experience": "The Medicol Experience",
     "team": "Our Team",
     "contact": "Contact Us"

@@ -1,18 +1,33 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { 
+  DropdownMenu, 
+  DropdownMenuContent, 
+  DropdownMenuItem, 
+  DropdownMenuTrigger 
+} from '@/components/ui/dropdown-menu';
 import medicolLogo from '@/assets/medicol-logo-blanco.png';
 
 interface NavLink {
-  href: string;
+  href?: string;
   key: string;
+  submenu?: Array<{ href: string; key: string }>;
 }
 
 const navLinks: NavLink[] = [
   { href: '/', key: 'navbar.home' },
-  { href: '/servicios', key: 'navbar.services' },
+  { 
+    key: 'navbar.services',
+    submenu: [
+      { href: '/servicios/cirugia-plastica', key: 'navbar.services_submenu.plastic_surgery' },
+      { href: '/servicios/celulas-madre', key: 'navbar.services_submenu.stem_cells' },
+      { href: '/servicios/procedimientos-dentales', key: 'navbar.services_submenu.dental' },
+      { href: '/servicios/diagnosticos', key: 'navbar.services_submenu.diagnostics' },
+    ]
+  },
   { href: '/experiencia', key: 'navbar.experience' },
   { href: '/equipo', key: 'navbar.team' },
   { href: '/contacto', key: 'navbar.contact' },
@@ -66,19 +81,52 @@ export const Navbar = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-x-8">
-            {navLinks.map((link) => (
-              link.key === 'navbar.experience' ? (
-                <motion.a
-                  key={link.key}
-                  href={link.href}
-                  className="px-5 py-2 bg-accent text-primary font-bold rounded-full shadow-md shadow-accent/40 hover:shadow-lg hover:shadow-accent/60 hover:scale-105 transform transition-all duration-300"
-                  initial={{ scale: 0.95, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                >
-                  {t(link.key)}
-                </motion.a>
-              ) : (
+            {navLinks.map((link) => {
+              // Si es "Experiencia", mantener el estilo especial
+              if (link.key === 'navbar.experience') {
+                return (
+                  <motion.a
+                    key={link.key}
+                    href={link.href}
+                    className="px-5 py-2 bg-accent text-primary font-bold rounded-full shadow-md shadow-accent/40 hover:shadow-lg hover:shadow-accent/60 hover:scale-105 transform transition-all duration-300"
+                    initial={{ scale: 0.95, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                  >
+                    {t(link.key)}
+                  </motion.a>
+                );
+              }
+              
+              // Si tiene submenu (Servicios)
+              if (link.submenu) {
+                return (
+                  <DropdownMenu key={link.key}>
+                    <DropdownMenuTrigger className="text-white hover:text-accent transition-colors duration-200 font-medium flex items-center gap-1 outline-none">
+                      {t(link.key)}
+                      <ChevronDown className="w-4 h-4" />
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent 
+                      align="start" 
+                      className="w-[320px] bg-background border border-border shadow-xl z-[100]"
+                    >
+                      {link.submenu.map((subLink) => (
+                        <DropdownMenuItem key={subLink.key} asChild>
+                          <a
+                            href={subLink.href}
+                            className="cursor-pointer text-foreground hover:bg-accent/10 px-4 py-3 text-sm font-medium"
+                          >
+                            {t(subLink.key)}
+                          </a>
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                );
+              }
+              
+              // Links normales
+              return (
                 <a
                   key={link.key}
                   href={link.href}
@@ -86,8 +134,8 @@ export const Navbar = () => {
                 >
                   {t(link.key)}
                 </a>
-              )
-            ))}
+              );
+            })}
           </nav>
 
           {/* Right Side Controls (Desktop) */}
@@ -151,20 +199,49 @@ export const Navbar = () => {
             className="md:hidden absolute top-full left-0 w-full bg-primary shadow-lg"
           >
             <nav className="flex flex-col px-6 py-4 space-y-4">
-              {navLinks.map((link) => (
-                link.key === 'navbar.experience' ? (
-                  <motion.a
-                    key={link.key}
-                    href={link.href}
-                    onClick={handleNavClick}
-                    className="px-5 py-2 bg-accent text-primary font-bold rounded-full shadow-md shadow-accent/40 hover:shadow-lg hover:shadow-accent/60 text-center transform transition-all duration-300"
-                    initial={{ scale: 0.95, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                  >
-                    {t(link.key)}
-                  </motion.a>
-                ) : (
+              {navLinks.map((link) => {
+                // Si es "Experiencia", mantener el estilo especial
+                if (link.key === 'navbar.experience') {
+                  return (
+                    <motion.a
+                      key={link.key}
+                      href={link.href}
+                      onClick={handleNavClick}
+                      className="px-5 py-2 bg-accent text-primary font-bold rounded-full shadow-md shadow-accent/40 hover:shadow-lg hover:shadow-accent/60 text-center transform transition-all duration-300"
+                      initial={{ scale: 0.95, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      transition={{ duration: 0.5, delay: 0.2 }}
+                    >
+                      {t(link.key)}
+                    </motion.a>
+                  );
+                }
+                
+                // Si tiene submenu (Servicios)
+                if (link.submenu) {
+                  return (
+                    <div key={link.key} className="space-y-2">
+                      <div className="text-white font-bold text-sm uppercase tracking-wide">
+                        {t(link.key)}
+                      </div>
+                      <div className="pl-4 space-y-2 border-l-2 border-accent/30">
+                        {link.submenu.map((subLink) => (
+                          <a
+                            key={subLink.key}
+                            href={subLink.href}
+                            onClick={handleNavClick}
+                            className="block text-white/90 hover:text-accent transition-colors duration-200 text-sm py-1"
+                          >
+                            {t(subLink.key)}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+                
+                // Links normales
+                return (
                   <a
                     key={link.key}
                     href={link.href}
@@ -173,9 +250,8 @@ export const Navbar = () => {
                   >
                     {t(link.key)}
                   </a>
-                )
-              ))}
-
+                );
+              })}
 
               {/* Mobile CTA Button */}
               <Button

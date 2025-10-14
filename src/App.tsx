@@ -8,6 +8,10 @@ import ServicesPage from "./pages/ServicesPage";
 import ExperiencePage from "./pages/ExperiencePage";
 import TeamPage from "./pages/TeamPage";
 import ContactPage from "./pages/ContactPage";
+import PlasticSurgeryPage from "./pages/PlasticSurgeryPage";
+import StemCellsPage from "./pages/StemCellsPage";
+import DentalPage from "./pages/DentalPage";
+import DiagnosticsPage from "./pages/DiagnosticsPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +25,10 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/servicios" element={<ServicesPage />} />
+          <Route path="/servicios/cirugia-plastica" element={<PlasticSurgeryPage />} />
+          <Route path="/servicios/celulas-madre" element={<StemCellsPage />} />
+          <Route path="/servicios/procedimientos-dentales" element={<DentalPage />} />
+          <Route path="/servicios/diagnosticos" element={<DiagnosticsPage />} />
           <Route path="/experiencia" element={<ExperiencePage />} />
           <Route path="/equipo" element={<TeamPage />} />
           <Route path="/contacto" element={<ContactPage />} />
