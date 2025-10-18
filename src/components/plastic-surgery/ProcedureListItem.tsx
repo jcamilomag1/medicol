@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Procedure } from '@/data/plastic-surgery-procedures';
@@ -15,40 +15,58 @@ export const ProcedureListItem = ({ procedure, onClick }: ProcedureListItemProps
 
   return (
     <div 
-      className="flex items-center justify-between p-4 bg-card border border-border rounded-lg hover:border-primary/50 hover:shadow-md transition-all duration-300 cursor-pointer group"
+      className="group relative flex items-center gap-4 p-4 bg-card border-2 border-border rounded-xl hover:border-primary/60 hover:shadow-lg transition-all duration-300 cursor-pointer overflow-hidden"
       onClick={onClick}
     >
-      <div className="flex-1">
-        <div className="flex items-center gap-3 mb-2">
-          <h4 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors">
-            {isEnglish ? procedure.name_en : procedure.name_es}
-          </h4>
-          <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/20">
-            {t('plastic_surgery.procedures.save_badge')} {procedure.savings_percentage}%
-          </Badge>
-        </div>
-        <p className="text-sm text-muted-foreground line-clamp-1">
-          {isEnglish ? procedure.description_en : procedure.description_es}
-        </p>
+      {/* Gradient overlay on hover */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      
+      {/* Image Thumbnail */}
+      <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border border-border/50 shadow-sm group-hover:shadow-md transition-shadow duration-300">
+        <img 
+          src={procedure.image} 
+          alt={isEnglish ? procedure.name_en : procedure.name_es}
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+        />
+        {/* Image overlay gradient on hover */}
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
       
-      <div className="flex items-center gap-4 ml-4">
-        <div className="text-right">
-          <p className="text-xs text-muted-foreground mb-1">
-            {t('plastic_surgery.procedures.from_price')}
-          </p>
-          <p className="text-xl font-bold text-accent">
-            ${procedure.price_usd.toLocaleString()}
-          </p>
+      {/* Content */}
+      <div className="flex-1 min-w-0 relative z-10">
+        <div className="flex items-start gap-2 mb-1.5">
+          <h4 className="text-base font-bold text-foreground group-hover:text-primary transition-colors duration-300 flex-1">
+            {isEnglish ? procedure.name_en : procedure.name_es}
+          </h4>
+          <Badge 
+            variant="secondary" 
+            className="flex-shrink-0 bg-accent/15 text-accent border-accent/30 font-bold group-hover:bg-accent group-hover:text-accent-foreground group-hover:scale-105 transition-all duration-300 animate-pulse group-hover:animate-none"
+          >
+            <Sparkles className="w-3 h-3 mr-1" />
+            {procedure.savings_percentage}%
+          </Badge>
         </div>
-        <Button 
-          variant="ghost" 
-          size="sm"
-          className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
-        >
-          <ChevronRight className="h-5 w-5" />
-        </Button>
+        <p className="text-sm text-muted-foreground line-clamp-2 mb-2 pr-2">
+          {isEnglish ? procedure.description_en : procedure.description_es}
+        </p>
+        <div className="flex items-center gap-2">
+          <span className="text-xs text-muted-foreground">
+            {t('plastic_surgery.procedures.from_price')}
+          </span>
+          <span className="text-lg font-bold text-accent group-hover:text-primary transition-colors duration-300">
+            ${procedure.price_usd.toLocaleString()}
+          </span>
+        </div>
       </div>
+      
+      {/* Action Button */}
+      <Button 
+        variant="ghost" 
+        size="sm"
+        className="flex-shrink-0 relative z-10 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
+      >
+        <ChevronRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+      </Button>
     </div>
   );
 };
