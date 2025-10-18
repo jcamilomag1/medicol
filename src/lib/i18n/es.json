@@ -5,7 +5,91 @@
     "read_more": "Leer más"
   },
   "countries": {
-    "usa": "Estados Unidos"
+    "usa": "Estados Unidos",
+    "canada": "Canadá",
+    "spain": "España",
+    "uk": "Reino Unido"
+  },
+  "gallery": {
+    "badge": "Resultados Reales",
+    "title": "Antes y Después",
+    "subtitle": "Transforma tu visión en realidad. Resultados verificados y pacientes satisfechos.",
+    "filter_all": "Todos los Procedimientos",
+    "before": "Antes",
+    "after": "Después",
+    "timeframe": "Resultados visibles en",
+    "view_details": "Ver Detalles"
+  },
+  "accreditations": {
+    "badge": "Calidad Certificada",
+    "title": "Por qué Medicol es Diferente",
+    "subtitle": "Acreditaciones internacionales que garantizan tu seguridad y resultados excepcionales",
+    "jci": {
+      "title": "Acreditación JCI",
+      "description": "Joint Commission International certifica que nuestras instalaciones cumplen con los más altos estándares de calidad y seguridad médica a nivel mundial."
+    },
+    "sccp": {
+      "title": "Miembros SCCP",
+      "description": "Todos nuestros cirujanos son miembros certificados de la Sociedad Colombiana de Cirugía Plástica, garantizando experiencia y ética profesional."
+    },
+    "acicme": {
+      "title": "ACICME Certificado",
+      "description": "Parte de la Asociación Colombiana de Instituciones de Cirugía para Mercados Externos, asegurando estándares internacionales de atención."
+    },
+    "stats": {
+      "patients": "Pacientes Satisfechos",
+      "years": "Años de Experiencia",
+      "rating": "Calificación Promedio"
+    }
+  },
+  "premium_services": {
+    "badge": "Experiencia Completa",
+    "title": "Servicios Premium Incluidos",
+    "subtitle": "Cuidado integral que va más allá de la cirugía. Te acompañamos en cada paso de tu transformación.",
+    "featured": "Destacado",
+    "recovery_house": {
+      "title": "Casa de Recuperación Privada",
+      "description": "Instalaciones exclusivas y cómodas para tu recuperación postoperatoria con atención personalizada."
+    },
+    "nursing": {
+      "title": "Enfermería 24/7",
+      "description": "Personal de enfermería especializado disponible las 24 horas para atender todas tus necesidades."
+    },
+    "translator": {
+      "title": "Traductor Médico",
+      "description": "Comunicación clara y precisa en tu idioma durante todo el proceso médico."
+    },
+    "concierge": {
+      "title": "Asistencia Concierge",
+      "description": "Coordinación completa de tu viaje, alojamiento y logística para una experiencia sin preocupaciones."
+    },
+    "transportation": {
+      "title": "Transporte Incluido",
+      "description": "Traslados aeropuerto-clínica-alojamiento completamente cubiertos durante tu estadía."
+    },
+    "nutrition": {
+      "title": "Plan Nutricional",
+      "description": "Menús personalizados diseñados para optimizar tu recuperación y resultados."
+    },
+    "insurance": {
+      "title": "Seguro Médico",
+      "description": "Cobertura completa durante tu procedimiento quirúrgico para tu tranquilidad."
+    },
+    "followup": {
+      "title": "Seguimiento Continuo",
+      "description": "Citas de control y seguimiento post-operatorio para garantizar resultados óptimos."
+    },
+    "whatsapp_message": "Hola, me gustaría conocer más sobre sus servicios premium incluidos en los paquetes de cirugía plástica.",
+    "cta": {
+      "title": "¿Listo para tu Transformación Completa?",
+      "description": "Agenda tu consulta virtual gratuita y descubre cómo nuestros servicios premium harán la diferencia en tu experiencia.",
+      "button": "Consultar Ahora por WhatsApp"
+    }
+  },
+  "video_testimonials": {
+    "badge": "Historias Reales",
+    "title": "Testimonios en Video",
+    "subtitle": "Escucha directamente de nuestros pacientes sobre su experiencia y resultados transformadores."
   },
   "hero": {
     "title": "Transforma tu vida de la mejor manera",

@@ -5,7 +5,91 @@
     "read_more": "Read more"
   },
   "countries": {
-    "usa": "United States"
+    "usa": "United States",
+    "canada": "Canada",
+    "spain": "Spain",
+    "uk": "United Kingdom"
+  },
+  "gallery": {
+    "badge": "Real Results",
+    "title": "Before & After",
+    "subtitle": "Transform your vision into reality. Verified results and satisfied patients.",
+    "filter_all": "All Procedures",
+    "before": "Before",
+    "after": "After",
+    "timeframe": "Visible results in",
+    "view_details": "View Details"
+  },
+  "accreditations": {
+    "badge": "Certified Quality",
+    "title": "Why Medicol is Different",
+    "subtitle": "International accreditations that guarantee your safety and exceptional results",
+    "jci": {
+      "title": "JCI Accreditation",
+      "description": "Joint Commission International certifies that our facilities meet the highest standards of quality and medical safety worldwide."
+    },
+    "sccp": {
+      "title": "SCCP Members",
+      "description": "All our surgeons are certified members of the Colombian Society of Plastic Surgery, guaranteeing experience and professional ethics."
+    },
+    "acicme": {
+      "title": "ACICME Certified",
+      "description": "Part of the Colombian Association of Surgery Institutions for External Markets, ensuring international standards of care."
+    },
+    "stats": {
+      "patients": "Satisfied Patients",
+      "years": "Years of Experience",
+      "rating": "Average Rating"
+    }
+  },
+  "premium_services": {
+    "badge": "Complete Experience",
+    "title": "Premium Services Included",
+    "subtitle": "Comprehensive care that goes beyond surgery. We accompany you every step of your transformation.",
+    "featured": "Featured",
+    "recovery_house": {
+      "title": "Private Recovery House",
+      "description": "Exclusive and comfortable facilities for your post-operative recovery with personalized attention."
+    },
+    "nursing": {
+      "title": "24/7 Nursing",
+      "description": "Specialized nursing staff available 24 hours a day to attend to all your needs."
+    },
+    "translator": {
+      "title": "Medical Translator",
+      "description": "Clear and precise communication in your language throughout the entire medical process."
+    },
+    "concierge": {
+      "title": "Concierge Assistance",
+      "description": "Complete coordination of your trip, accommodation, and logistics for a worry-free experience."
+    },
+    "transportation": {
+      "title": "Transportation Included",
+      "description": "Airport-clinic-accommodation transfers completely covered during your stay."
+    },
+    "nutrition": {
+      "title": "Nutritional Plan",
+      "description": "Personalized menus designed to optimize your recovery and results."
+    },
+    "insurance": {
+      "title": "Medical Insurance",
+      "description": "Complete coverage during your surgical procedure for your peace of mind."
+    },
+    "followup": {
+      "title": "Continuous Follow-up",
+      "description": "Check-up appointments and post-operative follow-up to guarantee optimal results."
+    },
+    "whatsapp_message": "Hello, I would like to know more about your premium services included in the plastic surgery packages.",
+    "cta": {
+      "title": "Ready for Your Complete Transformation?",
+      "description": "Schedule your free virtual consultation and discover how our premium services will make a difference in your experience.",
+      "button": "Inquire Now via WhatsApp"
+    }
+  },
+  "video_testimonials": {
+    "badge": "Real Stories",
+    "title": "Video Testimonials",
+    "subtitle": "Hear directly from our patients about their experience and transformative results."
   },
   "hero": {
     "title": "Transform your life in the best way",
