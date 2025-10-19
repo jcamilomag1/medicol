@@ -66,37 +66,11 @@ export default function PricingSection() {
       className="px-4 pt-20 pb-20 max-w-7xl mx-auto relative"
       ref={pricingRef}
     >
-      <article className="flex sm:flex-row flex-col sm:pb-0 pb-4 sm:items-center items-start justify-between">
-        <div className="text-left mb-6">
-          <h2 className="text-4xl font-medium leading-[130%] text-foreground mb-4">
-            <VerticalCutReveal
-              splitBy="words"
-              staggerDuration={0.15}
-              staggerFrom="first"
-              reverse={true}
-              containerClassName="justify-start"
-              transition={{
-                type: "spring",
-                stiffness: 250,
-                damping: 40,
-                delay: 0,
-              }}
-            >
-              {t('pricing.comparison.title')}
-            </VerticalCutReveal>
-          </h2>
-
-          <TimelineContent
-            as="p"
-            animationNum={0}
-            timelineRef={pricingRef}
-            customVariants={revealVariants}
-            className="text-muted-foreground max-w-2xl"
-          >
-            {t('pricing.comparison.subtitle')}
-          </TimelineContent>
-        </div>
-      </article>
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-5xl font-bold text-primary">
+          {t('pricing.comparison.main_title')}
+        </h2>
+      </div>
 
       <TimelineContent
         as="div"
