@@ -2,7 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { TimelineContent } from "@/components/ui/timeline-animation";
 import { VerticalCutReveal } from "@/components/ui/vertical-cut-reveal";
-import { CheckCheck, X, DollarSign } from "lucide-react";
+import { CheckCheck, X } from "lucide-react";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -18,9 +18,6 @@ export default function PricingSection() {
       priceRange: t('pricing.comparison.usa.price_range'),
       description: t('pricing.comparison.usa.description'),
       noBenefits: t('pricing.comparison.usa.no_benefits'),
-      additionalCostsTitle: t('pricing.comparison.usa.additional_costs_title'),
-      additionalCosts: t('pricing.comparison.usa.additional_costs', { returnObjects: true }) as string[],
-      totalExtra: t('pricing.comparison.usa.total_extra'),
       isHighlighted: false,
     },
     {
@@ -30,9 +27,6 @@ export default function PricingSection() {
       priceRange: t('pricing.comparison.uk.price_range'),
       description: t('pricing.comparison.uk.description'),
       noBenefits: t('pricing.comparison.uk.no_benefits'),
-      additionalCostsTitle: t('pricing.comparison.uk.additional_costs_title'),
-      additionalCosts: t('pricing.comparison.uk.additional_costs', { returnObjects: true }) as string[],
-      totalExtra: t('pricing.comparison.uk.total_extra'),
       isHighlighted: false,
     },
     {
@@ -72,11 +66,37 @@ export default function PricingSection() {
       className="px-4 pt-20 pb-20 max-w-7xl mx-auto relative"
       ref={pricingRef}
     >
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-5xl font-bold text-primary">
-          {t('pricing.comparison.main_title')}
-        </h2>
-      </div>
+      <article className="flex sm:flex-row flex-col sm:pb-0 pb-4 sm:items-center items-start justify-between">
+        <div className="text-left mb-6">
+          <h2 className="text-4xl font-medium leading-[130%] text-foreground mb-4">
+            <VerticalCutReveal
+              splitBy="words"
+              staggerDuration={0.15}
+              staggerFrom="first"
+              reverse={true}
+              containerClassName="justify-start"
+              transition={{
+                type: "spring",
+                stiffness: 250,
+                damping: 40,
+                delay: 0,
+              }}
+            >
+              {t('pricing.comparison.title')}
+            </VerticalCutReveal>
+          </h2>
+
+          <TimelineContent
+            as="p"
+            animationNum={0}
+            timelineRef={pricingRef}
+            customVariants={revealVariants}
+            className="text-muted-foreground max-w-2xl"
+          >
+            {t('pricing.comparison.subtitle')}
+          </TimelineContent>
+        </div>
+      </article>
 
       <TimelineContent
         as="div"
@@ -181,23 +201,10 @@ export default function PricingSection() {
                         </ul>
                       </>
                     ) : (
-                      <div className="space-y-3">
-                        <h4 className="font-semibold text-center text-destructive mb-3">
-                          {country.additionalCostsTitle}
-                        </h4>
-                        <ul className="space-y-2">
-                          {country.additionalCosts.map((cost: string, costIndex: number) => (
-                            <li key={costIndex} className="flex items-start gap-2">
-                              <DollarSign className="h-4 w-4 mt-0.5 flex-shrink-0 text-destructive" />
-                              <span className="text-xs text-muted-foreground">{cost}</span>
-                            </li>
-                          ))}
-                        </ul>
-                        
-                        <div className="pt-3 mt-3 border-t border-destructive/20">
-                          <p className="text-sm font-bold text-center text-destructive">
-                            {country.totalExtra}
-                          </p>
+                      <div className="text-center">
+                        <div className="flex items-center justify-center gap-2 text-muted-foreground">
+                          <X className="h-5 w-5 text-destructive" />
+                          <p className="text-sm italic">{country.noBenefits}</p>
                         </div>
                       </div>
                     )}

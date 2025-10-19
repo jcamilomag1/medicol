@@ -26,20 +26,6 @@ export const AboutMedicolSection = () => {
   return (
     <section id="about" className="py-20 sm:py-24 bg-gradient-hero">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        
-        {/* Título Principal - Centrado */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4">
-            {t('about.main_title')}
-          </h2>
-        </motion.div>
-
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           {/* Left Column: Text + Badges */}
@@ -50,10 +36,10 @@ export const AboutMedicolSection = () => {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            {/* Subtítulo de sección */}
-            <h3 className="text-xl md:text-2xl font-bold text-primary leading-tight">
+            {/* Título tipo subtítulo */}
+            <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight">
               {t('about.hero_title')}
-            </h3>
+            </h2>
             
             {/* Párrafo descriptivo */}
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">

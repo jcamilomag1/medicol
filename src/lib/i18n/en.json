@@ -196,7 +196,6 @@
     "point_4": "Complete post-operative follow-up"
   },
   "about": {
-    "main_title": "Choose trust, choose Medicol",
     "hero_title": "Your peace of mind is our commitment. We coordinate your health and your journey, from start to finish.",
     "hero_description": "We are specialists in medical tourism that combines plastic surgery, advanced diagnostics, regenerative medicine, dental treatments, and entertainment with over 15 years of experience.",
     "badge_jci": "JCI Accreditation",
@@ -324,7 +323,6 @@
   },
   "pricing": {
     "comparison": {
-      "main_title": "How much can you save in Colombia?",
       "title": "Compare Medical Tourism Prices",
       "subtitle": "Discover why thousands of patients choose Colombia for their medical procedures",
       "usa": {
@@ -333,18 +331,7 @@
         "price_range": "$10,000 - $15,000",
         "currency": "USD",
         "description": "Average price for cosmetic procedures",
-        "no_benefits": "No additional benefits included",
-        "additional_costs_title": "Additional Costs Not Included:",
-        "additional_costs": [
-          "Medications: $500 - $800",
-          "Transportation & lodging: $2,000 - $3,000",
-          "Compression garments: $200 - $400",
-          "Post-op massages: $500 - $1,000",
-          "Medical follow-up: $300 - $600",
-          "Translator (if needed): $500 - $800",
-          "Additional medical insurance: $800 - $1,500"
-        ],
-        "total_extra": "Extra total: $4,800 - $8,100"
+        "no_benefits": "No additional benefits included"
       },
       "uk": {
         "country": "United Kingdom",
@@ -352,18 +339,7 @@
         "price_range": "£8,000 - £12,000",
         "currency": "GBP",
         "description": "Average price for cosmetic procedures",
-        "no_benefits": "No additional benefits included",
-        "additional_costs_title": "Additional Costs Not Included:",
-        "additional_costs": [
-          "Medications: £400 - £600",
-          "Transportation & lodging: £1,500 - £2,500",
-          "Compression garments: £150 - £300",
-          "Post-op massages: £400 - £800",
-          "Medical follow-up: £250 - £500",
-          "Translator (if needed): £400 - £600",
-          "Additional medical insurance: £600 - £1,200"
-        ],
-        "total_extra": "Extra total: £3,700 - £6,500"
+        "no_benefits": "No additional benefits included"
       },
       "colombia": {
         "country": "Colombia",
