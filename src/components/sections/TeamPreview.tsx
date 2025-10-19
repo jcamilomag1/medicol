@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Linkedin, Instagram } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import doctorAlejandroImage from '@/assets/doctor-alejandro-guerra.jpg';
 
 interface Doctor {
   name: string;
@@ -21,7 +22,7 @@ const teamMembers: Doctor[] = [
     specialtyKey: 'team.doctors.alejandro.specialty',
     experienceKey: 'team.doctors.alejandro.experience',
     bioKey: 'team.doctors.alejandro.bio',
-    imageUrl: 'https://images.unsplash.com/photo-1622253692010-33352da55e0d?q=80&w=600&auto=format&fit=crop',
+    imageUrl: doctorAlejandroImage,
     profileUrl: '/nuestro-equipo/alejandro-guerra',
     linkedinUrl: '#',
     instagramUrl: '#'
