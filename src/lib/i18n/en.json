@@ -322,102 +322,48 @@
     }
   },
   "pricing": {
-    "section_title": "World-Class Quality, Smart Prices",
-    "section_subtitle": "Access world-class medical procedures with significant savings. Without compromising your safety or the results you deserve.",
-    "new_section": {
-      "title": "Plans & Pricing",
-      "subtitle": "Trusted by thousands of patients, we help people worldwide. Explore which option is right for you.",
-      "monthly": "Monthly",
-      "yearly": "Yearly",
-      "month": "month",
-      "year": "year",
-      "save_badge": "Save 20%",
-      "popular_badge": "Most Popular"
-    },
-    "plans": {
-      "basic": {
-        "name": "Basic Consultation",
-        "description": "Ideal for initial evaluations and virtual consultations",
-        "button": "Schedule Consultation",
-        "includes_title": "Includes:",
-        "features": [
-          "Virtual consultation with specialist",
-          "Initial medical evaluation",
-          "Preliminary treatment plan",
-          "30-day follow-up"
-        ]
-      },
-      "standard": {
-        "name": "Standard Package",
-        "description": "For outpatient procedures and minor treatments",
-        "button": "Request Quote",
-        "includes_title": "Everything in Basic, plus:",
-        "features": [
-          "Outpatient procedure",
-          "Post-operative medications",
-          "3 follow-up consultations",
-          "Medical translator included"
-        ]
-      },
-      "premium": {
-        "name": "Premium Package",
-        "description": "Complete experience with all services included for major surgeries",
-        "button": "Get Started",
-        "includes_title": "Everything in Standard, plus:",
-        "features": [
-          "Surgery at JCI hospital",
-          "Private recovery house",
-          "24/7 nursing care",
-          "Transportation included",
-          "Medical insurance",
-          "Concierge assistance",
-          "Nutritional plan",
-          "Unlimited follow-up"
-        ]
-      }
-    },
-    "view_details": "View Details",
     "comparison": {
-      "title": "Other Options",
-      "no_extras": "No extras included",
-      "spain_note": "Price without additional benefits",
-      "usa_note": "Price without additional benefits"
-    },
-    "spain": {
-      "country": "Spain",
-      "price_range": "€8,000 - €12,000",
-      "note": "Average price for cosmetic procedures"
-    },
-    "usa": {
-      "country": "United States",
-      "price_range": "$10,000 - $15,000",
-      "note": "Average price for cosmetic procedures"
-    },
-    "colombia": {
-      "country": "Colombia",
-      "price_range": "$4,000 - $6,000",
-      "hero_title": "The Best Choice 🏆",
-      "badge_best_value": "Best Value",
-      "badge_savings": "Save 50-60%",
-      "vs_others": "vs. USA & Europe",
-      "note": "Average price for cosmetic procedures",
-      "all_inclusive": "All Inclusive"
-    },
-    "benefits": {
-      "title": "All Inclusive in Colombia",
-      "subtitle": "Benefits that make the difference",
-      "insurance": "Medical insurance for surgery",
-      "transport": "Airport-accommodation transport and return",
-      "medications": "Complete post-operative medications",
-      "massage": "Specialized massages and lymphatic drainage",
-      "garments": "Post-surgical compression garments",
-      "garments_details": "Bras, girdles, sleeves and more according to your procedure"
-    },
-    "cta": {
-      "button": "Schedule Your Free Consultation",
-      "subtitle": "Get your personalized quote within 24 hours"
-    },
-    "disclaimer": "Prices are estimates and may vary depending on the specific procedure. Consultation included at no cost."
+      "title": "Compare Medical Tourism Prices",
+      "subtitle": "Discover why thousands of patients choose Colombia for their medical procedures",
+      "usa": {
+        "country": "United States",
+        "flag": "🇺🇸",
+        "price_range": "$10,000 - $15,000",
+        "currency": "USD",
+        "description": "Average price for cosmetic procedures",
+        "no_benefits": "No additional benefits included"
+      },
+      "uk": {
+        "country": "United Kingdom",
+        "flag": "🇬🇧",
+        "price_range": "£8,000 - £12,000",
+        "currency": "GBP",
+        "description": "Average price for cosmetic procedures",
+        "no_benefits": "No additional benefits included"
+      },
+      "colombia": {
+        "country": "Colombia",
+        "flag": "🇨🇴",
+        "price_range": "$4,000 - $6,000",
+        "currency": "USD",
+        "title": "Best Choice 🏆",
+        "badge_value": "Best Value",
+        "badge_savings": "Save 50-60%",
+        "description": "All-inclusive price with premium benefits",
+        "all_inclusive_title": "All Included:",
+        "benefits": [
+          "Medical insurance for surgery",
+          "Airport-accommodation-return transportation",
+          "Complete post-operative medications",
+          "Specialized massages and lymphatic drainage",
+          "Post-surgical compression garments",
+          "Private recovery house",
+          "24/7 medical translator",
+          "Unlimited medical follow-up"
+        ]
+      },
+      "info_text": "Prices are estimated. Free consultation included."
+    }
   },
   "reviews": {
     "section_title": "What our patients say",
