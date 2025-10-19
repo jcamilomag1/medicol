@@ -1,13 +1,14 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { PlayCircle } from 'lucide-react';
+import { PlayCircle, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import { VideoTestimonialCard } from '@/components/ui/video-testimonial-card';
+import { cn } from '@/lib/utils';
 
 interface FeaturedTestimonial {
   id: string;
@@ -75,6 +76,25 @@ export const FeaturedTestimonials = () => {
     Autoplay({ delay: 5000, stopOnInteraction: true })
   );
 
+  const [api, setApi] = React.useState<any>();
+  const [current, setCurrent] = React.useState(0);
+  const [showHint, setShowHint] = React.useState(true);
+
+  React.useEffect(() => {
+    if (!api) return;
+    
+    setCurrent(api.selectedScrollSnap());
+    
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => setShowHint(false), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section className="py-12 lg:py-24 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto px-4">
@@ -100,6 +120,7 @@ export const FeaturedTestimonials = () => {
         {/* Testimonials Carousel */}
         <div className="max-w-7xl mx-auto px-4 lg:px-8 mb-12">
           <Carousel
+            setApi={setApi}
             opts={{
               align: "start",
               loop: true,
@@ -122,6 +143,43 @@ export const FeaturedTestimonials = () => {
             <CarouselPrevious className="hidden lg:flex -left-12" />
             <CarouselNext className="hidden lg:flex -right-12" />
           </Carousel>
+
+          {/* Dots Navigation - Solo mobile/tablet */}
+          <div className="flex justify-center gap-2 mt-6 lg:hidden">
+            {featuredTestimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => api?.scrollTo(index)}
+                className={cn(
+                  "h-2 rounded-full transition-all duration-300",
+                  current === index 
+                    ? "bg-primary w-8" 
+                    : "bg-muted-foreground/30 w-2"
+                )}
+                aria-label={`Ir a testimonio ${index + 1}`}
+              />
+            ))}
+          </div>
+
+          {/* Swipe Hint - Solo mobile */}
+          <AnimatePresence>
+            {showHint && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="flex items-center justify-center gap-2 mt-4 lg:hidden text-muted-foreground text-sm"
+              >
+                <span>Desliza para ver más</span>
+                <motion.div
+                  animate={{ x: [0, 10, 0] }}
+                  transition={{ repeat: Infinity, duration: 1.5 }}
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
 
         {/* CTA Button */}
