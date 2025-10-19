@@ -104,6 +104,30 @@
     "mhc_alt": "Cluster Medellín Health City",
     "iso_alt": "Certificación ISO 9001"
   },
+  "main_services": {
+    "title": "Nuestros Servicios Especializados",
+    "subtitle": "Soluciones médicas integrales con los más altos estándares internacionales",
+    "plastic_surgery": {
+      "title": "Cirugía Plástica y Estética",
+      "benefit": "Transforma tu apariencia con procedimientos de clase mundial. Resultados naturales, recuperación rápida.",
+      "cta": "Ver Procedimientos"
+    },
+    "regenerative": {
+      "title": "Medicina Regenerativa",
+      "benefit": "Recupera tu vitalidad con terapias avanzadas de células madre. Rejuvenecimiento celular real.",
+      "cta": "Descubrir Terapias"
+    },
+    "dental": {
+      "title": "Diseño de Sonrisa",
+      "benefit": "Sonríe con confianza. Estética dental avanzada para tu sonrisa perfecta.",
+      "cta": "Ver Tratamientos"
+    },
+    "diagnostics": {
+      "title": "Chequeos y Diagnósticos",
+      "benefit": "Prevención inteligente con tecnología de vanguardia. Cuida tu salud proactivamente.",
+      "cta": "Conocer Más"
+    }
+  },
   "services": {
     "section_title": "Nuestros Servicios",
     "section_subtitle": "Especialistas certificados internacionalmente con resultados excepcionales. Ahorra del 50% al 60% en comparación con Estados Unidos y Europa, sin comprometer la calidad.",
