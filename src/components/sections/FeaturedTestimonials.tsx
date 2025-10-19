@@ -65,7 +65,7 @@ export const FeaturedTestimonials = () => {
         </motion.div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-12 max-w-5xl mx-auto">
           {featuredTestimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.id}
@@ -76,7 +76,7 @@ export const FeaturedTestimonials = () => {
               className="bg-card/90 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-border/50"
             >
               {/* Video Container */}
-              <div className="relative w-full aspect-video bg-muted">
+              <div className="relative w-full aspect-[9/16] bg-muted">
                 <iframe
                   src={testimonial.videoUrl}
                   className="w-full h-full"
