@@ -2,7 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { TimelineContent } from "@/components/ui/timeline-animation";
 import { VerticalCutReveal } from "@/components/ui/vertical-cut-reveal";
-import { CheckCheck, X } from "lucide-react";
+import { CheckCheck, X, DollarSign } from "lucide-react";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -18,6 +18,9 @@ export default function PricingSection() {
       priceRange: t('pricing.comparison.usa.price_range'),
       description: t('pricing.comparison.usa.description'),
       noBenefits: t('pricing.comparison.usa.no_benefits'),
+      additionalCostsTitle: t('pricing.comparison.usa.additional_costs_title'),
+      additionalCosts: t('pricing.comparison.usa.additional_costs', { returnObjects: true }) as string[],
+      totalExtra: t('pricing.comparison.usa.total_extra'),
       isHighlighted: false,
     },
     {
@@ -27,6 +30,9 @@ export default function PricingSection() {
       priceRange: t('pricing.comparison.uk.price_range'),
       description: t('pricing.comparison.uk.description'),
       noBenefits: t('pricing.comparison.uk.no_benefits'),
+      additionalCostsTitle: t('pricing.comparison.uk.additional_costs_title'),
+      additionalCosts: t('pricing.comparison.uk.additional_costs', { returnObjects: true }) as string[],
+      totalExtra: t('pricing.comparison.uk.total_extra'),
       isHighlighted: false,
     },
     {
@@ -175,10 +181,23 @@ export default function PricingSection() {
                         </ul>
                       </>
                     ) : (
-                      <div className="text-center">
-                        <div className="flex items-center justify-center gap-2 text-muted-foreground">
-                          <X className="h-5 w-5 text-destructive" />
-                          <p className="text-sm italic">{country.noBenefits}</p>
+                      <div className="space-y-3">
+                        <h4 className="font-semibold text-center text-destructive mb-3">
+                          {country.additionalCostsTitle}
+                        </h4>
+                        <ul className="space-y-2">
+                          {country.additionalCosts.map((cost: string, costIndex: number) => (
+                            <li key={costIndex} className="flex items-start gap-2">
+                              <DollarSign className="h-4 w-4 mt-0.5 flex-shrink-0 text-destructive" />
+                              <span className="text-xs text-muted-foreground">{cost}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        
+                        <div className="pt-3 mt-3 border-t border-destructive/20">
+                          <p className="text-sm font-bold text-center text-destructive">
+                            {country.totalExtra}
+                          </p>
                         </div>
                       </div>
                     )}
