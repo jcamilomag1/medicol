@@ -86,6 +86,26 @@
       "button": "Inquire Now via WhatsApp"
     }
   },
+  "featured_testimonials": {
+    "badge": "Real Testimonials",
+    "title": "Real Patients, Life-Changing Results",
+    "subtitle": "Hear directly from those who trusted Medicol to transform their lives",
+    "verified_badge": "Verified Patient",
+    "estefania": {
+      "name": "Estefanía",
+      "country": "United States",
+      "procedure": "Brazilian Butt Lift",
+      "quote": "The best medical experience I've ever had. The Medicol team exceeded all my expectations."
+    },
+    "janette": {
+      "name": "Janette",
+      "country": "United Kingdom",
+      "procedure": "Breast Augmentation",
+      "quote": "From day one I felt safe and cared for. The results are incredible and natural."
+    },
+    "view_all_cta": "View All Testimonials",
+    "rating": "Rating"
+  },
   "video_testimonials": {
     "badge": "Real Stories",
     "title": "Video Testimonials",

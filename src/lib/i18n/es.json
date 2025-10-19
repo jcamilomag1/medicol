@@ -86,6 +86,26 @@
       "button": "Consultar Ahora por WhatsApp"
     }
   },
+  "featured_testimonials": {
+    "badge": "Testimonios Reales",
+    "title": "Pacientes Reales, Resultados que Cambian Vidas",
+    "subtitle": "Escucha directamente de quienes confiaron en Medicol para transformar sus vidas",
+    "verified_badge": "Paciente Verificado",
+    "estefania": {
+      "name": "Estefanía",
+      "country": "Estados Unidos",
+      "procedure": "Brazilian Butt Lift",
+      "quote": "La mejor experiencia médica que he tenido. El equipo de Medicol superó todas mis expectativas."
+    },
+    "janette": {
+      "name": "Janette",
+      "country": "Reino Unido",
+      "procedure": "Mamoplastia de Aumento",
+      "quote": "Desde el primer día me sentí segura y cuidada. Los resultados son increíbles y naturales."
+    },
+    "view_all_cta": "Ver Todos los Testimonios",
+    "rating": "Calificación"
+  },
   "video_testimonials": {
     "badge": "Historias Reales",
     "title": "Testimonios en Video",
