@@ -103,6 +103,18 @@
       "procedure": "Breast Augmentation",
       "quote": "From day one I felt safe and cared for. The results are incredible and natural."
     },
+    "maria": {
+      "name": "María González",
+      "country": "Toronto, Canada",
+      "procedure": "BBL Butt Augmentation",
+      "quote": "The team was exceptional from the first contact. I felt safe and well cared for throughout the entire process."
+    },
+    "carlos": {
+      "name": "Carlos Ramírez",
+      "country": "Mexico City, Mexico",
+      "procedure": "HD Liposuction",
+      "quote": "Incredible results that exceeded my expectations. The post-operative follow-up was impeccable."
+    },
     "view_all_cta": "View All Testimonials",
     "rating": "Rating"
   },

@@ -103,6 +103,18 @@
       "procedure": "Mamoplastia de Aumento",
       "quote": "Desde el primer día me sentí segura y cuidada. Los resultados son increíbles y naturales."
     },
+    "maria": {
+      "name": "María González",
+      "country": "Toronto, Canadá",
+      "procedure": "Aumento de Glúteos BBL",
+      "quote": "El equipo fue excepcional desde el primer contacto. Me sentí segura y bien cuidada durante todo el proceso."
+    },
+    "carlos": {
+      "name": "Carlos Ramírez",
+      "country": "Ciudad de México, México",
+      "procedure": "Liposucción HD",
+      "quote": "Resultados increíbles que superaron mis expectativas. El seguimiento postoperatorio fue impecable."
+    },
     "view_all_cta": "Ver Todos los Testimonios",
     "rating": "Calificación"
   },

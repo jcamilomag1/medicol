@@ -1,9 +1,13 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { CheckCircle, Star, PlayCircle } from 'lucide-react';
+import { PlayCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
+import { VideoTestimonialCard } from '@/components/ui/video-testimonial-card';
 
 interface FeaturedTestimonial {
   id: string;
@@ -13,6 +17,7 @@ interface FeaturedTestimonial {
   procedureKey: string;
   quoteKey: string;
   videoUrl: string;
+  thumbnailUrl: string;
   rating: number;
 }
 
@@ -25,6 +30,7 @@ const featuredTestimonials: FeaturedTestimonial[] = [
     procedureKey: 'featured_testimonials.estefania.procedure',
     quoteKey: 'featured_testimonials.estefania.quote',
     videoUrl: 'https://drive.google.com/file/d/1ptAJ-Ssy5ek7-oExyp_fINNbu_HD_yjq/preview',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=800&fit=crop',
     rating: 5
   },
   {
@@ -35,12 +41,39 @@ const featuredTestimonials: FeaturedTestimonial[] = [
     procedureKey: 'featured_testimonials.janette.procedure',
     quoteKey: 'featured_testimonials.janette.quote',
     videoUrl: 'https://drive.google.com/file/d/16RIrS1-E6M7Av5Gs2D2RQBw0wsyU0RVc/preview',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=800&fit=crop',
+    rating: 5
+  },
+  {
+    id: 'maria',
+    nameKey: 'featured_testimonials.maria.name',
+    countryKey: 'featured_testimonials.maria.country',
+    countryFlag: '🇨🇦',
+    procedureKey: 'featured_testimonials.maria.procedure',
+    quoteKey: 'featured_testimonials.maria.quote',
+    videoUrl: 'https://drive.google.com/file/d/1ptAJ-Ssy5ek7-oExyp_fINNbu_HD_yjq/preview',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&h=800&fit=crop',
+    rating: 5
+  },
+  {
+    id: 'carlos',
+    nameKey: 'featured_testimonials.carlos.name',
+    countryKey: 'featured_testimonials.carlos.country',
+    countryFlag: '🇲🇽',
+    procedureKey: 'featured_testimonials.carlos.procedure',
+    quoteKey: 'featured_testimonials.carlos.quote',
+    videoUrl: 'https://drive.google.com/file/d/16RIrS1-E6M7Av5Gs2D2RQBw0wsyU0RVc/preview',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1581595220975-119360b2c23f?w=600&h=800&fit=crop',
     rating: 5
   }
 ];
 
 export const FeaturedTestimonials = () => {
   const { t } = useTranslation();
+  
+  const plugin = React.useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  );
 
   return (
     <section className="py-12 lg:py-24 bg-gradient-to-b from-background to-muted/20">
@@ -64,77 +97,31 @@ export const FeaturedTestimonials = () => {
           </p>
         </motion.div>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-12 max-w-5xl mx-auto">
-          {featuredTestimonials.map((testimonial, index) => (
-            <motion.div
-              key={testimonial.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-card/90 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-border/50"
-            >
-              {/* Video Container */}
-              <div className="relative w-full aspect-[9/16] bg-muted">
-                <iframe
-                  src={testimonial.videoUrl}
-                  className="w-full h-full"
-                  allow="autoplay"
-                  allowFullScreen
-                  loading="lazy"
-                  title={`${t(testimonial.nameKey)} testimonial video`}
-                />
-              </div>
-
-              {/* Content */}
-              <div className="p-6 space-y-4">
-                {/* Verified Badge & Info */}
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <h3 className="text-xl font-bold text-foreground">
-                        {t(testimonial.nameKey)}
-                      </h3>
-                      <span className="text-xl">{testimonial.countryFlag}</span>
-                    </div>
-                    <p className="text-sm text-muted-foreground">
-                      {t(testimonial.countryKey)}
-                    </p>
-                  </div>
-                  <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200 dark:bg-green-950 dark:text-green-400 dark:border-green-800 flex items-center gap-1 shrink-0">
-                    <CheckCircle className="w-3 h-3" />
-                    <span className="text-xs whitespace-nowrap">{t('featured_testimonials.verified_badge')}</span>
-                  </Badge>
-                </div>
-
-                {/* Rating */}
-                <div className="flex items-center gap-1">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                  <span className="text-sm text-muted-foreground ml-2">
-                    {testimonial.rating}.0
-                  </span>
-                </div>
-
-                {/* Quote */}
-                <blockquote className="text-base lg:text-lg italic text-muted-foreground border-l-4 border-primary pl-4 py-2">
-                  "{t(testimonial.quoteKey)}"
-                </blockquote>
-
-                {/* Procedure */}
-                <div className="pt-4 border-t border-border">
-                  <p className="text-sm text-muted-foreground mb-1">
-                    Procedimiento:
-                  </p>
-                  <p className="text-base font-semibold text-primary">
-                    {t(testimonial.procedureKey)}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+        {/* Testimonials Carousel */}
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 mb-12">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[plugin.current]}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {featuredTestimonials.map((testimonial) => (
+                <CarouselItem 
+                  key={testimonial.id} 
+                  className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/4"
+                >
+                  <VideoTestimonialCard {...testimonial} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            
+            {/* Navigation buttons - only desktop */}
+            <CarouselPrevious className="hidden lg:flex -left-12" />
+            <CarouselNext className="hidden lg:flex -right-12" />
+          </Carousel>
         </div>
 
         {/* CTA Button */}
