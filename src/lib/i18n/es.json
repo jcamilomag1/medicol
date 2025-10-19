@@ -324,6 +324,58 @@
   "pricing": {
     "section_title": "Calidad Mundial, Precios Inteligentes",
     "section_subtitle": "Accede a procedimientos médicos de clase mundial con ahorros significativos. Sin comprometer tu seguridad ni los resultados que mereces.",
+    "new_section": {
+      "title": "Planes y Precios",
+      "subtitle": "Confiado por miles de pacientes, ayudamos a personas de todo el mundo. Explora cuál opción es la adecuada para ti.",
+      "monthly": "Mensual",
+      "yearly": "Anual",
+      "month": "mes",
+      "year": "año",
+      "save_badge": "Ahorra 20%",
+      "popular_badge": "Más Popular"
+    },
+    "plans": {
+      "basic": {
+        "name": "Consulta Básica",
+        "description": "Ideal para evaluaciones iniciales y consultas virtuales",
+        "button": "Agendar Consulta",
+        "includes_title": "Incluye:",
+        "features": [
+          "Consulta virtual con especialista",
+          "Evaluación médica inicial",
+          "Plan de tratamiento preliminar",
+          "Seguimiento por 30 días"
+        ]
+      },
+      "standard": {
+        "name": "Paquete Estándar",
+        "description": "Para procedimientos ambulatorios y tratamientos menores",
+        "button": "Solicitar Cotización",
+        "includes_title": "Todo en Básico, más:",
+        "features": [
+          "Procedimiento ambulatorio",
+          "Medicamentos post-operatorios",
+          "3 consultas de seguimiento",
+          "Traductor médico incluido"
+        ]
+      },
+      "premium": {
+        "name": "Paquete Premium",
+        "description": "Experiencia completa con todos los servicios incluidos para cirugías mayores",
+        "button": "Comenzar Ahora",
+        "includes_title": "Todo en Estándar, más:",
+        "features": [
+          "Cirugía en hospital JCI",
+          "Casa de recuperación privada",
+          "Enfermería 24/7",
+          "Transporte incluido",
+          "Seguro médico",
+          "Asistencia concierge",
+          "Plan nutricional",
+          "Seguimiento ilimitado"
+        ]
+      }
+    },
     "view_details": "Ver Detalles",
     "comparison": {
       "title": "Otras Opciones",

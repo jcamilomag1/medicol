@@ -324,6 +324,58 @@
   "pricing": {
     "section_title": "World-Class Quality, Smart Prices",
     "section_subtitle": "Access world-class medical procedures with significant savings. Without compromising your safety or the results you deserve.",
+    "new_section": {
+      "title": "Plans & Pricing",
+      "subtitle": "Trusted by thousands of patients, we help people worldwide. Explore which option is right for you.",
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "month": "month",
+      "year": "year",
+      "save_badge": "Save 20%",
+      "popular_badge": "Most Popular"
+    },
+    "plans": {
+      "basic": {
+        "name": "Basic Consultation",
+        "description": "Ideal for initial evaluations and virtual consultations",
+        "button": "Schedule Consultation",
+        "includes_title": "Includes:",
+        "features": [
+          "Virtual consultation with specialist",
+          "Initial medical evaluation",
+          "Preliminary treatment plan",
+          "30-day follow-up"
+        ]
+      },
+      "standard": {
+        "name": "Standard Package",
+        "description": "For outpatient procedures and minor treatments",
+        "button": "Request Quote",
+        "includes_title": "Everything in Basic, plus:",
+        "features": [
+          "Outpatient procedure",
+          "Post-operative medications",
+          "3 follow-up consultations",
+          "Medical translator included"
+        ]
+      },
+      "premium": {
+        "name": "Premium Package",
+        "description": "Complete experience with all services included for major surgeries",
+        "button": "Get Started",
+        "includes_title": "Everything in Standard, plus:",
+        "features": [
+          "Surgery at JCI hospital",
+          "Private recovery house",
+          "24/7 nursing care",
+          "Transportation included",
+          "Medical insurance",
+          "Concierge assistance",
+          "Nutritional plan",
+          "Unlimited follow-up"
+        ]
+      }
+    },
     "view_details": "View Details",
     "comparison": {
       "title": "Other Options",
