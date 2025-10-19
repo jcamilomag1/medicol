@@ -1,117 +1,58 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 import { Scissors, Sparkles, Smile, Activity } from 'lucide-react';
 import { LucideIcon } from 'lucide-react';
+import { MedicalServiceCard } from '@/components/ui/medical-service-card';
 
 interface ServiceCardData {
   titleKey: string;
-  benefitKey: string;
+  descriptionKey: string;
   ctaKey: string;
   icon: LucideIcon;
   href: string;
-  gradientFrom: string;
-  gradientTo: string;
+  imageUrl: string;
+  themeColor: string;
 }
 
 const servicesData: ServiceCardData[] = [
   {
     titleKey: 'main_services.plastic_surgery.title',
-    benefitKey: 'main_services.plastic_surgery.benefit',
+    descriptionKey: 'main_services.plastic_surgery.benefit',
     ctaKey: 'main_services.plastic_surgery.cta',
     icon: Scissors,
     href: '/servicios/cirugia-plastica',
-    gradientFrom: 'from-primary/10',
-    gradientTo: 'to-accent/10',
+    imageUrl: 'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=800&fit=crop&q=80',
+    themeColor: '210 100% 45%',
   },
   {
     titleKey: 'main_services.regenerative.title',
-    benefitKey: 'main_services.regenerative.benefit',
+    descriptionKey: 'main_services.regenerative.benefit',
     ctaKey: 'main_services.regenerative.cta',
     icon: Sparkles,
     href: '/servicios/celulas-madre',
-    gradientFrom: 'from-accent/10',
-    gradientTo: 'to-primary/10',
+    imageUrl: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=800&fit=crop&q=80',
+    themeColor: '280 70% 50%',
   },
   {
     titleKey: 'main_services.dental.title',
-    benefitKey: 'main_services.dental.benefit',
+    descriptionKey: 'main_services.dental.benefit',
     ctaKey: 'main_services.dental.cta',
     icon: Smile,
     href: '/servicios/dental',
-    gradientFrom: 'from-primary/10',
-    gradientTo: 'to-accent/10',
+    imageUrl: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&h=800&fit=crop&q=80',
+    themeColor: '180 60% 45%',
   },
   {
     titleKey: 'main_services.diagnostics.title',
-    benefitKey: 'main_services.diagnostics.benefit',
+    descriptionKey: 'main_services.diagnostics.benefit',
     ctaKey: 'main_services.diagnostics.cta',
     icon: Activity,
     href: '/servicios/diagnosticos',
-    gradientFrom: 'from-accent/10',
-    gradientTo: 'to-primary/10',
+    imageUrl: 'https://images.unsplash.com/photo-1581595220975-119360b2c23f?w=600&h=800&fit=crop&q=80',
+    themeColor: '150 50% 40%',
   },
 ];
 
-const ServiceCard = ({ service, index }: { service: ServiceCardData; index: number }) => {
-  const { t } = useTranslation();
-  const Icon = service.icon;
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 30, scale: 0.95, filter: 'blur(10px)' }}
-      whileInView={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: index * 0.15 }}
-      whileHover={{ y: -8, scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
-      className="group relative"
-    >
-      {/* Card Container with Glassmorphism */}
-      <div className="relative h-full bg-white/80 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 shadow-lg shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500">
-        
-        {/* Gradient Background Overlay */}
-        <div className={`absolute inset-0 bg-gradient-to-br ${service.gradientFrom} ${service.gradientTo} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-        
-        {/* Content */}
-        <div className="relative z-10 flex flex-col h-full">
-          {/* Icon Container */}
-          <motion.div
-            whileHover={{ rotate: 360, scale: 1.1 }}
-            transition={{ duration: 0.6 }}
-            className="mb-5 w-16 h-16 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center ring-4 ring-primary/10 group-hover:ring-accent/30 transition-all duration-500 shadow-lg shadow-primary/20"
-          >
-            <Icon className="w-8 h-8 text-white" strokeWidth={2.5} />
-          </motion.div>
-
-          {/* Title */}
-          <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
-            {t(service.titleKey)}
-          </h3>
-
-          {/* Benefit Description */}
-          <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow">
-            {t(service.benefitKey)}
-          </p>
-
-          {/* CTA Button */}
-          <Link to={service.href}>
-            <Button 
-              variant="default" 
-              className="w-full group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-300"
-            >
-              {t(service.ctaKey)}
-            </Button>
-          </Link>
-        </div>
-
-        {/* Decorative Corner Accent */}
-        <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-accent/5 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      </div>
-    </motion.div>
-  );
-};
 
 export const MainServicesGrid = () => {
   const { t } = useTranslation();
@@ -140,9 +81,13 @@ export const MainServicesGrid = () => {
         </motion.div>
 
         {/* Services Grid - 4 Equal Columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {servicesData.map((service, index) => (
-            <ServiceCard key={service.href} service={service} index={index} />
+            <MedicalServiceCard
+              key={service.href}
+              index={index}
+              {...service}
+            />
           ))}
         </div>
       </div>
