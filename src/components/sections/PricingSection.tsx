@@ -147,9 +147,9 @@ export const PricingSection = () => {
           >
             <Card className="bg-accent p-0 rounded-lg shadow-lg relative h-fit border-accent">
               {/* Badge verde posicionado absolutamente en la parte superior */}
-              <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 z-10">
-                <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white border-0 px-4 py-2 text-base font-bold shadow-lg hover:shadow-xl transition-all animate-pulse">
-                  <Sparkles className="w-4 h-4 mr-2 inline" />
+              <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 z-10 w-auto max-w-[90vw]">
+                <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white border-0 px-4 py-2 text-base font-bold shadow-lg hover:shadow-xl transition-all animate-pulse whitespace-nowrap">
+                  <Sparkles className="w-4 h-4 mr-2 inline flex-shrink-0" />
                   {t('pricing.comparison.colombia.badge_savings')}
                 </Badge>
               </div>
