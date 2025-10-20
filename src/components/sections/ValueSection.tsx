@@ -11,6 +11,9 @@ export const ValueSection = () => {
   return (
     <section className="bg-muted/30 py-16 md:py-24">
       <div className="mx-auto max-w-5xl px-6 lg:max-w-7xl">
+        <div className="mb-12 text-center">
+          <h2 className="text-3xl font-bold text-primary md:text-4xl">{t('value_proposition.section_title')}</h2>
+        </div>
         <div className="relative">
           <div className="relative z-10 grid grid-cols-6 gap-3">
             {/* Slot 1: 100% Confiable */}
