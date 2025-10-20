@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Star, Check, Play, ArrowRight } from 'lucide-react';
+import { Star, Check, Sparkles, ArrowRight } from 'lucide-react';
 interface Review {
   id: string;
   nameKey: string;
@@ -172,8 +172,8 @@ export const ReviewSection = () => {
             </motion.div>)}
         </motion.div>
 
-        {/* Call to Action */}
-        <motion.div className="mt-16 text-center" initial={{
+        {/* Call to Action - Mobile First */}
+        <motion.div className="mt-16 px-4" initial={{
         opacity: 0,
         y: 30
       }} whileInView={{
@@ -184,29 +184,34 @@ export const ReviewSection = () => {
       }} transition={{
         delay: 0.6
       }}>
-          {/* Título CTA */}
-          <h3 className="text-3xl font-bold text-primary mb-4">
-            {t('reviews.cta_title')}
-          </h3>
-
-          {/* Descripción */}
-          <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-            {t('reviews.cta_description')}
-          </p>
-
-          {/* Botón Principal */}
-          <motion.a href="/experiencia" className="inline-flex items-center gap-3 px-10 py-5 bg-accent hover:bg-accent/90 text-white font-bold rounded-full text-lg shadow-xl hover:shadow-2xl transition-all" whileHover={{
-          scale: 1.05
-        }} whileTap={{
-          scale: 0.98
-        }}>
-            <Play className="w-6 h-6" />
-            {t('reviews.cta_button')}
-            <ArrowRight className="w-5 h-5" />
-          </motion.a>
-
-          {/* Trust badge */}
-          
+          <div className="relative mx-auto max-w-2xl rounded-3xl bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 p-6 sm:p-10 md:p-12 border border-primary/10 shadow-lg hover:shadow-xl transition-shadow">
+            {/* Badge superior decorativo */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full mb-6">
+              <Sparkles className="w-4 h-4 text-accent" />
+              <span className="text-xs font-medium text-accent">Tu transformación comienza aquí</span>
+            </div>
+            
+            {/* Título principal */}
+            <h3 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">
+              {t('reviews.cta_title')}
+            </h3>
+            
+            {/* Descripción corta */}
+            <p className="text-muted-foreground text-base sm:text-lg mb-8">
+              {t('reviews.cta_description')}
+            </p>
+            
+            {/* Botón CTA - Full width mobile */}
+            <motion.a 
+              href="/experiencia"
+              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 bg-accent hover:bg-accent/90 text-white font-semibold rounded-full text-base shadow-lg hover:shadow-xl transition-all"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              {t('reviews.cta_button')}
+              <ArrowRight className="w-5 h-5" />
+            </motion.a>
+          </div>
         </motion.div>
       </div>
     </section>;
