@@ -146,26 +146,25 @@ export const PricingSection = () => {
             customVariants={revealVariants}
           >
             <Card className="bg-accent p-0 rounded-lg shadow-lg relative h-fit border-accent">
-              <CardHeader className="pb-6 bg-white rounded-t-lg py-6 border-b border-border">
-                <div className="flex gap-2 justify-between items-start">
-                  <h3 className="text-xl text-primary mb-4">{t('pricing.colombia_detail.country')}</h3>
-                  <Badge className="bg-accent text-accent-foreground border-accent px-2 py-1 text-xs">
-                    {t('pricing.comparison.colombia.badge_value')}
-                  </Badge>
-                </div>
-                <div className="w-full justify-start flex items-end">
+              {/* Badge verde posicionado absolutamente en la parte superior */}
+              <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 z-10">
+                <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white border-0 px-4 py-2 text-base font-bold shadow-lg hover:shadow-xl transition-all animate-pulse">
+                  <Sparkles className="w-4 h-4 mr-2 inline" />
+                  {t('pricing.comparison.colombia.badge_savings')} <span className="font-normal text-sm ml-1">{t('pricing.comparison.colombia.vs_others')}</span>
+                </Badge>
+              </div>
+              
+              <CardHeader className="pb-6 bg-white rounded-t-lg py-6 border-b border-border text-center">
+                <h3 className="text-xl text-primary mb-4">
+                  {t('pricing.colombia_detail.country')}
+                </h3>
+                <div className="w-full justify-center flex items-end">
                   <span className="text-4xl font-semibold text-primary">
                     {t('pricing.colombia_detail.price_range').split(' ')[0]}
                   </span>
                   <span className="text-primary/80 ml-1">
                     {t('pricing.colombia_detail.price_range').split(' ').slice(1).join(' ')}
                   </span>
-                </div>
-                <div className="flex justify-center mt-3">
-                  <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white border-0 px-4 py-2 text-base font-bold shadow-lg hover:shadow-xl transition-all animate-pulse">
-                    <Sparkles className="w-4 h-4 mr-2 inline" />
-                    {t('pricing.comparison.colombia.badge_savings')} <span className="font-normal text-sm ml-1">{t('pricing.comparison.colombia.vs_others')}</span>
-                  </Badge>
                 </div>
               </CardHeader>
               <CardContent className="pb-6 pt-6 bg-accent">
