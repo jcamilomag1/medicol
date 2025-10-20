@@ -29,22 +29,6 @@ export function MedicalServicesCarousel({ services }: MedicalServicesCarouselPro
             paddingBottom: "20px",
           }}
         >
-          {/* Gradient Overlays */}
-          <div
-            className="absolute left-0 top-0 bottom-0 z-10 pointer-events-none"
-            style={{
-              width: "150px",
-              background: "linear-gradient(90deg, hsl(var(--background)) 0%, rgba(255, 255, 255, 0) 100%)",
-            }}
-          />
-          <div
-            className="absolute right-0 top-0 bottom-0 z-10 pointer-events-none"
-            style={{
-              width: "150px",
-              background: "linear-gradient(270deg, hsl(var(--background)) 0%, rgba(255, 255, 255, 0) 100%)",
-            }}
-          />
-
           {/* Scrolling Container */}
           <motion.div
             className="flex items-center"
