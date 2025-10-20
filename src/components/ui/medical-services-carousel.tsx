@@ -68,13 +68,13 @@ export function MedicalServicesCarousel({ services }: MedicalServicesCarouselPro
           <motion.div
             className="flex items-center"
             animate={{
-              x: [0, -((services.length * 380) / 2)],
+              x: [0, -(services.length * 380)],
             }}
             transition={{
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: services.length * 3,
+                duration: services.length * 4.5,
                 ease: "linear",
               },
             }}
@@ -83,8 +83,8 @@ export function MedicalServicesCarousel({ services }: MedicalServicesCarouselPro
               paddingLeft: "24px",
             }}
           >
-            {/* Duplicate services for seamless loop */}
-            {[...services, ...services].map((service, index) => (
+            {/* Triple services for seamless infinite loop */}
+            {[...services, ...services, ...services].map((service, index) => (
               <Link
                 key={index}
                 to={service.href}

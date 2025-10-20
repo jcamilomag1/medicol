@@ -33,7 +33,7 @@ const servicesData = [
     titleKey: 'main_services.diagnostics.title',
     categoryKey: 'main_services.diagnostics.category',
     href: '/servicios/diagnosticos',
-    imageUrl: 'https://images.unsplash.com/photo-1581595220975-119360b2c23f?w=600&h=800&fit=crop&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=800&fit=crop&q=80',
     themeColor: '150 50% 40%',
   },
 ];
