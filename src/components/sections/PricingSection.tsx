@@ -4,7 +4,7 @@ import { TimelineContent } from "@/components/ui/timeline-animation";
 import { VerticalCutReveal } from "@/components/ui/vertical-cut-reveal";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Check, X, TrendingDown } from "lucide-react";
+import { Check, X, Sparkles } from "lucide-react";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -161,16 +161,11 @@ export const PricingSection = () => {
                     {t('pricing.colombia_detail.price_range').split(' ').slice(1).join(' ')}
                   </span>
                 </div>
-                <div className="mt-3 p-3 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border-2 border-green-500">
-                  <div className="flex items-center justify-center gap-2">
-                    <TrendingDown className="w-5 h-5 text-green-600" />
-                    <p className="text-lg font-bold text-green-700">
-                      {t('pricing.comparison.colombia.badge_savings')}
-                    </p>
-                  </div>
-                  <p className="text-xs text-green-600 text-center mt-1">
-                    {t('pricing.comparison.colombia.vs_others')}
-                  </p>
+                <div className="flex justify-center mt-3">
+                  <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white border-0 px-4 py-2 text-base font-bold shadow-lg hover:shadow-xl transition-all animate-pulse">
+                    <Sparkles className="w-4 h-4 mr-2 inline" />
+                    {t('pricing.comparison.colombia.badge_savings')} <span className="font-normal text-sm ml-1">{t('pricing.comparison.colombia.vs_others')}</span>
+                  </Badge>
                 </div>
               </CardHeader>
               <CardContent className="pb-6 pt-6 bg-accent">
