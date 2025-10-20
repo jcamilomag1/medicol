@@ -86,6 +86,10 @@
       "button": "Consultar Ahora por WhatsApp"
     }
   },
+  "reviews_testimonials": {
+    "title": "Reseñas y Testimonios",
+    "subtitle": "Así generamos confianza con nuestros usuarios mostrandoles nuestro customer approval"
+  },
   "featured_testimonials": {
     "badge": "Testimonios Reales",
     "title": "Pacientes Reales, Resultados que Cambian Vidas",

@@ -86,6 +86,10 @@
       "button": "Inquire Now via WhatsApp"
     }
   },
+  "reviews_testimonials": {
+    "title": "Reviews and Testimonials",
+    "subtitle": "Building trust with our customers by showcasing our customer approval"
+  },
   "featured_testimonials": {
     "badge": "Real Testimonials",
     "title": "Real Patients, Life-Changing Results",
