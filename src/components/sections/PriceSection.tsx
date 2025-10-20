@@ -1,4 +1,4 @@
-import PricingSection from '@/components/ui/pricing-section';
+import { PricingSection } from './PricingSection';
 
 export const PriceSection = () => {
   return <PricingSection />;
