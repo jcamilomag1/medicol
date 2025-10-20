@@ -142,22 +142,26 @@
     "plastic_surgery": {
       "title": "Cirugía Plástica y Estética",
       "benefit": "Transforma tu apariencia con procedimientos de clase mundial. Resultados naturales, recuperación rápida.",
-      "cta": "Ver Procedimientos"
+      "cta": "Ver Procedimientos",
+      "category": "TRANSFORMACIÓN"
     },
     "regenerative": {
       "title": "Medicina Regenerativa",
       "benefit": "Recupera tu vitalidad con terapias avanzadas de células madre. Rejuvenecimiento celular real.",
-      "cta": "Descubrir Terapias"
+      "cta": "Descubrir Terapias",
+      "category": "INNOVACIÓN"
     },
     "dental": {
       "title": "Diseño de Sonrisa",
       "benefit": "Sonríe con confianza. Estética dental avanzada para tu sonrisa perfecta.",
-      "cta": "Ver Tratamientos"
+      "cta": "Ver Tratamientos",
+      "category": "SONRISA"
     },
     "diagnostics": {
       "title": "Chequeos y Diagnósticos",
       "benefit": "Prevención inteligente con tecnología de vanguardia. Cuida tu salud proactivamente.",
-      "cta": "Conocer Más"
+      "cta": "Conocer Más",
+      "category": "PRECISIÓN"
     }
   },
   "services": {

@@ -142,22 +142,26 @@
     "plastic_surgery": {
       "title": "Plastic & Aesthetic Surgery",
       "benefit": "Transform your appearance with world-class procedures. Natural results, fast recovery.",
-      "cta": "View Procedures"
+      "cta": "View Procedures",
+      "category": "TRANSFORMATION"
     },
     "regenerative": {
       "title": "Regenerative Medicine",
       "benefit": "Restore your vitality with advanced stem cell therapies. Real cellular rejuvenation.",
-      "cta": "Discover Therapies"
+      "cta": "Discover Therapies",
+      "category": "INNOVATION"
     },
     "dental": {
       "title": "Smile Design",
       "benefit": "Smile with confidence. Advanced dental aesthetics for your perfect smile.",
-      "cta": "View Treatments"
+      "cta": "View Treatments",
+      "category": "SMILE"
     },
     "diagnostics": {
       "title": "Check-Ups & Diagnostics",
       "benefit": "Smart prevention with cutting-edge technology. Proactive healthcare at its best.",
-      "cta": "Learn More"
+      "cta": "Learn More",
+      "category": "PRECISION"
     }
   },
   "services": {
