@@ -19,26 +19,7 @@ export function MedicalServicesCarousel({ services }: MedicalServicesCarouselPro
   const { t } = useTranslation();
 
   return (
-    <section className="relative w-full overflow-hidden bg-background">
-      <div className="py-20 px-6">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
-            {t('main_services.title')}
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            {t('main_services.subtitle')}
-          </p>
-        </motion.div>
-
-        {/* Carousel Container */}
-        <motion.div
+    <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
@@ -157,7 +138,5 @@ export function MedicalServicesCarousel({ services }: MedicalServicesCarouselPro
             ))}
           </motion.div>
         </motion.div>
-      </div>
-    </section>
   );
 }
