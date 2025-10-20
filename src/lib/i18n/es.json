@@ -525,6 +525,15 @@
       "view_details": "Ver Detalles",
       "learn_more": "Más Información"
     },
+    "categories": {
+      "all": "Todos",
+      "face": "Rostro y Cuello",
+      "body": "Contorno Corporal",
+      "breast": "Senos",
+      "buttocks": "Glúteos",
+      "combined": "Combinados",
+      "specialized": "Especializados"
+    },
     "modal": {
       "surgery_time": "Tiempo de Cirugía",
       "anesthesia": "Anestesia",

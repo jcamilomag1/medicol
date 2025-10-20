@@ -525,6 +525,15 @@
       "view_details": "View Details",
       "learn_more": "Learn More"
     },
+    "categories": {
+      "all": "All",
+      "face": "Face & Neck",
+      "body": "Body Contouring",
+      "breast": "Breast",
+      "buttocks": "Buttocks",
+      "combined": "Combined",
+      "specialized": "Specialized"
+    },
     "modal": {
       "surgery_time": "Surgery Time",
       "anesthesia": "Anesthesia",
