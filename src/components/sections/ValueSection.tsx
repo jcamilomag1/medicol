@@ -1,6 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent } from '@/components/ui/card';
 import { ShieldCheck, Languages, TrendingDown, Star } from 'lucide-react';
+import testimonialYoung from '@/assets/testimonial-woman-young.jpg';
+import testimonialElderly from '@/assets/testimonial-woman-elderly.jpg';
+import testimonialRhinoplasty from '@/assets/testimonial-woman-rhinoplasty.jpg';
 
 export const ValueSection = () => {
   const { t } = useTranslation();
@@ -115,40 +118,40 @@ export const ValueSection = () => {
                     <p className="text-foreground text-sm">{t('value_proposition.satisfaction.description')}</p>
                   </div>
                 </div>
-                <div className="before:bg-(--color-border) relative mt-6 before:absolute before:inset-0 before:mx-auto before:w-px sm:-my-6 sm:-mr-6">
-                  <div className="relative flex h-full flex-col justify-center space-y-6 py-6">
-                    <div className="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">
-                      <div className="flex items-center gap-0.5">
-                        <Star className="size-3 fill-accent text-accent" />
-                        <Star className="size-3 fill-accent text-accent" />
-                        <Star className="size-3 fill-accent text-accent" />
-                        <Star className="size-3 fill-accent text-accent" />
-                        <Star className="size-3 fill-accent text-accent" />
+                  <div className="before:bg-(--color-border) relative mt-6 before:absolute before:inset-0 before:mx-auto before:w-px sm:-my-6 sm:-mr-6">
+                    <div className="relative flex h-full flex-col justify-center space-y-6 py-6">
+                      <div className="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">
+                        <div className="flex items-center gap-0.5">
+                          <Star className="size-3 fill-accent text-accent" />
+                          <Star className="size-3 fill-accent text-accent" />
+                          <Star className="size-3 fill-accent text-accent" />
+                          <Star className="size-3 fill-accent text-accent" />
+                          <Star className="size-3 fill-accent text-accent" />
+                        </div>
+                        <img src={testimonialYoung} alt="Paciente satisfecha" className="ring-background size-7 ring-4 rounded-full object-cover" />
                       </div>
-                      <div className="ring-background size-7 ring-4 rounded-full bg-muted"></div>
-                    </div>
-                    <div className="relative ml-[calc(50%-1rem)] flex items-center gap-2">
-                      <div className="ring-background size-8 ring-4 rounded-full bg-muted"></div>
-                      <div className="flex items-center gap-0.5">
-                        <Star className="size-3 fill-accent text-accent" />
-                        <Star className="size-3 fill-accent text-accent" />
-                        <Star className="size-3 fill-accent text-accent" />
-                        <Star className="size-3 fill-accent text-accent" />
-                        <Star className="size-3 fill-accent text-accent" />
+                      <div className="relative ml-[calc(50%-1rem)] flex items-center gap-2">
+                        <img src={testimonialElderly} alt="Paciente satisfecha" className="ring-background size-8 ring-4 rounded-full object-cover" />
+                        <div className="flex items-center gap-0.5">
+                          <Star className="size-3 fill-accent text-accent" />
+                          <Star className="size-3 fill-accent text-accent" />
+                          <Star className="size-3 fill-accent text-accent" />
+                          <Star className="size-3 fill-accent text-accent" />
+                          <Star className="size-3 fill-accent text-accent" />
+                        </div>
                       </div>
-                    </div>
-                    <div className="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">
-                      <div className="flex items-center gap-0.5">
-                        <Star className="size-3 fill-accent text-accent" />
-                        <Star className="size-3 fill-accent text-accent" />
-                        <Star className="size-3 fill-accent text-accent" />
-                        <Star className="size-3 fill-accent text-accent" />
-                        <Star className="size-3 fill-accent text-accent" />
+                      <div className="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">
+                        <div className="flex items-center gap-0.5">
+                          <Star className="size-3 fill-accent text-accent" />
+                          <Star className="size-3 fill-accent text-accent" />
+                          <Star className="size-3 fill-accent text-accent" />
+                          <Star className="size-3 fill-accent text-accent" />
+                          <Star className="size-3 fill-accent text-accent" />
+                        </div>
+                        <img src={testimonialRhinoplasty} alt="Paciente satisfecha" className="ring-background size-7 ring-4 rounded-full object-cover" />
                       </div>
-                      <div className="ring-background size-7 ring-4 rounded-full bg-muted"></div>
                     </div>
                   </div>
-                </div>
               </CardContent>
             </Card>
           </div>
