@@ -99,7 +99,7 @@ export const ReviewSection = () => {
       }} transition={{
         duration: 0.6
       }}>
-          <h2 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl lg:text-6xl mb-6">
+          <h2 className="text-4xl font-bold tracking-tight text-primary mb-6">
             {t('reviews.section_title')}
           </h2>
           <p className="text-lg text-muted-foreground">

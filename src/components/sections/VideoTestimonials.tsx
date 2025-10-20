@@ -66,7 +66,7 @@ export const VideoTestimonials = () => {
           <Badge variant="outline" className="mb-4 border-accent text-accent">
             {t('video_testimonials.badge')}
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl font-bold text-foreground mb-4">
             {t('video_testimonials.title')}
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">

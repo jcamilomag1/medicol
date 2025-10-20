@@ -74,7 +74,7 @@ export const FeaturedTestimonials = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl font-bold text-foreground mb-4">
             {t('reviews_testimonials.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">

@@ -67,7 +67,7 @@ export const PricingSection = () => {
       <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,hsl(var(--muted))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--muted))_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_40%_50%_at_50%_50%,#000_70%,transparent_110%)]"></div>
       <div className="max-w-6xl mx-auto relative z-10">
         <article className="text-center mb-12">
-          <h2 className="text-4xl font-semibold text-foreground mb-4">
+          <h2 className="text-4xl font-bold text-foreground mb-4">
             <VerticalCutReveal
               splitBy="words"
               staggerDuration={0.15}

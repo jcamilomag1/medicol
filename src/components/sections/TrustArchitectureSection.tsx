@@ -21,7 +21,7 @@ export const TrustArchitectureSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl mb-8">
+          <h2 className="text-4xl font-bold tracking-tight text-primary mb-8">
             {t('trust.section_title')}
           </h2>
           

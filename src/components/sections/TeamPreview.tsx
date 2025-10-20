@@ -78,7 +78,7 @@ export const TeamPreview = () => {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-semibold text-foreground mb-4">
+          <h2 className="text-4xl font-bold text-foreground mb-4">
             Estarás en las mejores manos
           </h2>
           <p className="text-muted-foreground text-lg">

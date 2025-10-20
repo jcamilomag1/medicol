@@ -78,7 +78,7 @@ export const PremiumServicesSection = () => {
           <Badge variant="outline" className="mb-4 border-accent text-accent">
             {t('premium_services.badge')}
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl font-bold text-foreground mb-4">
             {t('premium_services.title')}
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto mb-8">

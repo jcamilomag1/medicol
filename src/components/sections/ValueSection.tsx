@@ -12,7 +12,7 @@ export const ValueSection = () => {
     <section className="bg-white py-12 md:py-16">
       <div className="mx-auto max-w-5xl px-6 lg:max-w-7xl">
         <div className="mb-12 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold text-primary">{t('value_proposition.section_title')}</h1>
+          <h1 className="text-4xl font-bold text-primary">{t('value_proposition.section_title')}</h1>
         </div>
         <div className="relative">
           <div className="relative z-10 grid grid-cols-6 gap-3">

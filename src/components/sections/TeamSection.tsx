@@ -94,7 +94,7 @@ export const TeamSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl lg:text-6xl mb-4">
+          <h2 className="text-4xl font-bold tracking-tight text-primary mb-4">
             {t('team.section_title')}
           </h2>
           <p className="text-lg text-muted-foreground">

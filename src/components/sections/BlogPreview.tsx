@@ -40,7 +40,7 @@ export const BlogPreview = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+          <h2 className="text-4xl font-bold tracking-tight text-primary">
             {t('blog.section_title')}
           </h2>
           <p className="mt-4 text-lg leading-8 text-gray-600">

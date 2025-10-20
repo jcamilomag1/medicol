@@ -54,7 +54,7 @@ export const AccreditationsSection = () => {
           <Badge variant="outline" className="mb-4 border-primary text-primary">
             {t('accreditations.badge')}
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl font-bold text-foreground mb-4">
             {t('accreditations.title')}
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">

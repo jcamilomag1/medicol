@@ -37,7 +37,7 @@ export const AboutMedicolSection = () => {
             className="space-y-6"
           >
             {/* Título tipo subtítulo */}
-            <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight">
+            <h2 className="text-4xl font-bold text-primary leading-tight">
               {t('about.hero_title')}
             </h2>
             
