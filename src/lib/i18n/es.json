@@ -362,9 +362,25 @@
     }
   },
   "pricing": {
+    "section": {
+      "title": "Compara y Ahorra Hasta 70%",
+      "subtitle": "Calidad Mundial a Precios Accesibles"
+    },
+    "cta": {
+      "button": "Obtén tu Cotización Gratuita"
+    },
     "comparison": {
       "title": "Compara Precios de Turismo Médico",
       "subtitle": "Descubre por qué miles de pacientes eligen Colombia para sus procedimientos médicos",
+      "qualified_surgeons": "Cirujanos Calificados",
+      "local_standards": "Estándares Locales de Calidad",
+      "extras_not_included": "Beneficios Adicionales (transporte, recuperación) Generalmente No Incluidos",
+      "extra_costs": "Seguro y Cuidados Post-Op a menudo con Costo Extra",
+      "estimate_note": "Precio Promedio Estimado",
+      "certified_surgeons_eu": "Cirujanos Certificados",
+      "eu_standards": "Estándares Europeos de Calidad",
+      "eu_extras_not_included": "Servicios Post-Op y Logística Generalmente No Incluidos",
+      "eu_extra_costs": "Posibles Costos Adicionales",
       "usa": {
         "country": "Estados Unidos",
         "flag": "🇺🇸",
@@ -389,6 +405,7 @@
         "title": "La Mejor Opción 🏆",
         "badge_value": "Mejor Valor",
         "badge_savings": "Ahorra 50-60%",
+        "vs_others": "vs USA/Europa",
         "description": "Precio todo incluido con beneficios premium",
         "all_inclusive_title": "Todo Incluido:",
         "benefits": [
@@ -403,6 +420,27 @@
         ]
       },
       "info_text": "Los precios son estimados. Consulta gratuita incluida."
+    },
+    "usa_canada": {
+      "country": "USA / Canadá",
+      "price_range": "$10,000 - $15,000+ USD"
+    },
+    "europe": {
+      "country": "Europa (España / UK)",
+      "price_range": "€8,000 - €12,000+ EUR"
+    },
+    "colombia_detail": {
+      "country": "Medellín (Medicol)",
+      "price_range": "$4,000 - $7,000 USD",
+      "expert_surgeons": "Cirujanos Expertos (+15 años exp.)",
+      "jci_hospitals": "Hospitales con Acreditación JCI",
+      "all_inclusive_title": "Paquete TODO INCLUIDO:",
+      "surgical_insurance": "Seguro Quirúrgico",
+      "complete_transport": "Transporte Completo",
+      "postop_meds": "Medicamentos Post-Op",
+      "massage_drainage": "Masajes y Drenajes Linfáticos",
+      "postop_garments": "Prendas Post-Quirúrgicas",
+      "bilingual_assistance": "Asistencia Bilingüe y Traductor"
     }
   },
   "reviews": {

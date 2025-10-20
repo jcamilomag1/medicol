@@ -362,9 +362,25 @@
     }
   },
   "pricing": {
+    "section": {
+      "title": "Compare and Save Up to 70%",
+      "subtitle": "World-Class Quality at Accessible Prices"
+    },
+    "cta": {
+      "button": "Get Your Free Quote"
+    },
     "comparison": {
       "title": "Compare Medical Tourism Prices",
       "subtitle": "Discover why thousands of patients choose Colombia for their medical procedures",
+      "qualified_surgeons": "Qualified Surgeons",
+      "local_standards": "Local Quality Standards",
+      "extras_not_included": "Additional Benefits (transport, recovery) Generally Not Included",
+      "extra_costs": "Insurance and Post-Op Care Often Extra Cost",
+      "estimate_note": "Average Estimated Price",
+      "certified_surgeons_eu": "Certified Surgeons",
+      "eu_standards": "European Quality Standards",
+      "eu_extras_not_included": "Post-Op Services and Logistics Generally Not Included",
+      "eu_extra_costs": "Possible Additional Costs",
       "usa": {
         "country": "United States",
         "flag": "🇺🇸",
@@ -389,6 +405,7 @@
         "title": "Best Choice 🏆",
         "badge_value": "Best Value",
         "badge_savings": "Save 50-60%",
+        "vs_others": "vs USA/Europe",
         "description": "All-inclusive price with premium benefits",
         "all_inclusive_title": "All Included:",
         "benefits": [
@@ -403,6 +420,27 @@
         ]
       },
       "info_text": "Prices are estimated. Free consultation included."
+    },
+    "usa_canada": {
+      "country": "USA / Canada",
+      "price_range": "$10,000 - $15,000+ USD"
+    },
+    "europe": {
+      "country": "Europe (Spain / UK)",
+      "price_range": "€8,000 - €12,000+ EUR"
+    },
+    "colombia_detail": {
+      "country": "Medellín (Medicol)",
+      "price_range": "$4,000 - $7,000 USD",
+      "expert_surgeons": "Expert Surgeons (+15 years exp.)",
+      "jci_hospitals": "JCI Accredited Hospitals",
+      "all_inclusive_title": "ALL INCLUDED Package:",
+      "surgical_insurance": "Surgical Insurance",
+      "complete_transport": "Complete Transportation",
+      "postop_meds": "Post-Op Medications",
+      "massage_drainage": "Massages and Lymphatic Drainage",
+      "postop_garments": "Post-Surgical Garments",
+      "bilingual_assistance": "Bilingual Assistance and Translator"
     }
   },
   "reviews": {
