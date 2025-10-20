@@ -11,8 +11,8 @@ export const HomePage = () => {
   return (
     <main className="flex flex-col gap-y-20">
       <HeroSection />
-      <AboutMedicolSectionNew />
       <MainServicesGrid />
+      <AboutMedicolSectionNew />
       <FeaturedTestimonials />
       <TeamPreview />
       <PriceSection />
