@@ -24,7 +24,7 @@ export const SelectUsSection = () => {
           '_blank'
         ),
         variant: 'default' as const,
-        className: 'bg-primary hover:bg-primary/90',
+        className: 'bg-accent text-accent-foreground hover:bg-accent/90',
       },
       {
         text: t('about.cta_team'),
