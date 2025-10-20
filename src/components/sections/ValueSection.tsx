@@ -62,7 +62,15 @@ export const ValueSection = () => {
                   </div>
                   <div className="space-y-2">
                     <h2 className="text-lg font-medium text-primary transition">{t('value_proposition.smart_savings.title')}</h2>
-                    <p className="text-foreground text-sm">{t('value_proposition.smart_savings.description')}</p>
+                    <p className="text-foreground text-sm">
+                      {t('value_proposition.smart_savings.description').split(/(50%|70%)/).map((part, index) => 
+                        part === '50%' || part === '70%' ? (
+                          <span key={index} className="font-semibold text-green-600">{part}</span>
+                        ) : (
+                          part
+                        )
+                      )}
+                    </p>
                   </div>
                 </div>
                 <div className="rounded-tl-(--radius) relative -mb-6 -mr-6 mt-6 h-fit border-l border-t p-6 py-6 sm:ml-6">
