@@ -74,7 +74,7 @@ export const TeamPreview = () => {
   const currentDoctor = teamMembers[currentIndex];
 
   return (
-    <section className="py-16 px-4 w-full">
+    <section className="py-8 md:py-12 px-4 w-full">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">

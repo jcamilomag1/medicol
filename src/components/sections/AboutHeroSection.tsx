@@ -63,7 +63,7 @@ const imageVariants = {
 
 const AboutHeroSection = ({ title, subtitle, actions, stats, images, className }: HeroSectionProps) => {
   return (
-    <section className={cn('w-full overflow-hidden bg-background py-12 sm:py-24', className)}>
+    <section className={cn('w-full overflow-hidden bg-background py-8 sm:py-12', className)}>
       <div className="container mx-auto grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-8">
         {/* Left Column: Text Content */}
         <motion.div
