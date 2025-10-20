@@ -60,7 +60,7 @@ export const AccreditationsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto space-y-6"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
         >
           {accreditations.map((accreditation, index) => {
             const Icon = accreditation.icon;
@@ -71,7 +71,7 @@ export const AccreditationsSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="flex gap-4 p-6 bg-card border-2 border-border rounded-xl hover:border-primary/50 hover:shadow-lg transition-all duration-300"
+                className="flex flex-col items-center text-center gap-4 p-6 bg-card border-2 border-border rounded-xl hover:border-primary/50 hover:shadow-lg transition-all duration-300"
               >
                 <div className={`flex-shrink-0 ${accreditation.color}`}>
                   <Icon className="w-10 h-10" />
