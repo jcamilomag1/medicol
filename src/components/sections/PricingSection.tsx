@@ -4,7 +4,7 @@ import { TimelineContent } from "@/components/ui/timeline-animation";
 import { VerticalCutReveal } from "@/components/ui/vertical-cut-reveal";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Check, X } from "lucide-react";
+import { Check, X, TrendingDown } from "lucide-react";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -161,9 +161,17 @@ export const PricingSection = () => {
                     {t('pricing.colombia_detail.price_range').split(' ').slice(1).join(' ')}
                   </span>
                 </div>
-                <p className="text-sm font-bold text-primary mt-2">
-                  {t('pricing.comparison.colombia.badge_savings')} {t('pricing.comparison.colombia.vs_others')}
-                </p>
+                <div className="mt-3 p-3 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border-2 border-green-500">
+                  <div className="flex items-center justify-center gap-2">
+                    <TrendingDown className="w-5 h-5 text-green-600" />
+                    <p className="text-lg font-bold text-green-700">
+                      {t('pricing.comparison.colombia.badge_savings')}
+                    </p>
+                  </div>
+                  <p className="text-xs text-green-600 text-center mt-1">
+                    {t('pricing.comparison.colombia.vs_others')}
+                  </p>
+                </div>
               </CardHeader>
               <CardContent className="pb-6 pt-6 bg-accent">
                 <ul className="space-y-3 mb-6">
