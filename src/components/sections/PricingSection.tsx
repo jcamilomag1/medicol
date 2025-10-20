@@ -146,22 +146,22 @@ export const PricingSection = () => {
             customVariants={revealVariants}
           >
             <Card className="bg-accent p-0 rounded-lg shadow-lg relative h-fit border-accent">
-              <CardHeader className="pb-6 bg-primary rounded-t-lg py-6">
+              <CardHeader className="pb-6 bg-white rounded-t-lg py-6 border-b border-border">
                 <div className="flex gap-2 justify-between items-start">
-                  <h3 className="text-xl text-primary-foreground mb-4">{t('pricing.colombia_detail.country')}</h3>
+                  <h3 className="text-xl text-primary mb-4">{t('pricing.colombia_detail.country')}</h3>
                   <Badge className="bg-accent text-accent-foreground border-accent px-2 py-1 text-xs">
                     {t('pricing.comparison.colombia.badge_value')}
                   </Badge>
                 </div>
                 <div className="w-full justify-start flex items-end">
-                  <span className="text-4xl font-semibold text-primary-foreground">
+                  <span className="text-4xl font-semibold text-primary">
                     {t('pricing.colombia_detail.price_range').split(' ')[0]}
                   </span>
-                  <span className="text-primary-foreground/80 ml-1">
+                  <span className="text-primary/80 ml-1">
                     {t('pricing.colombia_detail.price_range').split(' ').slice(1).join(' ')}
                   </span>
                 </div>
-                <p className="text-sm font-bold text-primary-foreground mt-2">
+                <p className="text-sm font-bold text-primary mt-2">
                   {t('pricing.comparison.colombia.badge_savings')} {t('pricing.comparison.colombia.vs_others')}
                 </p>
               </CardHeader>
