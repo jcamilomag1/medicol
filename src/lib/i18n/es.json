@@ -196,12 +196,20 @@
     "point_4": "Seguimiento post-operatorio completo"
   },
   "about": {
+    "main_title": "Elige confianza, elige Medicol",
     "hero_title": "Tu tranquilidad es nuestro compromiso. Coordinamos tu salud y tu viaje, de principio a fin.",
     "hero_description": "Somos especialistas en turismo médico que combina cirugía estética, diagnósticos avanzados, medicina regenerativa, tratamientos dentales y entretenimiento con más de 15 años de experiencia.",
     "badge_jci": "Acreditación JCI",
     "badge_sccp": "Certificados SCCP",
     "badge_acicme": "Miembros ACICME",
-    "team_image_alt": "Equipo Médico Medicol"
+    "team_image_alt": "Equipo Médico Medicol",
+    "stats": {
+      "patients": "Pacientes Satisfechos",
+      "years": "Años de Experiencia",
+      "jci_accredited": "Acreditado JCI"
+    },
+    "cta_consult": "Agenda tu Consulta Virtual Gratis",
+    "cta_team": "Conoce a Nuestro Equipo"
   },
   "why_choose": {
     "section_title": "Por Qué Elegir Medicol",
