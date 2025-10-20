@@ -74,16 +74,28 @@ export const TeamPreview = () => {
   const currentDoctor = teamMembers[currentIndex];
 
   return (
-    <motion.div
-      className="w-full max-w-6xl mx-auto px-4"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{
-        duration: 0.6,
-        ease: "easeOut"
-      }}
-    >
+    <section className="py-16 px-4 w-full">
+      <div className="max-w-6xl mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-semibold text-foreground mb-4">
+            Estarás en las mejores manos
+          </h2>
+          <p className="text-muted-foreground text-lg">
+            {t('team.preview_description')}
+          </p>
+        </div>
+
+        <motion.div
+          className="w-full"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{
+            duration: 0.6,
+            ease: "easeOut"
+          }}
+        >
       {/* Desktop Layout */}
       <div className="hidden md:flex relative items-center gap-8">
         {/* Doctor Image */}
@@ -286,5 +298,7 @@ export const TeamPreview = () => {
         </motion.button>
       </div>
     </motion.div>
+      </div>
+    </section>
   );
 };
