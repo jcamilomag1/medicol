@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Users, Award, ShieldCheck } from 'lucide-react';
 import HeroSection from '@/components/ui/hero-section-9';
 
-export const AboutMedicolSectionNew = () => {
+export const SelectUsSection = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
