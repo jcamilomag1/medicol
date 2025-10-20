@@ -148,50 +148,19 @@ export const TeamPreview = () => {
                 {t(currentDoctor.bioKey)}
               </p>
               
-              {/* Social Links + View Profile */}
-              <div className="flex items-center gap-4">
-                {/* Social Icons */}
-                {currentDoctor.linkedinUrl && (
-                  <motion.a
-                    href={currentDoctor.linkedinUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-primary hover:bg-primary/90 flex items-center justify-center transition-all"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin className="w-5 h-5 text-white" />
-                  </motion.a>
-                )}
-                {currentDoctor.instagramUrl && (
-                  <motion.a
-                    href={currentDoctor.instagramUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-primary hover:bg-primary/90 flex items-center justify-center transition-all"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    aria-label="Instagram"
-                  >
-                    <Instagram className="w-5 h-5 text-white" />
-                  </motion.a>
-                )}
-                
-                {/* View Profile Button */}
-                <motion.a
-                  href={currentDoctor.profileUrl}
-                  className="
-                    flex-1 px-6 py-3 bg-accent hover:bg-accent/90 
-                    text-white font-semibold rounded-full text-center
-                    transition-all
-                  "
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  {t('common.view_profile')} →
-                </motion.a>
-              </div>
+              {/* View Profile Button */}
+              <motion.a
+                href={currentDoctor.profileUrl}
+                className="
+                  block w-full px-6 py-3 bg-accent hover:bg-accent/90 
+                  text-white font-semibold rounded-full text-center
+                  transition-all
+                "
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                {t('common.view_profile')} →
+              </motion.a>
             </motion.div>
           </AnimatePresence>
         </motion.div>
@@ -243,36 +212,7 @@ export const TeamPreview = () => {
                 {t(currentDoctor.bioKey)}
               </p>
               
-              {/* Social Links + View Profile */}
-              <div className="flex justify-center items-center gap-3 mb-4">
-                {currentDoctor.linkedinUrl && (
-                  <motion.a
-                    href={currentDoctor.linkedinUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-primary hover:bg-primary/90 flex items-center justify-center transition-all"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin className="w-5 h-5 text-white" />
-                  </motion.a>
-                )}
-                {currentDoctor.instagramUrl && (
-                  <motion.a
-                    href={currentDoctor.instagramUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-primary hover:bg-primary/90 flex items-center justify-center transition-all"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    aria-label="Instagram"
-                  >
-                    <Instagram className="w-5 h-5 text-white" />
-                  </motion.a>
-                )}
-              </div>
-              
+              {/* View Profile Button */}
               <motion.a
                 href={currentDoctor.profileUrl}
                 className="
