@@ -13,8 +13,8 @@ export const HomePage = () => {
     <main className="flex flex-col gap-y-12">
       <HeroSection />
       <MainServicesSection />
-      <SelectUsSection />
       <ValueSection />
+      <SelectUsSection />
       <FeaturedTestimonials />
       <TeamPreview />
       <PriceSection />
