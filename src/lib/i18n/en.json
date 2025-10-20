@@ -199,6 +199,30 @@
     "point_3": "Personalized attention in your language",
     "point_4": "Complete post-operative follow-up"
   },
+  "value_proposition": {
+    "section_title": "Our Value Proposition",
+    "reliable": {
+      "percentage": "100%",
+      "title": "100% Reliable",
+      "subtitle": "Safety and Care Guaranteed"
+    },
+    "certified_quality": {
+      "title": "Certified Quality",
+      "description": "We operate in JCI-accredited hospitals with ACICME and SCCP certified professionals."
+    },
+    "no_barriers": {
+      "title": "Communication Without Barriers",
+      "description": "We offer medical translator and personalized bilingual assistance throughout your entire process."
+    },
+    "smart_savings": {
+      "title": "Smart and Transparent Savings",
+      "description": "Access world-class quality saving 50% to 70% compared to USA/Europe, with no hidden costs."
+    },
+    "satisfaction": {
+      "title": "Exceptional Satisfaction",
+      "description": "Thousands of transformed patients endorse our care. We treat you like family."
+    }
+  },
   "about": {
     "main_title": "Choose trust, choose Medicol",
     "hero_title": "Your peace of mind is our commitment. We coordinate your health and your journey, from start to finish.",
