@@ -9,7 +9,7 @@ export const ValueSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-muted/30 py-12 md:py-16">
+    <section className="bg-white py-12 md:py-16">
       <div className="mx-auto max-w-5xl px-6 lg:max-w-7xl">
         <div className="mb-12 text-center">
           <h1 className="text-3xl md:text-5xl font-bold text-primary">{t('value_proposition.section_title')}</h1>

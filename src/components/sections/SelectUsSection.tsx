@@ -57,5 +57,5 @@ export const SelectUsSection = () => {
     ],
   };
 
-  return <AboutHeroSection {...aboutData} className="bg-gradient-hero" />;
+  return <AboutHeroSection {...aboutData} className="bg-white" />;
 };
