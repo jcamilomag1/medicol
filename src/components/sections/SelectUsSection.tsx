@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { Users, Award, ShieldCheck } from 'lucide-react';
-import HeroSection from '@/components/ui/hero-section-9';
+import AboutHeroSection from './AboutHeroSection';
 
 export const SelectUsSection = () => {
   const { t } = useTranslation();
@@ -57,5 +57,5 @@ export const SelectUsSection = () => {
     ],
   };
 
-  return <HeroSection {...aboutData} className="bg-gradient-hero" />;
+  return <AboutHeroSection {...aboutData} className="bg-gradient-hero" />;
 };
