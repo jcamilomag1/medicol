@@ -121,7 +121,7 @@ export const FeaturedTestimonials = () => {
                     {/* User Info */}
                     <div className="flex items-center gap-3 border-t pt-4">
                       <Avatar className="w-10 h-10">
-                        <AvatarImage src={testimonial.avatarUrl} alt={testimonial.name} />
+                        <AvatarImage src={testimonial.avatarUrl} alt={testimonial.name} loading="lazy" />
                         <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                       </Avatar>
                       <div className="flex-1 min-w-0">

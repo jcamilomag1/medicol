@@ -21,11 +21,14 @@ export const ProcedureCard = ({ procedure, onClick }: ProcedureCardProps) => {
       className="h-full"
     >
       <Card className="h-full overflow-hidden cursor-pointer group shadow-soft hover:shadow-medium transition-all duration-300 flex flex-col min-h-[480px]">
-        <div className="relative aspect-video overflow-hidden">
+        <div className="relative aspect-video overflow-hidden bg-muted">
           <img
             src={procedure.image}
             alt={isEnglish ? procedure.name_en : procedure.name_es}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            style={{ backgroundColor: '#e5e7eb' }}
           />
           <Badge className="absolute top-4 right-4 bg-accent text-accent-foreground font-bold shadow-lg">
             {t('plastic_surgery.procedures.save_up_to')} {procedure.savings_percentage}%

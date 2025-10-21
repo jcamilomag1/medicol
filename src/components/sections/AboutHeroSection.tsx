@@ -151,21 +151,21 @@ const AboutHeroSection = ({ title, subtitle, actions, stats, images, className }
             style={{ transformOrigin: 'bottom center' }}
             variants={imageVariants}
           >
-            <img src={images[0]} alt="Medical team" className="h-full w-full rounded-xl object-cover" />
+            <img src={images[0]} alt="Medical team" loading="lazy" decoding="async" className="h-full w-full rounded-xl object-cover" />
           </motion.div>
           <motion.div
             className="absolute right-0 top-1/3 h-40 w-40 rounded-2xl bg-muted p-2 shadow-lg sm:h-56 sm:w-56"
             style={{ transformOrigin: 'left center' }}
             variants={imageVariants}
           >
-            <img src={images[1]} alt="Patient care" className="h-full w-full rounded-xl object-cover" />
+            <img src={images[1]} alt="Patient care" loading="lazy" decoding="async" className="h-full w-full rounded-xl object-cover" />
           </motion.div>
           <motion.div
             className="absolute bottom-0 left-0 h-32 w-32 rounded-2xl bg-muted p-2 shadow-lg sm:h-48 sm:w-48"
             style={{ transformOrigin: 'top right' }}
             variants={imageVariants}
           >
-            <img src={images[2]} alt="Modern facilities" className="h-full w-full rounded-xl object-cover" />
+            <img src={images[2]} alt="Modern facilities" loading="lazy" decoding="async" className="h-full w-full rounded-xl object-cover" />
           </motion.div>
         </motion.div>
       </div>

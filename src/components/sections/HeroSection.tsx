@@ -11,12 +11,26 @@ export const HeroSection = () => {
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image with Animation */}
       <motion.div 
-        className="absolute inset-0 z-0 bg-[url('https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] bg-cover bg-center"
+        className="absolute inset-0 z-0 overflow-hidden"
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
         style={{ backfaceVisibility: 'hidden' }}
-      />
+      >
+        <img
+          src="https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt="Medical facility background"
+          loading="eager"
+          decoding="async"
+          className="w-full h-full object-cover"
+          style={{ 
+            objectFit: 'cover',
+            willChange: 'transform',
+            transform: 'translateZ(0)',
+            backfaceVisibility: 'hidden'
+          }}
+        />
+      </motion.div>
 
       {/* Enhanced Overlays */}
       <div 
@@ -72,6 +86,8 @@ export const HeroSection = () => {
               <motion.img 
                 src={accreditationsImage} 
                 alt={t('hero.jci_alt')}
+                loading="lazy"
+                decoding="async"
                 className="h-12 md:h-14 lg:h-16 w-auto max-w-full opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-105"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 0.9, scale: 1 }}

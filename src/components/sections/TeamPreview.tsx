@@ -110,6 +110,8 @@ export const TeamPreview = () => {
               key={currentDoctor.imageUrl}
               src={currentDoctor.imageUrl}
               alt={currentDoctor.name}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover"
               initial={{ opacity: 0, scale: 1.1 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -192,6 +194,8 @@ export const TeamPreview = () => {
               key={currentDoctor.imageUrl}
               src={currentDoctor.imageUrl}
               alt={currentDoctor.name}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

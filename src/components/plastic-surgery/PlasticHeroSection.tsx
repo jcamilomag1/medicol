@@ -21,12 +21,23 @@ export const PlasticHeroSection = () => {
   return <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-primary-light to-accent">
       {/* Background image with animation */}
       <motion.div 
-        className="absolute inset-0 z-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${plasticSurgeryHeroBg})` }}
+        className="absolute inset-0 z-0 overflow-hidden"
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-      />
+      >
+        <img
+          src={plasticSurgeryHeroBg}
+          alt="Plastic surgery hero background"
+          loading="eager"
+          decoding="async"
+          className="w-full h-full object-cover"
+          style={{ 
+            objectFit: 'cover',
+            willChange: 'transform'
+          }}
+        />
+      </motion.div>
       
       {/* Primera capa de overlay - Color primario con gradiente */}
       <div className="absolute inset-0 z-[1] bg-gradient-to-br from-primary/90 via-primary/70 to-primary/50" />
