@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -71,13 +72,13 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img
               src={medicolLogo}
               alt="Medicol Logo"
               className="h-10 w-auto"
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-x-8">
@@ -85,16 +86,13 @@ export const Navbar = () => {
               // Si es "Experiencia", mantener el estilo especial
               if (link.key === 'navbar.experience') {
                 return (
-                  <motion.a
+                  <Link
                     key={link.key}
-                    href={link.href}
+                    to={link.href!}
                     className="px-5 py-2 bg-accent text-primary font-bold rounded-full shadow-md shadow-accent/40 hover:shadow-lg hover:shadow-accent/60 hover:scale-105 transform transition-all duration-300"
-                    initial={{ scale: 0.95, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
                   >
                     {t(link.key)}
-                  </motion.a>
+                  </Link>
                 );
               }
               
@@ -112,12 +110,12 @@ export const Navbar = () => {
                     >
                       {link.submenu.map((subLink) => (
                         <DropdownMenuItem key={subLink.key} asChild>
-                          <a
-                            href={subLink.href}
+                          <Link
+                            to={subLink.href}
                             className="cursor-pointer text-white hover:bg-accent hover:text-primary px-4 py-3 text-sm font-medium transition-colors duration-200 border-b border-white/10"
                           >
                             {t(subLink.key)}
-                          </a>
+                          </Link>
                         </DropdownMenuItem>
                       ))}
                     </DropdownMenuContent>
@@ -127,13 +125,13 @@ export const Navbar = () => {
               
               // Links normales
               return (
-                <a
+                <Link
                   key={link.key}
-                  href={link.href}
+                  to={link.href!}
                   className="text-white hover:text-accent transition-colors duration-200 font-medium"
                 >
                   {t(link.key)}
-                </a>
+                </Link>
               );
             })}
           </nav>
@@ -203,17 +201,14 @@ export const Navbar = () => {
                 // Si es "Experiencia", mantener el estilo especial
                 if (link.key === 'navbar.experience') {
                   return (
-                    <motion.a
+                    <Link
                       key={link.key}
-                      href={link.href}
+                      to={link.href!}
                       onClick={handleNavClick}
                       className="px-5 py-2 bg-accent text-primary font-bold rounded-full shadow-md shadow-accent/40 hover:shadow-lg hover:shadow-accent/60 text-center transform transition-all duration-300"
-                      initial={{ scale: 0.95, opacity: 0 }}
-                      animate={{ scale: 1, opacity: 1 }}
-                      transition={{ duration: 0.5, delay: 0.2 }}
                     >
                       {t(link.key)}
-                    </motion.a>
+                    </Link>
                   );
                 }
                 
@@ -226,14 +221,14 @@ export const Navbar = () => {
                       </div>
                       <div className="pl-4 space-y-2 border-l-2 border-accent/30">
                         {link.submenu.map((subLink) => (
-                          <a
+                          <Link
                             key={subLink.key}
-                            href={subLink.href}
+                            to={subLink.href}
                             onClick={handleNavClick}
                             className="block text-white/90 hover:text-accent transition-colors duration-200 text-sm py-1"
                           >
                             {t(subLink.key)}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -242,14 +237,14 @@ export const Navbar = () => {
                 
                 // Links normales
                 return (
-                  <a
+                  <Link
                     key={link.key}
-                    href={link.href}
+                    to={link.href!}
                     onClick={handleNavClick}
                     className="text-white hover:text-accent transition-colors duration-200 font-medium py-2"
                   >
                     {t(link.key)}
-                  </a>
+                  </Link>
                 );
               })}
 
