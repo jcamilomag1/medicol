@@ -51,11 +51,11 @@ export const HeroSection = () => {
       />
 
       {/* Content Container */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-6 py-12 md:py-16 lg:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-6 md:gap-8 lg:gap-8 items-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-[70%_30%] gap-6 md:gap-8 lg:gap-12 items-center">
           
-          {/* LEFT COLUMN - Main Content (60%) */}
-          <div className="space-y-4 md:space-y-6 lg:space-y-8 lg:pr-6">
+          {/* LEFT COLUMN - Main Content (70%) */}
+          <div className="space-y-4 md:space-y-6 lg:space-y-8 lg:pr-8">
             {/* Main Title with Animation */}
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
@@ -96,7 +96,7 @@ export const HeroSection = () => {
             </motion.div>
           </div>
           
-          {/* RIGHT COLUMN - CTA Card (40%) */}
+          {/* RIGHT COLUMN - CTA Card (30%) */}
           <motion.div
             initial={{ opacity: 0, x: 50, scale: 0.95 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
