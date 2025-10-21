@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Shield, Award, Star } from 'lucide-react';
+import plasticSurgeryHeroBg from '@/assets/plastic-surgery-hero-bg.jpg';
 export const PlasticHeroSection = () => {
   const {
     t
@@ -18,9 +19,20 @@ export const PlasticHeroSection = () => {
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
   };
   return <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-primary-light to-accent">
-      {/* Animated background overlay */}
-      <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-cover bg-center opacity-10" />
-      <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/70 to-transparent" />
+      {/* Background image with animation */}
+      <motion.div 
+        className="absolute inset-0 z-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${plasticSurgeryHeroBg})` }}
+        initial={{ scale: 1.1 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+      />
+      
+      {/* Primera capa de overlay - Color primario con gradiente */}
+      <div className="absolute inset-0 z-[1] bg-gradient-to-br from-primary/90 via-primary/70 to-primary/50" />
+      
+      {/* Segunda capa de overlay - Oscurecimiento inferior */}
+      <div className="absolute inset-0 z-[2] bg-gradient-to-t from-black/40 via-transparent to-transparent" />
       
       {/* Content */}
       <div className="container relative z-10 px-6 py-20">
