@@ -505,6 +505,8 @@
     "procedures": {
       "title": "Nuestros Procedimientos",
       "subtitle": "Explora nuestra amplia gama de cirugías plásticas realizadas por expertos certificados",
+      "search_placeholder": "Buscar procedimientos... (ej: rinoplastia, nariz, senos)",
+      "no_results": "No se encontraron procedimientos que coincidan con tu búsqueda",
       "filter_all": "Todos",
       "filter_face": "Rostro y Cuello",
       "filter_body": "Contorno Corporal",

@@ -5,12 +5,15 @@ import { ProcedureCard } from './ProcedureCard';
 import { ProcedureModal } from './ProcedureModal';
 import { procedures, Procedure } from '@/data/plastic-surgery-procedures';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Search, X } from 'lucide-react';
 
 export const ProceduresGrid = () => {
   const { t } = useTranslation();
   const [selectedProcedure, setSelectedProcedure] = useState<Procedure | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState<string>('');
 
   const categories = [
     { id: 'all', label: t('plastic_surgery.categories.all') },
@@ -22,9 +25,24 @@ export const ProceduresGrid = () => {
     { id: 'specialized', label: t('plastic_surgery.categories.specialized') },
   ];
 
-  const filteredProcedures = selectedCategory === 'all' 
-    ? procedures 
-    : procedures.filter(p => p.category === selectedCategory);
+  const filteredProcedures = procedures.filter(procedure => {
+    // Filter by category
+    const matchesCategory = selectedCategory === 'all' || procedure.category === selectedCategory;
+    
+    // Filter by search (if there's a search term)
+    if (!searchTerm.trim()) {
+      return matchesCategory;
+    }
+    
+    const searchLower = searchTerm.toLowerCase();
+    const matchesSearch = 
+      procedure.name_es.toLowerCase().includes(searchLower) ||
+      procedure.name_en.toLowerCase().includes(searchLower) ||
+      procedure.description_es.toLowerCase().includes(searchLower) ||
+      procedure.description_en.toLowerCase().includes(searchLower);
+      
+    return matchesCategory && matchesSearch;
+  });
 
   const handleProcedureClick = (procedure: Procedure) => {
     setSelectedProcedure(procedure);
@@ -49,6 +67,29 @@ export const ProceduresGrid = () => {
           </p>
         </motion.div>
 
+        {/* Search Bar */}
+        <div className="max-w-2xl mx-auto mb-8">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-5 w-5" />
+            <Input
+              type="text"
+              placeholder={t('plastic_surgery.procedures.search_placeholder')}
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="pl-10 pr-10 h-12 text-base"
+            />
+            {searchTerm && (
+              <button
+                onClick={() => setSearchTerm('')}
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="Clear search"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            )}
+          </div>
+        </div>
+
         {/* Category Filters */}
         <div className="flex gap-3 mb-8 overflow-x-auto pb-4 justify-center flex-wrap">
           {categories.map((category) => (
@@ -64,14 +105,21 @@ export const ProceduresGrid = () => {
         </div>
 
         {/* Procedures Grid */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, staggerChildren: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-        >
-          {filteredProcedures.map((procedure, index) => (
+        {filteredProcedures.length === 0 ? (
+          <div className="text-center py-12">
+            <p className="text-muted-foreground text-lg">
+              {t('plastic_surgery.procedures.no_results')}
+            </p>
+          </div>
+        ) : (
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, staggerChildren: 0.1 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          >
+            {filteredProcedures.map((procedure, index) => (
             <motion.div
               key={procedure.id}
               initial={{ opacity: 0, y: 20 }}
@@ -84,8 +132,9 @@ export const ProceduresGrid = () => {
                 onClick={() => handleProcedureClick(procedure)}
               />
             </motion.div>
-          ))}
-        </motion.div>
+            ))}
+          </motion.div>
+        )}
 
         {/* Procedure Modal */}
         <ProcedureModal

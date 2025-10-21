@@ -505,6 +505,8 @@
     "procedures": {
       "title": "Our Procedures",
       "subtitle": "Explore our wide range of plastic surgeries performed by certified experts",
+      "search_placeholder": "Search procedures... (e.g., rhinoplasty, nose, breast)",
+      "no_results": "No procedures found matching your search",
       "filter_all": "All",
       "filter_face": "Face & Neck",
       "filter_body": "Body Contouring",
