@@ -56,10 +56,8 @@ export const MainServicesSection = () => {
         </motion.div>
       </div>
 
-      {/* Carousel Component - solo margen izquierdo, se extiende hasta el borde derecho */}
-      <div className="pl-6">
-        <MedicalServicesCarousel services={servicesData} />
-      </div>
+      {/* Carousel Component - edge-to-edge, sin márgenes */}
+      <MedicalServicesCarousel services={servicesData} />
     </section>
   );
 };

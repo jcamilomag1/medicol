@@ -45,7 +45,7 @@ export function MedicalServicesCarousel({ services }: MedicalServicesCarouselPro
             }}
             style={{
               gap: "24px",
-              paddingLeft: "24px",
+              paddingLeft: "0px",
             }}
           >
             {/* Triple services for seamless infinite loop */}
