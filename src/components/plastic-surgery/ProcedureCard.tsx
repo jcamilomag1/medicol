@@ -18,8 +18,9 @@ export const ProcedureCard = ({ procedure, onClick }: ProcedureCardProps) => {
     <motion.div
       whileHover={{ y: -8 }}
       transition={{ duration: 0.3 }}
+      className="h-full"
     >
-      <Card className="h-full overflow-hidden cursor-pointer group shadow-soft hover:shadow-medium transition-all duration-300 flex flex-col">
+      <Card className="h-full overflow-hidden cursor-pointer group shadow-soft hover:shadow-medium transition-all duration-300 flex flex-col min-h-[480px]">
         <div className="relative aspect-video overflow-hidden">
           <img
             src={procedure.image}
@@ -32,10 +33,10 @@ export const ProcedureCard = ({ procedure, onClick }: ProcedureCardProps) => {
         </div>
         
         <CardContent className="p-6 flex-grow flex flex-col">
-          <h3 className="text-xl font-bold text-foreground mb-2 line-clamp-2">
+          <h3 className="text-xl font-bold text-foreground mb-2 line-clamp-2 min-h-[56px]">
             {isEnglish ? procedure.name_en : procedure.name_es}
           </h3>
-          <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+          <p className="text-muted-foreground text-sm mb-4 line-clamp-3 min-h-[60px]">
             {isEnglish ? procedure.description_en : procedure.description_es}
           </p>
           <div className="flex items-baseline gap-2 mt-auto">
