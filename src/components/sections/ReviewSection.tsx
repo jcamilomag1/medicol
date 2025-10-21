@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Star, Check, Sparkles, ArrowRight } from 'lucide-react';
+import { Star, Check, Award, ArrowRight } from 'lucide-react';
 interface Review {
   id: string;
   nameKey: string;
@@ -187,7 +187,7 @@ export const ReviewSection = () => {
           <div className="relative mx-auto max-w-2xl rounded-3xl bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 p-6 sm:p-10 md:p-12 border border-primary/10 shadow-lg hover:shadow-xl transition-shadow">
             {/* Badge superior decorativo */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full mb-6">
-              <Sparkles className="w-4 h-4 text-accent" />
+              <Award className="w-4 h-4 text-accent" />
               <span className="text-xs font-medium text-accent">Tu transformación comienza aquí</span>
             </div>
             
