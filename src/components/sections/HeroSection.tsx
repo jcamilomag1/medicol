@@ -52,7 +52,7 @@ export const HeroSection = () => {
 
       {/* Content Container */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-6 py-12 md:py-16 lg:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[58%_42%] gap-6 md:gap-8 lg:gap-6 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-6 md:gap-8 lg:gap-8 items-center">
           
           {/* LEFT COLUMN - Main Content (70%) */}
           <div className="space-y-4 md:space-y-6 lg:space-y-8 lg:pr-4">
@@ -101,9 +101,9 @@ export const HeroSection = () => {
             initial={{ opacity: 0, x: 50, scale: 0.95 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 100 }}
-            className="lg:self-center pr-4 lg:pr-0"
+            className="lg:self-center pr-4 lg:pr-6 overflow-visible"
           >
-            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-5 md:p-8 lg:p-10 shadow-2xl shadow-black/50 hover:shadow-black/70 transition-all duration-300 hover:-translate-y-2">
+            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-5 md:p-8 lg:p-10 shadow-2xl shadow-black/50 hover:shadow-black/70 transition-all duration-300 hover:-translate-y-2 mr-0 lg:mr-6 overflow-visible">
               
               {/* Card Headline */}
               <motion.h3 
