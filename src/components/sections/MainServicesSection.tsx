@@ -38,8 +38,8 @@ export const MainServicesSection = () => {
 
   return (
     <section className="relative w-full overflow-hidden bg-background py-12">
+      {/* Section Header - con padding horizontal */}
       <div className="px-6">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -54,8 +54,10 @@ export const MainServicesSection = () => {
             {t('main_services.subtitle')}
           </p>
         </motion.div>
+      </div>
 
-        {/* Carousel Component */}
+      {/* Carousel Component - solo margen izquierdo, se extiende hasta el borde derecho */}
+      <div className="pl-6">
         <MedicalServicesCarousel services={servicesData} />
       </div>
     </section>
