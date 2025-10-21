@@ -19,7 +19,7 @@ export const ProcedureCard = ({ procedure, onClick }: ProcedureCardProps) => {
       whileHover={{ y: -8 }}
       transition={{ duration: 0.3 }}
     >
-      <Card className="h-full overflow-hidden cursor-pointer group shadow-soft hover:shadow-medium transition-all duration-300">
+      <Card className="h-full overflow-hidden cursor-pointer group shadow-soft hover:shadow-medium transition-all duration-300 flex flex-col">
         <div className="relative aspect-video overflow-hidden">
           <img
             src={procedure.image}
@@ -31,14 +31,14 @@ export const ProcedureCard = ({ procedure, onClick }: ProcedureCardProps) => {
           </Badge>
         </div>
         
-        <CardContent className="p-6">
-          <h3 className="text-xl font-bold text-foreground mb-2">
+        <CardContent className="p-6 flex-grow flex flex-col">
+          <h3 className="text-xl font-bold text-foreground mb-2 line-clamp-2">
             {isEnglish ? procedure.name_en : procedure.name_es}
           </h3>
           <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
             {isEnglish ? procedure.description_en : procedure.description_es}
           </p>
-          <div className="flex items-baseline gap-2">
+          <div className="flex items-baseline gap-2 mt-auto">
             <span className="text-sm text-muted-foreground">
               {t('plastic_surgery.procedures.from_price')}
             </span>
