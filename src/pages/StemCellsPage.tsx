@@ -1,6 +1,5 @@
 import Layout from '@/components/Layout';
 import { ServiceHeroSection } from '@/components/services/ServiceHeroSection';
-import { AccreditationsSection } from '@/components/sections/AccreditationsSection';
 import { ServicesGrid } from '@/components/services/ServicesGrid';
 import { BreakthroughsSection } from '@/components/services/BreakthroughsSection';
 
@@ -110,9 +109,8 @@ const StemCellsPage = () => {
   return (
     <Layout>
       <ServiceHeroSection {...heroProps} />
-      <AccreditationsSection />
-      <ServicesGrid {...servicesProps} />
       <BreakthroughsSection {...breakthroughsProps} />
+      <ServicesGrid {...servicesProps} />
       <PremiumServicesSection />
       <ServiceTestimonialsSection {...testimonialsProps} />
       <ServiceFAQSection {...faqProps} />
