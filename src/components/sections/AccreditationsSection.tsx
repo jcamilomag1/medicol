@@ -2,32 +2,29 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Shield, Award, CheckCircle } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { Card } from '@/components/ui/card';
 
 interface Accreditation {
   icon: React.ElementType;
   titleKey: string;
   descriptionKey: string;
-  color: string;
 }
 
 const accreditations: Accreditation[] = [
   {
     icon: Shield,
     titleKey: 'accreditations.jci.title',
-    descriptionKey: 'accreditations.jci.description',
-    color: 'text-blue-500'
+    descriptionKey: 'accreditations.jci.description'
   },
   {
     icon: Award,
     titleKey: 'accreditations.sccp.title',
-    descriptionKey: 'accreditations.sccp.description',
-    color: 'text-amber-500'
+    descriptionKey: 'accreditations.sccp.description'
   },
   {
     icon: CheckCircle,
     titleKey: 'accreditations.acicme.title',
-    descriptionKey: 'accreditations.acicme.description',
-    color: 'text-green-500'
+    descriptionKey: 'accreditations.acicme.description'
   }
 ];
 
@@ -71,19 +68,24 @@ export const AccreditationsSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="flex flex-col items-center text-center gap-4 p-6 bg-card border-2 border-border rounded-xl hover:border-primary/50 hover:shadow-lg transition-all duration-300"
+                className="group"
               >
-                <div className={`flex-shrink-0 ${accreditation.color}`}>
-                  <Icon className="w-10 h-10" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">
+                <Card className="h-full p-8 flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-border hover:border-blue-200">
+                  {/* Icon Circle */}
+                  <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-blue-200">
+                    <Icon className="w-8 h-8 text-blue-500" />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-blue-600 transition-colors">
                     {t(accreditation.titleKey)}
                   </h3>
+
+                  {/* Description */}
                   <p className="text-muted-foreground leading-relaxed">
                     {t(accreditation.descriptionKey)}
                   </p>
-                </div>
+                </Card>
               </motion.div>
             );
           })}
