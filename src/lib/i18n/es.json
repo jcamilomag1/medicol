@@ -96,12 +96,12 @@
       "cards": {
         "title": "¿Por qué elegir Medicol?",
         "subtitle": "Experiencia que marca la diferencia",
-        "worry_free_title": "Sin Preocupaciones",
-        "worry_free_description": "Nosotros nos encargamos de todo. Desde tu llegada hasta tu recuperación, cada detalle está cubierto.",
-        "followup_title": "Seguimiento Incluido",
-        "followup_description": "Seguimiento post-operación completo sin costo adicional. Tu salud es nuestra prioridad antes, durante y después.",
-        "innovation_title": "Innovación de Punta",
-        "innovation_description": "Tecnología y equipamiento de última generación. Herramientas que marcan la diferencia en tus resultados."
+        "worry_free_title": "Gestionamos tu viaje completo.",
+        "worry_free_description": "Nos encargamos de todo por ti. Desde tu llegada hasta tu recuperación total, cubrimos cada detalle para que no tengas ninguna preocupación.",
+        "followup_title": "Cuidamos tu recuperación.",
+        "followup_description": "Nuestro compromiso no termina en la cirugía. Te acompañamos de cerca en tu post-operatorio para garantizar tu bienestar y tus resultados a largo plazo.",
+        "innovation_title": "Invertimos en tu seguridad.",
+        "innovation_description": "La innovación marca la diferencia. Usamos solo tecnología de punta para garantizar procedimientos más efectivos, seguros y con resultados superiores."
       }
     }
   },
