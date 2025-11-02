@@ -3,13 +3,13 @@ import { ServiceHeroSection } from '@/components/services/ServiceHeroSection';
 import { AccreditationsSection } from '@/components/sections/AccreditationsSection';
 import { ServicesGrid } from '@/components/services/ServicesGrid';
 import { BreakthroughsSection } from '@/components/services/BreakthroughsSection';
-import { ScientificExcellenceSection } from '@/components/services/ScientificExcellenceSection';
+
 import { PremiumServicesSection } from '@/components/sections/PremiumServicesSection';
 import { ServiceTestimonialsSection } from '@/components/services/ServiceTestimonialsSection';
 import { ServiceFAQSection } from '@/components/services/ServiceFAQSection';
 import { stemCellServices } from '@/data/services/stem-cells';
 import { stemCellsFAQs } from '@/data/faqs/stem-cells-faqs';
-import { Shield, Award, Users, Star, Microscope, Brain, Zap, FlaskConical } from 'lucide-react';
+import { Shield, Award, Users, Star, Microscope, Brain, Zap } from 'lucide-react';
 import stemCellsHeroBg from '@/assets/stem-cells/stem-cells-hero-bg.jpg';
 import mariaGonzalezImg from '@/assets/stem-cells/testimonials/maria-gonzalez.jpg';
 import jamesAndersonImg from '@/assets/stem-cells/testimonials/james-anderson.jpg';
@@ -58,13 +58,6 @@ const StemCellsPage = () => {
     ],
   };
 
-  const excellenceProps = {
-    titleKey: 'stem_cells.excellence.title',
-    items: [
-      { icon: FlaskConical, titleKey: 'stem_cells.excellence.research_title', descriptionKey: 'stem_cells.excellence.research_description' },
-      { icon: Shield, titleKey: 'stem_cells.excellence.quality_title', descriptionKey: 'stem_cells.excellence.quality_description' },
-    ],
-  };
 
   const testimonialsProps = {
     titleKey: 'stem_cells.testimonials.title',
@@ -120,7 +113,6 @@ const StemCellsPage = () => {
       <AccreditationsSection />
       <ServicesGrid {...servicesProps} />
       <BreakthroughsSection {...breakthroughsProps} />
-      <ScientificExcellenceSection {...excellenceProps} />
       <PremiumServicesSection />
       <ServiceTestimonialsSection {...testimonialsProps} />
       <ServiceFAQSection {...faqProps} />
