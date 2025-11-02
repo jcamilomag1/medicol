@@ -1,12 +1,22 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { ShieldCheck, HeartHandshake, Sparkles } from 'lucide-react';
+import { ShieldCheck, HeartHandshake, Sparkles, LucideIcon } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
-export const MedicolDifferentiators = () => {
-  const { t } = useTranslation();
+interface DifferentiatorCard {
+  icon: LucideIcon;
+  titleKey: string;
+  descriptionKey: string;
+}
 
-  const differentiators = [
+interface MedicolDifferentiatorsProps {
+  titleKey?: string;
+  cards?: DifferentiatorCard[];
+}
+
+export const MedicolDifferentiators = ({ 
+  titleKey = 'stem_cells.differentiators.cards.title',
+  cards = [
     {
       icon: ShieldCheck,
       titleKey: "stem_cells.differentiators.cards.worry_free_title",
@@ -22,7 +32,9 @@ export const MedicolDifferentiators = () => {
       titleKey: "stem_cells.differentiators.cards.innovation_title",
       descriptionKey: "stem_cells.differentiators.cards.innovation_description"
     }
-  ];
+  ]
+}: MedicolDifferentiatorsProps) => {
+  const { t } = useTranslation();
 
   return (
     <section className="py-20 px-6 bg-gradient-to-br from-muted/30 to-background">
@@ -36,13 +48,13 @@ export const MedicolDifferentiators = () => {
           className="text-center mb-16"
         >
         <h2 className="text-4xl font-bold text-foreground mb-4">
-          {t('stem_cells.differentiators.cards.title')}
+          {t(titleKey)}
         </h2>
         </motion.div>
 
         {/* 3 Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {differentiators.map((item, index) => {
+          {cards.map((item, index) => {
             const IconComponent = item.icon;
             return (
               <motion.div

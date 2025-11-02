@@ -1,4 +1,70 @@
 {
+  "dental": {
+    "hero": {
+      "title": "Dental Procedures at MediCol - Premium Care",
+      "subtitle": "Experience the future of dentistry with AI-guided precision, same-day solutions, and cutting-edge technology for your perfect smile at MediCol. Compare our affordable prices with US rates.",
+      "badge": "2025 Dentistry",
+      "cta_primary": "Free Virtual Consultation",
+      "cta_secondary": "View Treatments",
+      "whatsapp_message": "Hello, I'm interested in learning more about dental procedures at MediCol",
+      "trust_badge_1": "CAD/CAM Technology",
+      "trust_badge_2": "Same-Day Solutions",
+      "trust_badge_3": "1,000+ Smiles Created"
+    },
+    "services": {
+      "title": "Our Procedures",
+      "subtitle": "Complete dental treatments with cutting-edge technology",
+      "search_placeholder": "Search dental procedures...",
+      "no_results": "No procedures found matching your search",
+      "category_all": "All",
+      "category_design": "Design",
+      "category_cosmetic": "Cosmetic",
+      "category_restorative": "Restorative",
+      "category_orthodontics": "Orthodontics",
+      "category_technology": "Technology"
+    },
+    "breakthroughs": {
+      "title": "2025 Technology",
+      "subtitle": "The pillars of our modern dentistry",
+      "ai_title": "AI-Guided Treatment",
+      "ai_description": "Advanced AI technology for precise treatment planning and optimal results",
+      "same_day_title": "Same-Day Solutions",
+      "same_day_description": "3D printing and CAD/CAM technology for immediate dental restorations",
+      "precision_title": "Digital Precision",
+      "precision_description": "3D scanning and digital impressions for perfect-fit restorations"
+    },
+    "comfort": {
+      "title": "Comfort & Care",
+      "subtitle": "Your perfect dental experience",
+      "sedation_title": "Sedation Options",
+      "sedation_description": "Multiple sedation choices including IV sedation for anxiety-free treatment",
+      "luxury_title": "Luxury Experience",
+      "luxury_description": "Premium amenities and personalized care in a spa-like environment"
+    },
+    "testimonials": {
+      "title": "Transformed Smiles",
+      "subtitle": "Real stories from our patients"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our dental procedures",
+      "cta_title": "Ready for Your New Smile?",
+      "cta_subtitle": "Start with a virtual consultation including AI smile simulation to visualize your perfect results",
+      "cta_primary": "Book Virtual Consultation",
+      "cta_secondary": "Contact via WhatsApp"
+    },
+    "differentiators": {
+      "cards": {
+        "title": "Why choose Medicol for your smile?",
+        "ai_precision_title": "AI Precision",
+        "ai_precision_description": "We use artificial intelligence to design your perfect smile before starting any treatment.",
+        "same_day_title": "Same-Day Results",
+        "same_day_description": "CAD/CAM technology and 3D printing allow us to deliver permanent restorations in a single visit.",
+        "luxury_care_title": "Spa-Like Care",
+        "luxury_care_description": "Relaxing environment with full sedation available to make your experience completely stress-free."
+      }
+    }
+  },
   "stem_cells": {
     "hero": {
       "title": "Stem Cell Therapy",

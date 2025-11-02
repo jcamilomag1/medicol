@@ -1,4 +1,70 @@
 {
+  "dental": {
+    "hero": {
+      "title": "Procedimientos Dentales en MediCol - Cuidado Premium",
+      "subtitle": "Experimenta el futuro de la odontología con precisión guiada por IA, soluciones el mismo día y tecnología de vanguardia para tu sonrisa perfecta en MediCol. Compara nuestros precios asequibles con las tarifas de EE. UU.",
+      "badge": "Odontología 2025",
+      "cta_primary": "Consulta Virtual Gratuita",
+      "cta_secondary": "Ver Tratamientos",
+      "whatsapp_message": "Hola, me interesa conocer más sobre procedimientos dentales en MediCol",
+      "trust_badge_1": "Tecnología CAD/CAM",
+      "trust_badge_2": "Soluciones Mismo Día",
+      "trust_badge_3": "1,000+ Sonrisas Creadas"
+    },
+    "services": {
+      "title": "Nuestros Procedimientos",
+      "subtitle": "Tratamientos dentales completos con tecnología de vanguardia",
+      "search_placeholder": "Buscar procedimientos dentales...",
+      "no_results": "No se encontraron procedimientos que coincidan con tu búsqueda",
+      "category_all": "Todos",
+      "category_design": "Diseño",
+      "category_cosmetic": "Cosmético",
+      "category_restorative": "Restaurativo",
+      "category_orthodontics": "Ortodoncia",
+      "category_technology": "Tecnología"
+    },
+    "breakthroughs": {
+      "title": "Tecnología 2025",
+      "subtitle": "Los pilares de nuestra odontología moderna",
+      "ai_title": "Tratamiento Guiado por IA",
+      "ai_description": "Tecnología avanzada de IA para planificación precisa del tratamiento y resultados óptimos",
+      "same_day_title": "Soluciones el Mismo Día",
+      "same_day_description": "Impresión 3D y tecnología CAD/CAM para restauraciones dentales inmediatas",
+      "precision_title": "Precisión Digital",
+      "precision_description": "Escaneo 3D e impresiones digitales para restauraciones de ajuste perfecto"
+    },
+    "comfort": {
+      "title": "Comodidad y Cuidado",
+      "subtitle": "Tu experiencia dental perfecta",
+      "sedation_title": "Opciones de Sedación",
+      "sedation_description": "Múltiples opciones de sedación, incluida la sedación intravenosa, para un tratamiento sin ansiedad",
+      "luxury_title": "Experiencia de Lujo",
+      "luxury_description": "Comodidades premium y atención personalizada en un ambiente tipo spa"
+    },
+    "testimonials": {
+      "title": "Sonrisas Transformadas",
+      "subtitle": "Historias reales de nuestros pacientes"
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestros procedimientos dentales",
+      "cta_title": "¿Listo para tu Nueva Sonrisa?",
+      "cta_subtitle": "Comienza con una consulta virtual que incluye simulación de sonrisa con IA para visualizar tus resultados perfectos",
+      "cta_primary": "Reservar Consulta Virtual",
+      "cta_secondary": "Contactar por WhatsApp"
+    },
+    "differentiators": {
+      "cards": {
+        "title": "¿Por qué elegir Medicol para tu sonrisa?",
+        "ai_precision_title": "Precisión con IA",
+        "ai_precision_description": "Usamos inteligencia artificial para diseñar tu sonrisa perfecta antes de comenzar cualquier tratamiento.",
+        "same_day_title": "Resultados el Mismo Día",
+        "same_day_description": "Tecnología CAD/CAM y impresión 3D nos permiten entregarte restauraciones permanentes en una sola visita.",
+        "luxury_care_title": "Cuidado de Spa",
+        "luxury_care_description": "Ambiente relajante con sedación completa disponible para que tu experiencia sea completamente libre de estrés."
+      }
+    }
+  },
   "stem_cells": {
     "hero": {
       "title": "Terapia con Células Madre",
