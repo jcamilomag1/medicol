@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Star, Check, Award, ArrowRight } from 'lucide-react';
+import { Award, ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 interface Review {
   id: string;
   nameKey: string;
@@ -53,39 +54,27 @@ const reviews: Review[] = [{
   date: 'Abril 2024',
   verified: true
 }];
-const containerVariants = {
-  hidden: {
-    opacity: 0
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-};
-const cardVariants = {
-  hidden: {
-    opacity: 0,
-    y: 30,
-    scale: 0.95
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      type: "spring" as const,
-      stiffness: 100,
-      damping: 15
-    }
-  }
-};
+
+const Star = ({ filled }: { filled: boolean }) => (
+  <svg
+    className="w-4 h-4 text-yellow-400"
+    fill={filled ? "currentColor" : "none"}
+    stroke="currentColor"
+    strokeWidth="1.5"
+    viewBox="0 0 24 24"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M12 17.25l-6.16 3.73 1.64-7.03L2.5 9.77l7.19-.61L12 2.5l2.31 6.66 7.19.61-5 4.18 1.64 7.03z"
+    />
+  </svg>
+);
 export const ReviewSection = () => {
   const {
     t
   } = useTranslation();
-  return <section className="py-20 sm:py-24 bg-gradient-to-b from-background to-secondary/20">
+  return <section className="py-20 sm:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <motion.div className="max-w-3xl mx-auto text-center mb-16" initial={{
@@ -108,69 +97,86 @@ export const ReviewSection = () => {
         </motion.div>
 
         {/* Review Cards Grid */}
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16" initial="hidden" whileInView="visible" viewport={{
-        once: true
-      }} variants={containerVariants}>
-          {reviews.map(review => <motion.div key={review.id} className="relative p-6 rounded-2xl bg-gradient-to-br from-card/80 via-card/60 to-background/80 backdrop-blur-xl border border-border/50 shadow-lg hover:shadow-2xl transition-all duration-300" variants={cardVariants} whileHover={{
-          y: -8,
-          scale: 1.02
-        }}>
+        <div className="flex flex-wrap items-center justify-center gap-6 mb-16">
+          {reviews.map((review, index) => (
+            <motion.div
+              key={review.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.15, duration: 0.5 }}
+              className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300 w-80 h-[320px] flex flex-col"
+            >
               {/* Header with Avatar and Name */}
-              <div className="flex items-start gap-4 mb-4">
-                {/* Avatar */}
+              <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary text-lg shrink-0">
                   {t(review.nameKey)[0]}
                 </div>
-
-                {/* Info */}
-                <div className="flex-1 min-w-0">
-                  <h4 className="font-bold text-foreground text-base truncate">
-                    {t(review.nameKey)}
-                  </h4>
+                <div>
+                  <p className="font-semibold text-xl text-foreground">{t(review.nameKey)}</p>
                   <p className="text-sm text-muted-foreground">
                     {review.countryFlag} {t(review.countryKey)}
                   </p>
                 </div>
-
-                {/* Verified Badge */}
-                {review.verified && <div className="flex items-center gap-1 text-xs bg-green-50 dark:bg-green-950/30 text-green-700 dark:text-green-400 px-2 py-1 rounded-full shrink-0">
-                    <Check className="w-3 h-3" />
-                  </div>}
               </div>
 
               {/* Stars */}
-              <div className="flex gap-1 mb-4">
-                {[...Array(review.rating)].map((_, i) => <motion.div key={i} initial={{
-              opacity: 0,
-              scale: 0
-            }} whileInView={{
-              opacity: 1,
-              scale: 1
-            }} viewport={{
-              once: true
-            }} transition={{
-              delay: 0.5 + i * 0.05
-            }}>
-                    <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  </motion.div>)}
+              <div className="flex items-center gap-1 mt-4">
+                {Array(5).fill(0).map((_, i) => (
+                  <Star key={i} filled={review.rating > i} />
+                ))}
               </div>
 
               {/* Comment */}
-              <p className="text-foreground/90 leading-relaxed mb-4 text-sm">
+              <p className="text-muted-foreground mt-4 leading-relaxed flex-grow line-clamp-4">
                 "{t(review.commentKey)}"
               </p>
+            </motion.div>
+          ))}
 
-              {/* Footer with Procedure and Date */}
-              <div className="pt-4 border-t border-border/50 space-y-1 text-xs text-muted-foreground">
-                <p>
-                  <span className="font-semibold">{t('reviews.procedure_label')}:</span> {t(review.procedureKey)}
-                </p>
-                <p>
-                  <span className="font-semibold">{t('reviews.date_label')}:</span> {review.date}
-                </p>
-              </div>
-            </motion.div>)}
-        </motion.div>
+          {/* Google Reviews CTA Card */}
+          <motion.a
+            href="https://www.google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: reviews.length * 0.15, duration: 0.5 }}
+            className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300 w-64 h-[320px] flex flex-col items-center justify-center text-center group cursor-pointer"
+          >
+            {/* Google Reviews Logo */}
+            <div className="mb-4">
+              <img
+                src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg"
+                alt="Google Reviews"
+                className="h-8 mb-2"
+              />
+              <p className="text-sm font-semibold text-foreground">Reviews</p>
+            </div>
+            
+            {/* Decorative Stars */}
+            <div className="flex items-center gap-1 mb-4">
+              {Array(5).fill(0).map((_, i) => (
+                <Star key={i} filled={true} />
+              ))}
+            </div>
+            
+            {/* Descriptive Text */}
+            <p className="text-muted-foreground text-sm mb-6 px-2">
+              {t('reviews.cta_google_text', 'Ve lo que dicen nuestros pacientes')}
+            </p>
+            
+            {/* CTA Button */}
+            <Button 
+              variant="default" 
+              className="group-hover:scale-105 transition-transform"
+            >
+              {t('common.learn_more')}
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </motion.a>
+        </div>
 
         {/* Call to Action - Mobile First */}
         <motion.div className="mt-16 px-4" initial={{
