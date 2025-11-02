@@ -1,15 +1,15 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Quote, Star } from 'lucide-react';
+import testimonialRhinoplasty from '@/assets/testimonial-woman-rhinoplasty.jpg';
+import testimonialYoung from '@/assets/testimonial-woman-young.jpg';
+import testimonialElderly from '@/assets/testimonial-woman-elderly.jpg';
 
 const testimonials = [
   {
     name: 'María González',
     location: 'Miami, USA',
     procedure: 'Rinoplastia',
-    image: '/placeholder.svg',
+    image: testimonialRhinoplasty,
     rating: 5,
     text_es: 'La mejor decisión que pude haber tomado. El equipo de Medicol me acompañó en todo momento y los resultados superaron mis expectativas. Me sentí segura y bien cuidada durante todo el proceso.',
     text_en: 'The best decision I could have made. The Medicol team supported me every step of the way and the results exceeded my expectations. I felt safe and well cared for throughout the entire process.',
@@ -18,7 +18,7 @@ const testimonials = [
     name: 'John Smith',
     location: 'Toronto, Canada',
     procedure: 'Liposucción',
-    image: '/placeholder.svg',
+    image: testimonialYoung,
     rating: 5,
     text_es: 'Profesionalismo y calidez humana. Los cirujanos son de clase mundial y las instalaciones son de primer nivel. Definitivamente vale cada centavo.',
     text_en: 'Professionalism and human warmth. The surgeons are world-class and the facilities are top-notch. Definitely worth every penny.',
@@ -27,19 +27,35 @@ const testimonials = [
     name: 'Sophie Martin',
     location: 'Paris, France',
     procedure: 'Aumento de Senos',
-    image: '/placeholder.svg',
+    image: testimonialElderly,
     rating: 5,
     text_es: 'Increíble experiencia de principio a fin. Me sentí segura y bien cuidada. Los resultados son naturales y hermosos. ¡100% recomendado!',
     text_en: 'Incredible experience from start to finish. I felt safe and well cared for. The results are natural and beautiful. 100% recommended!',
   },
 ];
 
+const Star = ({ filled }: { filled: boolean }) => (
+  <svg
+    className="w-4 h-4 text-yellow-400"
+    fill={filled ? "currentColor" : "none"}
+    stroke="currentColor"
+    strokeWidth="1.5"
+    viewBox="0 0 24 24"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M12 17.25l-6.16 3.73 1.64-7.03L2.5 9.77l7.19-.61L12 2.5l2.31 6.66 7.19.61-5 4.18 1.64 7.03z"
+    />
+  </svg>
+);
+
 export const TestimonialsSection = () => {
   const { t, i18n } = useTranslation();
   const isEnglish = i18n.language === 'en';
 
   return (
-    <section className="py-20 px-6 bg-background">
+    <section className="py-20 px-6 bg-gray-50">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -56,42 +72,41 @@ export const TestimonialsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex flex-wrap items-center justify-center gap-6">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.2, duration: 0.6 }}
+              transition={{ delay: index * 0.15, duration: 0.5 }}
+              className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300 max-w-xs"
             >
-              <Card className="h-full shadow-soft hover:shadow-medium transition-all duration-300">
-                <CardContent className="p-6">
-                  <Quote className="w-10 h-10 text-accent/30 mb-4" />
-                  
-                  <div className="flex gap-1 mb-4">
-                    {Array.from({ length: testimonial.rating }).map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                    ))}
-                  </div>
-
-                  <p className="text-muted-foreground mb-6 italic">
-                    "{isEnglish ? testimonial.text_en : testimonial.text_es}"
-                  </p>
-
-                  <div className="flex items-center gap-4">
-                    <Avatar className="w-12 h-12">
-                      <AvatarImage src={testimonial.image} alt={testimonial.name} />
-                      <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <p className="font-semibold text-foreground">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.location}</p>
-                      <p className="text-sm text-accent">{testimonial.procedure}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="flex items-center gap-3">
+                <img
+                  className="w-12 h-12 rounded-full object-cover"
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                />
+                <div>
+                  <p className="font-semibold text-xl text-foreground">{testimonial.name}</p>
+                  <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-1 mt-4">
+                {Array(5)
+                  .fill(0)
+                  .map((_, i) => (
+                    <Star key={i} filled={testimonial.rating > i} />
+                  ))}
+              </div>
+              
+              <p className="text-muted-foreground mt-4 leading-relaxed">
+                "{isEnglish ? testimonial.text_en : testimonial.text_es}"
+              </p>
+              
+              <p className="text-sm text-accent font-medium mt-4">{testimonial.procedure}</p>
             </motion.div>
           ))}
         </div>
