@@ -6,7 +6,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { MessageCircle, Mail } from 'lucide-react';
 
@@ -51,19 +50,19 @@ export const ServiceFAQSection = ({
   };
 
   return (
-    <section className="py-20 px-6 bg-background">
+    <section className="py-20 px-6 bg-muted/30">
       <div className="container mx-auto max-w-7xl">
-        <div className="grid lg:grid-cols-3 gap-12">
-          {/* FAQs Column - 2/3 width */}
-          <div className="lg:col-span-2">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-8 lg:gap-12">
+          {/* FAQ Column */}
+          <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="mb-12"
+              className="mb-12 text-center lg:text-left"
             >
-              <h2 className="text-4xl font-bold text-foreground mb-4">
+              <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
                 {t(titleKey)}
               </h2>
               <p className="text-muted-foreground text-lg">
@@ -82,10 +81,12 @@ export const ServiceFAQSection = ({
                   <AccordionItem
                     key={index}
                     value={`item-${index}`}
-                    className="border rounded-lg px-6 bg-muted/30"
+                    className="border rounded-lg px-6 bg-background shadow-soft"
                   >
-                    <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
-                      {isSpanish ? faq.question_es : faq.question_en}
+                    <AccordionTrigger className="text-left hover:no-underline">
+                      <span className="font-semibold text-foreground">
+                        {isSpanish ? faq.question_es : faq.question_en}
+                      </span>
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground leading-relaxed">
                       {isSpanish ? faq.answer_es : faq.answer_en}
@@ -96,48 +97,48 @@ export const ServiceFAQSection = ({
             </motion.div>
           </div>
 
-          {/* CTA Card Column - 1/3 width, sticky */}
-          <div className="lg:col-span-1">
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="sticky top-24"
-            >
-              <Card className="bg-gradient-to-br from-primary/10 to-accent/10 border-primary/20">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4 text-foreground">
-                    {t(ctaConfig.titleKey)}
-                  </h3>
-                  <p className="text-muted-foreground mb-8">
-                    {t(ctaConfig.subtitleKey)}
-                  </p>
+          {/* CTA Column - Sticky on Desktop */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="lg:sticky lg:top-24 lg:self-start"
+          >
+            <div className="bg-gradient-to-br from-primary via-primary-light to-accent rounded-xl p-8 shadow-lg relative overflow-hidden">
+              <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-cover bg-center opacity-5" />
+              
+              <div className="relative z-10">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                  {t(ctaConfig.titleKey)}
+                </h3>
+                <p className="text-white/90 text-base mb-6">
+                  {t(ctaConfig.subtitleKey)}
+                </p>
 
-                  <div className="space-y-4">
-                    <Button
-                      onClick={handleWhatsAppContact}
-                      size="lg"
-                      className="w-full"
-                    >
-                      <MessageCircle className="w-5 h-5 mr-2" />
-                      {t(ctaConfig.primaryButtonKey)}
-                    </Button>
-
-                    <Button
-                      onClick={handleContactClick}
-                      variant="outline"
-                      size="lg"
-                      className="w-full"
-                    >
-                      <Mail className="w-5 h-5 mr-2" />
-                      {t(ctaConfig.secondaryButtonKey)}
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
+                <div className="flex flex-col gap-3">
+                  <Button
+                    onClick={handleWhatsAppContact}
+                    size="lg"
+                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold py-6 gap-2"
+                  >
+                    <MessageCircle className="w-5 h-5" />
+                    {t(ctaConfig.primaryButtonKey)}
+                  </Button>
+                  
+                  <Button
+                    onClick={handleContactClick}
+                    size="lg"
+                    variant="outline"
+                    className="w-full bg-white/10 hover:bg-white/20 text-white border-white/30 font-bold py-6 gap-2"
+                  >
+                    <Mail className="w-5 h-5" />
+                    {t(ctaConfig.secondaryButtonKey)}
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
