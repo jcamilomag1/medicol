@@ -65,10 +65,8 @@ export const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${
-        isScrolled 
-          ? 'bg-primary shadow-lg' 
-          : 'bg-background/5 backdrop-blur-md shadow-sm border-b border-white/10'
+      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ease-in-out ${
+        isScrolled ? 'bg-primary shadow-lg' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">

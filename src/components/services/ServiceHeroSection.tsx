@@ -61,10 +61,7 @@ export const ServiceHeroSection = ({
       />
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/75 to-background z-[1]" />
-      
-      {/* Top overlay for navbar area */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-transparent h-56 z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background z-[1]" />
       
       {/* Additional Gradient Overlay for Better Text Readability */}
       <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/50 to-transparent z-[2]" />
