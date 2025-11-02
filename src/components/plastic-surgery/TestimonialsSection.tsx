@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import testimonialRhinoplasty from '@/assets/testimonial-woman-rhinoplasty.jpg';
 import testimonialYoung from '@/assets/testimonial-woman-young.jpg';
 import testimonialElderly from '@/assets/testimonial-woman-elderly.jpg';
@@ -107,6 +109,52 @@ export const TestimonialsSection = () => {
               </p>
             </motion.div>
           ))}
+          
+          {/* Google Reviews CTA Card */}
+          <motion.a
+            href="https://www.google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: testimonials.length * 0.15, duration: 0.5 }}
+            className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300 w-64 h-[320px] flex flex-col items-center justify-center text-center group cursor-pointer"
+          >
+            {/* Google Reviews Logo */}
+            <div className="mb-4">
+              <img
+                src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg"
+                alt="Google Reviews"
+                className="h-8 mb-2"
+              />
+              <p className="text-sm font-semibold text-foreground">Reviews</p>
+            </div>
+            
+            {/* Decorative Stars */}
+            <div className="flex items-center gap-1 mb-4">
+              {Array(5).fill(0).map((_, i) => (
+                <Star key={i} filled={true} />
+              ))}
+            </div>
+            
+            {/* Descriptive Text */}
+            <p className="text-muted-foreground text-sm mb-6 px-2">
+              {isEnglish 
+                ? "See what our patients say about their experience"
+                : "Ve lo que dicen nuestros pacientes sobre su experiencia"
+              }
+            </p>
+            
+            {/* CTA Button */}
+            <Button 
+              variant="default" 
+              className="group-hover:scale-105 transition-transform"
+            >
+              {t('common.learn_more')}
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </motion.a>
         </div>
       </div>
     </section>
