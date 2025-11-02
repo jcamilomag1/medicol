@@ -105,8 +105,6 @@ export const TestimonialsSection = () => {
               <p className="text-muted-foreground mt-4 leading-relaxed flex-grow line-clamp-4">
                 "{isEnglish ? testimonial.text_en : testimonial.text_es}"
               </p>
-              
-              <p className="text-sm text-accent font-medium mt-4 pt-2">{testimonial.procedure}</p>
             </motion.div>
           ))}
         </div>
