@@ -2,6 +2,14 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Award, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 interface Review {
   id: string;
   nameKey: string;
@@ -71,9 +79,13 @@ const Star = ({ filled }: { filled: boolean }) => (
   </svg>
 );
 export const ReviewSection = () => {
-  const {
-    t
-  } = useTranslation();
+  const { t } = useTranslation();
+  
+  const autoplayPlugin = Autoplay({
+    delay: 4000,
+    stopOnInteraction: true,
+    stopOnMouseEnter: true,
+  });
   return <section className="py-20 sm:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
@@ -96,87 +108,105 @@ export const ReviewSection = () => {
           </p>
         </motion.div>
 
-        {/* Review Cards Grid */}
-        <div className="flex flex-wrap items-center justify-center gap-6 mb-16">
-          {reviews.map((review, index) => (
-            <motion.div
-              key={review.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.15, duration: 0.5 }}
-              className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300 w-80 h-[320px] flex flex-col"
-            >
-              {/* Header with Avatar and Name */}
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary text-lg shrink-0">
-                  {t(review.nameKey)[0]}
-                </div>
-                <div>
-                  <p className="font-semibold text-xl text-foreground">{t(review.nameKey)}</p>
-                  <p className="text-sm text-muted-foreground">
-                    {review.countryFlag} {t(review.countryKey)}
+        {/* Review Cards Carousel */}
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+            skipSnaps: false,
+            dragFree: true,
+          }}
+          plugins={[autoplayPlugin]}
+          className="w-full max-w-7xl mx-auto mb-16"
+        >
+          <CarouselContent className="-ml-4">
+            {reviews.map((review, index) => (
+              <CarouselItem key={review.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.15, duration: 0.5 }}
+                  className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300 h-[320px] flex flex-col"
+                >
+                  {/* Header with Avatar and Name */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary text-lg shrink-0">
+                      {t(review.nameKey)[0]}
+                    </div>
+                    <div>
+                      <p className="font-semibold text-xl text-foreground">{t(review.nameKey)}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {review.countryFlag} {t(review.countryKey)}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Stars */}
+                  <div className="flex items-center gap-1 mt-4">
+                    {Array(5).fill(0).map((_, i) => (
+                      <Star key={i} filled={review.rating > i} />
+                    ))}
+                  </div>
+
+                  {/* Comment */}
+                  <p className="text-muted-foreground mt-4 leading-relaxed flex-grow line-clamp-4">
+                    "{t(review.commentKey)}"
                   </p>
+                </motion.div>
+              </CarouselItem>
+            ))}
+
+            {/* Google Reviews CTA Card */}
+            <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+              <motion.a
+                href="https://www.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: reviews.length * 0.15, duration: 0.5 }}
+                className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300 h-[320px] flex flex-col items-center justify-center text-center group cursor-pointer"
+              >
+                {/* Google Reviews Logo */}
+                <div className="mb-4">
+                  <img
+                    src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg"
+                    alt="Google Reviews"
+                    className="h-8 mb-2"
+                  />
+                  <p className="text-sm font-semibold text-foreground">Reviews</p>
                 </div>
-              </div>
-
-              {/* Stars */}
-              <div className="flex items-center gap-1 mt-4">
-                {Array(5).fill(0).map((_, i) => (
-                  <Star key={i} filled={review.rating > i} />
-                ))}
-              </div>
-
-              {/* Comment */}
-              <p className="text-muted-foreground mt-4 leading-relaxed flex-grow line-clamp-4">
-                "{t(review.commentKey)}"
-              </p>
-            </motion.div>
-          ))}
-
-          {/* Google Reviews CTA Card */}
-          <motion.a
-            href="https://www.google.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: reviews.length * 0.15, duration: 0.5 }}
-            className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300 w-64 h-[320px] flex flex-col items-center justify-center text-center group cursor-pointer"
-          >
-            {/* Google Reviews Logo */}
-            <div className="mb-4">
-              <img
-                src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg"
-                alt="Google Reviews"
-                className="h-8 mb-2"
-              />
-              <p className="text-sm font-semibold text-foreground">Reviews</p>
-            </div>
-            
-            {/* Decorative Stars */}
-            <div className="flex items-center gap-1 mb-4">
-              {Array(5).fill(0).map((_, i) => (
-                <Star key={i} filled={true} />
-              ))}
-            </div>
-            
-            {/* Descriptive Text */}
-            <p className="text-muted-foreground text-sm mb-6 px-2">
-              {t('reviews.cta_google_text', 'Ve lo que dicen nuestros pacientes')}
-            </p>
-            
-            {/* CTA Button */}
-            <Button 
-              variant="default" 
-              className="group-hover:scale-105 transition-transform"
-            >
-              {t('common.learn_more')}
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </motion.a>
-        </div>
+                
+                {/* Decorative Stars */}
+                <div className="flex items-center gap-1 mb-4">
+                  {Array(5).fill(0).map((_, i) => (
+                    <Star key={i} filled={true} />
+                  ))}
+                </div>
+                
+                {/* Descriptive Text */}
+                <p className="text-muted-foreground text-sm mb-6 px-2">
+                  {t('reviews.cta_google_text', 'Ve lo que dicen nuestros pacientes')}
+                </p>
+                
+                {/* CTA Button */}
+                <Button 
+                  variant="default" 
+                  className="group-hover:scale-105 transition-transform"
+                >
+                  {t('common.learn_more')}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </motion.a>
+            </CarouselItem>
+          </CarouselContent>
+          
+          {/* Navigation Buttons */}
+          <CarouselPrevious className="hidden md:flex -left-12" />
+          <CarouselNext className="hidden md:flex -right-12" />
+        </Carousel>
 
         {/* Call to Action - Mobile First */}
         <motion.div className="mt-16 px-4" initial={{
