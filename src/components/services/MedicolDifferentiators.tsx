@@ -9,18 +9,18 @@ export const MedicolDifferentiators = () => {
   const differentiators = [
     {
       icon: ShieldCheck,
-      title: "Sin Preocupaciones",
-      description: "Nosotros nos encargamos de todo. Desde tu llegada hasta tu recuperación, cada detalle está cubierto."
+      titleKey: "stem_cells.differentiators.cards.worry_free_title",
+      descriptionKey: "stem_cells.differentiators.cards.worry_free_description"
     },
     {
       icon: HeartHandshake,
-      title: "Seguimiento Incluido",
-      description: "Seguimiento post-operación completo sin costo adicional. Tu salud es nuestra prioridad antes, durante y después."
+      titleKey: "stem_cells.differentiators.cards.followup_title",
+      descriptionKey: "stem_cells.differentiators.cards.followup_description"
     },
     {
       icon: Sparkles,
-      title: "Innovación de Punta",
-      description: "Tecnología y equipamiento de última generación. Herramientas que marcan la diferencia en tus resultados."
+      titleKey: "stem_cells.differentiators.cards.innovation_title",
+      descriptionKey: "stem_cells.differentiators.cards.innovation_description"
     }
   ];
 
@@ -35,11 +35,11 @@ export const MedicolDifferentiators = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            ¿Por qué elegir Medicol?
+          <h2 className="text-4xl font-bold text-foreground mb-4">
+            {t('stem_cells.differentiators.cards.title')}
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Experiencia que marca la diferencia
+            {t('stem_cells.differentiators.cards.subtitle')}
           </p>
         </motion.div>
 
@@ -56,20 +56,20 @@ export const MedicolDifferentiators = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group"
               >
-                <Card className="h-full p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-border">
+                <Card className="h-full p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-border hover:border-blue-200">
                   {/* Icon Circle */}
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <IconComponent className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-blue-200">
+                    <IconComponent className="w-8 h-8 text-blue-500" />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-bold text-foreground mb-4">
-                    {item.title}
+                  <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-blue-600 transition-colors">
+                    {t(item.titleKey)}
                   </h3>
 
                   {/* Description */}
                   <p className="text-muted-foreground leading-relaxed">
-                    {item.description}
+                    {t(item.descriptionKey)}
                   </p>
                 </Card>
               </motion.div>

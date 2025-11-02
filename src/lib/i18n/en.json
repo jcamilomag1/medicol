@@ -92,6 +92,16 @@
         "primary": "Free WhatsApp Consultation",
         "secondary": "View All-Inclusive Packages",
         "whatsapp_message": "Hello, I want to learn about the Medicol difference and schedule a free consultation"
+      },
+      "cards": {
+        "title": "Why Choose Medicol?",
+        "subtitle": "Experience that makes the difference",
+        "worry_free_title": "Worry-Free",
+        "worry_free_description": "We take care of everything. From your arrival to your recovery, every detail is covered.",
+        "followup_title": "Follow-up Included",
+        "followup_description": "Complete post-operation follow-up at no additional cost. Your health is our priority before, during, and after.",
+        "innovation_title": "Cutting-Edge Innovation",
+        "innovation_description": "State-of-the-art technology and equipment. Tools that make a difference in your results."
       }
     }
   },
