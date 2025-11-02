@@ -29,7 +29,6 @@ const StemCellsPage = () => {
       { icon: Shield, textKey: 'stem_cells.hero.trust_badge_1' },
       { icon: Award, textKey: 'stem_cells.hero.trust_badge_2' },
       { icon: Users, textKey: 'stem_cells.hero.trust_badge_3' },
-      { icon: Star, textKey: 'stem_cells.hero.trust_badge_4' },
     ],
   };
 
