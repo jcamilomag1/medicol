@@ -80,7 +80,7 @@ export const TestimonialsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15, duration: 0.5 }}
-              className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300 max-w-xs"
+              className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300 w-80 h-[320px] flex flex-col"
             >
               <div className="flex items-center gap-3">
                 <img
@@ -102,11 +102,11 @@ export const TestimonialsSection = () => {
                   ))}
               </div>
               
-              <p className="text-muted-foreground mt-4 leading-relaxed">
+              <p className="text-muted-foreground mt-4 leading-relaxed flex-grow line-clamp-4">
                 "{isEnglish ? testimonial.text_en : testimonial.text_es}"
               </p>
               
-              <p className="text-sm text-accent font-medium mt-4">{testimonial.procedure}</p>
+              <p className="text-sm text-accent font-medium mt-4 pt-2">{testimonial.procedure}</p>
             </motion.div>
           ))}
         </div>
