@@ -60,11 +60,11 @@ export const ServiceHeroSection = ({
         }}
       />
 
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background z-[1]" />
+      {/* Primary Color Overlay - Same as Homepage/Plastic Surgery */}
+      <div className="absolute inset-0 z-[1] bg-gradient-to-br from-primary/90 via-primary/70 to-primary/50" />
       
-      {/* Additional Gradient Overlay for Better Text Readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/50 to-transparent z-[2]" />
+      {/* Bottom Darkening Overlay - Same as Homepage/Plastic Surgery */}
+      <div className="absolute inset-0 z-[2] bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
       {/* Content */}
       <div className="container relative z-10 mx-auto px-6 py-20">
@@ -76,12 +76,12 @@ export const ServiceHeroSection = ({
             transition={{ duration: 0.6, delay: 0.2 }}
             className="inline-block mb-6"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/90 border border-accent backdrop-blur-sm">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
               </span>
-              <span className="text-sm font-medium text-primary">
+              <span className="text-sm font-medium text-accent-foreground">
                 {t(highlightBadgeKey)}
               </span>
             </span>
@@ -92,7 +92,7 @@ export const ServiceHeroSection = ({
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-5xl md:text-7xl font-bold mb-6 text-foreground leading-tight"
+            className="text-5xl md:text-7xl font-bold mb-6 text-white leading-tight"
           >
             {t(titleKey)}
           </motion.h1>
@@ -102,7 +102,7 @@ export const ServiceHeroSection = ({
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed max-w-3xl"
+            className="text-xl md:text-2xl text-white/90 mb-10 leading-relaxed max-w-3xl"
           >
             {t(subtitleKey)}
           </motion.p>
@@ -125,7 +125,7 @@ export const ServiceHeroSection = ({
               onClick={() => scrollToSection(ctaSecondaryTarget)}
               variant="outline"
               size="lg"
-              className="text-lg px-8 py-6 backdrop-blur-sm bg-background/50"
+              className="text-lg px-8 py-6 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20"
             >
               {t(ctaSecondaryKey)}
             </Button>
@@ -141,9 +141,9 @@ export const ServiceHeroSection = ({
             {trustBadges.map((badge, index) => {
               const IconComponent = badge.icon;
               return (
-                <div key={index} className="flex items-center gap-2 text-muted-foreground">
-                  <IconComponent className="w-5 h-5 text-primary" />
-                  <span className="text-sm font-medium">{t(badge.textKey)}</span>
+                <div key={index} className="flex items-center gap-2 text-white/90">
+                  <IconComponent className="w-5 h-5 text-accent" />
+                  <span className="text-sm font-medium text-white/90">{t(badge.textKey)}</span>
                 </div>
               );
             })}
