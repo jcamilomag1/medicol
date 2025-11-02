@@ -51,6 +51,48 @@
       "cta_subtitle": "Schedule your free consultation today",
       "cta_primary": "Contact via WhatsApp",
       "cta_secondary": "Contact Form"
+    },
+    "differentiators": {
+      "badge": "Why 5,000+ patients choose us",
+      "title": "The Medicol Difference",
+      "subtitle": "Not all medical tourism agencies are equal. Discover what makes us unique.",
+      "comparison": {
+        "header_aspect": "Aspect",
+        "header_others": "Other Agencies",
+        "header_medicol": "Medicol",
+        "hospital": "Hospitals",
+        "hospital_others": "Not certified",
+        "hospital_medicol": "JCI International Accreditation",
+        "recovery": "Recovery",
+        "recovery_others": "Generic hotels",
+        "recovery_medicol": "Private house + 24/7 Nursing",
+        "translator": "Communication",
+        "translator_others": "No medical translator",
+        "translator_medicol": "Professional medical translator",
+        "pricing": "Pricing",
+        "pricing_others": "Hidden costs",
+        "pricing_medicol": "Transparent all-inclusive (50-70% savings)",
+        "followup": "Follow-up",
+        "followup_others": "Limited or none",
+        "followup_medicol": "Complete 6-month follow-up"
+      },
+      "trust": {
+        "certification_title": "International Certification",
+        "certification_desc": "Only operator in Medellín with JCI certified hospitals",
+        "experience_title": "Proven Experience",
+        "experience_desc": "Successful procedures with 98% satisfaction",
+        "savings_title": "Guaranteed Savings",
+        "savings_desc": "All-inclusive: surgery + hospital + recovery + follow-up",
+        "care_title": "Premium Care",
+        "care_desc": "Private house with specialized nursing"
+      },
+      "cta": {
+        "title": "Ready for the Medicol Experience?",
+        "subtitle": "Join 5,000+ satisfied patients who trusted us",
+        "primary": "Free WhatsApp Consultation",
+        "secondary": "View All-Inclusive Packages",
+        "whatsapp_message": "Hello, I want to learn about the Medicol difference and schedule a free consultation"
+      }
     }
   },
   "common": {

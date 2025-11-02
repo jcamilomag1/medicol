@@ -1,8 +1,7 @@
 import Layout from '@/components/Layout';
 import { ServiceHeroSection } from '@/components/services/ServiceHeroSection';
 import { ServicesGrid } from '@/components/services/ServicesGrid';
-import { BreakthroughsSection } from '@/components/services/BreakthroughsSection';
-
+import { MedicolDifferentiators } from '@/components/services/MedicolDifferentiators';
 import { PremiumServicesSection } from '@/components/sections/PremiumServicesSection';
 import { ServiceTestimonialsSection } from '@/components/services/ServiceTestimonialsSection';
 import { ServiceFAQSection } from '@/components/services/ServiceFAQSection';
@@ -108,7 +107,7 @@ const StemCellsPage = () => {
   return (
     <Layout>
       <ServiceHeroSection {...heroProps} />
-      <BreakthroughsSection {...breakthroughsProps} />
+      <MedicolDifferentiators />
       <ServicesGrid {...servicesProps} />
       <PremiumServicesSection />
       <ServiceTestimonialsSection {...testimonialsProps} />

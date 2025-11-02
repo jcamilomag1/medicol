@@ -51,6 +51,48 @@
       "cta_subtitle": "Agenda tu consulta gratuita hoy",
       "cta_primary": "Contactar por WhatsApp",
       "cta_secondary": "Formulario de Contacto"
+    },
+    "differentiators": {
+      "badge": "Por qué 5,000+ pacientes nos eligen",
+      "title": "La Diferencia Medicol",
+      "subtitle": "No todas las agencias de turismo médico son iguales. Descubre lo que nos hace únicos.",
+      "comparison": {
+        "header_aspect": "Aspecto",
+        "header_others": "Otras Agencias",
+        "header_medicol": "Medicol",
+        "hospital": "Hospitales",
+        "hospital_others": "No certificados",
+        "hospital_medicol": "Acreditación JCI Internacional",
+        "recovery": "Recuperación",
+        "recovery_others": "Hoteles genéricos",
+        "recovery_medicol": "Casa privada + Enfermería 24/7",
+        "translator": "Comunicación",
+        "translator_others": "Sin traductor médico",
+        "translator_medicol": "Traductor médico profesional",
+        "pricing": "Precios",
+        "pricing_others": "Costos ocultos",
+        "pricing_medicol": "Todo incluido transparente (50-70% ahorro)",
+        "followup": "Seguimiento",
+        "followup_others": "Limitado o ninguno",
+        "followup_medicol": "Seguimiento completo 6 meses"
+      },
+      "trust": {
+        "certification_title": "Certificación Internacional",
+        "certification_desc": "Único operador en Medellín con hospitales certificados JCI",
+        "experience_title": "Experiencia Comprobada",
+        "experience_desc": "Procedimientos exitosos con 98% de satisfacción",
+        "savings_title": "Ahorro Garantizado",
+        "savings_desc": "Todo incluido: cirugía + hospital + recuperación + seguimiento",
+        "care_title": "Cuidado Premium",
+        "care_desc": "Casa privada con enfermería especializada"
+      },
+      "cta": {
+        "title": "¿Listo para la Experiencia Medicol?",
+        "subtitle": "Únete a 5,000+ pacientes satisfechos que confiaron en nosotros",
+        "primary": "Consulta Gratuita por WhatsApp",
+        "secondary": "Ver Paquetes Todo Incluido",
+        "whatsapp_message": "Hola, quiero conocer la diferencia Medicol y agendar una consulta gratuita"
+      }
     }
   },
   "common": {
