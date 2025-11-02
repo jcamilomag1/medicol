@@ -16,6 +16,9 @@ const DentalPage = lazy(() => import('./pages/DentalPage'));
 const DiagnosticsPage = lazy(() => import('./pages/DiagnosticsPage'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
+// Admin tools (temporal - solo desarrollo)
+const DentalImageGenerator = lazy(() => import('./components/admin/DentalImageGenerator').then(m => ({ default: m.DentalImageGenerator })));
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -46,6 +49,8 @@ const App = () => (
             <Route path="/experiencia" element={<ExperiencePage />} />
             <Route path="/equipo" element={<TeamPage />} />
             <Route path="/contacto" element={<ContactPage />} />
+            {/* Admin routes - temporal */}
+            <Route path="/admin/generate-dental-images" element={<DentalImageGenerator />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
