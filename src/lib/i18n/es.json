@@ -1,4 +1,58 @@
 {
+  "stem_cells": {
+    "hero": {
+      "title": "Terapia con Células Madre",
+      "subtitle": "Experimenta el futuro de la medicina regenerativa con nuestros tratamientos revolucionarios de 2025, combinando tecnología de exosomas con protocolos avanzados de células madre",
+      "badge": "Innovación Médica",
+      "cta_primary": "Consulta Gratuita",
+      "cta_secondary": "Ver Tratamientos",
+      "whatsapp_message": "Hola, me interesa conocer más sobre la terapia con células madre",
+      "trust_badge_1": "Laboratorio Certificado ISO 9001",
+      "trust_badge_2": "Tecnología de Exosomas 2025",
+      "trust_badge_3": "500+ Tratamientos Exitosos",
+      "trust_badge_4": "95% Tasa de Satisfacción"
+    },
+    "services": {
+      "title": "Tratamientos Disponibles",
+      "subtitle": "Descubre nuestra gama completa de terapias regenerativas de vanguardia",
+      "search_placeholder": "Buscar tratamientos...",
+      "no_results": "No se encontraron tratamientos que coincidan con tu búsqueda",
+      "category_all": "Todos",
+      "category_aesthetic": "Estética",
+      "category_orthopedic": "Ortopédico",
+      "category_medical": "Médico",
+      "category_technology": "Tecnología"
+    },
+    "breakthroughs": {
+      "title": "Avances Tecnológicos 2025",
+      "subtitle": "Los pilares de nuestra medicina regenerativa",
+      "exosome_title": "Tecnología de Exosomas",
+      "exosome_description": "Señalización celular de próxima generación para mejores resultados regenerativos",
+      "personalized_title": "Tratamiento Personalizado",
+      "personalized_description": "Protocolos optimizados por IA basados en tu perfil celular único",
+      "combined_title": "Terapias Combinadas",
+      "combined_description": "Enfoques de tratamiento sinérgicos para máxima efectividad"
+    },
+    "excellence": {
+      "title": "Excelencia Científica",
+      "research_title": "Investigación Clínica",
+      "research_description": "Colaboración continua con instituciones de investigación líderes y ensayos clínicos continuos",
+      "quality_title": "Garantía de Calidad",
+      "quality_description": "Instalaciones de laboratorio de última generación con rigurosos protocolos de control de calidad"
+    },
+    "testimonials": {
+      "title": "Historias de Éxito",
+      "subtitle": "Experiencias reales de nuestros pacientes"
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestros tratamientos",
+      "cta_title": "¿Listo para Comenzar?",
+      "cta_subtitle": "Agenda tu consulta gratuita hoy",
+      "cta_primary": "Contactar por WhatsApp",
+      "cta_secondary": "Formulario de Contacto"
+    }
+  },
   "common": {
     "learn_more": "Ver más",
     "view_profile": "Ver más",

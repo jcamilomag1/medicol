@@ -1,4 +1,58 @@
 {
+  "stem_cells": {
+    "hero": {
+      "title": "Stem Cell Therapy",
+      "subtitle": "Experience the future of regenerative medicine with our 2025 breakthrough treatments, combining exosome technology with advanced stem cell protocols",
+      "badge": "Medical Innovation",
+      "cta_primary": "Free Consultation",
+      "cta_secondary": "View Treatments",
+      "whatsapp_message": "Hello, I'm interested in learning more about stem cell therapy",
+      "trust_badge_1": "ISO 9001 Certified Laboratory",
+      "trust_badge_2": "2025 Exosome Technology",
+      "trust_badge_3": "500+ Successful Treatments",
+      "trust_badge_4": "95% Satisfaction Rate"
+    },
+    "services": {
+      "title": "Available Treatments",
+      "subtitle": "Discover our complete range of cutting-edge regenerative therapies",
+      "search_placeholder": "Search treatments...",
+      "no_results": "No treatments found matching your search",
+      "category_all": "All",
+      "category_aesthetic": "Aesthetic",
+      "category_orthopedic": "Orthopedic",
+      "category_medical": "Medical",
+      "category_technology": "Technology"
+    },
+    "breakthroughs": {
+      "title": "2025 Technological Breakthroughs",
+      "subtitle": "The pillars of our regenerative medicine",
+      "exosome_title": "Exosome Technology",
+      "exosome_description": "Next-generation cell signaling for enhanced regenerative outcomes",
+      "personalized_title": "Personalized Treatment",
+      "personalized_description": "AI-optimized protocols based on your unique cellular profile",
+      "combined_title": "Combined Therapies",
+      "combined_description": "Synergistic treatment approaches for maximum effectiveness"
+    },
+    "excellence": {
+      "title": "Scientific Excellence",
+      "research_title": "Clinical Research",
+      "research_description": "Ongoing collaboration with leading research institutions and continuous clinical trials",
+      "quality_title": "Quality Assurance",
+      "quality_description": "State-of-the-art lab facilities with rigorous quality control protocols"
+    },
+    "testimonials": {
+      "title": "Success Stories",
+      "subtitle": "Real experiences from our patients"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our treatments",
+      "cta_title": "Ready to Start?",
+      "cta_subtitle": "Schedule your free consultation today",
+      "cta_primary": "Contact via WhatsApp",
+      "cta_secondary": "Contact Form"
+    }
+  },
   "common": {
     "learn_more": "Learn More",
     "view_profile": "View more",
