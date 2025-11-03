@@ -51,7 +51,13 @@ export const ServiceTestimonialsSection = ({
   googleReviewsUrl = 'https://www.google.com/maps',
 }: ServiceTestimonialsSectionProps) => {
   const { t, i18n } = useTranslation();
-  const isSpanish = i18n.language === 'es';
+  const isEnglish = i18n.language === 'en';
+
+  const autoplayPlugin = Autoplay({
+    delay: 4000,
+    stopOnInteraction: true,
+    stopOnMouseEnter: true,
+  });
 
   return (
     <section className="py-20 px-6 bg-gray-50">
@@ -75,15 +81,13 @@ export const ServiceTestimonialsSection = ({
         {/* Testimonials Carousel */}
         <Carousel
           opts={{
-            align: 'start',
+            align: "start",
             loop: true,
+            skipSnaps: false,
+            dragFree: true,
           }}
-          plugins={[
-            Autoplay({
-              delay: 4000,
-            }),
-          ]}
-          className="w-full"
+          plugins={[autoplayPlugin]}
+          className="w-full max-w-7xl mx-auto"
         >
           <CarouselContent className="-ml-4">
             {/* Testimonial Cards */}
@@ -117,7 +121,7 @@ export const ServiceTestimonialsSection = ({
                   </div>
                   
                   <p className="text-muted-foreground mt-4 leading-relaxed flex-grow line-clamp-4">
-                    "{isSpanish ? testimonial.text_es : testimonial.text_en}"
+                    "{isEnglish ? testimonial.text_en : testimonial.text_es}"
                   </p>
                 </motion.div>
               </CarouselItem>
@@ -154,9 +158,9 @@ export const ServiceTestimonialsSection = ({
                 
                 {/* Descriptive Text */}
                 <p className="text-muted-foreground text-sm mb-6 px-2">
-                  {isSpanish 
-                    ? "Ve lo que dicen nuestros pacientes sobre su experiencia"
-                    : "See what our patients say about their experience"
+                  {isEnglish 
+                    ? "See what our patients say about their experience"
+                    : "Ve lo que dicen nuestros pacientes sobre su experiencia"
                   }
                 </p>
                 
@@ -165,7 +169,7 @@ export const ServiceTestimonialsSection = ({
                   variant="default" 
                   className="group-hover:scale-105 transition-transform"
                 >
-                  {isSpanish ? 'Saber Más' : 'Learn More'}
+                  {isEnglish ? 'Learn More' : 'Saber Más'}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </motion.a>
