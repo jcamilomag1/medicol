@@ -739,5 +739,58 @@
       "cta_primary": "Agenda tu Consulta Gratuita",
       "cta_secondary": "Más Información"
     }
+  },
+  "diagnostics": {
+    "hero": {
+      "title": "Diagnósticos Médicos Avanzados",
+      "subtitle": "Más allá de un simple chequeo. Descubre tu plan de salud futuro con diagnósticos de precisión guiados por IA y medicina preventiva de clase mundial en Medellín.",
+      "badge": "Medicina Preventiva 2025",
+      "cta_primary": "Consulta Virtual Gratuita",
+      "cta_secondary": "Ver Programas",
+      "whatsapp_message": "Hola, me interesa conocer más sobre diagnósticos médicos avanzados en MediCol",
+      "trust_badge_1": "Análisis Guiado por IA",
+      "trust_badge_2": "Resultados 24-48h",
+      "trust_badge_3": "Panel de Especialistas"
+    },
+    "programs": {
+      "title": "Nuestros Programas de Diagnóstico Preventivo",
+      "subtitle": "Paquetes lógicos basados en tus necesidades de salud",
+      "search_placeholder": "Buscar programas de diagnóstico...",
+      "no_results": "No se encontraron programas que coincidan con tu búsqueda",
+      "category_executive": "Ejecutivo",
+      "category_second_opinion": "Segunda Opinión",
+      "category_proactive": "Preventivo",
+      "category_genetic": "Genético"
+    },
+    "difference": {
+      "title": "La Ventaja MediCol: Datos que se Convierten en Acción",
+      "ai_analysis_title": "Análisis Guiado por IA",
+      "ai_analysis_description": "Utilizamos software de IA para analizar tus imágenes (MRI, CT) y resultados de laboratorio, detectando patrones sutiles que el ojo humano podría pasar por alto para una precisión diagnóstica superior.",
+      "smart_report_title": "Reporte Inteligente",
+      "smart_report_description": "No te entregamos una pila de papeles. Recibes un reporte consolidado, claro y accionable, explicando qué significan tus resultados y cuáles son los siguientes pasos recomendados.",
+      "specialists_panel_title": "Panel de Especialistas",
+      "specialists_panel_description": "Tus resultados son revisados no por un médico general, sino por un panel de especialistas (cardiólogos, oncólogos, radiólogos) de las mejores clínicas de Medellín."
+    },
+    "experience": {
+      "title": "Tu Bienestar, Sin Estrés",
+      "concierge_title": "Concierge de Salud Personal",
+      "concierge_description": "Tu coordinador de MediCol agenda y gestiona todas tus citas de forma consecutiva. Sin esperas, sin burocracia. Tu única preocupación es tu salud.",
+      "efficiency_title": "Eficiencia Máxima",
+      "efficiency_description": "Completa todos tus exámenes, imágenes y consultas en un solo lugar y en tiempo récord. Lo que en tu país tomaría meses, en MediCol toma días.",
+      "results_title": "Resultados Consolidados",
+      "results_description": "Recibe todos tus resultados (traducidos si es necesario) en un solo paquete digital y en una consulta de seguimiento (virtual o presencial) con tu especialista."
+    },
+    "testimonials": {
+      "title": "Historias de Salud Transformadas",
+      "subtitle": "Pacientes que tomaron el control de su salud"
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestros programas de diagnóstico",
+      "cta_title": "Toma el Control Total de tu Salud",
+      "cta_subtitle": "La prevención es la medicina del futuro. Agenda una consulta virtual gratuita para diseñar tu plan de diagnóstico personalizado con un asesor de salud de MediCol.",
+      "cta_primary": "Diseñar mi Chequeo",
+      "cta_secondary": "Contactar por WhatsApp"
+    }
   }
 }

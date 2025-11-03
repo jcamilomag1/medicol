@@ -739,5 +739,58 @@
       "cta_primary": "Schedule Your Free Consultation",
       "cta_secondary": "More Information"
     }
+  },
+  "diagnostics": {
+    "hero": {
+      "title": "Advanced Medical Diagnostics",
+      "subtitle": "Beyond a simple checkup. Discover your future health plan with AI-guided precision diagnostics and world-class preventive medicine in Medellín.",
+      "badge": "2025 Preventive Medicine",
+      "cta_primary": "Free Virtual Consultation",
+      "cta_secondary": "View Programs",
+      "whatsapp_message": "Hello, I'm interested in learning more about advanced medical diagnostics at MediCol",
+      "trust_badge_1": "AI-Powered Analysis",
+      "trust_badge_2": "24-48h Results",
+      "trust_badge_3": "Specialist Panel"
+    },
+    "programs": {
+      "title": "Our Preventive Diagnostic Programs",
+      "subtitle": "Logical packages based on your health needs",
+      "search_placeholder": "Search diagnostic programs...",
+      "no_results": "No programs found matching your search",
+      "category_executive": "Executive",
+      "category_second_opinion": "Second Opinion",
+      "category_proactive": "Preventive",
+      "category_genetic": "Genetic"
+    },
+    "difference": {
+      "title": "The MediCol Advantage: Data Converted into Action",
+      "ai_analysis_title": "AI-Powered Analysis",
+      "ai_analysis_description": "We use AI software to analyze your images (MRI, CT) and lab results, detecting subtle patterns that the human eye might miss for superior diagnostic accuracy.",
+      "smart_report_title": "Smart Report",
+      "smart_report_description": "We don't give you a pile of papers. You receive a consolidated, clear, and actionable report explaining what your results mean and what the recommended next steps are.",
+      "specialists_panel_title": "Specialist Panel",
+      "specialists_panel_description": "Your results are reviewed not by a general practitioner, but by a panel of specialists (cardiologists, oncologists, radiologists) from Medellín's best clinics."
+    },
+    "experience": {
+      "title": "Your Wellness, Stress-Free",
+      "concierge_title": "Personal Health Concierge",
+      "concierge_description": "Your MediCol coordinator schedules and manages all your appointments consecutively. No waiting, no bureaucracy. Your only concern is your health.",
+      "efficiency_title": "Maximum Efficiency",
+      "efficiency_description": "Complete all your exams, imaging, and consultations in one place and in record time. What would take months in your country, takes days at MediCol.",
+      "results_title": "Consolidated Results",
+      "results_description": "Receive all your results (translated if necessary) in a single digital package and in a follow-up consultation (virtual or in-person) with your specialist."
+    },
+    "testimonials": {
+      "title": "Transformed Health Stories",
+      "subtitle": "Patients who took control of their health"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our diagnostic programs",
+      "cta_title": "Take Complete Control of Your Health",
+      "cta_subtitle": "Prevention is the medicine of the future. Schedule a free virtual consultation to design your personalized diagnostic plan with a MediCol health advisor.",
+      "cta_primary": "Design My Checkup",
+      "cta_secondary": "Contact via WhatsApp"
+    }
   }
 }
