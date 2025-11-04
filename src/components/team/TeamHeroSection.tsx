@@ -6,8 +6,16 @@ const TeamHeroSection = () => {
 
   return (
     <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
-      {/* Background with overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-accent/90" />
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/src/assets/team-hero-bg.jpg')"
+        }}
+      />
+      
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-accent/85" />
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 md:px-8 text-center">
