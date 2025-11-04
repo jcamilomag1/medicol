@@ -30,7 +30,7 @@ const TeamTestimonialBanner = () => {
             ))}
           </div>
 
-          <blockquote className="text-lg md:text-2xl font-medium leading-relaxed mb-6">
+          <blockquote className="text-base md:text-2xl font-medium leading-relaxed mb-6">
             "{t('team.testimonial.text')}"
           </blockquote>
 
