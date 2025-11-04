@@ -1,6 +1,5 @@
 import Layout from '@/components/Layout';
 import TeamHeroSection from '@/components/team/TeamHeroSection';
-import TeamMissionSection from '@/components/team/TeamMissionSection';
 import TeamSocialProof from '@/components/team/TeamSocialProof';
 import TeamAdminSection from '@/components/team/TeamAdminSection';
 import TeamTestimonialBanner from '@/components/team/TeamTestimonialBanner';
@@ -13,7 +12,6 @@ const TeamPage = () => {
   return (
     <Layout>
       <TeamHeroSection />
-      <TeamMissionSection />
       <TeamSocialProof />
       <TeamAdminSection />
       <TeamTestimonialBanner />
