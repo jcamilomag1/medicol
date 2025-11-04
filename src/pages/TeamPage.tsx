@@ -1,11 +1,26 @@
 import Layout from '@/components/Layout';
+import TeamHeroSection from '@/components/team/TeamHeroSection';
+import TeamMissionSection from '@/components/team/TeamMissionSection';
+import TeamSocialProof from '@/components/team/TeamSocialProof';
+import TeamAdminSection from '@/components/team/TeamAdminSection';
+import TeamTestimonialBanner from '@/components/team/TeamTestimonialBanner';
+import TeamMedicalSection from '@/components/team/TeamMedicalSection';
+import TeamProcessTimeline from '@/components/team/TeamProcessTimeline';
+import TeamSupportNetwork from '@/components/team/TeamSupportNetwork';
+import TeamCTASection from '@/components/team/TeamCTASection';
 
 const TeamPage = () => {
   return (
     <Layout>
-      <div className="min-h-screen flex items-center justify-center px-6">
-        <h1 className="text-4xl font-bold text-primary">Nuestro Equipo Médico</h1>
-      </div>
+      <TeamHeroSection />
+      <TeamMissionSection />
+      <TeamSocialProof />
+      <TeamAdminSection />
+      <TeamTestimonialBanner />
+      <TeamMedicalSection />
+      <TeamProcessTimeline />
+      <TeamSupportNetwork />
+      <TeamCTASection />
     </Layout>
   );
 };

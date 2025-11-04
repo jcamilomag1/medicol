@@ -807,5 +807,183 @@
       "cta_primary": "Diseñar mi Chequeo",
       "cta_secondary": "Contactar por WhatsApp"
     }
+  },
+  "team": {
+    "hero": {
+      "badge": "Nuestro Equipo",
+      "title": "Humanos Expertos, Cuidado Excepcional",
+      "subtitle": "Conoce al equipo de MediCol: la fusión perfecta de cuidado logístico de clase mundial y excelencia médica de vanguardia en Medellín. Estamos aquí para encargarnos de todo."
+    },
+    "mission": {
+      "title": "Nuestra Misión: Tu Bienestar Sin Preocupaciones",
+      "paragraph1": "MediCol nació de una idea simple: el acceso a la medicina de clase mundial no debería ser complicado.",
+      "paragraph2": "Actuamos como tus curadores personales de salud en Medellín. Seleccionamos solo a los especialistas más reconocidos y la tecnología más avanzada, y construimos una experiencia de 'guante blanco' a tu alrededor.",
+      "paragraph3": "Nos encargamos de la logística, las citas, el idioma y cada detalle, para que tu único enfoque sea sanar."
+    },
+    "socialProof": {
+      "patients": "Pacientes Internacionales",
+      "rating": "Estrellas Promedio",
+      "experience": "Años de Experiencia",
+      "countries": "Países Atendidos"
+    },
+    "admin": {
+      "title": "Tu Equipo de Cuidado y Logística",
+      "intro": "Desde tu primera consulta virtual hasta tu recuperación post-tratamiento, este es tu equipo. Son tu punto de contacto 24/7, tus traductores, tus planificadores y tus defensores en Medellín.",
+      "daniel": {
+        "name": "Daniel Ramírez",
+        "role": "Director Ejecutivo",
+        "quote": "Mi compromiso es garantizar que cada paciente viva una experiencia transformadora y sin estrés.",
+        "bio": "Líder visionario dedicado a revolucionar el turismo médico. Coordina la estrategia global de MediCol para asegurar experiencias excepcionales."
+      },
+      "felipe": {
+        "name": "Felipe Múnera",
+        "role": "Director Financiero",
+        "quote": "Transparencia financiera total. Sin costos ocultos, solo claridad y confianza.",
+        "bio": "Experto en planificación financiera médica. Asegura precios justos, transparentes y sin sorpresas para todos nuestros pacientes."
+      },
+      "ismael": {
+        "name": "Ismael Salazar",
+        "role": "Director de Operaciones",
+        "quote": "Cada detalle cuenta. Me aseguro de que tu viaje sea impecable de principio a fin.",
+        "bio": "Maestro de la logística médica. Coordina transporte, alojamiento, citas y cada paso de tu recuperación con precisión milimétrica."
+      },
+      "lina": {
+        "name": "Lina Jaramillo",
+        "role": "Directora de Enfermería",
+        "quote": "Tu recuperación es mi prioridad. Estoy aquí 24/7 para cuidarte como familia.",
+        "bio": "Enfermera registrada con 20+ años de experiencia. Supervisa el cuidado postoperatorio y la enfermería privada de todos nuestros pacientes."
+      }
+    },
+    "testimonial": {
+      "text": "MediCol no solo me conectó con un cirujano excepcional, sino que se encargaron de TODO: vuelos, hotel, traductor, enfermera privada. Me sentí en casa a 5,000 km de distancia.",
+      "author": "Sarah M., USA 🇺🇸"
+    },
+    "medical": {
+      "title": "Nuestros Especialistas Afiliados",
+      "intro": "No somos una clínica, somos curadores de talento. Hemos seleccionado rigurosamente a los especialistas líderes en Colombia por sus credenciales, sus resultados probados y su enfoque centrado en el paciente.",
+      "credentials": "Credenciales",
+      "membership": "Miembro de",
+      "education": "Educación",
+      "experienceLabel": "Experiencia",
+      "treatments": "Tratamientos Principales",
+      "languages": "Idiomas",
+      "cta": "Agendar Consulta",
+      "guerra": {
+        "name": "Dr. Guerra",
+        "specialty": "Otorrinolaringólogo",
+        "philosophy": "Experto en tratamientos avanzados de oído, nariz y garganta con enfoque mínimamente invasivo.",
+        "membership": "ACICME",
+        "education": "Especialización en Otorrinolaringología",
+        "experience": "15+ años",
+        "treatmentsList": ["Rinoplastia Funcional", "Cirugía de Senos Paranasales", "Otoplastia", "Cirugía de Cuerdas Vocales"],
+        "languages": "Español, Inglés"
+      },
+      "diaz": {
+        "name": "Dra. Díaz",
+        "specialty": "Cirujana Plástica y Maxilofacial",
+        "philosophy": "Planes personalizados que logran resultados naturales y armoniosos. Tu visión, mi experiencia.",
+        "membership": "ACES, FILACP, IPRAS, Sociedad Colombiana de Cirugía Plástica",
+        "education": "Cirugía Plástica, Estética y Reconstructiva",
+        "experience": "25+ años",
+        "treatmentsList": ["Liposucción", "Abdominoplastia", "Aumento de Senos", "Rinoplastia", "Bichectomía", "Lifting Facial"],
+        "languages": "Español, Inglés"
+      },
+      "botero": {
+        "name": "Dra. Botero Arango",
+        "specialty": "Cirujana Plástica y Dermatóloga",
+        "philosophy": "Experta en medicina estética no invasiva para resultados naturales y duraderos.",
+        "membership": "ACICME (Junta Directiva - Secretaria), Facultad ACICME",
+        "education": "Universidad de Antioquia, BWS Institute (Brasil)",
+        "experience": "23 años en Clínica Medellín del Poblado",
+        "treatmentsList": ["Bótox", "Rellenos Dérmicos", "Hilos Tensores", "Bioestimuladores de Colágeno", "Manejo de Obesidad"],
+        "languages": "Español, Inglés, Portugués"
+      },
+      "daza": {
+        "name": "Dr. Daza",
+        "specialty": "Cirujano Plástico, Estético y Reconstructivo",
+        "philosophy": "Especializado en cirugía facial compleja y trasplante capilar con técnicas argentinas de vanguardia.",
+        "membership": "A.A.C.M (Argentina), S.A.C.P.E.R (Argentina)",
+        "education": "Pontificia Universidad Católica Argentina, Fellowship Hospital Juan A. Fernández",
+        "experience": "Certificación Internacional",
+        "treatmentsList": ["Rinoplastia", "Cirugía Facial Reconstructiva", "Trasplante Capilar", "Cirugía de Mano", "Quemaduras"],
+        "languages": "Español, Inglés"
+      },
+      "arango": {
+        "name": "Dr. Arango",
+        "specialty": "Cirujano Plástico, Maxilofacial y de Mano",
+        "philosophy": "Más de 25 años perfeccionando el arte del contorno corporal y facial.",
+        "membership": "Sociedad Colombiana de Cirugía Plástica (SCCP), Corporación Antioqueña de Cirugía Plástica",
+        "education": "Universidad de Antioquia (UdeA)",
+        "experience": "25+ años",
+        "treatmentsList": ["Liposucción", "Abdominoplastia", "Aumento de Senos", "Mastopexia", "Blefaroplastia", "Rinoplastia"],
+        "languages": "Español, Inglés"
+      },
+      "garcia": {
+        "name": "Dr. García",
+        "specialty": "Cirujano Plástico Estético y Reconstructivo",
+        "philosophy": "Combinando ingeniería biomédica con arte quirúrgico para resultados precisos y naturales.",
+        "membership": "Especialista Certificado",
+        "education": "UdeA (Cirugía Plástica), UPB (Ing. Biomédica), UNISANTA Brasil (Fellowship)",
+        "experience": "20+ años",
+        "treatmentsList": ["Aumento de Senos", "Levantamiento de Senos", "Abdominoplastia", "Blefaroplastia", "Otoplastia", "Cirugía Post-Bariátrica"],
+        "languages": "Español, Inglés, Portugués"
+      },
+      "lina": {
+        "name": "Enf. Lina Jaramillo",
+        "specialty": "Enfermera Registrada y Especialista Estética",
+        "philosophy": "Cuidado integral: desde procedimientos estéticos hasta tu recuperación completa en casa.",
+        "membership": "Enfermera Registrada Certificada",
+        "education": "Especialización en Estética y Cuidado Post-Quirúrgico",
+        "experience": "20+ años, 1,500+ clientes satisfechos",
+        "treatmentsList": ["Bótox", "Rellenos de Ácido Hialurónico", "Drenaje Linfático", "Enfermería 24/7", "Masajes Post-Quirúrgicos"],
+        "languages": "Español, Inglés"
+      }
+    },
+    "process": {
+      "title": "Tu Viaje Médico en 5 Pasos",
+      "step1": {
+        "title": "Contacto Inicial",
+        "description": "Consulta virtual gratuita con nuestro equipo. Evaluamos tu caso y te presentamos opciones."
+      },
+      "step2": {
+        "title": "Planificación Personalizada",
+        "description": "Diseñamos tu viaje completo: vuelos, alojamiento, citas médicas y traductor."
+      },
+      "step3": {
+        "title": "Llegada y Bienvenida",
+        "description": "Te recogemos en el aeropuerto. Check-in en tu casa de recuperación privada."
+      },
+      "step4": {
+        "title": "Tratamiento y Cuidado",
+        "description": "Procedimiento médico + enfermería 24/7 + seguimiento diario del equipo."
+      },
+      "step5": {
+        "title": "Recuperación y Seguimiento",
+        "description": "Seguimiento virtual por 6 meses. Estamos contigo incluso después de tu regreso."
+      }
+    },
+    "support": {
+      "title": "Un Ecosistema de Cuidado Completo",
+      "intro": "Más allá de nuestro equipo principal, tu bienestar está respaldado por la infraestructura médica más avanzada de la ciudad.",
+      "facilities": {
+        "title": "Instalaciones de Clase Mundial",
+        "description": "Acceso a hospitales acreditados JCI y clínicas de vanguardia en Medellín con tecnología de última generación."
+      },
+      "labs": {
+        "title": "Laboratorios Avanzados",
+        "description": "Diagnósticos de precisión con IA y tecnología de células madre regenerativas para tratamientos de vanguardia."
+      },
+      "hospitality": {
+        "title": "Servicios Premium",
+        "description": "Transporte de lujo, casas de recuperación privadas, enfermería 24/7 y concierge médico dedicado."
+      }
+    },
+    "cta": {
+      "title": "Inicia tu Viaje con un Equipo en el que Puedes Confiar",
+      "description": "Tu salud es lo más importante. Habla con un miembro de nuestro equipo de cuidado hoy mismo para planear tu viaje médico a Medellín. La primera consulta es gratuita.",
+      "button_calendly": "Agendar Consulta Gratuita",
+      "button_whatsapp": "Hablar por WhatsApp",
+      "whatsapp_message": "Hola, quiero hablar con el equipo de MediCol sobre mi viaje médico"
+    }
   }
 }

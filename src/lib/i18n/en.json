@@ -807,5 +807,183 @@
       "cta_primary": "Design My Checkup",
       "cta_secondary": "Contact via WhatsApp"
     }
+  },
+  "team": {
+    "hero": {
+      "badge": "Our Team",
+      "title": "Expert Humans, Exceptional Care",
+      "subtitle": "Meet the MediCol team: the perfect fusion of world-class logistical care and cutting-edge medical excellence in Medellín. We're here to take care of everything."
+    },
+    "mission": {
+      "title": "Our Mission: Your Worry-Free Wellbeing",
+      "paragraph1": "MediCol was born from a simple idea: access to world-class medicine shouldn't be complicated.",
+      "paragraph2": "We act as your personal health curators in Medellín. We select only the most renowned specialists and the most advanced technology, and build a 'white-glove' experience around you.",
+      "paragraph3": "We handle the logistics, appointments, language, and every detail, so your only focus is healing."
+    },
+    "socialProof": {
+      "patients": "International Patients",
+      "rating": "Average Stars",
+      "experience": "Years of Experience",
+      "countries": "Countries Served"
+    },
+    "admin": {
+      "title": "Your Care and Logistics Team",
+      "intro": "From your first virtual consultation to your post-treatment recovery, this is your team. They are your 24/7 point of contact, your translators, your planners, and your advocates in Medellín.",
+      "daniel": {
+        "name": "Daniel Ramírez",
+        "role": "Chief Executive Officer",
+        "quote": "My commitment is to ensure that every patient experiences a transformative and stress-free journey.",
+        "bio": "Visionary leader dedicated to revolutionizing medical tourism. Coordinates MediCol's global strategy to ensure exceptional experiences."
+      },
+      "felipe": {
+        "name": "Felipe Múnera",
+        "role": "Chief Financial Officer",
+        "quote": "Total financial transparency. No hidden costs, just clarity and trust.",
+        "bio": "Expert in medical financial planning. Ensures fair, transparent, and surprise-free pricing for all our patients."
+      },
+      "ismael": {
+        "name": "Ismael Salazar",
+        "role": "Chief Operating Officer",
+        "quote": "Every detail matters. I ensure your journey is flawless from start to finish.",
+        "bio": "Master of medical logistics. Coordinates transportation, accommodation, appointments, and every step of your recovery with military precision."
+      },
+      "lina": {
+        "name": "Lina Jaramillo",
+        "role": "Chief Nursing Officer",
+        "quote": "Your recovery is my priority. I'm here 24/7 to care for you like family.",
+        "bio": "Registered nurse with 20+ years of experience. Oversees postoperative care and private nursing for all our patients."
+      }
+    },
+    "testimonial": {
+      "text": "MediCol didn't just connect me with an exceptional surgeon, they took care of EVERYTHING: flights, hotel, translator, private nurse. I felt at home 5,000 km away.",
+      "author": "Sarah M., USA 🇺🇸"
+    },
+    "medical": {
+      "title": "Our Affiliated Specialists",
+      "intro": "We're not a clinic, we're talent curators. We have rigorously selected Colombia's leading specialists for their credentials, proven results, and patient-centered approach.",
+      "credentials": "Credentials",
+      "membership": "Member of",
+      "education": "Education",
+      "experienceLabel": "Experience",
+      "treatments": "Main Treatments",
+      "languages": "Languages",
+      "cta": "Schedule Consultation",
+      "guerra": {
+        "name": "Dr. Guerra",
+        "specialty": "Otolaryngologist",
+        "philosophy": "Expert in advanced ear, nose, and throat treatments with a minimally invasive approach.",
+        "membership": "ACICME",
+        "education": "Specialization in Otolaryngology",
+        "experience": "15+ years",
+        "treatmentsList": ["Functional Rhinoplasty", "Sinus Surgery", "Otoplasty", "Vocal Cord Surgery"],
+        "languages": "Spanish, English"
+      },
+      "diaz": {
+        "name": "Dr. Díaz",
+        "specialty": "Plastic and Maxillofacial Surgeon",
+        "philosophy": "Personalized plans that achieve natural and harmonious results. Your vision, my expertise.",
+        "membership": "ACES, FILACP, IPRAS, Colombian Society of Plastic Surgery",
+        "education": "Plastic, Aesthetic and Reconstructive Surgery",
+        "experience": "25+ years",
+        "treatmentsList": ["Liposuction", "Abdominoplasty", "Breast Augmentation", "Rhinoplasty", "Buccal Fat Removal", "Facelift"],
+        "languages": "Spanish, English"
+      },
+      "botero": {
+        "name": "Dr. Botero Arango",
+        "specialty": "Plastic Surgeon and Dermatologist",
+        "philosophy": "Expert in non-invasive aesthetic medicine for natural and lasting results.",
+        "membership": "ACICME (Board of Directors - Secretary), ACICME Faculty",
+        "education": "University of Antioquia, BWS Institute (Brazil)",
+        "experience": "23 years at Clínica Medellín del Poblado",
+        "treatmentsList": ["Botox", "Dermal Fillers", "Thread Lift", "Collagen Biostimulators", "Obesity Management"],
+        "languages": "Spanish, English, Portuguese"
+      },
+      "daza": {
+        "name": "Dr. Daza",
+        "specialty": "Plastic, Aesthetic and Reconstructive Surgeon",
+        "philosophy": "Specialized in complex facial surgery and hair transplantation with cutting-edge Argentine techniques.",
+        "membership": "A.A.C.M (Argentina), S.A.C.P.E.R (Argentina)",
+        "education": "Pontifical Catholic University of Argentina, Fellowship at Juan A. Fernández Hospital",
+        "experience": "International Certification",
+        "treatmentsList": ["Rhinoplasty", "Reconstructive Facial Surgery", "Hair Transplant", "Hand Surgery", "Burns"],
+        "languages": "Spanish, English"
+      },
+      "arango": {
+        "name": "Dr. Arango",
+        "specialty": "Plastic, Maxillofacial and Hand Surgeon",
+        "philosophy": "Over 25 years perfecting the art of body and facial contouring.",
+        "membership": "Colombian Society of Plastic Surgery (SCCP), Antioquian Plastic Surgery Corporation",
+        "education": "University of Antioquia (UdeA)",
+        "experience": "25+ years",
+        "treatmentsList": ["Liposuction", "Abdominoplasty", "Breast Augmentation", "Breast Lift", "Blepharoplasty", "Rhinoplasty"],
+        "languages": "Spanish, English"
+      },
+      "garcia": {
+        "name": "Dr. García",
+        "specialty": "Aesthetic and Reconstructive Plastic Surgeon",
+        "philosophy": "Combining biomedical engineering with surgical art for precise and natural results.",
+        "membership": "Board Certified Specialist",
+        "education": "UdeA (Plastic Surgery), UPB (Biomedical Eng.), UNISANTA Brazil (Fellowship)",
+        "experience": "20+ years",
+        "treatmentsList": ["Breast Augmentation", "Breast Lift", "Abdominoplasty", "Blepharoplasty", "Otoplasty", "Post-Bariatric Surgery"],
+        "languages": "Spanish, English, Portuguese"
+      },
+      "lina": {
+        "name": "RN. Lina Jaramillo",
+        "specialty": "Registered Nurse and Aesthetic Specialist",
+        "philosophy": "Comprehensive care: from aesthetic procedures to your complete home recovery.",
+        "membership": "Certified Registered Nurse",
+        "education": "Specialization in Aesthetics and Post-Surgical Care",
+        "experience": "20+ years, 1,500+ satisfied clients",
+        "treatmentsList": ["Botox", "Hyaluronic Acid Fillers", "Lymphatic Drainage", "24/7 Nursing", "Post-Surgical Massage"],
+        "languages": "Spanish, English"
+      }
+    },
+    "process": {
+      "title": "Your Medical Journey in 5 Steps",
+      "step1": {
+        "title": "Initial Contact",
+        "description": "Free virtual consultation with our team. We evaluate your case and present options."
+      },
+      "step2": {
+        "title": "Personalized Planning",
+        "description": "We design your complete journey: flights, accommodation, medical appointments, and translator."
+      },
+      "step3": {
+        "title": "Arrival and Welcome",
+        "description": "We pick you up at the airport. Check-in at your private recovery house."
+      },
+      "step4": {
+        "title": "Treatment and Care",
+        "description": "Medical procedure + 24/7 nursing + daily team follow-up."
+      },
+      "step5": {
+        "title": "Recovery and Follow-up",
+        "description": "Virtual follow-up for 6 months. We're with you even after your return."
+      }
+    },
+    "support": {
+      "title": "A Complete Care Ecosystem",
+      "intro": "Beyond our core team, your wellbeing is backed by the city's most advanced medical infrastructure.",
+      "facilities": {
+        "title": "World-Class Facilities",
+        "description": "Access to JCI-accredited hospitals and cutting-edge clinics in Medellín with state-of-the-art technology."
+      },
+      "labs": {
+        "title": "Advanced Laboratories",
+        "description": "AI-powered precision diagnostics and regenerative stem cell technology for cutting-edge treatments."
+      },
+      "hospitality": {
+        "title": "Premium Services",
+        "description": "Luxury transportation, private recovery houses, 24/7 nursing, and dedicated medical concierge."
+      }
+    },
+    "cta": {
+      "title": "Start Your Journey with a Team You Can Trust",
+      "description": "Your health is what matters most. Speak with a member of our care team today to plan your medical journey to Medellín. The first consultation is free.",
+      "button_calendly": "Schedule Free Consultation",
+      "button_whatsapp": "Talk via WhatsApp",
+      "whatsapp_message": "Hello, I want to talk to the MediCol team about my medical journey"
+    }
   }
 }
