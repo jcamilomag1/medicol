@@ -194,7 +194,7 @@ export const TeamPreview = () => {
               
               {/* View Profile Button */}
               <motion.a
-                href={currentDoctor.profileUrl}
+                href="/equipo"
                 className="
                   block w-full px-6 py-3 bg-accent hover:bg-accent/90 
                   text-white font-semibold rounded-full text-center
@@ -260,7 +260,7 @@ export const TeamPreview = () => {
               
               {/* View Profile Button */}
               <motion.a
-                href={currentDoctor.profileUrl}
+                href="/equipo"
                 className="
                   block w-full px-6 py-3 bg-accent hover:bg-accent/90 
                   text-white font-semibold rounded-full text-center
