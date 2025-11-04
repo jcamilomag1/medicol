@@ -15,26 +15,24 @@ const TeamMissionSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
-          <div className="bg-card rounded-2xl p-8 md:p-12 shadow-lg border border-border">
-            <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-8 text-center">
-              {t('team.mission.title')}
-            </h2>
+          <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-8 text-center">
+            {t('team.mission.title')}
+          </h2>
+          
+          <div className="space-y-6 text-lg md:text-xl text-muted-foreground">
+            <p className="leading-relaxed">
+              {t('team.mission.paragraph1')}
+            </p>
             
-            <div className="space-y-6 text-lg md:text-xl text-muted-foreground">
-              <p className="leading-relaxed">
-                {t('team.mission.paragraph1')}
-              </p>
-              
-              <p className="leading-relaxed">
-                {t('team.mission.paragraph2')}
-              </p>
-              
-              <p className="leading-relaxed font-medium text-foreground">
-                {t('team.mission.paragraph3')}
-              </p>
-            </div>
+            <p className="leading-relaxed">
+              {t('team.mission.paragraph2')}
+            </p>
+            
+            <p className="leading-relaxed font-medium text-foreground">
+              {t('team.mission.paragraph3')}
+            </p>
           </div>
         </motion.div>
       </div>
