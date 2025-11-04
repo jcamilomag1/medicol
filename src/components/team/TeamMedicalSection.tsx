@@ -110,7 +110,7 @@ const TeamMedicalSection = () => {
                           {(t(`team.medical.${doctor.key}.treatmentsList`, { returnObjects: true }) as string[]).map((treatment: string, i: number) => (
                             <span
                               key={i}
-                              className="px-3 py-1 bg-accent/20 text-accent-foreground rounded-full text-sm border border-accent/30"
+                              className="px-3 py-1 bg-slate-800 text-white rounded-full text-sm border border-slate-700"
                             >
                               {treatment}
                             </span>
