@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Linkedin, Instagram } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import doctorAlejandroImage from '@/assets/doctor-alejandro-guerra.jpg';
+
 
 interface Doctor {
   name: string;
@@ -18,72 +18,72 @@ interface Doctor {
 
 const teamMembers: Doctor[] = [
   {
-    name: 'Dr. Alejandro Guerra Ruiz',
-    specialtyKey: 'team.doctors.alejandro.specialty',
-    experienceKey: 'team.doctors.alejandro.experience',
-    bioKey: 'team.doctors.alejandro.bio',
-    imageUrl: doctorAlejandroImage,
-    profileUrl: '/nuestro-equipo/alejandro-guerra',
+    name: 'Dr. Guerra',
+    specialtyKey: 'team.doctors.guerra.specialty',
+    experienceKey: 'team.doctors.guerra.experience',
+    bioKey: 'team.doctors.guerra.bio',
+    imageUrl: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop',
+    profileUrl: '/equipo/dr-guerra',
     linkedinUrl: '#',
     instagramUrl: '#'
   },
   {
-    name: 'Dra. Carolina Botero Vélez',
-    specialtyKey: 'team.doctors.carolina.specialty',
-    experienceKey: 'team.doctors.carolina.experience',
-    bioKey: 'team.doctors.carolina.bio',
+    name: 'Dra. Diaz',
+    specialtyKey: 'team.doctors.diaz.specialty',
+    experienceKey: 'team.doctors.diaz.experience',
+    bioKey: 'team.doctors.diaz.bio',
+    imageUrl: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop',
+    profileUrl: '/equipo/dra-diaz',
+    linkedinUrl: '#',
+    instagramUrl: '#'
+  },
+  {
+    name: 'Dra. Botero Arango',
+    specialtyKey: 'team.doctors.botero.specialty',
+    experienceKey: 'team.doctors.botero.experience',
+    bioKey: 'team.doctors.botero.bio',
     imageUrl: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=600&auto=format&fit=crop',
-    profileUrl: '/nuestro-equipo/carolina-botero',
+    profileUrl: '/equipo/dra-botero',
     linkedinUrl: '#',
     instagramUrl: '#'
   },
   {
-    name: 'Dr. Juan Vélez Martínez',
-    specialtyKey: 'team.doctors.juan.specialty',
-    experienceKey: 'team.doctors.juan.experience',
-    bioKey: 'team.doctors.juan.bio',
+    name: 'Dr. Daza',
+    specialtyKey: 'team.doctors.daza.specialty',
+    experienceKey: 'team.doctors.daza.experience',
+    bioKey: 'team.doctors.daza.bio',
+    imageUrl: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&h=400&fit=crop',
+    profileUrl: '/equipo/dr-daza',
+    linkedinUrl: '#',
+    instagramUrl: '#'
+  },
+  {
+    name: 'Dr. Arango',
+    specialtyKey: 'team.doctors.arango.specialty',
+    experienceKey: 'team.doctors.arango.experience',
+    bioKey: 'team.doctors.arango.bio',
+    imageUrl: 'https://images.unsplash.com/photo-1622253692010-33352da55e0d?w=400&h=400&fit=crop',
+    profileUrl: '/equipo/dr-arango',
+    linkedinUrl: '#',
+    instagramUrl: '#'
+  },
+  {
+    name: 'Dr. García',
+    specialtyKey: 'team.doctors.garcia.specialty',
+    experienceKey: 'team.doctors.garcia.experience',
+    bioKey: 'team.doctors.garcia.bio',
     imageUrl: 'https://images.unsplash.com/photo-1629425733761-caae3b5f2e50?q=80&w=600&auto=format&fit=crop',
-    profileUrl: '/nuestro-equipo/juan-velez',
+    profileUrl: '/equipo/dr-garcia',
     linkedinUrl: '#',
     instagramUrl: '#'
   },
   {
-    name: 'Dra. María Fernández López',
-    specialtyKey: 'team.doctors.maria.specialty',
-    experienceKey: 'team.doctors.maria.experience',
-    bioKey: 'team.doctors.maria.bio',
-    imageUrl: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=600&auto=format&fit=crop',
-    profileUrl: '/nuestro-equipo/maria-fernandez',
-    linkedinUrl: '#',
-    instagramUrl: '#'
-  },
-  {
-    name: 'Dr. Roberto Silva Gómez',
-    specialtyKey: 'team.doctors.roberto.specialty',
-    experienceKey: 'team.doctors.roberto.experience',
-    bioKey: 'team.doctors.roberto.bio',
-    imageUrl: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80',
-    profileUrl: '/nuestro-equipo/roberto-silva',
-    linkedinUrl: '#',
-    instagramUrl: '#'
-  },
-  {
-    name: 'Dra. Lucía Martínez Torres',
-    specialtyKey: 'team.doctors.lucia.specialty',
-    experienceKey: 'team.doctors.lucia.experience',
-    bioKey: 'team.doctors.lucia.bio',
-    imageUrl: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=600&q=80',
-    profileUrl: '/nuestro-equipo/lucia-martinez',
-    linkedinUrl: '#',
-    instagramUrl: '#'
-  },
-  {
-    name: 'Dr. Carlos Restrepo Vargas',
-    specialtyKey: 'team.doctors.carlos.specialty',
-    experienceKey: 'team.doctors.carlos.experience',
-    bioKey: 'team.doctors.carlos.bio',
-    imageUrl: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80',
-    profileUrl: '/nuestro-equipo/carlos-restrepo',
+    name: 'Rn. Lina Jaramillo',
+    specialtyKey: 'team.doctors.jaramillo.specialty',
+    experienceKey: 'team.doctors.jaramillo.experience',
+    bioKey: 'team.doctors.jaramillo.bio',
+    imageUrl: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop',
+    profileUrl: '/equipo/rn-jaramillo',
     linkedinUrl: '#',
     instagramUrl: '#'
   }

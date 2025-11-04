@@ -445,40 +445,40 @@
     "bio": "Experiencia",
     "view_profile": "Ver Perfil Completo",
     "doctors": {
-      "alejandro": {
-        "specialty": "Cirujano Plástico Reconstructivo",
+      "guerra": {
+        "specialty": "Otorrinolaringólogo",
         "experience": "Más de 15 años de experiencia",
-        "bio": "Especialista en procedimientos de lipotransferencia y cirugía reconstructiva. Certificado por la Sociedad Internacional de Cirugía Plástica Estética con más de 2,000 procedimientos exitosos."
+        "bio": "Miembro de ACICME. Participa activamente en asociaciones médicas y conferencias para mantenerse a la vanguardia de su disciplina."
       },
-      "carolina": {
-        "specialty": "Especialista en Medicina Regenerativa",
-        "experience": "Más de 12 años de experiencia",
-        "bio": "Pionera en terapias con células madre y tratamientos anti-aging. Formación en las mejores clínicas de Europa y Estados Unidos con resultados excepcionales."
+      "diaz": {
+        "specialty": "Cirujana Plástica y Maxilofacial",
+        "experience": "Más de 25 años de experiencia certificada",
+        "bio": "Miembro distinguido de ACES, FILACP, IPRAS y la Sociedad Colombiana de Cirugía Plástica. Experta en cirugías corporales y faciales."
       },
-      "juan": {
-        "specialty": "Odontólogo y Diseñador de Sonrisa",
-        "experience": "Más de 18 años de experiencia",
-        "bio": "Experto en diseño de sonrisa digital y rehabilitación oral completa. Certificado en implantología avanzada y estética dental con tecnología de última generación."
+      "botero": {
+        "specialty": "Cirujana Plástica y Dermatóloga",
+        "experience": "23 años de experiencia",
+        "bio": "Miembro de la junta directiva y secretaria de ACICME. Experta en medicina estética: toxina botulínica, rellenos, hilos tensores y bioestimuladores."
       },
-      "maria": {
-        "specialty": "Dermatóloga Estética",
+      "daza": {
+        "specialty": "Cirujano Plástico, Estético y Reconstructivo",
+        "experience": "Experiencia Internacional Certificada",
+        "bio": "Especializado en Argentina (UCA) y miembro de A.A.C.M y S.A.C.P.E.R. Experto en cirugía facial, contorno corporal, cirugía de mano y trasplante capilar."
+      },
+      "arango": {
+        "specialty": "Cirujano Plástico, Maxilofacial y de Mano",
+        "experience": "Más de 25 años de experiencia",
+        "bio": "Graduado de la Universidad de Antioquia. Miembro de la Sociedad Colombiana de Cirugía Plástica (SCCP). Experto en liposucción, abdominoplastia y rinoplastia."
+      },
+      "garcia": {
+        "specialty": "Cirujano Plástico, Estético y Reconstructivo",
         "experience": "Más de 20 años de experiencia",
-        "bio": "Especialista en tratamientos láser, rejuvenecimiento facial y medicina estética. Miembro activo de la Academia Americana de Dermatología con enfoque en resultados naturales."
+        "bio": "Especializado en Cirugía Plástica (UdeA), Ing. Biomédica (UPB) y Cirugía Estética (UNISANTA, Brasil). Experto en cirugía mamaria, corporal y postbariátrica."
       },
-      "roberto": {
-        "specialty": "Cardiólogo Intervencionista",
-        "experience": "Más de 14 años de experiencia",
-        "bio": "Experto en diagnósticos cardiovasculares avanzados y medicina preventiva. Certificado en imagenología cardíaca con tecnología de última generación para detección temprana."
-      },
-      "lucia": {
-        "specialty": "Anestesióloga y Especialista en Dolor",
-        "experience": "Más de 16 años de experiencia",
-        "bio": "Especialista en manejo del dolor y técnicas de sedación avanzada. Formación en las mejores clínicas de anestesiología con enfoque en seguridad y confort del paciente."
-      },
-      "carlos": {
-        "specialty": "Cirujano Maxilofacial",
-        "experience": "Más de 22 años de experiencia",
-        "bio": "Experto en cirugía reconstructiva facial y procedimientos de ATM. Pionero en técnicas mínimamente invasivas con más de 1,500 cirugías exitosas y resultados de clase mundial."
+      "jaramillo": {
+        "specialty": "Enfermera Registrada y Especialista Estética",
+        "experience": "Más de 20 años de experiencia",
+        "bio": "Experta en procedimientos estéticos (Botox, fillers) y cuidado postoperatorio integral, incluyendo drenaje linfático y enfermería privada. +1,500 clientes satisfechos."
       }
     }
   },

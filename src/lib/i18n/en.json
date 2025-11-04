@@ -445,40 +445,40 @@
     "bio": "Experience",
     "view_profile": "View Full Profile",
     "doctors": {
-      "alejandro": {
-        "specialty": "Reconstructive Plastic Surgeon",
+      "guerra": {
+        "specialty": "Otorhinolaryngologist",
         "experience": "Over 15 years of experience",
-        "bio": "Specialist in fat transfer procedures and reconstructive surgery. Certified by the International Society of Aesthetic Plastic Surgery with over 2,000 successful procedures."
+        "bio": "Member of ACICME. Actively participates in medical associations and conferences to stay at the forefront of his specialized discipline."
       },
-      "carolina": {
-        "specialty": "Regenerative Medicine Specialist",
-        "experience": "Over 12 years of experience",
-        "bio": "Pioneer in stem cell therapies and anti-aging treatments. Trained at the best clinics in Europe and the United States with exceptional results."
+      "diaz": {
+        "specialty": "Plastic and Maxillofacial Surgeon",
+        "experience": "Over 25 years of certified experience",
+        "bio": "Distinguished member of ACES, FILACP, IPRAS, and the Colombian Society of Plastic Surgery. Expert in body and facial surgeries."
       },
-      "juan": {
-        "specialty": "Dentist and Smile Designer",
-        "experience": "Over 18 years of experience",
-        "bio": "Expert in digital smile design and complete oral rehabilitation. Certified in advanced implantology and dental aesthetics with cutting-edge technology."
+      "botero": {
+        "specialty": "Plastic Surgeon and Dermatologist",
+        "experience": "23 years of experience",
+        "bio": "ACICME board member and secretary. Expert in aesthetic medicine: Botulinum Toxin, dermal fillers, threads, and collagen biostimulants."
       },
-      "maria": {
-        "specialty": "Aesthetic Dermatologist",
+      "daza": {
+        "specialty": "Plastic, Aesthetic, and Reconstructive Surgeon",
+        "experience": "Certified International Experience",
+        "bio": "Specialized in Argentina (UCA) and member of A.A.C.M & S.A.C.P.E.R. Expert in facial surgery, body contouring, hand surgery, and hair transplantation."
+      },
+      "arango": {
+        "specialty": "Plastic, Maxillofacial, and Hand Surgeon",
+        "experience": "Over 25 years of experience",
+        "bio": "Graduate of the University of Antioquia. Member of the Colombian Society of Plastic Surgery (SCCP). Expert in liposuction, abdominoplasty, rhinoplasty, and breast surgery."
+      },
+      "garcia": {
+        "specialty": "Aesthetic and Reconstructive Plastic Surgeon",
+        "experience": "Over 20 years of expertise",
+        "bio": "Specialized in Plastic Surgery (UdeA), Biomedical Eng. (UPB), and Aesthetic Surgery (UNISANTA, Brazil). Expert in breast, body, and post-bariatric surgery."
+      },
+      "jaramillo": {
+        "specialty": "Registered Nurse & Aesthetic Specialist",
         "experience": "Over 20 years of experience",
-        "bio": "Specialist in laser treatments, facial rejuvenation, and aesthetic medicine. Active member of the American Academy of Dermatology with a focus on natural results."
-      },
-      "roberto": {
-        "specialty": "Interventional Cardiologist",
-        "experience": "Over 14 years of experience",
-        "bio": "Expert in advanced cardiovascular diagnostics and preventive medicine. Certified in cardiac imaging with cutting-edge technology for early detection."
-      },
-      "lucia": {
-        "specialty": "Anesthesiologist and Pain Specialist",
-        "experience": "Over 16 years of experience",
-        "bio": "Specialist in pain management and advanced sedation techniques. Trained at the best anesthesiology clinics with a focus on patient safety and comfort."
-      },
-      "carlos": {
-        "specialty": "Maxillofacial Surgeon",
-        "experience": "Over 22 years of experience",
-        "bio": "Expert in facial reconstructive surgery and TMJ procedures. Pioneer in minimally invasive techniques with over 1,500 successful surgeries and world-class results."
+        "bio": "Expert in aesthetic procedures (Botox, fillers) and comprehensive post-operative care, including lymphatic drainage and private nursing. 1,500+ satisfied clients."
       }
     }
   },
