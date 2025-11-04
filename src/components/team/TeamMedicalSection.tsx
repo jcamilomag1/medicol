@@ -123,19 +123,6 @@ const TeamMedicalSection = () => {
                         <Languages className="w-5 h-5 text-primary" />
                         <span><strong>{t('team.medical.languages')}:</strong> {t(`team.medical.${doctor.key}.languages`)}</span>
                       </div>
-
-                      {/* CTA */}
-                      <div className="pt-4">
-                        <Button asChild className="w-full md:w-auto bg-sky-400 hover:bg-sky-500 text-white">
-                          <a 
-                            href="https://calendly.com/medicol/consultation" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                          >
-                            {t('team.medical.cta')}
-                          </a>
-                        </Button>
-                      </div>
                     </div>
                   </AccordionContent>
                 </AccordionItem>
