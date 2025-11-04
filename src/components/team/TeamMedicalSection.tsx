@@ -126,7 +126,7 @@ const TeamMedicalSection = () => {
 
                       {/* CTA */}
                       <div className="pt-4">
-                        <Button asChild className="w-full md:w-auto">
+                        <Button asChild className="w-full md:w-auto bg-slate-800 hover:bg-slate-700 text-white">
                           <a 
                             href="https://calendly.com/medicol/consultation" 
                             target="_blank" 
