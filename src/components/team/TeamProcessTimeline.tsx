@@ -48,7 +48,7 @@ const TeamProcessTimeline = () => {
                 )}
 
                 {/* Icon Circle */}
-                <div className="absolute left-0 top-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg">
+                <div className="absolute left-0 top-0 w-12 h-12 bg-sky-400 rounded-full flex items-center justify-center shadow-lg">
                   <step.icon className="w-6 h-6 text-white" />
                 </div>
 
@@ -84,7 +84,7 @@ const TeamProcessTimeline = () => {
                     className="relative"
                   >
                     {/* Icon Circle */}
-                    <div className="relative z-10 w-24 h-24 mx-auto bg-primary rounded-full flex items-center justify-center shadow-lg mb-6">
+                    <div className="relative z-10 w-24 h-24 mx-auto bg-sky-400 rounded-full flex items-center justify-center shadow-lg mb-6">
                       <step.icon className="w-10 h-10 text-white" />
                     </div>
 
