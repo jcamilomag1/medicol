@@ -58,10 +58,6 @@ const TeamAdminSection = () => {
                     {t(`team.admin.${member.key}.role`)}
                   </p>
                 </div>
-
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {t(`team.admin.${member.key}.bio`)}
-                </p>
               </div>
             </motion.div>
           ))}
