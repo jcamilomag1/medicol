@@ -2,7 +2,6 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
-import { Quote } from 'lucide-react';
 
 const TeamAdminSection = () => {
   const { t } = useTranslation();
@@ -57,13 +56,6 @@ const TeamAdminSection = () => {
                   </h3>
                   <p className="text-primary font-semibold mt-1">
                     {t(`team.admin.${member.key}.role`)}
-                  </p>
-                </div>
-
-                <div className="relative bg-accent/10 rounded-xl p-6 w-full">
-                  <Quote className="absolute top-2 left-2 w-6 h-6 text-primary/30" />
-                  <p className="text-muted-foreground italic pt-4">
-                    "{t(`team.admin.${member.key}.quote`)}"
                   </p>
                 </div>
 
