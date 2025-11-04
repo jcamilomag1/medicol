@@ -5,7 +5,6 @@ import TeamAdminSection from '@/components/team/TeamAdminSection';
 import TeamTestimonialBanner from '@/components/team/TeamTestimonialBanner';
 import TeamMedicalSection from '@/components/team/TeamMedicalSection';
 import TeamProcessTimeline from '@/components/team/TeamProcessTimeline';
-import TeamSupportNetwork from '@/components/team/TeamSupportNetwork';
 import TeamCTASection from '@/components/team/TeamCTASection';
 
 const TeamPage = () => {
@@ -17,7 +16,6 @@ const TeamPage = () => {
       <TeamTestimonialBanner />
       <TeamMedicalSection />
       <TeamProcessTimeline />
-      <TeamSupportNetwork />
       <TeamCTASection />
     </Layout>
   );
