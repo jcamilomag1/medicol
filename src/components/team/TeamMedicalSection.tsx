@@ -8,10 +8,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Award, Languages, Calendar, GraduationCap, Briefcase, Stethoscope } from 'lucide-react';
-import { StatCounter } from '@/components/ui/stat-counter';
-import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { Award, Languages, Calendar } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const TeamMedicalSection = () => {
   const { t } = useTranslation();
@@ -76,129 +74,54 @@ const TeamMedicalSection = () => {
                     </div>
                   </AccordionTrigger>
                   
-                  <AccordionContent className="px-4 pb-4 md:px-6 md:pb-6">
-                    <div className="space-y-4 pt-4 md:grid md:grid-cols-2 md:gap-6 md:space-y-0">
-                      
-                      {/* Columna Izquierda */}
-                      <div className="space-y-4">
-                        {/* Philosophy Card */}
-                        <Card className="bg-primary/10 border-l-4 border-primary shadow-none">
-                          <div className="p-4">
-                            <p className="text-sm md:text-base text-foreground font-medium italic leading-relaxed">
-                              "{t(`team.medical.${doctor.key}.philosophy`)}"
-                            </p>
-                          </div>
-                        </Card>
-
-                        {/* Statistics Card */}
-                        <Card className="bg-sky-50 border-sky-200 shadow-none">
-                          <div className="p-4 text-center">
-                            <div className="flex items-center justify-center gap-2 mb-2">
-                              <Briefcase className="w-5 h-5 md:w-6 md:h-6 text-sky-600" />
-                              <h4 className="font-semibold text-sky-900 text-sm md:text-base">
-                                {t('team.medical.experienceLabel')}
-                              </h4>
-                            </div>
-                            <div className="text-sky-600">
-                              <StatCounter 
-                                value={parseInt(t(`team.medical.${doctor.key}.experience`)) || 15} 
-                                suffix="+" 
-                                className="text-3xl md:text-4xl font-bold"
-                              />
-                              <p className="text-xs md:text-sm text-sky-700 mt-1">Años de experiencia</p>
-                            </div>
-                          </div>
-                        </Card>
-
-                        {/* Languages Card */}
-                        <Card className="bg-emerald-50 border-emerald-200 shadow-none">
-                          <div className="p-4">
-                            <div className="flex items-center gap-2 mb-2">
-                              <Languages className="w-5 h-5 md:w-6 md:h-6 text-emerald-600" />
-                              <h4 className="font-semibold text-emerald-900 text-sm md:text-base">
-                                {t('team.medical.languages')}
-                              </h4>
-                            </div>
-                            <p className="text-sm text-emerald-800">
-                              {t(`team.medical.${doctor.key}.languages`)}
-                            </p>
-                          </div>
-                        </Card>
+                  <AccordionContent className="px-6 pb-6">
+                    <div className="space-y-6 pt-4">
+                      {/* Philosophy */}
+                      <div className="bg-primary/5 rounded-lg p-4 border-l-4 border-primary">
+                        <p className="text-foreground font-medium italic">
+                          {t(`team.medical.${doctor.key}.philosophy`)}
+                        </p>
                       </div>
 
-                      {/* Columna Derecha */}
-                      <div className="space-y-4">
-                        {/* Credentials Card */}
-                        <Card className="bg-slate-50 border-slate-200 shadow-none">
-                          <div className="p-4">
-                            <div className="flex items-center gap-2 mb-4">
-                              <Award className="w-5 h-5 md:w-6 md:h-6 text-primary" />
-                              <h4 className="font-semibold text-foreground text-sm md:text-base">
-                                {t('team.medical.credentials')}
-                              </h4>
-                            </div>
-                            <div className="space-y-3">
-                              <div className="flex gap-2 items-start">
-                                <GraduationCap className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                                <div className="flex-1 min-w-0">
-                                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-                                    {t('team.medical.membership')}
-                                  </p>
-                                  <p className="text-sm text-foreground mt-0.5">
-                                    {t(`team.medical.${doctor.key}.membership`)}
-                                  </p>
-                                </div>
-                              </div>
-                              
-                              <div className="flex gap-2 items-start">
-                                <Stethoscope className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                                <div className="flex-1 min-w-0">
-                                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-                                    {t('team.medical.education')}
-                                  </p>
-                                  <p className="text-sm text-foreground mt-0.5">
-                                    {t(`team.medical.${doctor.key}.education`)}
-                                  </p>
-                                </div>
-                              </div>
-                              
-                              <div className="flex gap-2 items-start">
-                                <Calendar className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                                <div className="flex-1 min-w-0">
-                                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-                                    {t('team.medical.experienceLabel')}
-                                  </p>
-                                  <p className="text-sm text-foreground mt-0.5">
-                                    {t(`team.medical.${doctor.key}.experience`)}
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </Card>
+                      {/* Credentials */}
+                      <div>
+                        <div className="flex items-center gap-2 mb-3">
+                          <Award className="w-5 h-5 text-primary" />
+                          <h4 className="font-semibold text-foreground">
+                            {t('team.medical.credentials')}
+                          </h4>
+                        </div>
+                        <div className="space-y-2 text-sm text-muted-foreground pl-7">
+                          <p><strong>{t('team.medical.membership')}:</strong> {t(`team.medical.${doctor.key}.membership`)}</p>
+                          <p><strong>{t('team.medical.education')}:</strong> {t(`team.medical.${doctor.key}.education`)}</p>
+                          <p className="flex items-center gap-2">
+                            <Calendar className="w-4 h-4" />
+                            <strong>{t('team.medical.experienceLabel')}:</strong> {t(`team.medical.${doctor.key}.experience`)}
+                          </p>
+                        </div>
+                      </div>
 
-                        {/* Treatments Card */}
-                        <Card className="bg-gradient-to-br from-slate-800 to-slate-900 border-slate-700 shadow-none">
-                          <div className="p-4">
-                            <div className="flex items-center gap-2 mb-3">
-                              <Stethoscope className="w-5 h-5 md:w-6 md:h-6 text-sky-400" />
-                              <h4 className="font-semibold text-white text-sm md:text-base">
-                                {t('team.medical.treatments')}
-                              </h4>
-                            </div>
-                            <div className="grid grid-cols-2 gap-2">
-                              {(t(`team.medical.${doctor.key}.treatmentsList`, { returnObjects: true }) as string[]).map((treatment: string, i: number) => (
-                                <Badge
-                                  key={i}
-                                  variant="secondary"
-                                  className="justify-center text-center bg-white/10 text-white border-white/20 hover:bg-white/20 transition-colors text-xs py-1.5"
-                                >
-                                  {treatment}
-                                </Badge>
-                              ))}
-                            </div>
-                          </div>
-                        </Card>
+                      {/* Treatments */}
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-3">
+                          {t('team.medical.treatments')}
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          {(t(`team.medical.${doctor.key}.treatmentsList`, { returnObjects: true }) as string[]).map((treatment: string, i: number) => (
+                            <span
+                              key={i}
+                              className="px-3 py-1 bg-slate-800 text-white rounded-full text-sm border border-slate-700"
+                            >
+                              {treatment}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Languages */}
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <Languages className="w-5 h-5 text-primary" />
+                        <span><strong>{t('team.medical.languages')}:</strong> {t(`team.medical.${doctor.key}.languages`)}</span>
                       </div>
                     </div>
                   </AccordionContent>
