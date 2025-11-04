@@ -56,6 +56,36 @@ const teamMembers: Doctor[] = [
     profileUrl: '/nuestro-equipo/maria-fernandez',
     linkedinUrl: '#',
     instagramUrl: '#'
+  },
+  {
+    name: 'Dr. Roberto Silva Gómez',
+    specialtyKey: 'team.doctors.roberto.specialty',
+    experienceKey: 'team.doctors.roberto.experience',
+    bioKey: 'team.doctors.roberto.bio',
+    imageUrl: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80',
+    profileUrl: '/nuestro-equipo/roberto-silva',
+    linkedinUrl: '#',
+    instagramUrl: '#'
+  },
+  {
+    name: 'Dra. Lucía Martínez Torres',
+    specialtyKey: 'team.doctors.lucia.specialty',
+    experienceKey: 'team.doctors.lucia.experience',
+    bioKey: 'team.doctors.lucia.bio',
+    imageUrl: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=600&q=80',
+    profileUrl: '/nuestro-equipo/lucia-martinez',
+    linkedinUrl: '#',
+    instagramUrl: '#'
+  },
+  {
+    name: 'Dr. Carlos Restrepo Vargas',
+    specialtyKey: 'team.doctors.carlos.specialty',
+    experienceKey: 'team.doctors.carlos.experience',
+    bioKey: 'team.doctors.carlos.bio',
+    imageUrl: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80',
+    profileUrl: '/nuestro-equipo/carlos-restrepo',
+    linkedinUrl: '#',
+    instagramUrl: '#'
   }
 ];
 

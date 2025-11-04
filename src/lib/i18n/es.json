@@ -464,6 +464,21 @@
         "specialty": "Dermatóloga Estética",
         "experience": "Más de 20 años de experiencia",
         "bio": "Especialista en tratamientos láser, rejuvenecimiento facial y medicina estética. Miembro activo de la Academia Americana de Dermatología con enfoque en resultados naturales."
+      },
+      "roberto": {
+        "specialty": "Cardiólogo Intervencionista",
+        "experience": "Más de 14 años de experiencia",
+        "bio": "Experto en diagnósticos cardiovasculares avanzados y medicina preventiva. Certificado en imagenología cardíaca con tecnología de última generación para detección temprana."
+      },
+      "lucia": {
+        "specialty": "Anestesióloga y Especialista en Dolor",
+        "experience": "Más de 16 años de experiencia",
+        "bio": "Especialista en manejo del dolor y técnicas de sedación avanzada. Formación en las mejores clínicas de anestesiología con enfoque en seguridad y confort del paciente."
+      },
+      "carlos": {
+        "specialty": "Cirujano Maxilofacial",
+        "experience": "Más de 22 años de experiencia",
+        "bio": "Experto en cirugía reconstructiva facial y procedimientos de ATM. Pionero en técnicas mínimamente invasivas con más de 1,500 cirugías exitosas y resultados de clase mundial."
       }
     }
   },

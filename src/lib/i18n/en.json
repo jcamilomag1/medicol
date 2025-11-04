@@ -464,6 +464,21 @@
         "specialty": "Aesthetic Dermatologist",
         "experience": "Over 20 years of experience",
         "bio": "Specialist in laser treatments, facial rejuvenation, and aesthetic medicine. Active member of the American Academy of Dermatology with a focus on natural results."
+      },
+      "roberto": {
+        "specialty": "Interventional Cardiologist",
+        "experience": "Over 14 years of experience",
+        "bio": "Expert in advanced cardiovascular diagnostics and preventive medicine. Certified in cardiac imaging with cutting-edge technology for early detection."
+      },
+      "lucia": {
+        "specialty": "Anesthesiologist and Pain Specialist",
+        "experience": "Over 16 years of experience",
+        "bio": "Specialist in pain management and advanced sedation techniques. Trained at the best anesthesiology clinics with a focus on patient safety and comfort."
+      },
+      "carlos": {
+        "specialty": "Maxillofacial Surgeon",
+        "experience": "Over 22 years of experience",
+        "bio": "Expert in facial reconstructive surgery and TMJ procedures. Pioneer in minimally invasive techniques with over 1,500 successful surgeries and world-class results."
       }
     }
   },
