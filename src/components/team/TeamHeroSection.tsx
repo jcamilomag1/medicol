@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
 
 const TeamHeroSection = () => {
   const { t } = useTranslation();
@@ -38,6 +39,25 @@ const TeamHeroSection = () => {
           <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
             {t('team.hero.subtitle')}
           </p>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <Button
+              size="lg"
+              onClick={() => {
+                document.getElementById('doctores')?.scrollIntoView({ 
+                  behavior: 'smooth',
+                  block: 'start'
+                });
+              }}
+              className="bg-white text-primary hover:bg-white/90 font-semibold shadow-lg"
+            >
+              Ver Doctores
+            </Button>
+          </motion.div>
         </motion.div>
       </div>
     </section>
