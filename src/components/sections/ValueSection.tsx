@@ -81,96 +81,64 @@ export const ValueSection = () => {
                 </div>
                 <div className="relative mt-6 sm:ml-6 flex items-center justify-center">
                   <svg className="w-full h-40 md:h-48" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                      {/* Gradiente para alcancía */}
-                      <linearGradient id="piggyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" style={{ stopColor: '#ec4899', stopOpacity: 0.9 }} />
-                        <stop offset="100%" style={{ stopColor: '#f9a8d4', stopOpacity: 0.7 }} />
-                      </linearGradient>
-                      {/* Gradiente para moneda */}
-                      <linearGradient id="coinGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" style={{ stopColor: '#fbbf24' }} />
-                        <stop offset="100%" style={{ stopColor: '#fcd34d' }} />
-                      </linearGradient>
-                      {/* Gradiente para badge */}
-                      <linearGradient id="savingsBadge" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" style={{ stopColor: '#3b82f6' }} />
-                        <stop offset="100%" style={{ stopColor: '#60a5fa' }} />
-                      </linearGradient>
-                    </defs>
+                    {/* Alcancía - Cuerpo principal */}
+                    <ellipse cx="100" cy="110" rx="45" ry="35" stroke="#6b7280" strokeWidth="2" />
                     
-                    {/* Alcancía (Piggy Bank) */}
-                    <g id="piggyBank">
-                      {/* Cuerpo principal */}
-                      <ellipse cx="100" cy="100" rx="50" ry="42" fill="url(#piggyGradient)" />
-                      <ellipse cx="100" cy="100" rx="50" ry="42" fill="none" stroke="#ec4899" strokeWidth="2" opacity="0.3" />
-                      
-                      {/* Patas */}
-                      <rect x="72" y="130" width="8" height="14" rx="4" fill="#ec4899" opacity="0.8" />
-                      <rect x="120" y="130" width="8" height="14" rx="4" fill="#ec4899" opacity="0.8" />
-                      
-                      {/* Oreja izquierda */}
-                      <ellipse cx="62" cy="82" rx="8" ry="14" fill="#f9a8d4" opacity="0.9" />
-                      
-                      {/* Oreja derecha */}
-                      <ellipse cx="138" cy="82" rx="8" ry="14" fill="#f9a8d4" opacity="0.9" />
-                      
-                      {/* Ranura para monedas */}
-                      <rect x="90" y="75" width="20" height="3" rx="1.5" fill="#6b7280" />
-                      
-                      {/* Ojo */}
-                      <circle cx="85" cy="95" r="4" fill="#6b7280" />
-                      
-                      {/* Nariz/hocico */}
-                      <ellipse cx="110" cy="100" rx="12" ry="10" fill="#f9a8d4" opacity="0.6" />
-                      <circle cx="107" cy="98" r="2" fill="#6b7280" />
-                      <circle cx="113" cy="98" r="2" fill="#6b7280" />
-                      
-                      {/* Colita */}
-                      <path 
-                        d="M 145 100 Q 155 95, 158 88 Q 160 82, 157 78" 
-                        stroke="#ec4899" 
-                        strokeWidth="3" 
-                        fill="none" 
-                        strokeLinecap="round"
-                      />
-                    </g>
+                    {/* Orejas */}
+                    <ellipse cx="70" cy="90" rx="6" ry="12" stroke="#6b7280" strokeWidth="2" />
+                    <ellipse cx="130" cy="90" rx="6" ry="12" stroke="#6b7280" strokeWidth="2" />
+                    
+                    {/* Patas */}
+                    <rect x="75" y="140" width="6" height="12" rx="3" stroke="#6b7280" strokeWidth="2" />
+                    <rect x="119" y="140" width="6" height="12" rx="3" stroke="#6b7280" strokeWidth="2" />
+                    
+                    {/* Ranura para monedas */}
+                    <line x1="90" y1="95" x2="110" y2="95" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" />
+                    
+                    {/* Ojo */}
+                    <circle cx="85" cy="110" r="3" fill="#6b7280" />
+                    
+                    {/* Hocico */}
+                    <circle cx="115" cy="115" r="8" stroke="#6b7280" strokeWidth="2" />
+                    <circle cx="112" cy="113" r="1.5" fill="#6b7280" />
+                    <circle cx="118" cy="113" r="1.5" fill="#6b7280" />
+                    
+                    {/* Cola */}
+                    <path 
+                      d="M 145 110 Q 155 105, 158 98 Q 160 92, 157 88" 
+                      stroke="#6b7280" 
+                      strokeWidth="2" 
+                      fill="none" 
+                      strokeLinecap="round"
+                    />
                     
                     {/* Moneda cayendo */}
-                    <g id="coin">
-                      {/* Círculo de la moneda */}
-                      <circle cx="100" cy="50" r="16" fill="url(#coinGradient)" />
-                      <circle cx="100" cy="50" r="16" fill="none" stroke="#f59e0b" strokeWidth="2" opacity="0.6" />
-                      
-                      {/* Símbolo $ */}
-                      <text 
-                        x="100" 
-                        y="57" 
-                        textAnchor="middle" 
-                        fill="#78350f" 
-                        style={{ fontSize: '20px', fontWeight: 'bold' }}
-                      >
-                        $
-                      </text>
-                      
-                      {/* Líneas de movimiento */}
-                      <line x1="88" y1="35" x2="85" y2="30" stroke="#fbbf24" strokeWidth="2" strokeLinecap="round" opacity="0.6" />
-                      <line x1="112" y1="35" x2="115" y2="30" stroke="#fbbf24" strokeWidth="2" strokeLinecap="round" opacity="0.6" />
-                    </g>
+                    <circle cx="100" cy="60" r="14" stroke="#6b7280" strokeWidth="2" />
+                    <text 
+                      x="100" 
+                      y="66" 
+                      textAnchor="middle" 
+                      fill="#6b7280" 
+                      style={{ fontSize: '18px', fontWeight: 'bold' }}
+                    >
+                      $
+                    </text>
+                    
+                    {/* Líneas de movimiento */}
+                    <line x1="88" y1="48" x2="85" y2="43" stroke="#6b7280" strokeWidth="1.5" strokeLinecap="round" />
+                    <line x1="112" y1="48" x2="115" y2="43" stroke="#6b7280" strokeWidth="1.5" strokeLinecap="round" />
                     
                     {/* Badge de ahorro */}
-                    <g id="badge">
-                      <rect x="55" y="165" width="90" height="20" rx="10" fill="url(#savingsBadge)" />
-                      <text 
-                        x="100" 
-                        y="178" 
-                        textAnchor="middle" 
-                        fill="#ffffff" 
-                        style={{ fontSize: '12px', fontWeight: 'bold' }}
-                      >
-                        Ahorro 60%
-                      </text>
-                    </g>
+                    <rect x="60" y="170" width="80" height="18" rx="9" stroke="#6b7280" strokeWidth="2" />
+                    <text 
+                      x="100" 
+                      y="182" 
+                      textAnchor="middle" 
+                      fill="#6b7280" 
+                      style={{ fontSize: '11px', fontWeight: '600' }}
+                    >
+                      Ahorro 60%
+                    </text>
                   </svg>
                 </div>
               </CardContent>
