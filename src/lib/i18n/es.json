@@ -1039,10 +1039,10 @@
       "success_message": "¡Mensaje enviado! Nos pondremos en contacto pronto."
     },
     "trust": {
-      "badge_1": "🛡️ Acreditación JCI",
-      "badge_2": "⭐ +5,000 Pacientes Satisfechos",
-      "badge_3": "📍 15+ Años en Medellín",
-      "badge_4": "🏆 Certificaciones Internacionales"
+      "badge_1": "Acreditación JCI",
+      "badge_2": "+5,000 Pacientes Satisfechos",
+      "badge_3": "15+ Años en Medellín",
+      "badge_4": "Certificaciones Internacionales"
     }
   }
 }
