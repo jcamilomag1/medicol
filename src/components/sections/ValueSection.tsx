@@ -82,31 +82,31 @@ export const ValueSection = () => {
                 <div className="relative mt-6 sm:ml-6 flex items-center justify-center">
               <svg className="w-full h-40 md:h-48" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                 {/* Círculo principal de la moneda */}
-                <circle cx="100" cy="100" r="50" stroke="#6b7280" strokeWidth="2" />
+                <circle cx="100" cy="100" r="50" stroke="hsl(200 100% 61%)" strokeWidth="2" />
                 
                 {/* Círculo interior decorativo */}
-                <circle cx="100" cy="100" r="42" stroke="#6b7280" strokeWidth="1.5" opacity="0.4" />
+                <circle cx="100" cy="100" r="42" stroke="hsl(200 100% 61%)" strokeWidth="1.5" opacity="0.4" />
                 
                 {/* Símbolo de dólar */}
                 <text 
                   x="100" 
                   y="115" 
                   textAnchor="middle" 
-                  fill="#6b7280" 
+                  fill="hsl(200 100% 61%)" 
                   style={{ fontSize: '48px', fontWeight: 'bold' }}
                 >
                   $
                 </text>
                 
                 {/* Líneas radiantes (efecto de valor/brillo) */}
-                <line x1="100" y1="30" x2="100" y2="20" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" />
-                <line x1="135" y1="45" x2="142" y2="38" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" />
-                <line x1="155" y1="100" x2="165" y2="100" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" />
-                <line x1="135" y1="155" x2="142" y2="162" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" />
-                <line x1="100" y1="170" x2="100" y2="180" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" />
-                <line x1="65" y1="155" x2="58" y2="162" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" />
-                <line x1="45" y1="100" x2="35" y2="100" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" />
-                <line x1="65" y1="45" x2="58" y2="38" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" />
+                <line x1="100" y1="30" x2="100" y2="20" stroke="hsl(200 100% 61%)" strokeWidth="2" strokeLinecap="round" />
+                <line x1="135" y1="45" x2="142" y2="38" stroke="hsl(200 100% 61%)" strokeWidth="2" strokeLinecap="round" />
+                <line x1="155" y1="100" x2="165" y2="100" stroke="hsl(200 100% 61%)" strokeWidth="2" strokeLinecap="round" />
+                <line x1="135" y1="155" x2="142" y2="162" stroke="hsl(200 100% 61%)" strokeWidth="2" strokeLinecap="round" />
+                <line x1="100" y1="170" x2="100" y2="180" stroke="hsl(200 100% 61%)" strokeWidth="2" strokeLinecap="round" />
+                <line x1="65" y1="155" x2="58" y2="162" stroke="hsl(200 100% 61%)" strokeWidth="2" strokeLinecap="round" />
+                <line x1="45" y1="100" x2="35" y2="100" stroke="hsl(200 100% 61%)" strokeWidth="2" strokeLinecap="round" />
+                <line x1="65" y1="45" x2="58" y2="38" stroke="hsl(200 100% 61%)" strokeWidth="2" strokeLinecap="round" />
               </svg>
                 </div>
               </CardContent>
