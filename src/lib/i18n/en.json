@@ -985,5 +985,64 @@
       "button_whatsapp": "Talk via WhatsApp",
       "whatsapp_message": "Hello, I want to talk to the MediCol team about my medical journey"
     }
+  },
+  "contact": {
+    "hero": {
+      "title": "We're Here For You",
+      "subtitle": "Contact Medicol and discover how we can help you achieve your health and wellness goals"
+    },
+    "methods": {
+      "section_title": "How Would You Like to Contact Us?",
+      "section_subtitle": "Choose the method that works best for you to get in touch with our team",
+      "ai_title": "Talk to Our AI Assistant",
+      "ai_description": "24/7 consultation available with advanced voice technology",
+      "ai_badge": "Coming Soon",
+      "ai_button": "Start AI Call",
+      "whatsapp_title": "Chat via WhatsApp",
+      "whatsapp_description": "Quick response via direct message",
+      "whatsapp_button": "Open WhatsApp",
+      "whatsapp_message": "Hello, I would like to get more information about Medicol services",
+      "schedule_title": "Schedule Your Consultation",
+      "schedule_description": "Book your appointment with our specialists",
+      "schedule_button": "Schedule Now"
+    },
+    "info": {
+      "phone_title": "Call Us",
+      "phone_number": "+57 (4) 321-8900",
+      "phone_hours": "Mon - Fri: 8:00 AM - 6:00 PM",
+      "email_title": "Email Us",
+      "email_address": "contact@medicol.com",
+      "email_response": "We'll respond within 24 hours",
+      "location_title": "Visit Us",
+      "location_address": "Calle 10 #43B-30, El Poblado",
+      "location_city": "Medellín, Colombia"
+    },
+    "map": {
+      "title": "Our Location",
+      "subtitle": "Find us in the heart of El Poblado, Medellín"
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "subtitle": "Fill out the form and we'll get back to you soon",
+      "name_label": "Full Name",
+      "name_placeholder": "Your name",
+      "email_label": "Email",
+      "email_placeholder": "your@email.com",
+      "phone_label": "Phone",
+      "phone_placeholder": "+57 300 123 4567",
+      "service_label": "Service of Interest",
+      "service_placeholder": "Select a service",
+      "message_label": "Message",
+      "message_placeholder": "Tell us how we can help you...",
+      "submit_button": "Send Message",
+      "sending": "Sending...",
+      "success_message": "Message sent! We'll be in touch soon."
+    },
+    "trust": {
+      "badge_1": "🛡️ JCI Accreditation",
+      "badge_2": "⭐ +5,000 Satisfied Patients",
+      "badge_3": "📍 15+ Years in Medellín",
+      "badge_4": "🏆 International Certifications"
+    }
   }
 }

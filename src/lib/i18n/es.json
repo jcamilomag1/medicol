@@ -985,5 +985,64 @@
       "button_whatsapp": "Hablar por WhatsApp",
       "whatsapp_message": "Hola, quiero hablar con el equipo de MediCol sobre mi viaje médico"
     }
+  },
+  "contact": {
+    "hero": {
+      "title": "Estamos Aquí Para Ti",
+      "subtitle": "Contacta con Medicol y descubre cómo podemos ayudarte a alcanzar tus objetivos de salud y bienestar"
+    },
+    "methods": {
+      "section_title": "¿Cómo Prefieres Contactarnos?",
+      "section_subtitle": "Elige el método que más te convenga para ponerte en contacto con nuestro equipo",
+      "ai_title": "Habla con Nuestro Asistente IA",
+      "ai_description": "Consulta disponible 24/7 con tecnología de voz avanzada",
+      "ai_badge": "Próximamente",
+      "ai_button": "Iniciar Llamada IA",
+      "whatsapp_title": "Chatea por WhatsApp",
+      "whatsapp_description": "Respuesta rápida por mensaje directo",
+      "whatsapp_button": "Abrir WhatsApp",
+      "whatsapp_message": "Hola, me gustaría obtener más información sobre los servicios de Medicol",
+      "schedule_title": "Agenda tu Consulta",
+      "schedule_description": "Reserva tu cita con nuestros especialistas",
+      "schedule_button": "Agendar Ahora"
+    },
+    "info": {
+      "phone_title": "Llámanos",
+      "phone_number": "+57 (4) 321-8900",
+      "phone_hours": "Lun - Vie: 8:00 AM - 6:00 PM",
+      "email_title": "Escríbenos",
+      "email_address": "contacto@medicol.com",
+      "email_response": "Te responderemos en 24 horas",
+      "location_title": "Visítanos",
+      "location_address": "Calle 10 #43B-30, El Poblado",
+      "location_city": "Medellín, Colombia"
+    },
+    "map": {
+      "title": "Nuestra Ubicación",
+      "subtitle": "Encuéntranos en el corazón de El Poblado, Medellín"
+    },
+    "form": {
+      "title": "Envíanos un Mensaje",
+      "subtitle": "Completa el formulario y nos pondremos en contacto contigo pronto",
+      "name_label": "Nombre Completo",
+      "name_placeholder": "Tu nombre",
+      "email_label": "Email",
+      "email_placeholder": "tu@email.com",
+      "phone_label": "Teléfono",
+      "phone_placeholder": "+57 300 123 4567",
+      "service_label": "Servicio de Interés",
+      "service_placeholder": "Selecciona un servicio",
+      "message_label": "Mensaje",
+      "message_placeholder": "Cuéntanos cómo podemos ayudarte...",
+      "submit_button": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success_message": "¡Mensaje enviado! Nos pondremos en contacto pronto."
+    },
+    "trust": {
+      "badge_1": "🛡️ Acreditación JCI",
+      "badge_2": "⭐ +5,000 Pacientes Satisfechos",
+      "badge_3": "📍 15+ Años en Medellín",
+      "badge_4": "🏆 Certificaciones Internacionales"
+    }
   }
 }
