@@ -84,16 +84,16 @@ export const ValueSection = () => {
                     <defs>
                       {/* Gradientes elegantes */}
                       <linearGradient id="barGradientUSA" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" style={{ stopColor: 'hsl(var(--destructive))', stopOpacity: 0.9 }} />
-                        <stop offset="100%" style={{ stopColor: 'hsl(var(--destructive))', stopOpacity: 0.6 }} />
+                        <stop offset="0%" style={{ stopColor: '#6b7280', stopOpacity: 0.9 }} />
+                        <stop offset="100%" style={{ stopColor: '#9ca3af', stopOpacity: 0.7 }} />
                       </linearGradient>
                       <linearGradient id="barGradientColombia" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" style={{ stopColor: 'hsl(var(--primary))', stopOpacity: 0.9 }} />
-                        <stop offset="100%" style={{ stopColor: 'hsl(var(--accent))', stopOpacity: 0.8 }} />
+                        <stop offset="0%" style={{ stopColor: '#60a5fa', stopOpacity: 0.9 }} />
+                        <stop offset="100%" style={{ stopColor: '#93c5fd', stopOpacity: 0.8 }} />
                       </linearGradient>
                       <linearGradient id="badgeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" style={{ stopColor: 'hsl(var(--primary))' }} />
-                        <stop offset="100%" style={{ stopColor: 'hsl(var(--accent))' }} />
+                        <stop offset="0%" style={{ stopColor: '#3b82f6' }} />
+                        <stop offset="100%" style={{ stopColor: '#60a5fa' }} />
                       </linearGradient>
                     </defs>
                     
@@ -103,13 +103,13 @@ export const ValueSection = () => {
                     {/* Barra USA */}
                     <g>
                       <rect x="60" y="25" width="60" height="120" rx="6" fill="url(#barGradientUSA)" opacity="0.9" />
-                      <rect x="60" y="25" width="60" height="120" rx="6" fill="none" stroke="hsl(var(--destructive))" strokeWidth="2" opacity="0.3" />
+                      <rect x="60" y="25" width="60" height="120" rx="6" fill="none" stroke="#6b7280" strokeWidth="2" opacity="0.3" />
                       {/* Etiqueta USA */}
                       <text x="90" y="170" textAnchor="middle" className="fill-muted-foreground" style={{ fontSize: '14px', fontWeight: '600' }}>
                         USA
                       </text>
                       {/* Precio USA */}
-                      <text x="90" y="15" textAnchor="middle" className="fill-destructive" style={{ fontSize: '18px', fontWeight: 'bold' }}>
+                      <text x="90" y="15" textAnchor="middle" fill="#4b5563" style={{ fontSize: '18px', fontWeight: 'bold' }}>
                         $8,000
                       </text>
                     </g>
@@ -117,13 +117,13 @@ export const ValueSection = () => {
                     {/* Barra Colombia */}
                     <g>
                       <rect x="180" y="97" width="60" height="48" rx="6" fill="url(#barGradientColombia)" />
-                      <rect x="180" y="97" width="60" height="48" rx="6" fill="none" stroke="hsl(var(--primary))" strokeWidth="2" opacity="0.4" />
+                      <rect x="180" y="97" width="60" height="48" rx="6" fill="none" stroke="#60a5fa" strokeWidth="2" opacity="0.4" />
                       {/* Etiqueta Colombia */}
                       <text x="210" y="170" textAnchor="middle" className="fill-muted-foreground" style={{ fontSize: '14px', fontWeight: '600' }}>
                         Colombia
                       </text>
                       {/* Precio Colombia */}
-                      <text x="210" y="90" textAnchor="middle" className="fill-primary" style={{ fontSize: '18px', fontWeight: 'bold' }}>
+                      <text x="210" y="90" textAnchor="middle" fill="#3b82f6" style={{ fontSize: '18px', fontWeight: 'bold' }}>
                         $3,200
                       </text>
                     </g>
