@@ -220,7 +220,7 @@ export const ReviewSection = () => {
       }} transition={{
         delay: 0.6
       }}>
-          <div className="relative mx-auto max-w-2xl rounded-3xl bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 p-6 sm:p-10 md:p-12 border border-primary/10 shadow-lg hover:shadow-xl transition-shadow">
+          <div className="relative mx-auto max-w-6xl rounded-3xl bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 p-6 sm:p-10 md:p-12 border border-primary/10 shadow-lg hover:shadow-xl transition-shadow">
             {/* Badge superior decorativo */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full mb-6">
               <Award className="w-4 h-4 text-accent" />
