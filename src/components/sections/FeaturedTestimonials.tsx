@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { PlayCircle, Star } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Link } from 'react-router-dom';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 interface FeaturedTestimonial {
@@ -173,27 +171,6 @@ export const FeaturedTestimonials = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* CTA Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center"
-        >
-          <Button
-            asChild
-            variant="outline"
-            size="lg"
-            className="gap-2"
-          >
-            <Link to="/experiencia">
-              <PlayCircle className="w-5 h-5" />
-              {t('featured_testimonials.view_all_cta')}
-            </Link>
-          </Button>
-        </motion.div>
       </div>
     </section>
   );
