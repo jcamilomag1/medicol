@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
 import danielRamirezImg from '@/assets/team/daniel-ramirez.png';
+import felipeMuneraImg from '@/assets/team/felipe-munera.png';
 
 const TeamAdminSection = () => {
   const { t } = useTranslation();
@@ -11,7 +12,7 @@ const TeamAdminSection = () => {
 
   const adminTeam = [
     { key: 'daniel', image: danielRamirezImg },
-    { key: 'felipe', image: '/placeholder.svg' },
+    { key: 'felipe', image: felipeMuneraImg },
     { key: 'ismael', image: '/placeholder.svg' },
     { key: 'lina', image: '/placeholder.svg' },
   ];
