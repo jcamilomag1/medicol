@@ -80,66 +80,34 @@ export const ValueSection = () => {
                   </div>
                 </div>
                 <div className="relative mt-6 sm:ml-6 flex items-center justify-center">
-                  <svg className="w-full h-40 md:h-48" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    {/* Alcancía - Cuerpo principal */}
-                    <ellipse cx="100" cy="110" rx="45" ry="35" stroke="#6b7280" strokeWidth="2" />
-                    
-                    {/* Orejas */}
-                    <ellipse cx="70" cy="90" rx="6" ry="12" stroke="#6b7280" strokeWidth="2" />
-                    <ellipse cx="130" cy="90" rx="6" ry="12" stroke="#6b7280" strokeWidth="2" />
-                    
-                    {/* Patas */}
-                    <rect x="75" y="140" width="6" height="12" rx="3" stroke="#6b7280" strokeWidth="2" />
-                    <rect x="119" y="140" width="6" height="12" rx="3" stroke="#6b7280" strokeWidth="2" />
-                    
-                    {/* Ranura para monedas */}
-                    <line x1="90" y1="95" x2="110" y2="95" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" />
-                    
-                    {/* Ojo */}
-                    <circle cx="85" cy="110" r="3" fill="#6b7280" />
-                    
-                    {/* Hocico */}
-                    <circle cx="115" cy="115" r="8" stroke="#6b7280" strokeWidth="2" />
-                    <circle cx="112" cy="113" r="1.5" fill="#6b7280" />
-                    <circle cx="118" cy="113" r="1.5" fill="#6b7280" />
-                    
-                    {/* Cola */}
-                    <path 
-                      d="M 145 110 Q 155 105, 158 98 Q 160 92, 157 88" 
-                      stroke="#6b7280" 
-                      strokeWidth="2" 
-                      fill="none" 
-                      strokeLinecap="round"
-                    />
-                    
-                    {/* Moneda cayendo */}
-                    <circle cx="100" cy="60" r="14" stroke="#6b7280" strokeWidth="2" />
-                    <text 
-                      x="100" 
-                      y="66" 
-                      textAnchor="middle" 
-                      fill="#6b7280" 
-                      style={{ fontSize: '18px', fontWeight: 'bold' }}
-                    >
-                      $
-                    </text>
-                    
-                    {/* Líneas de movimiento */}
-                    <line x1="88" y1="48" x2="85" y2="43" stroke="#6b7280" strokeWidth="1.5" strokeLinecap="round" />
-                    <line x1="112" y1="48" x2="115" y2="43" stroke="#6b7280" strokeWidth="1.5" strokeLinecap="round" />
-                    
-                    {/* Badge de ahorro */}
-                    <rect x="60" y="170" width="80" height="18" rx="9" stroke="#6b7280" strokeWidth="2" />
-                    <text 
-                      x="100" 
-                      y="182" 
-                      textAnchor="middle" 
-                      fill="#6b7280" 
-                      style={{ fontSize: '11px', fontWeight: '600' }}
-                    >
-                      Ahorro 60%
-                    </text>
-                  </svg>
+              <svg className="w-full h-40 md:h-48" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* Círculo principal de la moneda */}
+                <circle cx="100" cy="100" r="50" stroke="#6b7280" strokeWidth="2" />
+                
+                {/* Círculo interior decorativo */}
+                <circle cx="100" cy="100" r="42" stroke="#6b7280" strokeWidth="1.5" opacity="0.4" />
+                
+                {/* Símbolo de dólar */}
+                <text 
+                  x="100" 
+                  y="115" 
+                  textAnchor="middle" 
+                  fill="#6b7280" 
+                  style={{ fontSize: '48px', fontWeight: 'bold' }}
+                >
+                  $
+                </text>
+                
+                {/* Líneas radiantes (efecto de valor/brillo) */}
+                <line x1="100" y1="30" x2="100" y2="20" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" />
+                <line x1="135" y1="45" x2="142" y2="38" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" />
+                <line x1="155" y1="100" x2="165" y2="100" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" />
+                <line x1="135" y1="155" x2="142" y2="162" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" />
+                <line x1="100" y1="170" x2="100" y2="180" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" />
+                <line x1="65" y1="155" x2="58" y2="162" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" />
+                <line x1="45" y1="100" x2="35" y2="100" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" />
+                <line x1="65" y1="45" x2="58" y2="38" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" />
+              </svg>
                 </div>
               </CardContent>
             </Card>
