@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { PlayCircle, Star } from 'lucide-react';
@@ -17,6 +17,7 @@ interface FeaturedTestimonial {
   quote_en: string;
   videoUrl: string;
   avatarUrl: string;
+  thumbnailUrl: string;
   rating: number;
 }
 
@@ -31,6 +32,7 @@ const featuredTestimonials: FeaturedTestimonial[] = [
     quote_en: 'The best medical experience I\'ve ever had. The Medicol team exceeded all my expectations.',
     videoUrl: 'https://drive.google.com/file/d/1ptAJ-Ssy5ek7-oExyp_fINNbu_HD_yjq/preview',
     avatarUrl: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=100&h=100&fit=crop',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1200&fit=crop&q=80',
     rating: 5
   },
   {
@@ -43,6 +45,7 @@ const featuredTestimonials: FeaturedTestimonial[] = [
     quote_en: 'From day one I felt safe and cared for. The results are incredible and natural.',
     videoUrl: 'https://drive.google.com/file/d/16RIrS1-E6M7Av5Gs2D2RQBw0wsyU0RVc/preview',
     avatarUrl: 'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=100&h=100&fit=crop',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&h=1200&fit=crop&q=80',
     rating: 5
   },
   {
@@ -55,6 +58,7 @@ const featuredTestimonials: FeaturedTestimonial[] = [
     quote_en: 'An exceptional experience. I felt supported every step of the way and the results exceeded my expectations.',
     videoUrl: 'https://drive.google.com/file/d/1QGbC7-SgrGPKgpfS8cBxKT9HBIWRa2Ed/preview',
     avatarUrl: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=100&h=100&fit=crop',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=1200&fit=crop&q=80',
     rating: 5
   }
 ];
@@ -62,6 +66,11 @@ const featuredTestimonials: FeaturedTestimonial[] = [
 export const FeaturedTestimonials = () => {
   const { t, i18n } = useTranslation();
   const isEnglish = i18n.language === 'en';
+  const [playingVideo, setPlayingVideo] = useState<string | null>(null);
+
+  const handlePlay = (id: string) => {
+    setPlayingVideo(id);
+  };
 
   return (
     <section className="py-8 lg:py-12 bg-gradient-to-b from-background to-muted/20">
@@ -96,12 +105,43 @@ export const FeaturedTestimonials = () => {
                 <CardContent className="p-0">
                   {/* Video */}
                   <div className="relative aspect-[9/16] bg-muted">
-                    <iframe
-                      src={testimonial.videoUrl}
-                      className="absolute inset-0 w-full h-full"
-                      allow="autoplay"
-                      title={`${testimonial.name} testimonial video`}
-                    />
+                    {playingVideo === testimonial.id ? (
+                      <iframe
+                        src={testimonial.videoUrl}
+                        className="absolute inset-0 w-full h-full"
+                        allow="autoplay"
+                        title={`${testimonial.name} testimonial video`}
+                      />
+                    ) : (
+                      <div 
+                        className="relative w-full h-full cursor-pointer group"
+                        onClick={() => handlePlay(testimonial.id)}
+                      >
+                        {/* Thumbnail Image */}
+                        <img 
+                          src={testimonial.thumbnailUrl}
+                          alt={`${testimonial.name} testimonial`}
+                          className="absolute inset-0 w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                        
+                        {/* Dark Overlay */}
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
+                        
+                        {/* Play Button */}
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-20 h-20 rounded-full bg-white/90 group-hover:bg-white flex items-center justify-center transition-all duration-300 group-hover:scale-110 shadow-xl">
+                            <PlayCircle className="w-12 h-12 text-accent" />
+                          </div>
+                        </div>
+                        
+                        {/* Video Badge */}
+                        <div className="absolute top-3 left-3 bg-black/70 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full flex items-center gap-1.5">
+                          <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+                          VIDEO
+                        </div>
+                      </div>
+                    )}
                   </div>
                   
                   {/* Content */}
