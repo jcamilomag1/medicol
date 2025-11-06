@@ -234,11 +234,6 @@ export const ReviewSection = () => {
                 <h3 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">
                   {t('reviews.cta_title')}
                 </h3>
-                
-                {/* Descripción corta */}
-                <p className="text-muted-foreground text-base sm:text-lg mb-6 md:mb-0">
-                  {t('reviews.cta_description')}
-                </p>
               </div>
 
               {/* Columna derecha - Botón */}
