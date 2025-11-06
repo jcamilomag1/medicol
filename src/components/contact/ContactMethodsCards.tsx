@@ -24,7 +24,7 @@ export const ContactMethodsCards = () => {
       title: t('contact.methods.ai_title'),
       description: t('contact.methods.ai_description'),
       badge: t('contact.methods.ai_badge'),
-      gradient: 'from-violet-500 to-purple-600',
+      gradient: 'from-gray-400 to-gray-500',
       disabled: true,
       action: () => {},
       buttonText: t('contact.methods.ai_button')
