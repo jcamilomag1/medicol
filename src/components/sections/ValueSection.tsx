@@ -79,66 +79,98 @@ export const ValueSection = () => {
                     </p>
                   </div>
                 </div>
-                <div className="relative mt-6 sm:ml-6">
-                  <svg className="w-full h-40 md:h-48" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div className="relative mt-6 sm:ml-6 flex items-center justify-center">
+                  <svg className="w-full h-40 md:h-48" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <defs>
-                      {/* Gradientes elegantes */}
-                      <linearGradient id="barGradientUSA" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" style={{ stopColor: '#6b7280', stopOpacity: 0.9 }} />
-                        <stop offset="100%" style={{ stopColor: '#9ca3af', stopOpacity: 0.7 }} />
+                      {/* Gradiente para alcancía */}
+                      <linearGradient id="piggyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style={{ stopColor: '#ec4899', stopOpacity: 0.9 }} />
+                        <stop offset="100%" style={{ stopColor: '#f9a8d4', stopOpacity: 0.7 }} />
                       </linearGradient>
-                      <linearGradient id="barGradientColombia" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" style={{ stopColor: '#60a5fa', stopOpacity: 0.9 }} />
-                        <stop offset="100%" style={{ stopColor: '#93c5fd', stopOpacity: 0.8 }} />
+                      {/* Gradiente para moneda */}
+                      <linearGradient id="coinGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style={{ stopColor: '#fbbf24' }} />
+                        <stop offset="100%" style={{ stopColor: '#fcd34d' }} />
                       </linearGradient>
-                      <linearGradient id="badgeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      {/* Gradiente para badge */}
+                      <linearGradient id="savingsBadge" x1="0%" y1="0%" x2="100%" y2="0%">
                         <stop offset="0%" style={{ stopColor: '#3b82f6' }} />
                         <stop offset="100%" style={{ stopColor: '#60a5fa' }} />
                       </linearGradient>
                     </defs>
                     
-                    {/* Línea base */}
-                    <line x1="30" y1="145" x2="270" y2="145" stroke="hsl(var(--border))" strokeWidth="2" />
-                    
-                    {/* Barra USA */}
-                    <g>
-                      <rect x="60" y="25" width="60" height="120" rx="6" fill="url(#barGradientUSA)" opacity="0.9" />
-                      <rect x="60" y="25" width="60" height="120" rx="6" fill="none" stroke="#6b7280" strokeWidth="2" opacity="0.3" />
-                      {/* Etiqueta USA */}
-                      <text x="90" y="170" textAnchor="middle" className="fill-muted-foreground" style={{ fontSize: '14px', fontWeight: '600' }}>
-                        USA
-                      </text>
-                      {/* Precio USA */}
-                      <text x="90" y="15" textAnchor="middle" fill="#4b5563" style={{ fontSize: '18px', fontWeight: 'bold' }}>
-                        $8,000
-                      </text>
+                    {/* Alcancía (Piggy Bank) */}
+                    <g id="piggyBank">
+                      {/* Cuerpo principal */}
+                      <ellipse cx="100" cy="100" rx="50" ry="42" fill="url(#piggyGradient)" />
+                      <ellipse cx="100" cy="100" rx="50" ry="42" fill="none" stroke="#ec4899" strokeWidth="2" opacity="0.3" />
+                      
+                      {/* Patas */}
+                      <rect x="72" y="130" width="8" height="14" rx="4" fill="#ec4899" opacity="0.8" />
+                      <rect x="120" y="130" width="8" height="14" rx="4" fill="#ec4899" opacity="0.8" />
+                      
+                      {/* Oreja izquierda */}
+                      <ellipse cx="62" cy="82" rx="8" ry="14" fill="#f9a8d4" opacity="0.9" />
+                      
+                      {/* Oreja derecha */}
+                      <ellipse cx="138" cy="82" rx="8" ry="14" fill="#f9a8d4" opacity="0.9" />
+                      
+                      {/* Ranura para monedas */}
+                      <rect x="90" y="75" width="20" height="3" rx="1.5" fill="#6b7280" />
+                      
+                      {/* Ojo */}
+                      <circle cx="85" cy="95" r="4" fill="#6b7280" />
+                      
+                      {/* Nariz/hocico */}
+                      <ellipse cx="110" cy="100" rx="12" ry="10" fill="#f9a8d4" opacity="0.6" />
+                      <circle cx="107" cy="98" r="2" fill="#6b7280" />
+                      <circle cx="113" cy="98" r="2" fill="#6b7280" />
+                      
+                      {/* Colita */}
+                      <path 
+                        d="M 145 100 Q 155 95, 158 88 Q 160 82, 157 78" 
+                        stroke="#ec4899" 
+                        strokeWidth="3" 
+                        fill="none" 
+                        strokeLinecap="round"
+                      />
                     </g>
                     
-                    {/* Barra Colombia */}
-                    <g>
-                      <rect x="180" y="97" width="60" height="48" rx="6" fill="url(#barGradientColombia)" />
-                      <rect x="180" y="97" width="60" height="48" rx="6" fill="none" stroke="#60a5fa" strokeWidth="2" opacity="0.4" />
-                      {/* Etiqueta Colombia */}
-                      <text x="210" y="170" textAnchor="middle" className="fill-muted-foreground" style={{ fontSize: '14px', fontWeight: '600' }}>
-                        Colombia
+                    {/* Moneda cayendo */}
+                    <g id="coin">
+                      {/* Círculo de la moneda */}
+                      <circle cx="100" cy="50" r="16" fill="url(#coinGradient)" />
+                      <circle cx="100" cy="50" r="16" fill="none" stroke="#f59e0b" strokeWidth="2" opacity="0.6" />
+                      
+                      {/* Símbolo $ */}
+                      <text 
+                        x="100" 
+                        y="57" 
+                        textAnchor="middle" 
+                        fill="#78350f" 
+                        style={{ fontSize: '20px', fontWeight: 'bold' }}
+                      >
+                        $
                       </text>
-                      {/* Precio Colombia */}
-                      <text x="210" y="90" textAnchor="middle" fill="#3b82f6" style={{ fontSize: '18px', fontWeight: 'bold' }}>
-                        $3,200
-                      </text>
+                      
+                      {/* Líneas de movimiento */}
+                      <line x1="88" y1="35" x2="85" y2="30" stroke="#fbbf24" strokeWidth="2" strokeLinecap="round" opacity="0.6" />
+                      <line x1="112" y1="35" x2="115" y2="30" stroke="#fbbf24" strokeWidth="2" strokeLinecap="round" opacity="0.6" />
                     </g>
                     
                     {/* Badge de ahorro */}
-                    <g>
-                      <rect x="105" y="185" width="90" height="12" rx="6" fill="url(#badgeGradient)" />
-                      <text x="150" y="194" textAnchor="middle" className="fill-white" style={{ fontSize: '10px', fontWeight: 'bold' }}>
-                        Ahorro: 60%
+                    <g id="badge">
+                      <rect x="55" y="165" width="90" height="20" rx="10" fill="url(#savingsBadge)" />
+                      <text 
+                        x="100" 
+                        y="178" 
+                        textAnchor="middle" 
+                        fill="#ffffff" 
+                        style={{ fontSize: '12px', fontWeight: 'bold' }}
+                      >
+                        Ahorro 60%
                       </text>
                     </g>
-                    
-                    {/* Líneas de referencia punteadas */}
-                    <line x1="30" y1="97" x2="270" y2="97" stroke="hsl(var(--border))" strokeWidth="1" strokeDasharray="4 4" opacity="0.3" />
-                    <line x1="30" y1="25" x2="270" y2="25" stroke="hsl(var(--border))" strokeWidth="1" strokeDasharray="4 4" opacity="0.3" />
                   </svg>
                 </div>
               </CardContent>
