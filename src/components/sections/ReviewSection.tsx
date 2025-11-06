@@ -209,7 +209,7 @@ export const ReviewSection = () => {
         </Carousel>
 
         {/* Call to Action - Two Column Layout */}
-        <motion.div className="mt-16" initial={{
+        <motion.div className="mt-10" initial={{
         opacity: 0,
         y: 30
       }} whileInView={{
