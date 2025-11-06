@@ -80,36 +80,66 @@ export const ValueSection = () => {
                   </div>
                 </div>
                 <div className="relative mt-6 sm:ml-6">
-                  <div className="flex flex-col gap-3">
-                    <div className="flex items-center justify-between gap-3">
-                      {/* USA Price */}
-                      <div className="flex-1 rounded-lg border-2 border-destructive/30 bg-destructive/10 p-2.5 md:p-3">
-                        <div className="text-xs font-medium text-muted-foreground mb-1">USA</div>
-                        <div className="text-lg md:text-xl font-bold text-destructive line-through">$8,000</div>
-                      </div>
-
-                      {/* Arrow */}
-                      <div className="flex-shrink-0">
-                        <svg className="w-5 h-5 md:w-6 md:h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
-                      </div>
-
-                      {/* Colombia Price */}
-                      <div className="flex-1 rounded-lg border-2 border-primary/40 bg-primary/10 p-2.5 md:p-3">
-                        <div className="text-xs font-medium text-muted-foreground mb-1">Colombia</div>
-                        <div className="text-lg md:text-xl font-bold text-primary">$3,200</div>
-                      </div>
-                    </div>
-
-                    {/* Savings Badge */}
-                    <div className="mx-auto w-fit rounded-full bg-gradient-to-r from-primary to-accent px-3 py-1.5 md:px-4 md:py-2">
-                      <div className="flex items-center gap-1.5">
-                        <TrendingDown className="size-3.5 md:size-4 text-white" />
-                        <span className="text-xs md:text-sm font-bold text-white">Ahorro: 60%</span>
-                      </div>
-                    </div>
-                  </div>
+                  <svg className="w-full h-40 md:h-48" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      {/* Gradientes elegantes */}
+                      <linearGradient id="barGradientUSA" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style={{ stopColor: 'hsl(var(--destructive))', stopOpacity: 0.9 }} />
+                        <stop offset="100%" style={{ stopColor: 'hsl(var(--destructive))', stopOpacity: 0.6 }} />
+                      </linearGradient>
+                      <linearGradient id="barGradientColombia" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style={{ stopColor: 'hsl(var(--primary))', stopOpacity: 0.9 }} />
+                        <stop offset="100%" style={{ stopColor: 'hsl(var(--accent))', stopOpacity: 0.8 }} />
+                      </linearGradient>
+                      <linearGradient id="badgeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style={{ stopColor: 'hsl(var(--primary))' }} />
+                        <stop offset="100%" style={{ stopColor: 'hsl(var(--accent))' }} />
+                      </linearGradient>
+                    </defs>
+                    
+                    {/* Línea base */}
+                    <line x1="30" y1="145" x2="270" y2="145" stroke="hsl(var(--border))" strokeWidth="2" />
+                    
+                    {/* Barra USA */}
+                    <g>
+                      <rect x="60" y="25" width="60" height="120" rx="6" fill="url(#barGradientUSA)" opacity="0.9" />
+                      <rect x="60" y="25" width="60" height="120" rx="6" fill="none" stroke="hsl(var(--destructive))" strokeWidth="2" opacity="0.3" />
+                      {/* Etiqueta USA */}
+                      <text x="90" y="170" textAnchor="middle" className="fill-muted-foreground" style={{ fontSize: '14px', fontWeight: '600' }}>
+                        USA
+                      </text>
+                      {/* Precio USA */}
+                      <text x="90" y="15" textAnchor="middle" className="fill-destructive" style={{ fontSize: '18px', fontWeight: 'bold' }}>
+                        $8,000
+                      </text>
+                    </g>
+                    
+                    {/* Barra Colombia */}
+                    <g>
+                      <rect x="180" y="97" width="60" height="48" rx="6" fill="url(#barGradientColombia)" />
+                      <rect x="180" y="97" width="60" height="48" rx="6" fill="none" stroke="hsl(var(--primary))" strokeWidth="2" opacity="0.4" />
+                      {/* Etiqueta Colombia */}
+                      <text x="210" y="170" textAnchor="middle" className="fill-muted-foreground" style={{ fontSize: '14px', fontWeight: '600' }}>
+                        Colombia
+                      </text>
+                      {/* Precio Colombia */}
+                      <text x="210" y="90" textAnchor="middle" className="fill-primary" style={{ fontSize: '18px', fontWeight: 'bold' }}>
+                        $3,200
+                      </text>
+                    </g>
+                    
+                    {/* Badge de ahorro */}
+                    <g>
+                      <rect x="105" y="185" width="90" height="12" rx="6" fill="url(#badgeGradient)" />
+                      <text x="150" y="194" textAnchor="middle" className="fill-white" style={{ fontSize: '10px', fontWeight: 'bold' }}>
+                        Ahorro: 60%
+                      </text>
+                    </g>
+                    
+                    {/* Líneas de referencia punteadas */}
+                    <line x1="30" y1="97" x2="270" y2="97" stroke="hsl(var(--border))" strokeWidth="1" strokeDasharray="4 4" opacity="0.3" />
+                    <line x1="30" y1="25" x2="270" y2="25" stroke="hsl(var(--border))" strokeWidth="1" strokeDasharray="4 4" opacity="0.3" />
+                  </svg>
                 </div>
               </CardContent>
             </Card>
