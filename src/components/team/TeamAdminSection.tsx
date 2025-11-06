@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
+import danielRamirezImg from '@/assets/team/daniel-ramirez.png';
 
 const TeamAdminSection = () => {
   const { t } = useTranslation();
@@ -9,7 +10,7 @@ const TeamAdminSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const adminTeam = [
-    { key: 'daniel', image: '/placeholder.svg' },
+    { key: 'daniel', image: danielRamirezImg },
     { key: 'felipe', image: '/placeholder.svg' },
     { key: 'ismael', image: '/placeholder.svg' },
     { key: 'lina', image: '/placeholder.svg' },
