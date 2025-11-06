@@ -205,7 +205,7 @@ export const Navbar = () => {
                       key={link.key}
                       to={link.href!}
                       onClick={handleNavClick}
-                      className="px-5 py-2 bg-accent text-primary font-bold rounded-full shadow-md shadow-accent/40 hover:shadow-lg hover:shadow-accent/60 text-center transform transition-all duration-300"
+                      className="px-5 py-2 bg-accent text-primary font-bold rounded-full shadow-md shadow-accent/40 hover:shadow-lg hover:shadow-accent/60 text-left transform transition-all duration-300"
                     >
                       {t(link.key)}
                     </Link>
