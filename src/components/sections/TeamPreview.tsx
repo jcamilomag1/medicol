@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Linkedin, Instagram } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import drGuerraImg from '@/assets/team/dr-guerra.png';
+import draDiazImg from '@/assets/team/dra-diaz.png';
 
 
 interface Doctor {
@@ -33,7 +34,7 @@ const teamMembers: Doctor[] = [
     specialtyKey: 'team.doctors.diaz.specialty',
     experienceKey: 'team.doctors.diaz.experience',
     bioKey: 'team.doctors.diaz.bio',
-    imageUrl: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop',
+    imageUrl: draDiazImg,
     profileUrl: '/equipo/dra-diaz',
     linkedinUrl: '#',
     instagramUrl: '#'
