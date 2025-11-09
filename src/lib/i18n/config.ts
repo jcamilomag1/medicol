@@ -16,7 +16,7 @@ const getBrowserLanguage = (): string => {
   if (stored && ['es', 'en'].includes(stored)) return stored;
   
   const browserLang = navigator.language.split('-')[0];
-  return ['es', 'en'].includes(browserLang) ? browserLang : 'es';
+  return ['es', 'en'].includes(browserLang) ? browserLang : 'en';
 };
 
 const defaultLng = getBrowserLanguage();
@@ -26,7 +26,7 @@ i18n
   .init({
     resources: {}, // Start empty, load dynamically
     lng: defaultLng,
-    fallbackLng: 'es',
+    fallbackLng: 'en',
     interpolation: {
       escapeValue: false,
     },
