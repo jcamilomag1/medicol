@@ -174,7 +174,8 @@
   "common": {
     "learn_more": "Learn More",
     "view_profile": "View more",
-    "read_more": "Read more"
+    "read_more": "Read more",
+    "loading": "Loading..."
   },
   "countries": {
     "usa": "United States",
