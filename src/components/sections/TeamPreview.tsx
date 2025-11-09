@@ -201,13 +201,8 @@ export const TeamPreview = () => {
               </p>
               
               {/* Experience */}
-              <p className="text-sm text-muted-foreground mb-4">
+              <p className="text-sm text-muted-foreground mb-6">
                 {t(currentDoctor.experienceKey)}
-              </p>
-              
-              {/* Bio */}
-              <p className="text-foreground leading-relaxed mb-6">
-                {t(currentDoctor.bioKey)}
               </p>
               
               {/* View Profile Button */}
@@ -269,11 +264,8 @@ export const TeamPreview = () => {
               <p className="text-lg font-semibold text-accent text-center mb-1">
                 {t(currentDoctor.specialtyKey)}
               </p>
-              <p className="text-sm text-muted-foreground text-center mb-4">
+              <p className="text-sm text-muted-foreground text-center mb-6">
                 {t(currentDoctor.experienceKey)}
-              </p>
-              <p className="text-foreground text-center leading-relaxed mb-6">
-                {t(currentDoctor.bioKey)}
               </p>
               
               {/* View Profile Button */}
