@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight, Linkedin, Instagram } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import drGuerraImg from '@/assets/team/dr-guerra.png';
 import draDiazImg from '@/assets/team/dra-diaz.png';
+import draBoteroImg from '@/assets/team/dra-botero.png';
 
 
 interface Doctor {
@@ -40,11 +41,11 @@ const teamMembers: Doctor[] = [
     instagramUrl: '#'
   },
   {
-    name: 'Dra. Botero Arango',
+    name: 'Dra. Botero',
     specialtyKey: 'team.doctors.botero.specialty',
     experienceKey: 'team.doctors.botero.experience',
     bioKey: 'team.doctors.botero.bio',
-    imageUrl: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=600&auto=format&fit=crop',
+    imageUrl: draBoteroImg,
     profileUrl: '/equipo/dra-botero',
     linkedinUrl: '#',
     instagramUrl: '#'

@@ -12,6 +12,7 @@ import { Award, Languages, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import drGuerraImg from '@/assets/team/dr-guerra.png';
 import draDiazImg from '@/assets/team/dra-diaz.png';
+import draBoteroImg from '@/assets/team/dra-botero.png';
 
 const TeamMedicalSection = () => {
   const { t } = useTranslation();
@@ -21,7 +22,7 @@ const TeamMedicalSection = () => {
   const doctors = [
     { key: 'guerra', image: drGuerraImg },
     { key: 'diaz', image: draDiazImg },
-    { key: 'botero', image: '/placeholder.svg' },
+    { key: 'botero', image: draBoteroImg },
     { key: 'daza', image: '/placeholder.svg' },
     { key: 'arango', image: '/placeholder.svg' },
     { key: 'garcia', image: '/placeholder.svg' },
