@@ -8,6 +8,7 @@ import draDiazImg from '@/assets/team/dra-diaz.png';
 import draBoteroImg from '@/assets/team/dra-botero.png';
 import drDazaImg from '@/assets/team/dr-daza.png';
 import drArangoImg from '@/assets/team/dr-arango.png';
+import drGarciaImg from '@/assets/team/dr-garcia.png';
 
 
 interface Doctor {
@@ -77,7 +78,7 @@ const teamMembers: Doctor[] = [
     specialtyKey: 'team.doctors.garcia.specialty',
     experienceKey: 'team.doctors.garcia.experience',
     bioKey: 'team.doctors.garcia.bio',
-    imageUrl: 'https://images.unsplash.com/photo-1629425733761-caae3b5f2e50?q=80&w=600&auto=format&fit=crop',
+    imageUrl: drGarciaImg,
     profileUrl: '/equipo/dr-garcia',
     linkedinUrl: '#',
     instagramUrl: '#'
