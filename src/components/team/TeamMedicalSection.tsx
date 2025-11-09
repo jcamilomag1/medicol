@@ -16,6 +16,7 @@ import draBoteroImg from '@/assets/team/dra-botero.png';
 import drDazaImg from '@/assets/team/dr-daza.png';
 import drArangoImg from '@/assets/team/dr-arango.png';
 import drGarciaImg from '@/assets/team/dr-garcia.png';
+import rnJaramilloImg from '@/assets/team/rn-jaramillo.png';
 
 const TeamMedicalSection = () => {
   const { t } = useTranslation();
@@ -29,7 +30,7 @@ const TeamMedicalSection = () => {
     { key: 'daza', image: drDazaImg },
     { key: 'arango', image: drArangoImg },
     { key: 'garcia', image: drGarciaImg },
-    { key: 'lina', image: '/placeholder.svg' },
+    { key: 'lina', image: rnJaramilloImg },
   ];
 
   return (

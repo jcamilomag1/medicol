@@ -9,6 +9,7 @@ import draBoteroImg from '@/assets/team/dra-botero.png';
 import drDazaImg from '@/assets/team/dr-daza.png';
 import drArangoImg from '@/assets/team/dr-arango.png';
 import drGarciaImg from '@/assets/team/dr-garcia.png';
+import rnJaramilloImg from '@/assets/team/rn-jaramillo.png';
 
 
 interface Doctor {
@@ -84,11 +85,11 @@ const teamMembers: Doctor[] = [
     instagramUrl: '#'
   },
   {
-    name: 'Rn. Lina Jaramillo',
+    name: 'Rn. Jaramillo',
     specialtyKey: 'team.doctors.jaramillo.specialty',
     experienceKey: 'team.doctors.jaramillo.experience',
     bioKey: 'team.doctors.jaramillo.bio',
-    imageUrl: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop',
+    imageUrl: rnJaramilloImg,
     profileUrl: '/equipo/rn-jaramillo',
     linkedinUrl: '#',
     instagramUrl: '#'
