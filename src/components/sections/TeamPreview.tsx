@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils';
 import drGuerraImg from '@/assets/team/dr-guerra.png';
 import draDiazImg from '@/assets/team/dra-diaz.png';
 import draBoteroImg from '@/assets/team/dra-botero.png';
+import drDazaImg from '@/assets/team/dr-daza.png';
 
 
 interface Doctor {
@@ -55,7 +56,7 @@ const teamMembers: Doctor[] = [
     specialtyKey: 'team.doctors.daza.specialty',
     experienceKey: 'team.doctors.daza.experience',
     bioKey: 'team.doctors.daza.bio',
-    imageUrl: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&h=400&fit=crop',
+    imageUrl: drDazaImg,
     profileUrl: '/equipo/dr-daza',
     linkedinUrl: '#',
     instagramUrl: '#'
