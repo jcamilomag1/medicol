@@ -7,6 +7,7 @@ import drGuerraImg from '@/assets/team/dr-guerra.png';
 import draDiazImg from '@/assets/team/dra-diaz.png';
 import draBoteroImg from '@/assets/team/dra-botero.png';
 import drDazaImg from '@/assets/team/dr-daza.png';
+import drArangoImg from '@/assets/team/dr-arango.png';
 
 
 interface Doctor {
@@ -66,7 +67,7 @@ const teamMembers: Doctor[] = [
     specialtyKey: 'team.doctors.arango.specialty',
     experienceKey: 'team.doctors.arango.experience',
     bioKey: 'team.doctors.arango.bio',
-    imageUrl: 'https://images.unsplash.com/photo-1622253692010-33352da55e0d?w=400&h=400&fit=crop',
+    imageUrl: drArangoImg,
     profileUrl: '/equipo/dr-arango',
     linkedinUrl: '#',
     instagramUrl: '#'
