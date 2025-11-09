@@ -10,6 +10,7 @@ import drDazaImg from '@/assets/team/dr-daza.png';
 import drArangoImg from '@/assets/team/dr-arango.png';
 import drGarciaImg from '@/assets/team/dr-garcia.png';
 import rnJaramilloImg from '@/assets/team/rn-jaramillo.png';
+import drOchoaImg from '@/assets/team/dr-ochoa.png';
 
 
 interface Doctor {
@@ -91,6 +92,16 @@ const teamMembers: Doctor[] = [
     bioKey: 'team.doctors.jaramillo.bio',
     imageUrl: rnJaramilloImg,
     profileUrl: '/equipo/rn-jaramillo',
+    linkedinUrl: '#',
+    instagramUrl: '#'
+  },
+  {
+    name: 'Dra. Ochoa',
+    specialtyKey: 'team.medical.ochoa.specialty',
+    experienceKey: 'team.medical.ochoa.experience',
+    bioKey: 'team.medical.ochoa.philosophy',
+    imageUrl: drOchoaImg,
+    profileUrl: '/equipo#ochoa',
     linkedinUrl: '#',
     instagramUrl: '#'
   }
