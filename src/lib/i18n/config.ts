@@ -40,12 +40,20 @@ loadTranslations(defaultLng).then((translations) => {
   i18n.addResourceBundle(defaultLng, 'translation', translations, true, true);
 });
 
-// Pre-load secondary language in background after 2 seconds
-setTimeout(() => {
+// Pre-load secondary language on first user interaction (optimized)
+const loadSecondaryLanguage = () => {
   const secondaryLng = defaultLng === 'es' ? 'en' : 'es';
-  loadTranslations(secondaryLng).then((translations) => {
-    i18n.addResourceBundle(secondaryLng, 'translation', translations, true, true);
-  });
-}, 2000);
+  if (!i18n.hasResourceBundle(secondaryLng, 'translation')) {
+    loadTranslations(secondaryLng).then((translations) => {
+      i18n.addResourceBundle(secondaryLng, 'translation', translations, true, true);
+    });
+  }
+};
+
+// Listen for first user interaction
+const interactionEvents = ['mousemove', 'scroll', 'touchstart', 'click'];
+interactionEvents.forEach(event => {
+  document.addEventListener(event, loadSecondaryLanguage, { once: true, passive: true });
+});
 
 export default i18n;
