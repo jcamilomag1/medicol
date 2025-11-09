@@ -937,6 +937,16 @@
         "experience": "20+ años, 1,500+ clientes satisfechos",
         "treatmentsList": ["Bótox", "Rellenos de Ácido Hialurónico", "Drenaje Linfático", "Enfermería 24/7", "Masajes Post-Quirúrgicos"],
         "languages": "Español, Inglés"
+      },
+      "ochoa": {
+        "name": "Dra. Ochoa",
+        "specialty": "Especialista en Células Madre y Medicina Estética",
+        "philosophy": "Transformación corporal y rejuvenecimiento celular con tecnología de vanguardia.",
+        "membership": "Especialista Certificada en Medicina Estética",
+        "education": "Especialización en Células Madre y Contorno Corporal",
+        "experience": "15+ años",
+        "treatmentsList": ["Células Madre", "Contorno Corporal", "Rellenos de Ácido Hialurónico", "Bótox", "Slimtone", "Slimfreeze"],
+        "languages": "Español, Inglés"
       }
     },
     "process": {

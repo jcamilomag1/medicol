@@ -937,6 +937,16 @@
         "experience": "20+ years, 1,500+ satisfied clients",
         "treatmentsList": ["Botox", "Hyaluronic Acid Fillers", "Lymphatic Drainage", "24/7 Nursing", "Post-Surgical Massage"],
         "languages": "Spanish, English"
+      },
+      "ochoa": {
+        "name": "Dr. Ochoa",
+        "specialty": "Stem Cell and Aesthetic Medicine Specialist",
+        "philosophy": "Body transformation and cellular rejuvenation with cutting-edge technology.",
+        "membership": "Board Certified Aesthetic Medicine Specialist",
+        "education": "Specialization in Stem Cells and Body Contouring",
+        "experience": "15+ years",
+        "treatmentsList": ["Stem Cells", "Body Contouring", "Hyaluronic Acid Fillers", "Botox", "Slimtone", "Slimfreeze"],
+        "languages": "Spanish, English"
       }
     },
     "process": {
