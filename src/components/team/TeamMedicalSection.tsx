@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/accordion";
 import { Award, Languages, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import drGuerraImg from '@/assets/team/dr-guerra.png';
 
 const TeamMedicalSection = () => {
   const { t } = useTranslation();
@@ -17,7 +18,7 @@ const TeamMedicalSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const doctors = [
-    { key: 'guerra', image: '/placeholder.svg' },
+    { key: 'guerra', image: drGuerraImg },
     { key: 'diaz', image: '/placeholder.svg' },
     { key: 'botero', image: '/placeholder.svg' },
     { key: 'daza', image: '/placeholder.svg' },
