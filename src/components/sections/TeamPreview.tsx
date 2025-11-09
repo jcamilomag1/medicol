@@ -169,12 +169,12 @@ export const TeamPreview = () => {
           </AnimatePresence>
         </motion.div>
 
-        {/* Card with Glassmorphism */}
+        {/* Card with Glassmorphism - Split Design */}
         <motion.div 
           className="
-            relative ml-[-80px] z-10 max-w-xl flex-1 p-8 rounded-3xl
-            bg-gradient-to-br from-white/90 via-white/80 to-background/90
-            backdrop-blur-xl
+            relative ml-[-80px] z-10 max-w-xl flex-1 rounded-3xl overflow-hidden
+            bg-gradient-to-br from-white/95 via-white/90 to-background/95
+            backdrop-blur-2xl
             border border-border/50
             shadow-2xl shadow-primary/10
           "
@@ -189,35 +189,72 @@ export const TeamPreview = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
+              className="flex"
             >
-              {/* Name */}
-              <h3 className="text-3xl font-bold text-primary mb-2">
-                {currentDoctor.name}
-              </h3>
+              {/* Left Side - Accent Block with Initials */}
+              <div className="w-28 bg-accent/10 flex items-center justify-center p-6 border-r border-border/30">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-accent/30 to-accent/10 backdrop-blur-sm border-2 border-accent/40 flex items-center justify-center">
+                  <span className="text-2xl font-bold text-accent">
+                    {currentDoctor.name.split(' ').map(n => n[0]).join('')}
+                  </span>
+                </div>
+              </div>
               
-              {/* Specialty */}
-              <p className="text-lg font-semibold text-accent mb-1">
-                {t(currentDoctor.specialtyKey)}
-              </p>
-              
-              {/* Experience */}
-              <p className="text-sm text-muted-foreground mb-6">
-                {t(currentDoctor.experienceKey)}
-              </p>
-              
-              {/* View Profile Button */}
-              <motion.a
-                href="/equipo"
-                className="
-                  block w-full px-6 py-3 bg-accent hover:bg-accent/90 
-                  text-white font-semibold rounded-full text-center
-                  transition-all
-                "
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                {t('common.view_profile')} →
-              </motion.a>
+              {/* Right Side - Info */}
+              <div className="flex-1 p-8">
+                {/* Name */}
+                <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+                  {currentDoctor.name}
+                </h3>
+                
+                {/* Two Column Layout for Specialty & Experience */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="space-y-1">
+                    <p className="text-xs text-muted-foreground uppercase tracking-wide">Especialidad</p>
+                    <p className="text-sm font-semibold text-accent">
+                      {t(currentDoctor.specialtyKey)}
+                    </p>
+                  </div>
+                  <div className="space-y-1">
+                    <p className="text-xs text-muted-foreground uppercase tracking-wide">Experiencia</p>
+                    <p className="text-sm font-semibold text-foreground">
+                      {t(currentDoctor.experienceKey)}
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Separator */}
+                <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent mb-6" />
+                
+                {/* View Profile Button with Animated Gradient */}
+                <motion.a
+                  href="/equipo"
+                  className="
+                    relative block w-full px-6 py-3 rounded-full text-center
+                    bg-gradient-to-r from-accent to-accent/80
+                    text-white font-semibold
+                    overflow-hidden group
+                    transition-all duration-300
+                  "
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <span className="relative z-10">{t('common.view_profile')}</span>
+                  <motion.span
+                    className="inline-block ml-2 relative z-10"
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    →
+                  </motion.span>
+                  {/* Shimmer effect */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                    animate={{ x: ['-100%', '100%'] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                  />
+                </motion.a>
+              </div>
             </motion.div>
           </AnimatePresence>
         </motion.div>
@@ -248,7 +285,7 @@ export const TeamPreview = () => {
           </AnimatePresence>
         </motion.div>
 
-        {/* Card Content */}
+        {/* Card Content - Split Design Mobile */}
         <div className="px-4">
           <AnimatePresence mode="wait">
             <motion.div
@@ -257,30 +294,72 @@ export const TeamPreview = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
+              className="rounded-3xl overflow-hidden bg-gradient-to-br from-white/95 via-white/90 to-background/95 backdrop-blur-2xl border border-border/50 shadow-xl"
             >
-              <h3 className="text-2xl font-bold text-primary text-center mb-2">
-                {currentDoctor.name}
-              </h3>
-              <p className="text-lg font-semibold text-accent text-center mb-1">
-                {t(currentDoctor.specialtyKey)}
-              </p>
-              <p className="text-sm text-muted-foreground text-center mb-6">
-                {t(currentDoctor.experienceKey)}
-              </p>
+              {/* Top - Accent Block with Initials */}
+              <div className="bg-accent/10 flex items-center justify-center py-6 border-b border-border/30">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-accent/30 to-accent/10 backdrop-blur-sm border-2 border-accent/40 flex items-center justify-center">
+                  <span className="text-2xl font-bold text-accent">
+                    {currentDoctor.name.split(' ').map(n => n[0]).join('')}
+                  </span>
+                </div>
+              </div>
               
-              {/* View Profile Button */}
-              <motion.a
-                href="/equipo"
-                className="
-                  block w-full px-6 py-3 bg-accent hover:bg-accent/90 
-                  text-white font-semibold rounded-full text-center
-                  transition-all
-                "
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                {t('common.view_profile')} →
-              </motion.a>
+              {/* Bottom - Info */}
+              <div className="p-6">
+                {/* Name */}
+                <h3 className="text-2xl font-bold text-center mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+                  {currentDoctor.name}
+                </h3>
+                
+                {/* Two Column Layout for Specialty & Experience */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="space-y-1 text-center">
+                    <p className="text-xs text-muted-foreground uppercase tracking-wide">Especialidad</p>
+                    <p className="text-sm font-semibold text-accent">
+                      {t(currentDoctor.specialtyKey)}
+                    </p>
+                  </div>
+                  <div className="space-y-1 text-center">
+                    <p className="text-xs text-muted-foreground uppercase tracking-wide">Experiencia</p>
+                    <p className="text-sm font-semibold text-foreground">
+                      {t(currentDoctor.experienceKey)}
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Separator */}
+                <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent mb-6" />
+                
+                {/* View Profile Button with Animated Gradient */}
+                <motion.a
+                  href="/equipo"
+                  className="
+                    relative block w-full px-6 py-3 rounded-full text-center
+                    bg-gradient-to-r from-accent to-accent/80
+                    text-white font-semibold
+                    overflow-hidden group
+                    transition-all duration-300
+                  "
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <span className="relative z-10">{t('common.view_profile')}</span>
+                  <motion.span
+                    className="inline-block ml-2 relative z-10"
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    →
+                  </motion.span>
+                  {/* Shimmer effect */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                    animate={{ x: ['-100%', '100%'] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                  />
+                </motion.a>
+              </div>
             </motion.div>
           </AnimatePresence>
         </div>
