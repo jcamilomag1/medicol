@@ -18,7 +18,7 @@ export const HeroSection = () => {
         style={{ backfaceVisibility: 'hidden' }}
       >
         <img
-          src="https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          src="https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1&fit=crop"
           alt="Medical facility background"
           loading="eager"
           decoding="async"

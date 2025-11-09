@@ -52,13 +52,16 @@ export const ServiceHeroSection = ({
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1.5, ease: 'easeOut' }}
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
+        className="absolute inset-0 z-0 overflow-hidden"
+      >
+        <img
+          src={backgroundImage}
+          alt="Service hero background"
+          loading="eager"
+          decoding="async"
+          className="w-full h-full object-cover"
+        />
+      </motion.div>
 
       {/* Primary Color Overlay - Same as Homepage/Plastic Surgery */}
       <div className="absolute inset-0 z-[1] bg-gradient-to-br from-primary/90 via-primary/70 to-primary/50" />

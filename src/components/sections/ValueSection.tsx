@@ -134,10 +134,10 @@ export const ValueSection = () => {
                           <Star className="size-3 fill-accent text-accent" />
                           <Star className="size-3 fill-accent text-accent" />
                         </div>
-                        <img src={testimonialYoung} alt="Paciente satisfecha" className="ring-background size-7 ring-4 rounded-full object-cover" />
+                        <img src={testimonialYoung} alt="Paciente satisfecha" loading="lazy" decoding="async" className="ring-background size-7 ring-4 rounded-full object-cover" />
                       </div>
                       <div className="relative ml-[calc(50%-1rem)] flex items-center gap-2">
-                        <img src={testimonialElderly} alt="Paciente satisfecha" className="ring-background size-8 ring-4 rounded-full object-cover" />
+                        <img src={testimonialElderly} alt="Paciente satisfecha" loading="lazy" decoding="async" className="ring-background size-8 ring-4 rounded-full object-cover" />
                         <div className="flex items-center gap-0.5">
                           <Star className="size-3 fill-accent text-accent" />
                           <Star className="size-3 fill-accent text-accent" />
@@ -154,7 +154,7 @@ export const ValueSection = () => {
                           <Star className="size-3 fill-accent text-accent" />
                           <Star className="size-3 fill-accent text-accent" />
                         </div>
-                        <img src={testimonialRhinoplasty} alt="Paciente satisfecha" className="ring-background size-7 ring-4 rounded-full object-cover" />
+                        <img src={testimonialRhinoplasty} alt="Paciente satisfecha" loading="lazy" decoding="async" className="ring-background size-7 ring-4 rounded-full object-cover" />
                       </div>
                     </div>
                   </div>

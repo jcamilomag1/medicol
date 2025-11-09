@@ -12,6 +12,8 @@ export const ContactHeroSection = () => {
         <img
           src={contactHeroBg}
           alt="Medicol Contact"
+          loading="eager"
+          decoding="async"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/90 to-accent/85" />
