@@ -227,7 +227,7 @@ export const ReviewSection = () => {
                 {/* Badge superior decorativo */}
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full mb-6">
                   <Award className="w-4 h-4 text-accent" />
-                  <span className="text-xs font-medium text-accent">Tu transformación comienza aquí</span>
+                  <span className="text-xs font-medium text-accent">{t('reviews.badge_text')}</span>
                 </div>
                 
                 {/* Título principal */}

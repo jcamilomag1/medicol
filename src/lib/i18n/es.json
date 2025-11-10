@@ -819,6 +819,7 @@
   "reviews": {
     "section_title": "Lo que dicen nuestros pacientes",
     "section_subtitle": "Reseñas reales de pacientes satisfechos que transformaron su vida con Medicol",
+    "badge_text": "Tu transformación comienza aquí",
     "review1": {
       "name": "María González",
       "comment": "Excelente atención desde el primer momento. El equipo médico es muy profesional y los resultados superaron mis expectativas. 100% recomendado.",
