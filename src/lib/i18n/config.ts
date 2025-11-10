@@ -3,7 +3,16 @@ import { initReactI18next } from 'react-i18next';
 import enTranslations from './en.json';
 import esTranslations from './es.json';
 
-// Language configuration
+// Clear all i18n cache
+if (typeof window !== 'undefined') {
+  // Force clear localStorage cache
+  const keys = Object.keys(localStorage);
+  keys.forEach(key => {
+    if (key.startsWith('i18next')) {
+      localStorage.removeItem(key);
+    }
+  });
+}
 
 // Browser language detection with localStorage persistence
 const getBrowserLanguage = (): string => {
@@ -15,19 +24,6 @@ const getBrowserLanguage = (): string => {
 };
 
 const defaultLng = getBrowserLanguage();
-
-// Debug: Verify translations are loaded
-console.log('🔍 i18n initializing with:', {
-  defaultLng,
-  esKeys: Object.keys(esTranslations).slice(0, 5),
-  enKeys: Object.keys(enTranslations).slice(0, 5),
-  teamPreviewDesc_es: (esTranslations as any).team?.preview_description,
-  teamPreviewDesc_en: (enTranslations as any).team?.preview_description,
-  teamSpecialtyLabel_es: (esTranslations as any).team?.specialty_label,
-  teamSpecialtyLabel_en: (enTranslations as any).team?.specialty_label,
-  teamExperienceLabel_es: (esTranslations as any).team?.experience_label,
-  teamExperienceLabel_en: (enTranslations as any).team?.experience_label
-});
 
 i18n
   .use(initReactI18next)
@@ -48,6 +44,11 @@ i18n
     react: {
       useSuspense: false,
     },
+    load: 'languageOnly',
+    debug: false,
+    // Force reload resources
+    returnEmptyString: false,
+    returnNull: false,
   });
 
 export default i18n;
