@@ -52,91 +52,93 @@ const TeamMedicalSection = () => {
           </p>
         </motion.div>
 
-        <Accordion type="multiple" className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          {doctors.map((doctor, index) => (
-            <motion.div
-              key={doctor.key}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <AccordionItem 
-                value={doctor.key} 
-                className="bg-card rounded-xl border border-border overflow-hidden shadow-sm hover:shadow-lg transition-all h-full"
+        <div className="max-w-5xl mx-auto">
+          <Accordion type="single" collapsible className="space-y-4">
+            {doctors.map((doctor, index) => (
+              <motion.div
+                key={doctor.key}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <AccordionTrigger className="px-4 py-6 hover:no-underline">
-                  <div className="flex flex-col items-center text-center w-full gap-3">
-                    <img
-                      src={doctor.image}
-                      alt={t(`team.medical.${doctor.key}.name`)}
-                      className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-primary/20 hover:border-primary/40 transition-colors"
-                    />
-                    <div className="w-full">
-                      <h3 className="text-base md:text-lg font-bold text-foreground">
-                        {t(`team.medical.${doctor.key}.name`)}
-                      </h3>
-                      <p className="text-xs md:text-sm text-primary font-medium mt-1">
-                        {t(`team.medical.${doctor.key}.specialty`)}
-                      </p>
-                    </div>
-                  </div>
-                </AccordionTrigger>
-                
-                <AccordionContent className="px-4 pb-6">
-                  <div className="space-y-4 pt-2">
-                    {/* Philosophy */}
-                    <div className="bg-primary/5 rounded-lg p-3 border-l-4 border-primary">
-                      <p className="text-foreground text-sm font-medium italic">
-                        {t(`team.medical.${doctor.key}.philosophy`)}
-                      </p>
-                    </div>
-
-                    {/* Credentials */}
-                    <div>
-                      <div className="flex items-center gap-2 mb-2">
-                        <Award className="w-4 h-4 text-primary" />
-                        <h4 className="font-semibold text-foreground text-sm">
-                          {t('team.medical.credentials')}
-                        </h4>
-                      </div>
-                      <div className="space-y-1 text-xs text-muted-foreground pl-6">
-                        <p><strong>{t('team.medical.membership')}:</strong> {t(`team.medical.${doctor.key}.membership`)}</p>
-                        <p><strong>{t('team.medical.education')}:</strong> {t(`team.medical.${doctor.key}.education`)}</p>
-                        <p className="flex items-center gap-1">
-                          <Calendar className="w-3 h-3" />
-                          <strong>{t('team.medical.experienceLabel')}:</strong> {t(`team.medical.${doctor.key}.experience`)}
+                <AccordionItem 
+                  value={doctor.key} 
+                  className="bg-card rounded-xl border border-border overflow-hidden shadow-sm hover:shadow-md transition-all"
+                >
+                  <AccordionTrigger className="px-6 py-4 hover:no-underline">
+                    <div className="flex items-center gap-4 text-left w-full">
+                      <img
+                        src={doctor.image}
+                        alt={t(`team.medical.${doctor.key}.name`)}
+                        className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-primary/20 flex-shrink-0"
+                      />
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-lg md:text-xl font-bold text-foreground truncate">
+                          {t(`team.medical.${doctor.key}.name`)}
+                        </h3>
+                        <p className="text-sm md:text-base text-primary font-medium">
+                          {t(`team.medical.${doctor.key}.specialty`)}
                         </p>
                       </div>
                     </div>
+                  </AccordionTrigger>
+                  
+                  <AccordionContent className="px-6 pb-6">
+                    <div className="space-y-6 pt-4">
+                      {/* Philosophy */}
+                      <div className="bg-primary/5 rounded-lg p-4 border-l-4 border-primary">
+                        <p className="text-foreground font-medium italic">
+                          {t(`team.medical.${doctor.key}.philosophy`)}
+                        </p>
+                      </div>
 
-                    {/* Treatments */}
-                    <div>
-                      <h4 className="font-semibold text-foreground text-sm mb-2">
-                        {t('team.medical.treatments')}
-                      </h4>
-                      <div className="flex flex-wrap gap-1">
-                        {(t(`team.medical.${doctor.key}.treatmentsList`, { returnObjects: true }) as string[]).map((treatment: string, i: number) => (
-                          <span
-                            key={i}
-                            className="px-2 py-1 bg-slate-800 text-white rounded-full text-xs border border-slate-700"
-                          >
-                            {treatment}
-                          </span>
-                        ))}
+                      {/* Credentials */}
+                      <div>
+                        <div className="flex items-center gap-2 mb-3">
+                          <Award className="w-5 h-5 text-primary" />
+                          <h4 className="font-semibold text-foreground">
+                            {t('team.medical.credentials')}
+                          </h4>
+                        </div>
+                        <div className="space-y-2 text-sm text-muted-foreground pl-7">
+                          <p><strong>{t('team.medical.membership')}:</strong> {t(`team.medical.${doctor.key}.membership`)}</p>
+                          <p><strong>{t('team.medical.education')}:</strong> {t(`team.medical.${doctor.key}.education`)}</p>
+                          <p className="flex items-center gap-2">
+                            <Calendar className="w-4 h-4" />
+                            <strong>{t('team.medical.experienceLabel')}:</strong> {t(`team.medical.${doctor.key}.experience`)}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Treatments */}
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-3">
+                          {t('team.medical.treatments')}
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          {(t(`team.medical.${doctor.key}.treatmentsList`, { returnObjects: true }) as string[]).map((treatment: string, i: number) => (
+                            <span
+                              key={i}
+                              className="px-3 py-1 bg-slate-800 text-white rounded-full text-sm border border-slate-700"
+                            >
+                              {treatment}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Languages */}
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <Languages className="w-5 h-5 text-primary" />
+                        <span><strong>{t('team.medical.languages')}:</strong> {t(`team.medical.${doctor.key}.languages`)}</span>
                       </div>
                     </div>
-
-                    {/* Languages */}
-                    <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                      <Languages className="w-4 h-4 text-primary" />
-                      <span><strong>{t('team.medical.languages')}:</strong> {t(`team.medical.${doctor.key}.languages`)}</span>
-                    </div>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-            </motion.div>
-          ))}
-        </Accordion>
+                  </AccordionContent>
+                </AccordionItem>
+              </motion.div>
+            ))}
+          </Accordion>
+        </div>
       </div>
     </section>
   );
