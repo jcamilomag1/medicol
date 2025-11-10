@@ -20,10 +20,12 @@ export interface StemCellService {
   price_comparison_us: number;
   savings_percentage: number;
   image: string;
-  treatment_time: string;
+  treatment_time_es: string;
+  treatment_time_en: string;
   anesthesia_es: string;
   anesthesia_en: string;
-  recovery_days: string;
+  recovery_days_es: string;
+  recovery_days_en: string;
   final_results_timeline_es: string;
   final_results_timeline_en: string;
   ideal_candidates_es: string[];
@@ -44,10 +46,12 @@ export const stemCellServices: StemCellService[] = [
     price_comparison_us: 18000,
     savings_percentage: 64,
     image: hairRestorationImg,
-    treatment_time: '2-3 horas',
+    treatment_time_es: '2-3 horas',
+    treatment_time_en: '2-3 hours',
     anesthesia_es: 'Local',
     anesthesia_en: 'Local',
-    recovery_days: '1-2 días',
+    recovery_days_es: '1-2 días',
+    recovery_days_en: '1-2 days',
     final_results_timeline_es: '3-6 meses',
     final_results_timeline_en: '3-6 months',
     ideal_candidates_es: [
@@ -90,10 +94,12 @@ export const stemCellServices: StemCellService[] = [
     price_comparison_us: 22000,
     savings_percentage: 64,
     image: jointRegenerationImg,
-    treatment_time: '2-4 horas',
+    treatment_time_es: '2-4 horas',
+    treatment_time_en: '2-4 hours',
     anesthesia_es: 'Local con sedación',
     anesthesia_en: 'Local with sedation',
-    recovery_days: '2-3 días',
+    recovery_days_es: '2-3 días',
+    recovery_days_en: '2-3 days',
     final_results_timeline_es: '4-8 meses',
     final_results_timeline_en: '4-8 months',
     ideal_candidates_es: [
@@ -136,10 +142,12 @@ export const stemCellServices: StemCellService[] = [
     price_comparison_us: 35000,
     savings_percentage: 66,
     image: antiAgingImg,
-    treatment_time: '3-5 horas',
+    treatment_time_es: '3-5 horas',
+    treatment_time_en: '3-5 hours',
     anesthesia_es: 'Sedación consciente',
     anesthesia_en: 'Conscious sedation',
-    recovery_days: '2-4 días',
+    recovery_days_es: '2-4 días',
+    recovery_days_en: '2-4 days',
     final_results_timeline_es: '6-12 meses',
     final_results_timeline_en: '6-12 months',
     ideal_candidates_es: [
@@ -182,10 +190,12 @@ export const stemCellServices: StemCellService[] = [
     price_comparison_us: 20000,
     savings_percentage: 63,
     image: sportsInjuryImg,
-    treatment_time: '2-3 horas',
+    treatment_time_es: '2-3 horas',
+    treatment_time_en: '2-3 hours',
     anesthesia_es: 'Local',
     anesthesia_en: 'Local',
-    recovery_days: '1-3 días',
+    recovery_days_es: '1-3 días',
+    recovery_days_en: '1-3 days',
     final_results_timeline_es: '3-6 meses',
     final_results_timeline_en: '3-6 months',
     ideal_candidates_es: [
@@ -228,10 +238,12 @@ export const stemCellServices: StemCellService[] = [
     price_comparison_us: 45000,
     savings_percentage: 67,
     image: autoimmuneImg,
-    treatment_time: '4-6 horas',
+    treatment_time_es: '4-6 horas',
+    treatment_time_en: '4-6 hours',
     anesthesia_es: 'Sedación',
     anesthesia_en: 'Sedation',
-    recovery_days: '3-5 días',
+    recovery_days_es: '3-5 días',
+    recovery_days_en: '3-5 days',
     final_results_timeline_es: '6-12 meses',
     final_results_timeline_en: '6-12 months',
     ideal_candidates_es: [
@@ -274,10 +286,12 @@ export const stemCellServices: StemCellService[] = [
     price_comparison_us: 25000,
     savings_percentage: 66,
     image: facialRejuvenationImg,
-    treatment_time: '2-3 horas',
+    treatment_time_es: '2-3 horas',
+    treatment_time_en: '2-3 hours',
     anesthesia_es: 'Local',
     anesthesia_en: 'Local',
-    recovery_days: '2-3 días',
+    recovery_days_es: '2-3 días',
+    recovery_days_en: '2-3 days',
     final_results_timeline_es: '3-6 meses',
     final_results_timeline_en: '3-6 months',
     ideal_candidates_es: [
@@ -320,10 +334,12 @@ export const stemCellServices: StemCellService[] = [
     price_comparison_us: 16000,
     savings_percentage: 63,
     image: skinRegenerationImg,
-    treatment_time: '1-2 horas',
+    treatment_time_es: '1-2 horas',
+    treatment_time_en: '1-2 hours',
     anesthesia_es: 'Tópica',
     anesthesia_en: 'Topical',
-    recovery_days: '1-2 días',
+    recovery_days_es: '1-2 días',
+    recovery_days_en: '1-2 days',
     final_results_timeline_es: '2-4 meses',
     final_results_timeline_en: '2-4 months',
     ideal_candidates_es: [
@@ -366,10 +382,12 @@ export const stemCellServices: StemCellService[] = [
     price_comparison_us: 26000,
     savings_percentage: 65,
     image: inflammagingImg,
-    treatment_time: '3-4 horas',
+    treatment_time_es: '3-4 horas',
+    treatment_time_en: '3-4 hours',
     anesthesia_es: 'Sedación consciente',
     anesthesia_en: 'Conscious sedation',
-    recovery_days: '2-3 días',
+    recovery_days_es: '2-3 días',
+    recovery_days_en: '2-3 days',
     final_results_timeline_es: '4-8 meses',
     final_results_timeline_en: '4-8 months',
     ideal_candidates_es: [
@@ -412,10 +430,12 @@ export const stemCellServices: StemCellService[] = [
     price_comparison_us: 14000,
     savings_percentage: 61,
     image: redLightImg,
-    treatment_time: '1 hora',
+    treatment_time_es: '1 hora',
+    treatment_time_en: '1 hour',
     anesthesia_es: 'No requerida',
     anesthesia_en: 'Not required',
-    recovery_days: 'Inmediato',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
     final_results_timeline_es: '1-3 meses',
     final_results_timeline_en: '1-3 months',
     ideal_candidates_es: [
@@ -458,10 +478,12 @@ export const stemCellServices: StemCellService[] = [
     price_comparison_us: 19000,
     savings_percentage: 63,
     image: defensinImg,
-    treatment_time: '2-3 horas',
+    treatment_time_es: '2-3 horas',
+    treatment_time_en: '2-3 hours',
     anesthesia_es: 'Local',
     anesthesia_en: 'Local',
-    recovery_days: '1-2 días',
+    recovery_days_es: '1-2 días',
+    recovery_days_en: '1-2 days',
     final_results_timeline_es: '3-6 meses',
     final_results_timeline_en: '3-6 months',
     ideal_candidates_es: [

@@ -9,10 +9,12 @@ export interface DiagnosticProgram {
   price_comparison_us: number;
   savings_percentage: number;
   image: string;
-  treatment_time: string;
+  treatment_time_es: string;
+  treatment_time_en: string;
   anesthesia_es: string;
   anesthesia_en: string;
-  recovery_days: string;
+  recovery_days_es: string;
+  recovery_days_en: string;
   final_results_timeline_es: string;
   final_results_timeline_en: string;
   ideal_candidates_es: string[];
@@ -33,10 +35,12 @@ export const diagnosticPrograms: DiagnosticProgram[] = [
     price_comparison_us: 8000,
     savings_percentage: 69,
     image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80',
-    treatment_time: '1-2 días',
+    treatment_time_es: '1-2 días',
+    treatment_time_en: '1-2 days',
     anesthesia_es: 'No requerida',
     anesthesia_en: 'Not required',
-    recovery_days: 'Inmediato',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
     final_results_timeline_es: '24-48 horas',
     final_results_timeline_en: '24-48 hours',
     ideal_candidates_es: [
@@ -83,10 +87,12 @@ export const diagnosticPrograms: DiagnosticProgram[] = [
     price_comparison_us: 6000,
     savings_percentage: 70,
     image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80',
-    treatment_time: '2-3 días',
+    treatment_time_es: '2-3 días',
+    treatment_time_en: '2-3 days',
     anesthesia_es: 'No requerida',
     anesthesia_en: 'Not required',
-    recovery_days: 'Inmediato',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
     final_results_timeline_es: '3-5 días laborables',
     final_results_timeline_en: '3-5 business days',
     ideal_candidates_es: [
@@ -133,10 +139,12 @@ export const diagnosticPrograms: DiagnosticProgram[] = [
     price_comparison_us: 5500,
     savings_percentage: 73,
     image: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&w=800&q=80',
-    treatment_time: '1 día',
+    treatment_time_es: '1 día',
+    treatment_time_en: '1 day',
     anesthesia_es: 'No requerida',
     anesthesia_en: 'Not required',
-    recovery_days: 'Inmediato',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
     final_results_timeline_es: '48 horas',
     final_results_timeline_en: '48 hours',
     ideal_candidates_es: [
@@ -183,10 +191,12 @@ export const diagnosticPrograms: DiagnosticProgram[] = [
     price_comparison_us: 10000,
     savings_percentage: 68,
     image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=800&q=80',
-    treatment_time: '1 día',
+    treatment_time_es: '1 día',
+    treatment_time_en: '1 day',
     anesthesia_es: 'No requerida',
     anesthesia_en: 'Not required',
-    recovery_days: 'Inmediato',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
     final_results_timeline_es: '2-3 semanas',
     final_results_timeline_en: '2-3 weeks',
     ideal_candidates_es: [

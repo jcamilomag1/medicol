@@ -21,10 +21,12 @@ interface ServiceItem {
   price_comparison_us: number;
   savings_percentage: number;
   image: string;
-  treatment_time: string;
+  treatment_time_es: string;
+  treatment_time_en: string;
   anesthesia_es: string;
   anesthesia_en: string;
-  recovery_days: string;
+  recovery_days_es: string;
+  recovery_days_en: string;
   final_results_timeline_es: string;
   final_results_timeline_en: string;
   ideal_candidates_es: string[];
@@ -94,7 +96,7 @@ export const ServiceModal = ({ service, isOpen, onClose }: ServiceModalProps) =>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-4">
             <div className="flex flex-col items-center gap-2 p-4 rounded-lg bg-muted/50">
               <Clock className="w-6 h-6 text-primary" />
-              <span className="text-sm font-medium text-center">{service.treatment_time}</span>
+              <span className="text-sm font-medium text-center">{isSpanish ? service.treatment_time_es : service.treatment_time_en}</span>
             </div>
             <div className="flex flex-col items-center gap-2 p-4 rounded-lg bg-muted/50">
               <Syringe className="w-6 h-6 text-primary" />
@@ -102,7 +104,7 @@ export const ServiceModal = ({ service, isOpen, onClose }: ServiceModalProps) =>
             </div>
             <div className="flex flex-col items-center gap-2 p-4 rounded-lg bg-muted/50">
               <Calendar className="w-6 h-6 text-primary" />
-              <span className="text-sm font-medium text-center">{service.recovery_days}</span>
+              <span className="text-sm font-medium text-center">{isSpanish ? service.recovery_days_es : service.recovery_days_en}</span>
             </div>
             <div className="flex flex-col items-center gap-2 p-4 rounded-lg bg-muted/50">
               <Target className="w-6 h-6 text-primary" />

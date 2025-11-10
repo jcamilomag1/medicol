@@ -22,10 +22,12 @@ interface ServiceItem {
   price_comparison_us: number;
   savings_percentage: number;
   image: string;
-  treatment_time: string;
+  treatment_time_es: string;
+  treatment_time_en: string;
   anesthesia_es: string;
   anesthesia_en: string;
-  recovery_days: string;
+  recovery_days_es: string;
+  recovery_days_en: string;
   final_results_timeline_es: string;
   final_results_timeline_en: string;
   ideal_candidates_es: string[];

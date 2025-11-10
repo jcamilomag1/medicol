@@ -9,10 +9,12 @@ export interface DentalService {
   price_comparison_us: number;
   savings_percentage: number;
   image: string;
-  treatment_time: string;
+  treatment_time_es: string;
+  treatment_time_en: string;
   anesthesia_es: string;
   anesthesia_en: string;
-  recovery_days: string;
+  recovery_days_es: string;
+  recovery_days_en: string;
   final_results_timeline_es: string;
   final_results_timeline_en: string;
   ideal_candidates_es: string[];
@@ -33,10 +35,12 @@ export const dentalServices: DentalService[] = [
     price_comparison_us: 2500,
     savings_percentage: 66,
     image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80',
-    treatment_time: '2-3 horas',
+    treatment_time_es: '2-3 horas',
+    treatment_time_en: '2-3 hours',
     anesthesia_es: 'Local',
     anesthesia_en: 'Local',
-    recovery_days: 'Inmediato',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
     final_results_timeline_es: '1-2 semanas',
     final_results_timeline_en: '1-2 weeks',
     ideal_candidates_es: [
@@ -79,10 +83,12 @@ export const dentalServices: DentalService[] = [
     price_comparison_us: 1800,
     savings_percentage: 65,
     image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80',
-    treatment_time: '1-2 horas',
+    treatment_time_es: '1-2 horas',
+    treatment_time_en: '1-2 hours',
     anesthesia_es: 'Local',
     anesthesia_en: 'Local',
-    recovery_days: 'Inmediato',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
     final_results_timeline_es: '1 semana',
     final_results_timeline_en: '1 week',
     ideal_candidates_es: [
@@ -123,10 +129,12 @@ export const dentalServices: DentalService[] = [
     price_comparison_us: 1500,
     savings_percentage: 67,
     image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80',
-    treatment_time: '1 hora',
+    treatment_time_es: '1 hora',
+    treatment_time_en: '1 hour',
     anesthesia_es: 'Local o no requerida',
     anesthesia_en: 'Local or not required',
-    recovery_days: 'Inmediato',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
     final_results_timeline_es: 'Inmediato',
     final_results_timeline_en: 'Immediate',
     ideal_candidates_es: [
@@ -165,10 +173,12 @@ export const dentalServices: DentalService[] = [
     price_comparison_us: 175,
     savings_percentage: 79,
     image: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=800&q=80',
-    treatment_time: '30-45 minutos',
+    treatment_time_es: '30-45 minutos',
+    treatment_time_en: '30-45 minutes',
     anesthesia_es: 'Generalmente no requerida',
     anesthesia_en: 'Generally not required',
-    recovery_days: 'Inmediato',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
     final_results_timeline_es: 'Inmediato',
     final_results_timeline_en: 'Immediate',
     ideal_candidates_es: [
@@ -207,10 +217,12 @@ export const dentalServices: DentalService[] = [
     price_comparison_us: 1400,
     savings_percentage: 95,
     image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80',
-    treatment_time: '1 hora por diente',
+    treatment_time_es: '1 hora por diente',
+    treatment_time_en: '1 hour per tooth',
     anesthesia_es: 'Local',
     anesthesia_en: 'Local',
-    recovery_days: '1-2 días',
+    recovery_days_es: '1-2 días',
+    recovery_days_en: '1-2 days',
     final_results_timeline_es: '2 semanas',
     final_results_timeline_en: '2 weeks',
     ideal_candidates_es: [
@@ -251,10 +263,12 @@ export const dentalServices: DentalService[] = [
     price_comparison_us: 1000,
     savings_percentage: 70,
     image: 'https://images.unsplash.com/photo-1609840114035-3c981a782dfe?auto=format&fit=crop&w=800&q=80',
-    treatment_time: '1 hora',
+    treatment_time_es: '1 hora',
+    treatment_time_en: '1 hour',
     anesthesia_es: 'No requerida',
     anesthesia_en: 'Not required',
-    recovery_days: 'Inmediato',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
     final_results_timeline_es: 'Inmediato',
     final_results_timeline_en: 'Immediate',
     ideal_candidates_es: [
@@ -295,10 +309,12 @@ export const dentalServices: DentalService[] = [
     price_comparison_us: 500,
     savings_percentage: 60,
     image: 'https://images.unsplash.com/photo-1588776814546-daab20edb980?auto=format&fit=crop&w=800&q=80',
-    treatment_time: '45 minutos (elaboración)',
+    treatment_time_es: '45 minutos (elaboración)',
+    treatment_time_en: '45 minutes (preparation)',
     anesthesia_es: 'No requerida',
     anesthesia_en: 'Not required',
-    recovery_days: 'Inmediato',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
     final_results_timeline_es: '2-4 semanas',
     final_results_timeline_en: '2-4 weeks',
     ideal_candidates_es: [
@@ -339,10 +355,12 @@ export const dentalServices: DentalService[] = [
     price_comparison_us: 400,
     savings_percentage: 84,
     image: 'https://images.unsplash.com/photo-1626736985686-e13b89c2b5ec?auto=format&fit=crop&w=800&q=80',
-    treatment_time: '30 minutos (elaboración)',
+    treatment_time_es: '30 minutos (elaboración)',
+    treatment_time_en: '30 minutes (preparation)',
     anesthesia_es: 'No requerida',
     anesthesia_en: 'Not required',
-    recovery_days: 'Inmediato',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
     final_results_timeline_es: 'Inmediato',
     final_results_timeline_en: 'Immediate',
     ideal_candidates_es: [
@@ -383,10 +401,12 @@ export const dentalServices: DentalService[] = [
     price_comparison_us: 1250,
     savings_percentage: 60,
     image: 'https://images.unsplash.com/photo-1629909615957-be38c326b21e?auto=format&fit=crop&w=800&q=80',
-    treatment_time: '30 minutos',
+    treatment_time_es: '30 minutos',
+    treatment_time_en: '30 minutes',
     anesthesia_es: 'No requerida',
     anesthesia_en: 'Not required',
-    recovery_days: '1-2 días',
+    recovery_days_es: '1-2 días',
+    recovery_days_en: '1-2 days',
     final_results_timeline_es: '1-2 semanas',
     final_results_timeline_en: '1-2 weeks',
     ideal_candidates_es: [
@@ -427,10 +447,12 @@ export const dentalServices: DentalService[] = [
     price_comparison_us: 650,
     savings_percentage: 73,
     image: 'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=800&q=80',
-    treatment_time: '1 hora',
+    treatment_time_es: '1 hora',
+    treatment_time_en: '1 hour',
     anesthesia_es: 'No requerida',
     anesthesia_en: 'Not required',
-    recovery_days: 'Inmediato',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
     final_results_timeline_es: 'Variable',
     final_results_timeline_en: 'Variable',
     ideal_candidates_es: [
