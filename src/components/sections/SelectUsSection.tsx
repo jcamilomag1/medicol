@@ -35,7 +35,7 @@ export const SelectUsSection = () => {
     
     stats: [
       {
-        value: '5,000+',
+        value: '200+',
         label: t('about.stats.patients'),
         icon: <Users className="h-5 w-5 text-primary" />,
       },
