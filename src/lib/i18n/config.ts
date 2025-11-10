@@ -3,6 +3,8 @@ import { initReactI18next } from 'react-i18next';
 import enTranslations from './en.json';
 import esTranslations from './es.json';
 
+// Language configuration
+
 // Browser language detection with localStorage persistence
 const getBrowserLanguage = (): string => {
   const stored = localStorage.getItem('i18nextLng');
