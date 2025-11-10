@@ -200,13 +200,13 @@ export const TeamPreview = () => {
                 {/* Two Column Layout for Specialty & Experience */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="space-y-1">
-                    <p className="text-xs text-muted-foreground uppercase tracking-wide">Especialidad</p>
+                    <p className="text-xs text-muted-foreground uppercase tracking-wide">{t('team.specialty_label')}</p>
                     <p className="text-sm font-semibold text-accent">
                       {t(currentDoctor.specialtyKey)}
                     </p>
                   </div>
                   <div className="space-y-1">
-                    <p className="text-xs text-muted-foreground uppercase tracking-wide">Experiencia</p>
+                    <p className="text-xs text-muted-foreground uppercase tracking-wide">{t('team.experience_label')}</p>
                     <p className="text-sm font-semibold text-foreground">
                       {t(currentDoctor.experienceKey)}
                     </p>
