@@ -31,7 +31,7 @@ export const ProcedureModal = ({ procedure, open, onOpenChange }: ProcedureModal
     {
       icon: Clock,
       label: t('plastic_surgery.modal.surgery_time'),
-      value: procedure.surgery_time,
+      value: isEnglish ? procedure.surgery_time_en : procedure.surgery_time_es,
     },
     {
       icon: Syringe,
@@ -41,7 +41,7 @@ export const ProcedureModal = ({ procedure, open, onOpenChange }: ProcedureModal
     {
       icon: Calendar,
       label: t('plastic_surgery.modal.recovery'),
-      value: procedure.recovery_days,
+      value: isEnglish ? procedure.recovery_days_en : procedure.recovery_days_es,
     },
     {
       icon: Eye,
