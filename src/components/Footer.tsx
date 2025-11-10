@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 
 const footerNav = {
@@ -40,12 +39,12 @@ export const Footer = () => {
             <ul className="space-y-3">
               {footerNav.solutions.map((link) => (
                 <li key={link.key}>
-                  <Link
-                    to={link.href}
+                  <a
+                    href={link.href}
                     className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
                   >
                     {t(link.key)}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -59,12 +58,12 @@ export const Footer = () => {
             <ul className="space-y-3">
               {footerNav.company.map((link) => (
                 <li key={link.key}>
-                  <Link
-                    to={link.href}
+                  <a
+                    href={link.href}
                     className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
                   >
                     {t(link.key)}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -78,12 +77,12 @@ export const Footer = () => {
             <ul className="space-y-3">
               {footerNav.legal.map((link) => (
                 <li key={link.key}>
-                  <Link
-                    to={link.href}
+                  <a
+                    href={link.href}
                     className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
                   >
                     {t(link.key)}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

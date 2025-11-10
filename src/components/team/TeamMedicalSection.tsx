@@ -70,8 +70,6 @@ const TeamMedicalSection = () => {
                       <img
                         src={doctor.image}
                         alt={t(`team.medical.${doctor.key}.name`)}
-                        loading="lazy"
-                        decoding="async"
                         className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-primary/20 flex-shrink-0"
                       />
                       <div className="flex-1 min-w-0">

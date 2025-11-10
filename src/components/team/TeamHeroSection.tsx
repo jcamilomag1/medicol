@@ -8,20 +8,12 @@ const TeamHeroSection = () => {
   return (
     <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <motion.div 
-        className="absolute inset-0 z-0 overflow-hidden"
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-      >
-        <img
-          src="/src/assets/team-hero-bg.jpg"
-          alt="Team hero background"
-          loading="eager"
-          decoding="async"
-          className="w-full h-full object-cover"
-        />
-      </motion.div>
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/src/assets/team-hero-bg.jpg')"
+        }}
+      />
       
       {/* Overlay for readability */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-accent/85" />

@@ -105,8 +105,6 @@ export const ServiceTestimonialsSection = ({
                       className="w-12 h-12 rounded-full object-cover"
                       src={testimonial.image}
                       alt={testimonial.name}
-                      loading="lazy"
-                      decoding="async"
                     />
                     <div>
                       <p className="font-semibold text-xl text-foreground">{testimonial.name}</p>
@@ -146,8 +144,6 @@ export const ServiceTestimonialsSection = ({
                   <img
                     src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg"
                     alt="Google Reviews"
-                    loading="lazy"
-                    decoding="async"
                     className="h-8 mb-2"
                   />
                   <p className="text-sm font-semibold text-foreground">Reviews</p>

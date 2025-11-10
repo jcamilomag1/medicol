@@ -174,8 +174,7 @@
   "common": {
     "learn_more": "Learn More",
     "view_profile": "View more",
-    "read_more": "Read more",
-    "loading": "Loading..."
+    "read_more": "Read more"
   },
   "countries": {
     "usa": "United States",
@@ -439,10 +438,8 @@
   "team": {
     "section_title": "Our Expert Team",
     "section_subtitle": "Highly qualified professionals with years of experience dedicated to your transformation",
-    "preview_title": "Our Medical Team", 
+    "preview_title": "Our Medical Team",
     "preview_description": "Meet the specialists who will make your transformation a reality.",
-    "specialty_label": "Specialty",
-    "experience_label": "Experience",
     "education": "Education",
     "certifications": "Certifications",
     "bio": "Experience",
@@ -636,7 +633,6 @@
   "reviews": {
     "section_title": "What our patients say",
     "section_subtitle": "Real reviews from satisfied patients who transformed their lives with Medicol",
-    "transformation_badge": "Your transformation begins here",
     "review1": {
       "name": "María González",
       "comment": "Excellent care from the first moment. The medical team is very professional and the results exceeded my expectations. 100% recommended.",

@@ -50,8 +50,6 @@ const TeamAdminSection = () => {
                   <img
                     src={member.image}
                     alt={t(`team.admin.${member.key}.name`)}
-                    loading="lazy"
-                    decoding="async"
                     className="w-20 h-20 md:w-28 md:h-28 rounded-full object-cover border-2 md:border-3 border-primary/20"
                   />
                 </div>

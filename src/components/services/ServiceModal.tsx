@@ -79,8 +79,6 @@ export const ServiceModal = ({ service, isOpen, onClose }: ServiceModalProps) =>
           <img
             src={service.image}
             alt={name}
-            loading="lazy"
-            decoding="async"
             className="w-full h-full object-cover"
           />
           <Badge className="absolute top-4 right-4 bg-primary">

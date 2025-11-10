@@ -127,7 +127,7 @@ export const TeamPreview = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            {t('team.section_title')}
+            Estarás en las mejores manos
           </h2>
           <p className="text-muted-foreground text-lg">
             {t('team.preview_description')}
@@ -210,13 +210,13 @@ export const TeamPreview = () => {
                 {/* Two Column Layout for Specialty & Experience */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="space-y-1">
-                    <p className="text-xs text-muted-foreground uppercase tracking-wide">{t('team.specialty_label')}</p>
+                    <p className="text-xs text-muted-foreground uppercase tracking-wide">Especialidad</p>
                     <p className="text-sm font-semibold text-accent">
                       {t(currentDoctor.specialtyKey)}
                     </p>
                   </div>
                   <div className="space-y-1">
-                    <p className="text-xs text-muted-foreground uppercase tracking-wide">{t('team.experience_label')}</p>
+                    <p className="text-xs text-muted-foreground uppercase tracking-wide">Experiencia</p>
                     <p className="text-sm font-semibold text-foreground">
                       {t(currentDoctor.experienceKey)}
                     </p>
@@ -315,13 +315,13 @@ export const TeamPreview = () => {
                 {/* Two Column Layout for Specialty & Experience */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="space-y-1 text-center">
-                    <p className="text-xs text-muted-foreground uppercase tracking-wide">{t('team.specialty_label')}</p>
+                    <p className="text-xs text-muted-foreground uppercase tracking-wide">Especialidad</p>
                     <p className="text-sm font-semibold text-accent">
                       {t(currentDoctor.specialtyKey)}
                     </p>
                   </div>
                   <div className="space-y-1 text-center">
-                    <p className="text-xs text-muted-foreground uppercase tracking-wide">{t('team.experience_label')}</p>
+                    <p className="text-xs text-muted-foreground uppercase tracking-wide">Experiencia</p>
                     <p className="text-sm font-semibold text-foreground">
                       {t(currentDoctor.experienceKey)}
                     </p>
