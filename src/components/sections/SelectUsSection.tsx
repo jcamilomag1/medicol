@@ -17,7 +17,7 @@ export const SelectUsSection = () => {
     
     actions: [
       {
-        text: 'Ver la experiencia Medicol',
+        text: t('about.cta_experience'),
         onClick: () => navigate('/experiencia'),
         variant: 'default' as const,
         className: 'bg-accent text-accent-foreground hover:bg-accent/90',
