@@ -17,12 +17,8 @@ export const SelectUsSection = () => {
     
     actions: [
       {
-        text: t('about.cta_consult'),
-        onClick: () => window.open(
-          'https://wa.me/573001234567?text=' + 
-          encodeURIComponent(t('why_choose.whatsapp_message')), 
-          '_blank'
-        ),
+        text: 'Ver la experiencia Medicol',
+        onClick: () => navigate('/experiencia'),
         variant: 'default' as const,
         className: 'bg-accent text-accent-foreground hover:bg-accent/90',
       },
