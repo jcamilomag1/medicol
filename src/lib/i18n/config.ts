@@ -16,6 +16,19 @@ const getBrowserLanguage = (): string => {
 
 const defaultLng = getBrowserLanguage();
 
+// Debug: Verify translations are loaded
+console.log('🔍 i18n initializing with:', {
+  defaultLng,
+  esKeys: Object.keys(esTranslations).slice(0, 5),
+  enKeys: Object.keys(enTranslations).slice(0, 5),
+  teamPreviewDesc_es: (esTranslations as any).team?.preview_description,
+  teamPreviewDesc_en: (enTranslations as any).team?.preview_description,
+  teamSpecialtyLabel_es: (esTranslations as any).team?.specialty_label,
+  teamSpecialtyLabel_en: (enTranslations as any).team?.specialty_label,
+  teamExperienceLabel_es: (esTranslations as any).team?.experience_label,
+  teamExperienceLabel_en: (enTranslations as any).team?.experience_label
+});
+
 i18n
   .use(initReactI18next)
   .init({

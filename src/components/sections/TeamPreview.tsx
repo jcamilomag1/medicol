@@ -108,8 +108,22 @@ const teamMembers: Doctor[] = [
 ];
 
 export const TeamPreview = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Debug: Verify translation function is working
+  console.log('🔍 TeamPreview i18n status:', {
+    language: i18n.language,
+    isInitialized: i18n.isInitialized,
+    hasResources: i18n.hasResourceBundle(i18n.language, 'translation'),
+    translations: {
+      preview_description: t('team.preview_description'),
+      specialty_label: t('team.specialty_label'),
+      experience_label: t('team.experience_label'),
+      current_doctor_specialty: t(teamMembers[currentIndex].specialtyKey),
+      current_doctor_experience: t(teamMembers[currentIndex].experienceKey)
+    }
+  });
 
   const handleNext = () =>
     setCurrentIndex((index) => (index + 1) % teamMembers.length);
