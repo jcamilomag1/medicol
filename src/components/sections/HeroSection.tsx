@@ -157,16 +157,6 @@ export const HeroSection = () => {
                   <span>{t('hero.cta_benefit_3')}</span>
                 </div>
               </motion.div>
-              
-              {/* Social Proof */}
-              <motion.p 
-                className="text-center text-white/70 text-xs md:text-sm mt-4 pt-4 md:mt-6 md:pt-6 border-t border-white/10"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.9 }}
-              >
-                ⭐⭐⭐⭐⭐ {t('hero.social_proof')}
-              </motion.p>
             </div>
           </motion.div>
           
