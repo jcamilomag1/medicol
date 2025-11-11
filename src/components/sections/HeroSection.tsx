@@ -103,7 +103,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 100 }}
             className="lg:self-center px-4 lg:px-0 lg:pr-6 overflow-visible"
           >
-            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-5 md:p-8 lg:p-10 shadow-2xl shadow-black/50 hover:shadow-black/70 transition-all duration-300 hover:-translate-y-2 mx-auto lg:mx-0 lg:mr-6 overflow-visible max-w-md lg:max-w-none">
+            <div className="bg-white/5 backdrop-blur-xl border border-white/20 rounded-3xl p-5 md:p-8 lg:p-10 shadow-2xl shadow-black/50 hover:shadow-black/70 transition-all duration-300 hover:-translate-y-2 mx-auto lg:mx-0 lg:mr-6 overflow-visible max-w-md lg:max-w-none">
               
               {/* Card Headline */}
               <motion.h3 
