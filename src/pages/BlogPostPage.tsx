@@ -14,6 +14,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Helmet } from "react-helmet";
+import ReactMarkdown from "react-markdown";
 
 const BlogPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -75,7 +76,7 @@ const BlogPostPage = () => {
         <meta property="og:type" content="article" />
       </Helmet>
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background pt-20">
         {/* Breadcrumbs */}
         <div className="border-b border-border bg-muted/30">
           <div className="container mx-auto px-4 py-4 max-w-4xl">
@@ -144,8 +145,8 @@ const BlogPostPage = () => {
             )}
 
             {/* Content */}
-            <div className="prose prose-lg max-w-none text-foreground">
-              <div dangerouslySetInnerHTML={{ __html: content }} />
+            <div className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-foreground prose-strong:text-foreground prose-li:text-foreground">
+              <ReactMarkdown>{content}</ReactMarkdown>
             </div>
 
             {/* Back Button */}
