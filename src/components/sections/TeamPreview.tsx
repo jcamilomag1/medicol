@@ -115,21 +115,11 @@ export const TeamPreview = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
-              className="flex"
+              className="p-6 overflow-y-auto max-h-[470px]"
             >
-              {/* Left Side - Accent Block with Initials */}
-              <div className="w-28 bg-accent/10 flex items-center justify-center p-6 border-r border-border/30">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-accent/30 to-accent/10 backdrop-blur-sm border-2 border-accent/40 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-accent">
-                    {t(`team.medical.${currentDoctor.key}.name`).split(' ').map(n => n[0]).join('')}
-                  </span>
-                </div>
-              </div>
-              
-              {/* Right Side - Info */}
-              <div className="flex-1 p-6 overflow-y-auto max-h-[470px]">
+              <div>
                 {/* Name */}
-                <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+                <h3 className="text-3xl font-bold mb-2 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
                   {t(`team.medical.${currentDoctor.key}.name`)}
                 </h3>
                 
@@ -175,15 +165,9 @@ export const TeamPreview = () => {
                 {/* Treatments */}
                 <div className="mb-4">
                   <p className="text-xs font-semibold text-foreground mb-2">{t('team.medical.treatments')}</p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {t(`team.medical.${currentDoctor.key}.treatmentsList`, { returnObjects: true }) instanceof Array && 
-                      (t(`team.medical.${currentDoctor.key}.treatmentsList`, { returnObjects: true }) as string[]).map((treatment, idx) => (
-                        <span key={idx} className="px-2 py-0.5 bg-slate-800 text-white rounded-full text-xs border border-slate-700">
-                          {treatment}
-                        </span>
-                      ))
-                    }
-                  </div>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    {(t(`team.medical.${currentDoctor.key}.treatmentsList`, { returnObjects: true }) as string[]).join(' • ')}
+                  </p>
                 </div>
                 
                 {/* Languages */}
@@ -232,19 +216,9 @@ export const TeamPreview = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
-              className="rounded-3xl overflow-hidden bg-gradient-to-br from-white/95 via-white/90 to-background/95 backdrop-blur-2xl border border-border/50 shadow-xl"
+              className="rounded-3xl overflow-hidden bg-gradient-to-br from-white/95 via-white/90 to-background/95 backdrop-blur-2xl border border-border/50 shadow-xl p-5 overflow-y-auto max-h-[600px]"
             >
-              {/* Top - Accent Block with Initials */}
-              <div className="bg-accent/10 flex items-center justify-center py-6 border-b border-border/30">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-accent/30 to-accent/10 backdrop-blur-sm border-2 border-accent/40 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-accent">
-                    {t(`team.medical.${currentDoctor.key}.name`).split(' ').map(n => n[0]).join('')}
-                  </span>
-                </div>
-              </div>
-              
-              {/* Bottom - Info */}
-              <div className="p-5 overflow-y-auto max-h-[600px]">
+              <div>
                 {/* Name */}
                 <h3 className="text-xl font-bold text-center mb-2 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
                   {t(`team.medical.${currentDoctor.key}.name`)}
@@ -292,15 +266,9 @@ export const TeamPreview = () => {
                 {/* Treatments */}
                 <div className="mb-4">
                   <p className="text-xs font-semibold text-foreground mb-2">{t('team.medical.treatments')}</p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {t(`team.medical.${currentDoctor.key}.treatmentsList`, { returnObjects: true }) instanceof Array && 
-                      (t(`team.medical.${currentDoctor.key}.treatmentsList`, { returnObjects: true }) as string[]).map((treatment, idx) => (
-                        <span key={idx} className="px-2 py-0.5 bg-slate-800 text-white rounded-full text-xs border border-slate-700">
-                          {treatment}
-                        </span>
-                      ))
-                    }
-                  </div>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    {(t(`team.medical.${currentDoctor.key}.treatmentsList`, { returnObjects: true }) as string[]).join(' • ')}
+                  </p>
                 </div>
                 
                 {/* Languages */}
