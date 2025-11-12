@@ -43,8 +43,23 @@ export const TeamPreview = () => {
   const currentDoctor = teamMembers[currentIndex];
 
   return (
-    <section className="py-8 md:py-12 px-4 w-full">
+    <section className="py-12 md:py-20 bg-accent/5 px-4 w-full">
       <div className="max-w-6xl mx-auto">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
+            {t('team.medical.title')}
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            {t('team.medical.intro')}
+          </p>
+        </motion.div>
+
         <motion.div
           className="w-full"
           initial={{ opacity: 0, y: 40 }}
