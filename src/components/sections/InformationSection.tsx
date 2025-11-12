@@ -25,7 +25,11 @@ export const InformationSection = () => {
   ];
 
   return (
-    <section className="py-20 sm:py-24 bg-white">
+    <section className="py-20 sm:py-24 bg-white relative">
+      {/* Decorative Separator */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-primary/50 rounded-full" />
+      
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
@@ -88,13 +92,13 @@ export const InformationSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative"
+            className="relative flex items-center justify-center"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-xl">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-md w-full">
               <img
                 src={recoveryImage}
                 alt="Premium Recovery House"
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-cover aspect-[3/4]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
             </div>
