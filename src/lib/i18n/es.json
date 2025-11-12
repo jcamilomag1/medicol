@@ -1187,6 +1187,17 @@
             "Guía de recuperación y estilo de vida a largo plazo."
           ]
         }
+      },
+      "faq": {
+        "title": "Preguntas Frecuentes",
+        "subtitle": "Todo lo que necesitas saber sobre tu viaje con Medicol"
+      },
+      "cta": {
+        "title": "¿Listo para Tu Transformación?",
+        "subtitle": "Agenda tu consulta virtual gratuita hoy y da el primer paso hacia la mejor versión de ti.",
+        "whatsapp_button": "Hablar por WhatsApp",
+        "contact_button": "Ir a Contacto",
+        "whatsapp_message": "Hola! Me interesa conocer más sobre el proceso del viaje del paciente Medicol. ¿Podrían brindarme más información?"
       }
     }
   }

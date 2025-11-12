@@ -1187,6 +1187,17 @@
             "Long-term recovery and lifestyle guidance."
           ]
         }
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Everything you need to know about your journey with Medicol"
+      },
+      "cta": {
+        "title": "Ready for Your Transformation?",
+        "subtitle": "Schedule your free virtual consultation today and take the first step towards the best version of yourself.",
+        "whatsapp_button": "Chat on WhatsApp",
+        "contact_button": "Go to Contact",
+        "whatsapp_message": "Hello! I'm interested in learning more about the Medicol patient journey process. Could you provide me with more information?"
       }
     }
   }

@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout';
 import TimeLine_01, { TimeLine_01Entry } from '@/components/ui/release-time-line';
+import ExperienceFAQWithCTA from '@/components/experience/ExperienceFAQWithCTA';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { 
@@ -153,6 +154,9 @@ const ExperiencePage = () => {
           entries={medicolJourneyEntries} 
         />
       </div>
+
+      {/* FAQ + CTA Section */}
+      <ExperienceFAQWithCTA />
     </Layout>
   );
 };
