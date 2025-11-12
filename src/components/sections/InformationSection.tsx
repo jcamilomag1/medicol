@@ -65,8 +65,8 @@ export const InformationSection = () => {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="flex gap-4"
                   >
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-                      <Icon className="w-6 h-6 text-white" />
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                      <Icon className="w-6 h-6 text-primary" />
                     </div>
                     <div className="flex-1 space-y-1">
                       <h3 className="text-xl font-semibold text-foreground">
