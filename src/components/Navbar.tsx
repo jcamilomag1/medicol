@@ -149,15 +149,6 @@ export const Navbar = () => {
                 {i18n.language === 'es' ? 'EN' : 'ES'}
               </span>
             </button>
-
-            {/* CTA Button */}
-            <Button
-              variant="default"
-              size="default"
-              className="bg-accent text-primary hover:bg-accent/90 font-semibold"
-            >
-              {t('nav.cta')}
-            </Button>
           </div>
 
           {/* Mobile Controls: Language + Menu */}
@@ -247,15 +238,6 @@ export const Navbar = () => {
                   </Link>
                 );
               })}
-
-              {/* Mobile CTA Button */}
-              <Button
-                variant="default"
-                size="default"
-                className="bg-accent text-primary hover:bg-accent/90 font-semibold w-full"
-              >
-                {t('nav.cta')}
-              </Button>
             </nav>
           </motion.div>
         )}
