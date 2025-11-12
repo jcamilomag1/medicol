@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -39,6 +39,8 @@ export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { i18n, t } = useTranslation();
+  const location = useLocation();
+  const isBlogPage = location.pathname.startsWith('/blog');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,7 +69,7 @@ export const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ease-in-out ${
-        isScrolled ? 'bg-primary shadow-lg' : 'bg-transparent'
+        isScrolled || isBlogPage ? 'bg-primary shadow-lg' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
