@@ -735,6 +735,10 @@
     "blog": "Blog"
   },
   "blog": {
+    "hero": {
+      "title": "Medicol Blog",
+      "subtitle": "Verified medical information by specialists. Discover tips, treatments and health news."
+    },
     "section_title": "From Our Blog",
     "section_subtitle": "Stay informed with the latest news, trends, and expert advice.",
     "title": "Blog",

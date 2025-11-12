@@ -735,6 +735,10 @@
     "blog": "Blog"
   },
   "blog": {
+    "hero": {
+      "title": "Blog Medicol",
+      "subtitle": "Información médica verificada por especialistas. Descubre consejos, tratamientos y novedades en salud."
+    },
     "section_title": "Desde Nuestro Blog",
     "section_subtitle": "Mantente informado con las últimas noticias, tendencias y consejos de nuestros expertos.",
     "title": "Blog",

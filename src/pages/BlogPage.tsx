@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+import { BlogHeroSection } from "@/components/sections/BlogHeroSection";
 import { useAllBlogPosts } from "@/hooks/useBlogPosts";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
@@ -11,21 +12,9 @@ const BlogPage = () => {
 
   return (
     <Layout>
+      <BlogHeroSection />
+      
       <div className="min-h-screen bg-background">
-        {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-br from-primary/10 via-background to-accent/5">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-                {t("blog.title")}
-              </h1>
-              <p className="text-lg text-muted-foreground">
-                {t("blog.subtitle")}
-              </p>
-            </div>
-          </div>
-        </section>
-
         {/* Blog Posts Grid */}
         <section className="py-16">
           <div className="container mx-auto px-4">
