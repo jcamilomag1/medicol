@@ -26,12 +26,6 @@ const TeamHeroSection = () => {
           transition={{ duration: 0.6 }}
           className="space-y-6"
         >
-          <div className="inline-block">
-            <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium text-white border border-white/30">
-              {t('team.hero.badge')}
-            </span>
-          </div>
-          
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white max-w-4xl mx-auto">
             {t('team.hero.title')}
           </h1>
