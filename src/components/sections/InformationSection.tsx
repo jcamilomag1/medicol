@@ -42,11 +42,6 @@ export const InformationSection = () => {
             transition={{ duration: 0.6 }}
             className="space-y-8"
           >
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold">
-              {t('medical_tourism.badge')}
-            </div>
-
             {/* Title */}
             <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
               {t('medical_tourism.title')}
