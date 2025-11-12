@@ -1,11 +1,9 @@
 import { HeroSection } from './sections/HeroSection';
 import { MainServicesSection } from './sections/MainServicesSection';
-import { FeaturedTestimonials } from './sections/FeaturedTestimonials';
 import { TeamPreview } from './sections/TeamPreview';
 import { ValueSection } from './sections/ValueSection';
 import { PriceSection } from './sections/PriceSection';
 import { ReviewSection } from './sections/ReviewSection';
-import { TransformationCTASection } from './sections/TransformationCTASection';
 import { BlogPreview } from './sections/BlogPreview';
 
 export const HomePage = () => {
@@ -17,7 +15,6 @@ export const HomePage = () => {
       <PriceSection />
       <TeamPreview />
       <ReviewSection />
-      <TransformationCTASection />
       <BlogPreview />
     </main>
   );
