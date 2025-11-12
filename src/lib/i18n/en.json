@@ -737,6 +737,16 @@
   "blog": {
     "section_title": "From Our Blog",
     "section_subtitle": "Stay informed with the latest news, trends, and expert advice.",
+    "title": "Blog",
+    "subtitle": "Explore articles about health, beauty, and wellness",
+    "read_more": "Read more",
+    "views": "views",
+    "back_to_blog": "Back to blog",
+    "related_posts": "Related articles",
+    "not_found": "Article not found",
+    "not_found_description": "The article you're looking for doesn't exist or has been removed.",
+    "no_posts": "No published articles yet.",
+    "error": "Error loading articles. Please try again.",
     "category": {
       "cosmetic": "Cosmetic Surgery",
       "regenerative": "Regenerative Medicine",

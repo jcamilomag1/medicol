@@ -14,6 +14,8 @@ const PlasticSurgeryPage = lazy(() => import('./pages/PlasticSurgeryPage'));
 const StemCellsPage = lazy(() => import('./pages/StemCellsPage'));
 const DentalPage = lazy(() => import('./pages/DentalPage'));
 const DiagnosticsPage = lazy(() => import('./pages/DiagnosticsPage'));
+const BlogPage = lazy(() => import('./pages/BlogPage'));
+const BlogPostPage = lazy(() => import('./pages/BlogPostPage'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 const queryClient = new QueryClient();
@@ -46,6 +48,8 @@ const App = () => (
             <Route path="/experiencia" element={<ExperiencePage />} />
             <Route path="/equipo" element={<TeamPage />} />
             <Route path="/contacto" element={<ContactPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

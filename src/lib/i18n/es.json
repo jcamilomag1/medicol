@@ -737,6 +737,16 @@
   "blog": {
     "section_title": "Desde Nuestro Blog",
     "section_subtitle": "Mantente informado con las últimas noticias, tendencias y consejos de nuestros expertos.",
+    "title": "Blog",
+    "subtitle": "Explora artículos sobre salud, belleza y bienestar",
+    "read_more": "Leer más",
+    "views": "vistas",
+    "back_to_blog": "Volver al blog",
+    "related_posts": "Artículos relacionados",
+    "not_found": "Artículo no encontrado",
+    "not_found_description": "El artículo que buscas no existe o ha sido eliminado.",
+    "no_posts": "No hay artículos publicados aún.",
+    "error": "Error al cargar los artículos. Por favor, intenta de nuevo.",
     "category": {
       "cosmetic": "Cirugía Cosmética",
       "regenerative": "Medicina Regenerativa",
