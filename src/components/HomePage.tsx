@@ -14,10 +14,10 @@ export const HomePage = () => {
       <HeroSection />
       <MainServicesSection />
       <ValueSection />
-      <FeaturedTestimonials />
       <PriceSection />
       <TeamPreview />
       <ReviewSection />
+      <FeaturedTestimonials />
       <BlogPreview />
     </main>
   );
