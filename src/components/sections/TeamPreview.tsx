@@ -43,7 +43,7 @@ export const TeamPreview = () => {
   const currentDoctor = teamMembers[currentIndex];
 
   return (
-    <section className="py-12 md:py-20 bg-accent/5 px-4 w-full">
+    <section id="doctores" className="py-12 md:py-20 bg-accent/5 px-4 w-full">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <motion.div
