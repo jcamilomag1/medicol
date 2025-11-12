@@ -186,7 +186,7 @@ export const TeamPreview = () => {
       <div className="md:hidden max-w-sm mx-auto">
         {/* Doctor Image */}
         <motion.div 
-          className="w-full aspect-square rounded-3xl overflow-hidden mb-6 shadow-xl"
+          className="w-full aspect-[4/3] max-h-[240px] rounded-3xl overflow-hidden mb-4 shadow-xl"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
@@ -216,7 +216,7 @@ export const TeamPreview = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
-              className="rounded-3xl overflow-hidden bg-gradient-to-br from-white/95 via-white/90 to-background/95 backdrop-blur-2xl border border-border/50 shadow-xl p-5 overflow-y-auto max-h-[600px]"
+              className="rounded-3xl overflow-hidden bg-gradient-to-br from-white/95 via-white/90 to-background/95 backdrop-blur-2xl border border-border/50 shadow-xl p-4 overflow-y-auto max-h-[380px]"
             >
               <div>
                 {/* Name */}
