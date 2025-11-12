@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Home, Plane, BadgeCheck } from 'lucide-react';
+import { Home, Plane, BadgeCheck, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import recoveryImage from '@/assets/medical-tourism-recovery.jpg';
 
 export const InformationSection = () => {
@@ -31,7 +32,7 @@ export const InformationSection = () => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-primary/50 rounded-full" />
       
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           
           {/* Left Column - Content */}
           <motion.div
@@ -86,22 +87,31 @@ export const InformationSection = () => {
             </div>
           </motion.div>
 
-          {/* Right Column - Image */}
+          {/* Right Column - Image + CTA */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative flex items-center justify-center"
+            className="relative flex flex-col items-center justify-start max-h-[600px]"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-md w-full">
               <img
                 src={recoveryImage}
                 alt="Premium Recovery House"
-                className="w-full h-auto object-cover aspect-[3/4]"
+                className="w-full h-auto object-cover aspect-[4/5]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
             </div>
+            
+            {/* CTA Button */}
+            <Link 
+              to="/experiencia"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-accent transition-colors group mt-6"
+            >
+              {t('medical_tourism.cta_text')}
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </motion.div>
         </div>
       </div>
