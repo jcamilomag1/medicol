@@ -17,7 +17,6 @@ export const HomePage = () => {
       <PriceSection />
       <TeamPreview />
       <ReviewSection />
-      <FeaturedTestimonials />
       <TransformationCTASection />
       <BlogPreview />
     </main>
