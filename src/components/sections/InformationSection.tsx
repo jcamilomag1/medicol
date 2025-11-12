@@ -102,7 +102,7 @@ export const InformationSection = () => {
             {/* CTA Button */}
             <Link 
               to="/experiencia"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-accent transition-colors group mt-6"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-primary border-2 border-primary rounded-full hover:bg-primary hover:text-white transition-all duration-300 group mt-6"
             >
               {t('medical_tourism.cta_text')}
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
