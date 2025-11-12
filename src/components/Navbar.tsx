@@ -31,6 +31,7 @@ const navLinks: NavLink[] = [
   },
   { href: '/experiencia', key: 'navbar.experience' },
   { href: '/equipo', key: 'navbar.team' },
+  { href: '/blog', key: 'navbar.blog' },
   { href: '/contacto', key: 'navbar.contact' },
 ];
 
