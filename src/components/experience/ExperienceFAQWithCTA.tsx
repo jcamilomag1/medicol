@@ -26,7 +26,7 @@ const ExperienceFAQWithCTA = () => {
   };
 
   return (
-    <section ref={ref} className="py-16 md:py-24 bg-background">
+    <section ref={ref} className="py-16 md:py-24 bg-muted/30">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid lg:grid-cols-[1.5fr_1fr] gap-8 lg:gap-12 items-start">
           {/* FAQ Section */}
