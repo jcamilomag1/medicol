@@ -6,10 +6,10 @@ export const TransformationCTASection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="py-12 sm:py-16 bg-gray-50">
+    <section className="bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <motion.div 
-          className="mt-10" 
+          className="" 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
