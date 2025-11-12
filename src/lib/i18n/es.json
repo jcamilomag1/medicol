@@ -676,6 +676,17 @@
       "whatsapp_message": "Hola, quiero hablar con el equipo de MediCol sobre mi viaje médico"
     }
   },
+  "medical_tourism": {
+    "badge": "Servicio Todo Incluido",
+    "title": "Servicio de Turismo Médico Todo Incluido",
+    "description": "La empresa funciona también como agencia de turismo médico, ofreciendo paquetes completos que garantizan atención integral y la mejor experiencia.",
+    "recovery_title": "Casa de Recuperación Premium",
+    "recovery_description": "Convenios con casas postquirúrgicas que incluyen: enfermera privada 24/7, alimentación personalizada según dieta médica, masajes, drenajes, manicure, pedicure, jacuzzi, turco, masajes de relajación y acompañamiento a zonas turísticas.",
+    "logistics_title": "Logística Completa",
+    "logistics_description": "Gestión de vuelos a precios preferenciales, alquiler de vehículos con chofer privado y opciones de hospedaje (apartamentos, casas u hoteles) en las mejores zonas de Medellín.",
+    "pricing_title": "Mejores Precios Garantizados",
+    "pricing_description": "Los clientes obtienen mejores precios y beneficios exclusivos al reservar todo a través de la empresa, gracias a nuestras alianzas estratégicas."
+  },
   "testimonials": {
     "video_title": "Lo que Dicen Nuestros Pacientes",
     "video_description": "Escucha las historias reales de quienes confiaron en nosotros."

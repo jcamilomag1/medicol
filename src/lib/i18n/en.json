@@ -676,6 +676,17 @@
       "whatsapp_message": "Hello, I want to talk to the MediCol team about my medical journey"
     }
   },
+  "medical_tourism": {
+    "badge": "All-Inclusive Service",
+    "title": "All-Inclusive Medical Tourism Service",
+    "description": "We also operate as a medical tourism agency, offering complete packages that guarantee comprehensive care and the best experience.",
+    "recovery_title": "Premium Recovery House",
+    "recovery_description": "Agreements with post-surgical houses that include: 24/7 private nurse, personalized meals according to medical diet, massages, drainage, manicure, pedicure, jacuzzi, Turkish bath, relaxation massages, and accompaniment to tourist areas.",
+    "logistics_title": "Complete Logistics",
+    "logistics_description": "Management of flights at preferential prices, vehicle rental with private driver, and accommodation options (apartments, houses, or hotels) in the best areas of Medellín.",
+    "pricing_title": "Best Prices Guaranteed",
+    "pricing_description": "Clients get better prices and exclusive benefits by booking everything through us, thanks to our strategic partnerships."
+  },
   "testimonials": {
     "video_title": "What Our Patients Say",
     "video_description": "Hear the real stories of those who trusted us."
