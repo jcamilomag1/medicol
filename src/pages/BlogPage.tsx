@@ -59,6 +59,11 @@ const BlogPage = () => {
                             src={post.image_url}
                             alt={title}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            onError={(e) => {
+                              const img = e.currentTarget as HTMLImageElement;
+                              img.onerror = null;
+                              img.src = '/placeholder.svg';
+                            }}
                           />
                           {post.category && (
                             <span className="absolute top-4 left-4 bg-accent text-accent-foreground text-xs font-semibold px-3 py-1 rounded-full">

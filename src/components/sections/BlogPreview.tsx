@@ -52,6 +52,11 @@ export const BlogPreview = () => {
                         src={post.image_url}
                         alt={title}
                         className="w-full rounded-2xl bg-gray-100 object-cover aspect-[16/9] group-hover:scale-[1.02] transition-transform duration-300"
+                        onError={(e) => {
+                          const img = e.currentTarget as HTMLImageElement;
+                          img.onerror = null;
+                          img.src = '/placeholder.svg';
+                        }}
                       />
                       <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
                     </div>
