@@ -6,12 +6,14 @@ import TeamTestimonialBanner from '@/components/team/TeamTestimonialBanner';
 import TeamMedicalSection from '@/components/team/TeamMedicalSection';
 import TeamProcessTimeline from '@/components/team/TeamProcessTimeline';
 import TeamCTASection from '@/components/team/TeamCTASection';
+import { TeamPreview } from '@/components/sections/TeamPreview';
 
 const TeamPage = () => {
   return (
     <Layout>
       <TeamHeroSection />
       <TeamSocialProof />
+      <TeamPreview />
       <TeamAdminSection />
       <TeamTestimonialBanner />
       <TeamMedicalSection />
