@@ -1088,5 +1088,106 @@
       "badge_3": "15+ Years in Medellín",
       "badge_4": "International Certifications"
     }
+  },
+  "experience": {
+    "hero": {
+      "title": "Making your medical journey as comfortable as your recovery",
+      "subtitle": "We accompany you every step with security, luxury, and personalized care",
+      "cta": "Learn More"
+    },
+    "timeline": {
+      "title": "The Medicol Patient Journey",
+      "description": "Your transformation, simplified. We accompany you every step with security, luxury, and personalized care. This is how we treat you like family.",
+      "steps": {
+        "step1": {
+          "title": "1. Free Virtual Consultation",
+          "subtitle": "Step 1: From Your Home",
+          "description": "Begin your journey with a confidential, no-cost virtual consultation. You'll speak with our experts to discuss your goals, clarify doubts, and understand your options.",
+          "items": [
+            "Review of your medical history and objectives.",
+            "Personalized recommendations from the medical team.",
+            "Technical explanation of procedures.",
+            "Transparent cost summary and financing options."
+          ]
+        },
+        "step2": {
+          "title": "2. Comprehensive Planning",
+          "subtitle": "Step 2: Premium Coordination",
+          "description": "Your personal 'Patient Host' handles all the logistics. We design your custom itinerary for a stress-free experience.",
+          "items": [
+            "Coordination of surgery and travel dates.",
+            "Booking at our private Recovery Houses or partner hotels.",
+            "Management of included surgery insurance.",
+            "Delivery of detailed itinerary and pre-operative guides."
+          ]
+        },
+        "step3": {
+          "title": "3. Your Welcome to Medellín",
+          "subtitle": "Step 3: Arrival and Accompaniment",
+          "description": "From the moment you land, we welcome you like family. Forget about language barriers or feeling alone.",
+          "items": [
+            "VIP airport pickup.",
+            "Private transfer with your driver and medical translator.",
+            "Assisted check-in at your Recovery House or hotel.",
+            "Delivery of welcome package and local SIM card."
+          ]
+        },
+        "step4": {
+          "title": "4. Pre-Operative Appointment",
+          "subtitle": "Step 4: Meet Your Surgeon",
+          "description": "Your in-person consultation at our world-class facilities. You'll meet your surgeon and anesthesia team in a JCI-accredited environment.",
+          "items": [
+            "In-person consultation with your plastic surgeon.",
+            "Required physical exams and medical tests.",
+            "Resolution of final doubts with your medical translator present.",
+            "Final confirmation of surgical plan."
+          ]
+        },
+        "step5": {
+          "title": "5. Your Transformation Day",
+          "subtitle": "Step 5: Safety and JCI Excellence",
+          "description": "Your procedure takes place in a state-of-the-art operating room, using advanced technology and under the highest international safety standards.",
+          "items": [
+            "Procedure at JCI-Accredited hospital.",
+            "Medical team with over 15 years of experience.",
+            "Anesthesia and monitoring by specialists.",
+            "Begin your recovery in an advanced monitoring room."
+          ]
+        },
+        "step6": {
+          "title": "6. Five-Star Recovery",
+          "subtitle": "Step 6: Comprehensive 24/7 Care",
+          "description": "This is where Medicol redefines care. Your recovery takes place in our exclusive private Recovery Houses, designed for your comfort and healing.",
+          "items": [
+            "Professional nursing care 24/7 by your side.",
+            "Personalized meals according to your medical diet.",
+            "Post-operative massages and lymphatic drainage included.",
+            "Medication management and compression garments.",
+            "Quiet, luxurious environment 100% focused on your well-being."
+          ],
+          "button": "See Our Recovery Houses"
+        },
+        "step7": {
+          "title": "7. Safe Return Home",
+          "subtitle": "Step 7: Authorization and Preparation",
+          "description": "Your surgeon will perform a final check-up to authorize your travel. We ensure you return home safely with all clear instructions.",
+          "items": [
+            "Final check-up and medical discharge from your surgeon.",
+            "Detailed home care instructions.",
+            "Private airport transfer with assistance."
+          ]
+        },
+        "step8": {
+          "title": "8. Continuous Follow-Up",
+          "subtitle": "Step 8: We Stay With You",
+          "description": "Your care doesn't end when you fly. We maintain constant contact to monitor your progress and ensure your results are optimal and lasting.",
+          "items": [
+            "Scheduled virtual check-ups with your medical team.",
+            "24/7 WhatsApp support for any questions.",
+            "Long-term recovery and lifestyle guidance."
+          ]
+        }
+      }
+    }
   }
 }

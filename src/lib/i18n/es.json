@@ -1088,5 +1088,106 @@
       "badge_3": "15+ Años en Medellín",
       "badge_4": "Certificaciones Internacionales"
     }
+  },
+  "experience": {
+    "hero": {
+      "title": "Hacemos que tu viaje médico sea tan cómodo como tu recuperación",
+      "subtitle": "Te acompañamos en cada paso con seguridad, lujo y cuidado personalizado",
+      "cta": "Ver más"
+    },
+    "timeline": {
+      "title": "El Viaje del Paciente Medicol",
+      "description": "Tu transformación, simplificada. Te acompañamos en cada paso con seguridad, lujo y cuidado personalizado. Así es como te tratamos como familia.",
+      "steps": {
+        "step1": {
+          "title": "1. Consulta Virtual Gratuita",
+          "subtitle": "Paso 1: Desde tu hogar",
+          "description": "Comienza tu viaje con una consulta virtual confidencial y sin costo. Hablarás con nuestros expertos para discutir tus metas, aclarar dudas y entender tus opciones.",
+          "items": [
+            "Revisión de tu historial médico y objetivos.",
+            "Recomendaciones personalizadas del equipo médico.",
+            "Explicación técnica de procedimientos.",
+            "Resumen de costos transparentes y opciones de financiamiento."
+          ]
+        },
+        "step2": {
+          "title": "2. Planificación Integral",
+          "subtitle": "Paso 2: Coordinación Premium",
+          "description": "Tu 'Anfitrión de Paciente' personal se encarga de toda la logística. Diseñamos tu itinerario a medida para una experiencia sin estrés.",
+          "items": [
+            "Coordinación de fechas de cirugía y viaje.",
+            "Reserva en nuestras Casas de Recuperación privadas o hoteles aliados.",
+            "Gestión del seguro de cirugía incluido.",
+            "Entrega de itinerario detallado y guías pre-operatorias."
+          ]
+        },
+        "step3": {
+          "title": "3. Tu Bienvenida a Medellín",
+          "subtitle": "Paso 3: Llegada y Acompañamiento",
+          "description": "Desde que aterrizas, te recibimos como familia. Olvídate de las barreras del idioma o de sentirte solo.",
+          "items": [
+            "Recogida VIP en el aeropuerto.",
+            "Traslado privado con tu conductor y traductor médico.",
+            "Check-in asistido en tu Casa de Recuperación u hotel.",
+            "Entrega de paquete de bienvenida y SIM card local."
+          ]
+        },
+        "step4": {
+          "title": "4. Cita Pre-Operatoria",
+          "subtitle": "Paso 4: Conoce a tu Cirujano",
+          "description": "Tu consulta presencial en nuestras instalaciones de clase mundial. Conocerás a tu cirujano y al equipo de anestesia en un entorno acreditado por JCI.",
+          "items": [
+            "Consulta en persona con tu cirujano plástico.",
+            "Exámenes físicos y pruebas médicas requeridas.",
+            "Resolución de últimas dudas con tu traductor médico presente.",
+            "Confirmación final del plan quirúrgico."
+          ]
+        },
+        "step5": {
+          "title": "5. El Día de tu Transformación",
+          "subtitle": "Paso 5: Seguridad y Excelencia JCI",
+          "description": "Tu procedimiento se realiza en un quirófano de última generación, utilizando tecnología avanzada y bajo los más altos estándares de seguridad internacional.",
+          "items": [
+            "Procedimiento en hospital con Acreditación JCI.",
+            "Equipo médico con más de 15 años de experiencia.",
+            "Anestesia y monitoreo por especialistas.",
+            "Inicio de tu recuperación en una sala de monitoreo avanzada."
+          ]
+        },
+        "step6": {
+          "title": "6. Recuperación 5 Estrellas",
+          "subtitle": "Paso 6: Cuidado Integral 24/7",
+          "description": "Aquí es donde Medicol redefine el cuidado. Tu recuperación se lleva a cabo en nuestras exclusivas Casas de Recuperación privadas, diseñadas para tu confort y sanación.",
+          "items": [
+            "Cuidado de enfermería profesional 24/7 a tu lado.",
+            "Alimentación personalizada según tu dieta médica.",
+            "Masajes post-operatorios y drenajes linfáticos incluidos.",
+            "Gestión de medicamentos y prendas de compresión.",
+            "Ambiente tranquilo, lujoso y 100% enfocado en tu bienestar."
+          ],
+          "button": "Ver nuestras Casas de Recuperación"
+        },
+        "step7": {
+          "title": "7. Regreso Seguro a Casa",
+          "subtitle": "Paso 7: Autorización y Preparación",
+          "description": "Tu cirujano realizará un chequeo final para autorizar tu viaje. Nos aseguramos de que regreses a casa de forma segura y con todas las indicaciones claras.",
+          "items": [
+            "Chequeo final y alta médica por parte de tu cirujano.",
+            "Instrucciones detalladas de cuidado en casa.",
+            "Traslado privado al aeropuerto con asistencia."
+          ]
+        },
+        "step8": {
+          "title": "8. Seguimiento Continuo",
+          "subtitle": "Paso 8: Seguimos Contigo",
+          "description": "Tu cuidado no termina cuando vuelas. Mantenemos contacto constante para monitorear tu progreso y asegurar que tus resultados sean óptimos y duraderos.",
+          "items": [
+            "Chequeos virtuales programados con tu equipo médico.",
+            "Soporte 24/7 vía WhatsApp para cualquier duda.",
+            "Guía de recuperación y estilo de vida a largo plazo."
+          ]
+        }
+      }
+    }
   }
 }
