@@ -36,7 +36,7 @@ export const ValueSection = () => {
             {/* Slot 2: Calidad Certificada */}
             <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2 backdrop-blur-md bg-gray-50/90 border border-gray-200/40 shadow-lg shadow-gray-200/50 ring-1 ring-gray-200/20 transition-all duration-300 ease-in-out hover:shadow-xl hover:shadow-gray-300/50 hover:-translate-y-1 hover:scale-[1.02] hover:ring-2 hover:ring-accent/20 hover:border-accent/30">
               <CardContent className="pt-4 md:pt-6">
-                <div className="relative mx-auto flex aspect-square size-24 md:size-32 rounded-full border border-blue-900 before:absolute before:-inset-2 before:rounded-full before:border before:border-blue-800">
+                <div className="relative mx-auto flex aspect-square size-24 md:size-32 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border dark:border-white/10 dark:before:border-white/5">
                   <ShieldCheck className="m-auto size-12 md:size-16 text-accent" strokeWidth={1.5} />
                 </div>
                 <div className="relative z-10 mt-4 md:mt-6 space-y-2 text-center">
@@ -49,7 +49,7 @@ export const ValueSection = () => {
             {/* Slot 3: Comunicación Sin Barreras */}
             <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2 backdrop-blur-md bg-gray-50/90 border border-gray-200/40 shadow-lg shadow-gray-200/50 ring-1 ring-gray-200/20 transition-all duration-300 ease-in-out hover:shadow-xl hover:shadow-gray-300/50 hover:-translate-y-1 hover:scale-[1.02] hover:ring-2 hover:ring-accent/20 hover:border-accent/30">
               <CardContent className="pt-4 md:pt-6">
-                <div className="relative mx-auto flex aspect-square size-24 md:size-32 rounded-full border border-blue-900 before:absolute before:-inset-2 before:rounded-full before:border before:border-blue-800">
+                <div className="relative mx-auto flex aspect-square size-24 md:size-32 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border dark:border-white/10 dark:before:border-white/5">
                   <Languages className="m-auto size-12 md:size-16 text-accent" strokeWidth={1.5} />
                 </div>
                 <div className="relative z-10 mt-4 md:mt-6 space-y-2 text-center">
@@ -63,7 +63,7 @@ export const ValueSection = () => {
             <Card className="relative col-span-full overflow-hidden lg:col-span-3 backdrop-blur-md bg-gray-50/90 border border-gray-200/40 shadow-lg shadow-gray-200/50 ring-1 ring-gray-200/20 transition-all duration-300 ease-in-out hover:shadow-xl hover:shadow-gray-300/50 hover:-translate-y-1 hover:scale-[1.02] hover:ring-2 hover:ring-accent/20 hover:border-accent/30">
               <CardContent className="grid pt-4 md:pt-6 sm:grid-cols-2">
                 <div className="relative z-10 flex flex-col justify-between space-y-8 md:space-y-12 lg:space-y-6">
-                  <div className="relative flex aspect-square size-12 rounded-full border border-blue-900 before:absolute before:-inset-2 before:rounded-full before:border before:border-blue-800">
+                  <div className="relative flex aspect-square size-12 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border dark:border-white/10 dark:before:border-white/5">
                     <TrendingDown className="m-auto size-5 text-accent" strokeWidth={1.5} />
                   </div>
                   <div className="space-y-2">
