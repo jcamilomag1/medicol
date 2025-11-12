@@ -10,14 +10,17 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { experienceFAQs } from '@/data/experience-faqs';
+import { experienceTexts } from '@/data/experience-texts';
 
 const ExperienceFAQWithCTA = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  
+  const isSpanish = i18n.language === 'es';
 
   const handleWhatsAppClick = () => {
-    const message = t('experience.cta.whatsapp_message');
+    const message = isSpanish ? experienceTexts.whatsapp_message_es : experienceTexts.whatsapp_message_en;
     window.open(`https://wa.me/573001234567?text=${encodeURIComponent(message)}`, '_blank');
   };
 
@@ -38,10 +41,10 @@ const ExperienceFAQWithCTA = () => {
           >
             <div className="space-y-3">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                {t('experience.faq.title')}
+                {isSpanish ? experienceTexts.faq_title_es : experienceTexts.faq_title_en}
               </h2>
               <p className="text-lg text-muted-foreground">
-                {t('experience.faq.subtitle')}
+                {isSpanish ? experienceTexts.faq_subtitle_es : experienceTexts.faq_subtitle_en}
               </p>
             </div>
 
@@ -80,10 +83,10 @@ const ExperienceFAQWithCTA = () => {
               <div className="relative z-10 space-y-6">
                 <div className="space-y-3">
                   <h3 className="text-2xl md:text-3xl font-bold text-white">
-                    {t('experience.cta.title')}
+                    {isSpanish ? experienceTexts.cta_title_es : experienceTexts.cta_title_en}
                   </h3>
                   <p className="text-white/90 leading-relaxed">
-                    {t('experience.cta.subtitle')}
+                    {isSpanish ? experienceTexts.cta_subtitle_es : experienceTexts.cta_subtitle_en}
                   </p>
                 </div>
 
@@ -94,7 +97,7 @@ const ExperienceFAQWithCTA = () => {
                     className="w-full bg-white text-primary hover:bg-white/90 font-semibold shadow-md"
                   >
                     <MessageCircle className="mr-2 h-5 w-5" />
-                    {t('experience.cta.whatsapp_button')}
+                    {isSpanish ? experienceTexts.whatsapp_button_es : experienceTexts.whatsapp_button_en}
                   </Button>
 
                   <Button
@@ -104,14 +107,14 @@ const ExperienceFAQWithCTA = () => {
                     className="w-full bg-white/10 text-white border-white/30 hover:bg-white/20 hover:text-white font-semibold"
                   >
                     <Phone className="mr-2 h-5 w-5" />
-                    {t('experience.cta.contact_button')}
+                    {isSpanish ? experienceTexts.contact_button_es : experienceTexts.contact_button_en}
                   </Button>
                 </div>
 
                 {/* Trust indicator */}
                 <div className="pt-4 border-t border-white/20">
                   <p className="text-sm text-white/80 text-center">
-                    ✓ Consulta virtual gratuita
+                    {isSpanish ? experienceTexts.trust_indicator_es : experienceTexts.trust_indicator_en}
                   </p>
                 </div>
               </div>
