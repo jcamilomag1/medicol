@@ -8,7 +8,7 @@ export const HeroSection = () => {
   const { t } = useTranslation();
   
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-[60vh] md:min-h-[70vh] flex items-center overflow-hidden">
       {/* Background Image with Animation */}
       <motion.div 
         className="absolute inset-0 z-0 overflow-hidden"
