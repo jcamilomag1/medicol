@@ -11,7 +11,7 @@ const TeamSocialProof = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = [
-    { icon: Users, value: 500, suffix: '+', label: t('team.socialProof.patients') },
+    { icon: Users, value: 200, suffix: '+', label: t('team.socialProof.patients') },
     { icon: Star, value: 4.9, suffix: '/5', label: t('team.socialProof.rating') },
     { icon: Award, value: 15, suffix: '+', label: t('team.socialProof.experience') },
     { icon: Globe, value: 20, suffix: '+', label: t('team.socialProof.countries') },
