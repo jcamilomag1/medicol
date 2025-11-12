@@ -51,7 +51,7 @@ export const HeroSection = () => {
       />
 
       {/* Content Container */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-6 py-12 md:py-16 lg:py-20">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-6 py-12 md:py-16 lg:py-20 pt-24 md:pt-28 lg:pt-32">
         <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-6 md:gap-8 lg:gap-8 items-center">
           
           {/* LEFT COLUMN - Main Content (70%) */}

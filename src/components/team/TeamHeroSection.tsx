@@ -19,7 +19,7 @@ const TeamHeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-accent/85" />
       
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 md:px-8 text-center">
+      <div className="relative z-10 container mx-auto px-4 md:px-8 text-center pt-24 md:pt-28 lg:pt-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
