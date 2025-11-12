@@ -9,7 +9,7 @@ export const ValueSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-white py-8 md:py-16">
+    <section className="bg-gradient-to-br from-background via-accent/5 to-primary/5 py-8 md:py-16">
       <div className="mx-auto max-w-5xl px-6 lg:max-w-7xl">
         <div className="mb-6 md:mb-12 text-center">
           <h1 className="text-3xl md:text-4xl font-bold text-primary">{t('value_proposition.section_title')}</h1>
@@ -17,7 +17,7 @@ export const ValueSection = () => {
         <div className="relative">
           <div className="relative z-10 grid grid-cols-6 gap-2 md:gap-3">
             {/* Slot 1: 100% Confiable */}
-            <Card className="relative col-span-full flex overflow-hidden lg:col-span-2">
+            <Card className="relative col-span-full flex overflow-hidden lg:col-span-2 backdrop-blur-md bg-white/80 border border-white/40 shadow-lg shadow-accent/5 ring-1 ring-accent/10">
               <CardContent className="relative m-auto size-fit pt-4 md:pt-6">
                 <div className="relative flex h-20 md:h-24 w-48 md:w-56 items-center">
                   <svg className="text-accent/30 absolute inset-0 size-full" viewBox="0 0 254 104" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,7 +34,7 @@ export const ValueSection = () => {
             </Card>
 
             {/* Slot 2: Calidad Certificada */}
-            <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2">
+            <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2 backdrop-blur-md bg-white/80 border border-white/40 shadow-lg shadow-accent/5 ring-1 ring-accent/10">
               <CardContent className="pt-4 md:pt-6">
                 <div className="relative mx-auto flex aspect-square size-24 md:size-32 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border dark:border-white/10 dark:before:border-white/5">
                   <ShieldCheck className="m-auto size-12 md:size-16 text-accent" strokeWidth={1.5} />
@@ -47,7 +47,7 @@ export const ValueSection = () => {
             </Card>
 
             {/* Slot 3: Comunicación Sin Barreras */}
-            <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2">
+            <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2 backdrop-blur-md bg-white/80 border border-white/40 shadow-lg shadow-accent/5 ring-1 ring-accent/10">
               <CardContent className="pt-4 md:pt-6">
                 <div className="relative mx-auto flex aspect-square size-24 md:size-32 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border dark:border-white/10 dark:before:border-white/5">
                   <Languages className="m-auto size-12 md:size-16 text-accent" strokeWidth={1.5} />
@@ -60,7 +60,7 @@ export const ValueSection = () => {
             </Card>
 
             {/* Slot 4: Ahorro Inteligente */}
-            <Card className="relative col-span-full overflow-hidden lg:col-span-3">
+            <Card className="relative col-span-full overflow-hidden lg:col-span-3 backdrop-blur-md bg-white/80 border border-white/40 shadow-lg shadow-accent/5 ring-1 ring-accent/10">
               <CardContent className="grid pt-4 md:pt-6 sm:grid-cols-2">
                 <div className="relative z-10 flex flex-col justify-between space-y-8 md:space-y-12 lg:space-y-6">
                   <div className="relative flex aspect-square size-12 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border dark:border-white/10 dark:before:border-white/5">
@@ -113,7 +113,7 @@ export const ValueSection = () => {
             </Card>
 
             {/* Slot 5: Satisfacción Excepcional */}
-            <Card className="relative col-span-full overflow-hidden lg:col-span-3">
+            <Card className="relative col-span-full overflow-hidden lg:col-span-3 backdrop-blur-md bg-white/80 border border-white/40 shadow-lg shadow-accent/5 ring-1 ring-accent/10">
               <CardContent className="grid h-full pt-4 md:pt-6 sm:grid-cols-2">
                 <div className="relative z-10 flex flex-col justify-between space-y-8 md:space-y-12 lg:space-y-6">
                   <div className="relative flex aspect-square size-12 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border dark:border-white/10 dark:before:border-white/5">
