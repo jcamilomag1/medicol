@@ -176,6 +176,10 @@
     "view_profile": "Ver más",
     "read_more": "Leer más"
   },
+  "floating_appointment": {
+    "button_text": "Agendar Cita",
+    "button_text_short": "Agendar"
+  },
   "countries": {
     "usa": "Estados Unidos",
     "canada": "Canadá",

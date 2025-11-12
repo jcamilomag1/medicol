@@ -176,6 +176,10 @@
     "view_profile": "View more",
     "read_more": "Read more"
   },
+  "floating_appointment": {
+    "button_text": "Schedule Appointment",
+    "button_text_short": "Schedule"
+  },
   "countries": {
     "usa": "United States",
     "canada": "Canada",
