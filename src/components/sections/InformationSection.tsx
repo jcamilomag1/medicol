@@ -48,7 +48,7 @@ export const InformationSection = () => {
             </div>
 
             {/* Title */}
-            <h2 className="text-4xl md:text-5xl font-bold text-primary leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
               {t('medical_tourism.title')}
             </h2>
 
