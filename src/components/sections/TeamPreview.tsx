@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Linkedin, Instagram } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Award, Languages } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import drGuerraImg from '@/assets/team/dr-guerra.png';
 import draDiazImg from '@/assets/team/dra-diaz.png';
@@ -12,89 +12,20 @@ import drGarciaImg from '@/assets/team/dr-garcia.png';
 import rnJaramilloImg from '@/assets/team/rn-jaramillo.png';
 import drOchoaImg from '@/assets/team/dr-ochoa.png';
 
-
 interface Doctor {
-  name: string;
-  specialtyKey: string;
-  experienceKey: string;
-  bioKey: string;
+  key: string;
   imageUrl: string;
-  profileUrl: string;
-  linkedinUrl?: string;
-  instagramUrl?: string;
 }
 
 const teamMembers: Doctor[] = [
-  {
-    name: 'Dr. Guerra',
-    specialtyKey: 'team.doctors.guerra.specialty',
-    experienceKey: 'team.doctors.guerra.experience',
-    bioKey: 'team.doctors.guerra.bio',
-    imageUrl: drGuerraImg,
-    profileUrl: '/equipo/dr-guerra',
-    linkedinUrl: '#',
-    instagramUrl: '#'
-  },
-  {
-    name: 'Dra. Diaz',
-    specialtyKey: 'team.doctors.diaz.specialty',
-    experienceKey: 'team.doctors.diaz.experience',
-    bioKey: 'team.doctors.diaz.bio',
-    imageUrl: draDiazImg,
-    profileUrl: '/equipo/dra-diaz',
-    linkedinUrl: '#',
-    instagramUrl: '#'
-  },
-  {
-    name: 'Dra. Botero',
-    specialtyKey: 'team.doctors.botero.specialty',
-    experienceKey: 'team.doctors.botero.experience',
-    bioKey: 'team.doctors.botero.bio',
-    imageUrl: draBoteroImg,
-    profileUrl: '/equipo/dra-botero',
-    linkedinUrl: '#',
-    instagramUrl: '#'
-  },
-  {
-    name: 'Dr. Daza',
-    specialtyKey: 'team.doctors.daza.specialty',
-    experienceKey: 'team.doctors.daza.experience',
-    bioKey: 'team.doctors.daza.bio',
-    imageUrl: drDazaImg,
-    profileUrl: '/equipo/dr-daza',
-    linkedinUrl: '#',
-    instagramUrl: '#'
-  },
-  {
-    name: 'Dr. Arango',
-    specialtyKey: 'team.doctors.arango.specialty',
-    experienceKey: 'team.doctors.arango.experience',
-    bioKey: 'team.doctors.arango.bio',
-    imageUrl: drArangoImg,
-    profileUrl: '/equipo/dr-arango',
-    linkedinUrl: '#',
-    instagramUrl: '#'
-  },
-  {
-    name: 'Dr. García',
-    specialtyKey: 'team.doctors.garcia.specialty',
-    experienceKey: 'team.doctors.garcia.experience',
-    bioKey: 'team.doctors.garcia.bio',
-    imageUrl: drGarciaImg,
-    profileUrl: '/equipo/dr-garcia',
-    linkedinUrl: '#',
-    instagramUrl: '#'
-  },
-  {
-    name: 'Rn. Jaramillo',
-    specialtyKey: 'team.doctors.jaramillo.specialty',
-    experienceKey: 'team.doctors.jaramillo.experience',
-    bioKey: 'team.doctors.jaramillo.bio',
-    imageUrl: rnJaramilloImg,
-    profileUrl: '/equipo/rn-jaramillo',
-    linkedinUrl: '#',
-    instagramUrl: '#'
-  }
+  { key: 'guerra', imageUrl: drGuerraImg },
+  { key: 'diaz', imageUrl: draDiazImg },
+  { key: 'botero', imageUrl: draBoteroImg },
+  { key: 'daza', imageUrl: drDazaImg },
+  { key: 'arango', imageUrl: drArangoImg },
+  { key: 'garcia', imageUrl: drGarciaImg },
+  { key: 'lina', imageUrl: rnJaramilloImg },
+  { key: 'ochoa', imageUrl: drOchoaImg }
 ];
 
 export const TeamPreview = () => {
@@ -147,7 +78,7 @@ export const TeamPreview = () => {
             <motion.img
               key={currentDoctor.imageUrl}
               src={currentDoctor.imageUrl}
-              alt={currentDoctor.name}
+              alt={t(`team.medical.${currentDoctor.key}.name`)}
               loading="lazy"
               decoding="async"
               className="w-full h-full object-cover"
@@ -174,7 +105,7 @@ export const TeamPreview = () => {
         >
           <AnimatePresence mode="wait">
             <motion.div
-              key={currentDoctor.name}
+              key={currentDoctor.key}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -185,65 +116,77 @@ export const TeamPreview = () => {
               <div className="w-28 bg-accent/10 flex items-center justify-center p-6 border-r border-border/30">
                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-accent/30 to-accent/10 backdrop-blur-sm border-2 border-accent/40 flex items-center justify-center">
                   <span className="text-2xl font-bold text-accent">
-                    {currentDoctor.name.split(' ').map(n => n[0]).join('')}
+                    {t(`team.medical.${currentDoctor.key}.name`).split(' ').map(n => n[0]).join('')}
                   </span>
                 </div>
               </div>
               
               {/* Right Side - Info */}
-              <div className="flex-1 p-8">
+              <div className="flex-1 p-6 overflow-y-auto max-h-[470px]">
                 {/* Name */}
-                <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-                  {currentDoctor.name}
+                <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+                  {t(`team.medical.${currentDoctor.key}.name`)}
                 </h3>
                 
-                {/* Two Column Layout for Specialty & Experience */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="space-y-1">
-                    <p className="text-xs text-muted-foreground uppercase tracking-wide">{t('team.specialty_label')}</p>
-                    <p className="text-sm font-semibold text-accent">
-                      {t(currentDoctor.specialtyKey)}
-                    </p>
+                {/* Specialty */}
+                <p className="text-sm font-semibold text-accent mb-4">
+                  {t(`team.medical.${currentDoctor.key}.specialty`)}
+                </p>
+                
+                {/* Philosophy Quote */}
+                <div className="mb-4 pl-3 border-l-2 border-accent/40">
+                  <p className="text-sm italic text-muted-foreground leading-relaxed">
+                    "{t(`team.medical.${currentDoctor.key}.philosophy`)}"
+                  </p>
+                </div>
+                
+                {/* Credentials */}
+                <div className="space-y-3 mb-4">
+                  <div className="flex items-start gap-2">
+                    <Award className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <div className="text-xs">
+                      <p className="font-semibold text-foreground">{t('team.medical.membership')}</p>
+                      <p className="text-muted-foreground">{t(`team.medical.${currentDoctor.key}.membership`)}</p>
+                    </div>
                   </div>
-                  <div className="space-y-1">
-                    <p className="text-xs text-muted-foreground uppercase tracking-wide">{t('team.experience_label')}</p>
-                    <p className="text-sm font-semibold text-foreground">
-                      {t(currentDoctor.experienceKey)}
-                    </p>
+                  
+                  <div className="flex items-start gap-2">
+                    <Award className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <div className="text-xs">
+                      <p className="font-semibold text-foreground">{t('team.medical.education')}</p>
+                      <p className="text-muted-foreground">{t(`team.medical.${currentDoctor.key}.education`)}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-2">
+                    <Award className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <div className="text-xs">
+                      <p className="font-semibold text-foreground">{t('team.medical.experienceLabel')}</p>
+                      <p className="text-muted-foreground">{t(`team.medical.${currentDoctor.key}.experience`)}</p>
+                    </div>
                   </div>
                 </div>
                 
-                {/* Separator */}
-                <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent mb-6" />
+                {/* Treatments */}
+                <div className="mb-4">
+                  <p className="text-xs font-semibold text-foreground mb-2">{t('team.medical.treatments')}</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {t(`team.medical.${currentDoctor.key}.treatmentsList`, { returnObjects: true }) instanceof Array && 
+                      (t(`team.medical.${currentDoctor.key}.treatmentsList`, { returnObjects: true }) as string[]).map((treatment, idx) => (
+                        <span key={idx} className="px-2 py-0.5 bg-slate-800 text-white rounded-full text-xs border border-slate-700">
+                          {treatment}
+                        </span>
+                      ))
+                    }
+                  </div>
+                </div>
                 
-                {/* View Profile Button with Animated Gradient */}
-                <motion.a
-                  href="/equipo"
-                  className="
-                    relative block w-full px-6 py-3 rounded-full text-center
-                    bg-gradient-to-r from-accent to-accent/80
-                    text-white font-semibold
-                    overflow-hidden group
-                    transition-all duration-300
-                  "
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <span className="relative z-10">{t('common.view_profile')}</span>
-                  <motion.span
-                    className="inline-block ml-2 relative z-10"
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  >
-                    →
-                  </motion.span>
-                  {/* Shimmer effect */}
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                    animate={{ x: ['-100%', '100%'] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                  />
-                </motion.a>
+                {/* Languages */}
+                <div className="flex items-center gap-2 text-xs">
+                  <Languages className="w-4 h-4 text-accent" />
+                  <span className="font-semibold text-foreground">{t('team.medical.languages')}:</span>
+                  <span className="text-muted-foreground">{t(`team.medical.${currentDoctor.key}.languages`)}</span>
+                </div>
               </div>
             </motion.div>
           </AnimatePresence>
@@ -263,7 +206,7 @@ export const TeamPreview = () => {
             <motion.img
               key={currentDoctor.imageUrl}
               src={currentDoctor.imageUrl}
-              alt={currentDoctor.name}
+              alt={t(`team.medical.${currentDoctor.key}.name`)}
               loading="lazy"
               decoding="async"
               className="w-full h-full object-cover"
@@ -279,7 +222,7 @@ export const TeamPreview = () => {
         <div className="px-4">
           <AnimatePresence mode="wait">
             <motion.div
-              key={currentDoctor.name}
+              key={currentDoctor.key}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -290,65 +233,77 @@ export const TeamPreview = () => {
               <div className="bg-accent/10 flex items-center justify-center py-6 border-b border-border/30">
                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-accent/30 to-accent/10 backdrop-blur-sm border-2 border-accent/40 flex items-center justify-center">
                   <span className="text-2xl font-bold text-accent">
-                    {currentDoctor.name.split(' ').map(n => n[0]).join('')}
+                    {t(`team.medical.${currentDoctor.key}.name`).split(' ').map(n => n[0]).join('')}
                   </span>
                 </div>
               </div>
               
               {/* Bottom - Info */}
-              <div className="p-6">
+              <div className="p-5 overflow-y-auto max-h-[600px]">
                 {/* Name */}
-                <h3 className="text-2xl font-bold text-center mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-                  {currentDoctor.name}
+                <h3 className="text-xl font-bold text-center mb-2 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+                  {t(`team.medical.${currentDoctor.key}.name`)}
                 </h3>
                 
-                {/* Two Column Layout for Specialty & Experience */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="space-y-1 text-center">
-                    <p className="text-xs text-muted-foreground uppercase tracking-wide">Especialidad</p>
-                    <p className="text-sm font-semibold text-accent">
-                      {t(currentDoctor.specialtyKey)}
-                    </p>
+                {/* Specialty */}
+                <p className="text-sm font-semibold text-accent text-center mb-4">
+                  {t(`team.medical.${currentDoctor.key}.specialty`)}
+                </p>
+                
+                {/* Philosophy Quote */}
+                <div className="mb-4 pl-3 border-l-2 border-accent/40">
+                  <p className="text-xs italic text-muted-foreground leading-relaxed">
+                    "{t(`team.medical.${currentDoctor.key}.philosophy`)}"
+                  </p>
+                </div>
+                
+                {/* Credentials */}
+                <div className="space-y-3 mb-4">
+                  <div className="flex items-start gap-2">
+                    <Award className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <div className="text-xs">
+                      <p className="font-semibold text-foreground">{t('team.medical.membership')}</p>
+                      <p className="text-muted-foreground">{t(`team.medical.${currentDoctor.key}.membership`)}</p>
+                    </div>
                   </div>
-                  <div className="space-y-1 text-center">
-                    <p className="text-xs text-muted-foreground uppercase tracking-wide">Experiencia</p>
-                    <p className="text-sm font-semibold text-foreground">
-                      {t(currentDoctor.experienceKey)}
-                    </p>
+                  
+                  <div className="flex items-start gap-2">
+                    <Award className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <div className="text-xs">
+                      <p className="font-semibold text-foreground">{t('team.medical.education')}</p>
+                      <p className="text-muted-foreground">{t(`team.medical.${currentDoctor.key}.education`)}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-2">
+                    <Award className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <div className="text-xs">
+                      <p className="font-semibold text-foreground">{t('team.medical.experienceLabel')}</p>
+                      <p className="text-muted-foreground">{t(`team.medical.${currentDoctor.key}.experience`)}</p>
+                    </div>
                   </div>
                 </div>
                 
-                {/* Separator */}
-                <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent mb-6" />
+                {/* Treatments */}
+                <div className="mb-4">
+                  <p className="text-xs font-semibold text-foreground mb-2">{t('team.medical.treatments')}</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {t(`team.medical.${currentDoctor.key}.treatmentsList`, { returnObjects: true }) instanceof Array && 
+                      (t(`team.medical.${currentDoctor.key}.treatmentsList`, { returnObjects: true }) as string[]).map((treatment, idx) => (
+                        <span key={idx} className="px-2 py-0.5 bg-slate-800 text-white rounded-full text-xs border border-slate-700">
+                          {treatment}
+                        </span>
+                      ))
+                    }
+                  </div>
+                </div>
                 
-                {/* View Profile Button with Animated Gradient */}
-                <motion.a
-                  href="/equipo"
-                  className="
-                    relative block w-full px-6 py-3 rounded-full text-center
-                    bg-gradient-to-r from-accent to-accent/80
-                    text-white font-semibold
-                    overflow-hidden group
-                    transition-all duration-300
-                  "
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <span className="relative z-10">{t('common.view_profile')}</span>
-                  <motion.span
-                    className="inline-block ml-2 relative z-10"
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  >
-                    →
-                  </motion.span>
-                  {/* Shimmer effect */}
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                    animate={{ x: ['-100%', '100%'] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                  />
-                </motion.a>
+                {/* Languages */}
+                <div className="flex items-center gap-2 text-xs">
+                  <Languages className="w-4 h-4 text-accent" />
+                  <span className="font-semibold text-foreground">{t('team.medical.languages')}:</span>
+                  <span className="text-muted-foreground">{t(`team.medical.${currentDoctor.key}.languages`)}</span>
+                </div>
               </div>
             </motion.div>
           </AnimatePresence>
