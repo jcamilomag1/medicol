@@ -141,14 +141,6 @@ export const Navbar = () => {
                 </Link>
               );
             })}
-            {isAdmin && (
-              <Link
-                to="/admin"
-                className="text-white hover:text-accent transition-colors duration-200 font-medium"
-              >
-                Admin
-              </Link>
-            )}
           </nav>
 
           {/* Right Side Controls (Desktop) */}
