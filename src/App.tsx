@@ -20,7 +20,6 @@ const BlogPage = lazy(() => import('./pages/BlogPage'));
 const BlogPostPage = lazy(() => import('./pages/BlogPostPage'));
 const AuthPage = lazy(() => import('./pages/AuthPage'));
 const DashboardPage = lazy(() => import('./pages/admin/DashboardPage'));
-const BlogPostsAdmin = lazy(() => import('./pages/admin/BlogPostsAdmin'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 const queryClient = new QueryClient();
@@ -58,7 +57,6 @@ const App = () => (
               <Route path="/blog/:slug" element={<BlogPostPage />} />
               <Route path="/auth" element={<AuthPage />} />
               <Route path="/admin" element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} />
-              <Route path="/admin/posts" element={<ProtectedRoute><BlogPostsAdmin /></ProtectedRoute>} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
