@@ -52,9 +52,9 @@ export const useUpdateUser = () => {
 
   return useMutation({
     mutationFn: async ({ userId, ...userData }: { userId: string; password?: string; role?: string }) => {
-      const { data, error } = await supabase.functions.invoke(`admin-users/${userId}`, {
+      const { data, error } = await supabase.functions.invoke('admin-users', {
         method: 'PATCH',
-        body: userData,
+        body: { userId, ...userData },
       });
 
       if (error) throw error;
@@ -65,7 +65,8 @@ export const useUpdateUser = () => {
       toast.success("Usuario actualizado exitosamente");
     },
     onError: (error: any) => {
-      toast.error(error.message || "Error al actualizar usuario");
+      const errorMessage = error?.message || error?.context?.body?.error || "Error al actualizar usuario";
+      toast.error(errorMessage);
     },
   });
 };
@@ -75,8 +76,9 @@ export const useDeleteUser = () => {
 
   return useMutation({
     mutationFn: async (userId: string) => {
-      const { data, error } = await supabase.functions.invoke(`admin-users/${userId}`, {
+      const { data, error } = await supabase.functions.invoke('admin-users', {
         method: 'DELETE',
+        body: { userId },
       });
 
       if (error) throw error;
@@ -87,7 +89,8 @@ export const useDeleteUser = () => {
       toast.success("Usuario eliminado exitosamente");
     },
     onError: (error: any) => {
-      toast.error(error.message || "Error al eliminar usuario");
+      const errorMessage = error?.message || error?.context?.body?.error || "Error al eliminar usuario";
+      toast.error(errorMessage);
     },
   });
 };
