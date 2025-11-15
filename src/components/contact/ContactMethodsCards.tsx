@@ -111,11 +111,7 @@ export const ContactMethodsCards = () => {
                   onClick={card.action}
                   disabled={card.disabled}
                   size="lg"
-                  className={`w-full ${
-                    card.disabled
-                      ? 'bg-gradient-to-r from-gray-400 to-gray-500 text-white/70 cursor-not-allowed opacity-60'
-                      : `bg-gradient-to-r ${card.gradient} text-white hover:opacity-90 font-semibold shadow-lg transition-opacity`
-                  }`}
+                  className="w-full bg-muted hover:bg-muted/80 text-foreground font-semibold transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {card.buttonText}
                 </Button>
