@@ -9,22 +9,12 @@ export interface User {
   roles: string[];
 }
 
-const getAuthHeader = async () => {
-  const { data: { session } } = await supabase.auth.getSession();
-  return session?.access_token ? `Bearer ${session.access_token}` : '';
-};
-
 export const useUsers = () => {
   return useQuery({
     queryKey: ["admin-users"],
     queryFn: async () => {
-      const authHeader = await getAuthHeader();
-      
       const { data, error } = await supabase.functions.invoke('admin-users', {
         method: 'GET',
-        headers: {
-          Authorization: authHeader,
-        },
       });
 
       if (error) throw error;
@@ -38,13 +28,8 @@ export const useCreateUser = () => {
 
   return useMutation({
     mutationFn: async (userData: { email: string; password: string; role: string }) => {
-      const authHeader = await getAuthHeader();
-
       const { data, error } = await supabase.functions.invoke('admin-users', {
         method: 'POST',
-        headers: {
-          Authorization: authHeader,
-        },
         body: userData,
       });
 
@@ -66,13 +51,8 @@ export const useUpdateUser = () => {
 
   return useMutation({
     mutationFn: async ({ userId, ...userData }: { userId: string; password?: string; role?: string }) => {
-      const authHeader = await getAuthHeader();
-
       const { data, error } = await supabase.functions.invoke(`admin-users/${userId}`, {
         method: 'PATCH',
-        headers: {
-          Authorization: authHeader,
-        },
         body: userData,
       });
 
@@ -94,13 +74,8 @@ export const useDeleteUser = () => {
 
   return useMutation({
     mutationFn: async (userId: string) => {
-      const authHeader = await getAuthHeader();
-
       const { data, error } = await supabase.functions.invoke(`admin-users/${userId}`, {
         method: 'DELETE',
-        headers: {
-          Authorization: authHeader,
-        },
       });
 
       if (error) throw error;
