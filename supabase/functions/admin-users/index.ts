@@ -15,21 +15,24 @@ serve(async (req) => {
   try {
     const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
     const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
-    const authHeader = req.headers.get('Authorization')!;
 
-    // Cliente con privilegios de servicio para operaciones de auth
+    const rawAuth = req.headers.get('Authorization') || req.headers.get('authorization') || '';
+    const isBearer = rawAuth.toLowerCase().startsWith('bearer ');
+    if (!isBearer) {
+      return new Response(
+        JSON.stringify({ error: 'Usuario no autenticado' }),
+        { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+    const token = rawAuth.slice(7).trim();
+
+    // Cliente con privilegios de servicio para operaciones seguras
     const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey, {
-      auth: {
-        autoRefreshToken: false,
-        persistSession: false
-      }
+      auth: { autoRefreshToken: false, persistSession: false }
     });
-    
-    // Verificar que el usuario esté autenticado usando el admin client
-    const { data: { user }, error: userError } = await supabaseAdmin.auth.getUser(
-      authHeader.replace('Bearer ', '')
-    );
-    
+
+    // Verificar JWT
+    const { data: { user }, error: userError } = await supabaseAdmin.auth.getUser(token);
     if (userError || !user) {
       console.error('Auth error:', userError);
       return new Response(
