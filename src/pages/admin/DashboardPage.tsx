@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AdminLayout } from "@/components/admin/AdminLayout";
 import { Plus } from "lucide-react";
-import { useAllBlogPosts, BlogPost } from "@/hooks/useBlogPosts";
+import { useAllBlogPostsAdmin, BlogPost } from "@/hooks/useBlogPosts";
 import { Button } from "@/components/ui/button";
 import { BlogPostTable } from "@/components/admin/BlogPostTable";
 import { BlogPostForm } from "@/components/admin/BlogPostForm";
@@ -25,7 +25,7 @@ import { useIsAdmin } from "@/hooks/useUserRole";
 const DashboardPage = () => {
   const { user } = useAuth();
   const { isAdmin } = useIsAdmin(user?.id);
-  const { data: posts, isLoading } = useAllBlogPosts();
+  const { data: posts, isLoading } = useAllBlogPostsAdmin();
   const queryClient = useQueryClient();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
