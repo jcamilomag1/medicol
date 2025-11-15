@@ -42,12 +42,6 @@ export const AdminLayout = ({ children }: AdminLayoutProps) => {
                 Dashboard
               </Button>
             </Link>
-            <Link to="/admin/posts">
-              <Button variant="ghost" className="w-full justify-start">
-                <FileText className="h-4 w-4 mr-2" />
-                Blog Posts
-              </Button>
-            </Link>
           </nav>
         </aside>
 
