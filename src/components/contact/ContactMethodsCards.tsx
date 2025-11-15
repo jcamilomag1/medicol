@@ -78,11 +78,11 @@ export const ContactMethodsCards = () => {
               whileHover={{ scale: card.disabled ? 1 : 1.05 }}
               className="relative group"
             >
-              <div className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${card.gradient} p-8 h-full shadow-2xl border border-white/20 backdrop-blur-xl`}>
+              <div className="relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-lg p-8 h-full shadow-2xl border border-white/10">
                 {/* Badge for AI Agent */}
                 {card.badge && (
                   <div className="absolute top-4 right-4">
-                    <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
+                    <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
                       {card.badge}
                     </Badge>
                   </div>
@@ -90,16 +90,16 @@ export const ContactMethodsCards = () => {
 
                 {/* Icon */}
                 <div className="mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                    <card.icon className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 rounded-2xl bg-primary/10 backdrop-blur-sm flex items-center justify-center">
+                    <card.icon className="w-8 h-8 text-primary" />
                   </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-bold text-white mb-3">
+                <h3 className="text-2xl font-bold text-primary mb-3">
                   {card.title}
                 </h3>
-                <p className="text-white/90 mb-6 min-h-[60px]">
+                <p className="text-foreground/80 mb-6 min-h-[60px]">
                   {card.description}
                 </p>
 
@@ -110,8 +110,8 @@ export const ContactMethodsCards = () => {
                   size="lg"
                   className={`w-full ${
                     card.disabled
-                      ? 'bg-white/20 text-white/50 cursor-not-allowed hover:bg-white/20'
-                      : 'bg-white text-primary hover:bg-white/90 font-semibold shadow-lg'
+                      ? 'bg-gradient-to-r from-gray-400 to-gray-500 text-white/70 cursor-not-allowed opacity-60'
+                      : `bg-gradient-to-r ${card.gradient} text-white hover:opacity-90 font-semibold shadow-lg transition-opacity`
                   }`}
                 >
                   {card.buttonText}
