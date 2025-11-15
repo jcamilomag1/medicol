@@ -1,24 +1,20 @@
 import Layout from '@/components/Layout';
 import { ContactHeroSection } from '@/components/contact/ContactHeroSection';
-import { QuickContactBar } from '@/components/contact/QuickContactBar';
-import { ContactMethodsSection } from '@/components/contact/ContactMethodsSection';
-import { ContactInfoAndMap } from '@/components/contact/ContactInfoAndMap';
-import { ContactFormSimplified } from '@/components/contact/ContactFormSimplified';
-import { ContactFAQ } from '@/components/contact/ContactFAQ';
-import { TrustAndStats } from '@/components/contact/TrustAndStats';
-import { EmergencyContact } from '@/components/contact/EmergencyContact';
+import { ContactMethodsCards } from '@/components/contact/ContactMethodsCards';
+import { ContactInfoGrid } from '@/components/contact/ContactInfoGrid';
+import { ContactMap } from '@/components/contact/ContactMap';
+import { ContactForm } from '@/components/contact/ContactForm';
+import { ContactTrustSection } from '@/components/contact/ContactTrustSection';
 
 const ContactPage = () => {
   return (
     <Layout>
       <ContactHeroSection />
-      <QuickContactBar />
-      <ContactMethodsSection />
-      <ContactInfoAndMap />
-      <ContactFormSimplified />
-      <ContactFAQ />
-      <TrustAndStats />
-      <EmergencyContact />
+      <ContactMethodsCards />
+      <ContactInfoGrid />
+      <ContactMap />
+      <ContactForm />
+      <ContactTrustSection />
     </Layout>
   );
 };
