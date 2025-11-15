@@ -9,6 +9,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { toast } from 'sonner';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, 'El nombre debe tener al menos 2 caracteres').max(100),
@@ -52,43 +53,83 @@ export const ContactForm = () => {
     'Consulta General'
   ];
 
+  const contactMethods = [
+    {
+      icon: Mail,
+      contact: t('contact.info.email_address'),
+    },
+    {
+      icon: Phone,
+      contact: t('contact.info.phone_number'),
+    },
+    {
+      icon: MapPin,
+      contact: t('contact.info.location_address'),
+    },
+  ];
+
   return (
     <section className="py-16 md:py-24 bg-muted/30">
-      <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-            {t('contact.form.title')}
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            {t('contact.form.subtitle')}
-          </p>
-        </motion.div>
+      <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+        <div className="max-w-lg mx-auto gap-12 justify-between lg:flex lg:max-w-none">
+          
+          {/* COLUMNA IZQUIERDA - Información */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-lg space-y-3"
+          >
+            {/* Badge */}
+            <span className="inline-block px-3 py-1.5 text-xs border border-primary/30 rounded-full text-primary font-medium bg-primary/5">
+              {t('contact.form.badge', 'Contacto')}
+            </span>
+            
+            {/* Título */}
+            <h3 className="text-primary text-3xl font-semibold sm:text-4xl">
+              {t('contact.form.title')}
+            </h3>
+            
+            {/* Subtítulo */}
+            <p className="text-muted-foreground">
+              {t('contact.form.subtitle')}
+            </p>
+            
+            {/* Lista de métodos de contacto */}
+            <div>
+              <ul className="mt-6 flex flex-wrap gap-x-10 gap-y-6 items-center">
+                {contactMethods.map((item, idx) => (
+                  <li key={idx} className="flex items-center gap-x-3">
+                    <div className="flex-none text-primary">
+                      <item.icon className="w-6 h-6" />
+                    </div>
+                    <p className="text-foreground">{item.contact}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="max-w-2xl mx-auto"
-        >
-          <form onSubmit={handleSubmit(onSubmit)} className="bg-card rounded-3xl p-8 md:p-10 shadow-2xl border border-border">
-            <div className="space-y-6">
+          {/* COLUMNA DERECHA - Formulario */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex-1 mt-12 sm:max-w-lg lg:max-w-md"
+          >
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
               {/* Name */}
               <div>
-                <Label htmlFor="name" className="text-foreground">
+                <Label htmlFor="name" className="font-medium">
                   {t('contact.form.name_label')}
                 </Label>
                 <Input
                   id="name"
                   {...register('name')}
                   placeholder={t('contact.form.name_placeholder')}
-                  className="mt-2"
+                  className="w-full mt-2 px-3 py-2 bg-background border border-input focus:border-primary shadow-sm rounded-lg"
                 />
                 {errors.name && (
                   <p className="text-destructive text-sm mt-1">{errors.name.message}</p>
@@ -97,7 +138,7 @@ export const ContactForm = () => {
 
               {/* Email */}
               <div>
-                <Label htmlFor="email" className="text-foreground">
+                <Label htmlFor="email" className="font-medium">
                   {t('contact.form.email_label')}
                 </Label>
                 <Input
@@ -105,7 +146,7 @@ export const ContactForm = () => {
                   type="email"
                   {...register('email')}
                   placeholder={t('contact.form.email_placeholder')}
-                  className="mt-2"
+                  className="w-full mt-2 px-3 py-2 bg-background border border-input focus:border-primary shadow-sm rounded-lg"
                 />
                 {errors.email && (
                   <p className="text-destructive text-sm mt-1">{errors.email.message}</p>
@@ -114,7 +155,7 @@ export const ContactForm = () => {
 
               {/* Phone */}
               <div>
-                <Label htmlFor="phone" className="text-foreground">
+                <Label htmlFor="phone" className="font-medium">
                   {t('contact.form.phone_label')}
                 </Label>
                 <Input
@@ -122,7 +163,7 @@ export const ContactForm = () => {
                   type="tel"
                   {...register('phone')}
                   placeholder={t('contact.form.phone_placeholder')}
-                  className="mt-2"
+                  className="w-full mt-2 px-3 py-2 bg-background border border-input focus:border-primary shadow-sm rounded-lg"
                 />
                 {errors.phone && (
                   <p className="text-destructive text-sm mt-1">{errors.phone.message}</p>
@@ -131,11 +172,11 @@ export const ContactForm = () => {
 
               {/* Service */}
               <div>
-                <Label htmlFor="service" className="text-foreground">
+                <Label htmlFor="service" className="font-medium">
                   {t('contact.form.service_label')}
                 </Label>
                 <Select onValueChange={(value) => setValue('service', value)}>
-                  <SelectTrigger className="mt-2">
+                  <SelectTrigger className="w-full mt-2 px-3 py-2 bg-background border border-input focus:border-primary shadow-sm rounded-lg">
                     <SelectValue placeholder={t('contact.form.service_placeholder')} />
                   </SelectTrigger>
                   <SelectContent>
@@ -153,14 +194,14 @@ export const ContactForm = () => {
 
               {/* Message */}
               <div>
-                <Label htmlFor="message" className="text-foreground">
+                <Label htmlFor="message" className="font-medium">
                   {t('contact.form.message_label')}
                 </Label>
                 <Textarea
                   id="message"
                   {...register('message')}
                   placeholder={t('contact.form.message_placeholder')}
-                  className="mt-2 min-h-[120px]"
+                  className="w-full mt-2 h-36 px-3 py-2 resize-none bg-background border border-input focus:border-primary shadow-sm rounded-lg"
                 />
                 {errors.message && (
                   <p className="text-destructive text-sm mt-1">{errors.message.message}</p>
@@ -171,14 +212,14 @@ export const ContactForm = () => {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                size="lg"
-                className="w-full bg-accent hover:bg-accent/90 text-white font-semibold"
+                className="w-full px-4 py-2 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg"
               >
                 {isSubmitting ? t('contact.form.sending') : t('contact.form.submit_button')}
               </Button>
-            </div>
-          </form>
-        </motion.div>
+            </form>
+          </motion.div>
+          
+        </div>
       </div>
     </section>
   );
