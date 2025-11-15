@@ -124,7 +124,26 @@ serve(async (req) => {
 
       if (createError) {
         console.error('Error creating user:', createError);
-        throw createError;
+        
+        // Manejar errores específicos de creación de usuario
+        let errorMessage = 'Error al crear usuario';
+        let statusCode = 500;
+        
+        if (createError.message.includes('already been registered')) {
+          errorMessage = 'Este email ya está registrado';
+          statusCode = 409; // Conflict
+        } else if (createError.message.includes('email')) {
+          errorMessage = 'Email inválido';
+          statusCode = 400;
+        } else if (createError.message.includes('password')) {
+          errorMessage = 'Contraseña inválida';
+          statusCode = 400;
+        }
+        
+        return new Response(
+          JSON.stringify({ error: errorMessage }),
+          { status: statusCode, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        );
       }
 
       // Asignar rol
