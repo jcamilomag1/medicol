@@ -166,7 +166,7 @@ export const Footer = () => {
           <div className="flex items-center justify-center sm:justify-start">
             <Link
               to="/admin"
-              className="text-xs text-white hover:text-accent transition-colors duration-200 font-medium px-4 py-2 border border-white/20 rounded-md hover:border-accent/50"
+              className="text-xs text-gray-400 hover:text-white transition-colors duration-200"
             >
               Admin
             </Link>
