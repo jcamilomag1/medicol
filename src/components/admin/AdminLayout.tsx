@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
-import { LogOut, FileText, LayoutDashboard } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
+import { LogOut, LayoutDashboard, Users } from "lucide-react";
+import { useIsAdmin } from "@/hooks/useUserRole";
 
 interface AdminLayoutProps {
   children: ReactNode;
@@ -11,6 +11,8 @@ interface AdminLayoutProps {
 
 export const AdminLayout = ({ children }: AdminLayoutProps) => {
   const { user, signOut } = useAuth();
+  const { isAdmin } = useIsAdmin(user?.id);
+  const location = useLocation();
 
   return (
     <div className="min-h-screen bg-background">
@@ -37,11 +39,25 @@ export const AdminLayout = ({ children }: AdminLayoutProps) => {
         <aside className="w-64 min-h-[calc(100vh-73px)] border-r bg-card p-4">
           <nav className="space-y-2">
             <Link to="/admin">
-              <Button variant="ghost" className="w-full justify-start">
+              <Button 
+                variant={location.pathname === '/admin' ? 'default' : 'ghost'} 
+                className="w-full justify-start"
+              >
                 <LayoutDashboard className="h-4 w-4 mr-2" />
-                Dashboard
+                Blog
               </Button>
             </Link>
+            {isAdmin && (
+              <Link to="/admin/users">
+                <Button 
+                  variant={location.pathname === '/admin/users' ? 'default' : 'ghost'} 
+                  className="w-full justify-start"
+                >
+                  <Users className="h-4 w-4 mr-2" />
+                  Usuarios
+                </Button>
+              </Link>
+            )}
           </nav>
         </aside>
 

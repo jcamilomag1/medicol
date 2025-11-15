@@ -24,9 +24,10 @@ interface BlogPostTableProps {
   posts: BlogPost[];
   onEdit: (post: BlogPost) => void;
   onDelete: (post: BlogPost) => void;
+  isAdmin?: boolean;
 }
 
-export const BlogPostTable = ({ posts, onEdit, onDelete }: BlogPostTableProps) => {
+export const BlogPostTable = ({ posts, onEdit, onDelete, isAdmin = true }: BlogPostTableProps) => {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<"all" | "published" | "draft">("all");
 
@@ -122,13 +123,15 @@ export const BlogPostTable = ({ posts, onEdit, onDelete }: BlogPostTableProps) =
                       >
                         <Pencil className="h-4 w-4" />
                       </Button>
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={() => onDelete(post)}
-                      >
-                        <Trash2 className="h-4 w-4" />
-                      </Button>
+                      {isAdmin && (
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => onDelete(post)}
+                        >
+                          <Trash2 className="h-4 w-4" />
+                        </Button>
+                      )}
                     </div>
                   </TableCell>
                 </TableRow>
