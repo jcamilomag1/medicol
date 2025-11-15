@@ -11,6 +11,8 @@ import {
   DropdownMenuTrigger 
 } from '@/components/ui/dropdown-menu';
 import medicolLogo from '@/assets/medicol-logo-blanco.png';
+import { useAuth } from '@/contexts/AuthContext';
+import { useIsAdmin } from '@/hooks/useUserRole';
 
 interface NavLink {
   href?: string;
@@ -41,6 +43,8 @@ export const Navbar = () => {
   const { i18n, t } = useTranslation();
   const location = useLocation();
   const isBlogPage = location.pathname.startsWith('/blog');
+  const { user } = useAuth();
+  const { isAdmin } = useIsAdmin(user?.id);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -137,6 +141,14 @@ export const Navbar = () => {
                 </Link>
               );
             })}
+            {isAdmin && (
+              <Link
+                to="/admin"
+                className="text-white hover:text-accent transition-colors duration-200 font-medium"
+              >
+                Admin
+              </Link>
+            )}
           </nav>
 
           {/* Right Side Controls (Desktop) */}
@@ -241,6 +253,15 @@ export const Navbar = () => {
                   </Link>
                 );
               })}
+              {isAdmin && (
+                <Link
+                  to="/admin"
+                  onClick={handleNavClick}
+                  className="text-white hover:text-accent transition-colors duration-200 font-medium py-2"
+                >
+                  Admin
+                </Link>
+              )}
             </nav>
           </motion.div>
         )}
