@@ -161,18 +161,24 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-8 border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs leading-5 text-gray-400 text-center sm:text-left">
-            &copy; {new Date().getFullYear()} Medicol. {t('footer.rights_reserved')}
-          </p>
-          {isAdmin && (
+        <div className="mt-8 border-t border-white/10 pt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {/* Columna izquierda - Admin Link */}
+          <div className="flex items-center justify-center sm:justify-start">
             <Link
               to="/admin"
               className="text-xs text-white hover:text-accent transition-colors duration-200 font-medium px-4 py-2 border border-white/20 rounded-md hover:border-accent/50"
             >
               Admin
             </Link>
-          )}
+          </div>
+
+          {/* Columna central - Copyright */}
+          <p className="text-xs leading-5 text-gray-400 text-center">
+            &copy; {new Date().getFullYear()} Medicol. {t('footer.rights_reserved')}
+          </p>
+
+          {/* Columna derecha - Vacía */}
+          <div></div>
         </div>
       </div>
     </footer>
