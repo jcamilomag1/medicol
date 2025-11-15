@@ -15,33 +15,38 @@ serve(async (req) => {
   try {
     const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
     const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
-    const authHeader = req.headers.get('Authorization');
-
-    if (!authHeader) {
-      throw new Error('No authorization header');
-    }
+    const authHeader = req.headers.get('Authorization')!;
 
     // Cliente con privilegios de servicio para operaciones de auth
-    const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey);
+    const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey, {
+      auth: {
+        autoRefreshToken: false,
+        persistSession: false
+      }
+    });
     
-    // Cliente con el token del usuario para verificar permisos
-    const supabaseClient = createClient(
-      supabaseUrl,
-      Deno.env.get('SUPABASE_ANON_KEY')!,
-      { global: { headers: { Authorization: authHeader } } }
+    // Verificar que el usuario esté autenticado usando el admin client
+    const { data: { user }, error: userError } = await supabaseAdmin.auth.getUser(
+      authHeader.replace('Bearer ', '')
     );
-
-    // Verificar que el usuario esté autenticado
-    const { data: { user }, error: userError } = await supabaseClient.auth.getUser();
+    
     if (userError || !user) {
-      throw new Error('Usuario no autenticado');
+      console.error('Auth error:', userError);
+      return new Response(
+        JSON.stringify({ error: 'Usuario no autenticado' }),
+        { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
     }
 
     // Verificar que el usuario sea admin
-    const { data: roles } = await supabaseClient
+    const { data: roles, error: rolesError } = await supabaseAdmin
       .from('user_roles')
       .select('role')
       .eq('user_id', user.id);
+
+    if (rolesError) {
+      console.error('Roles error:', rolesError);
+    }
 
     const isAdmin = roles?.some(r => r.role === 'admin');
     if (!isAdmin) {
