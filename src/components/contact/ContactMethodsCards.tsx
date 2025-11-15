@@ -78,7 +78,7 @@ export const ContactMethodsCards = () => {
               whileHover={{ scale: card.disabled ? 1 : 1.05 }}
               className="relative group"
             >
-              <div className="relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-lg p-8 h-full shadow-2xl border border-white/10">
+              <div className="relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-lg p-8 h-full flex flex-col border-2 border-foreground/20">
                 {/* Badge for AI Agent */}
                 {card.badge && (
                   <div className="absolute top-4 right-4">
@@ -88,22 +88,25 @@ export const ContactMethodsCards = () => {
                   </div>
                 )}
 
-                {/* Icon */}
-                <div className="mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-primary/10 backdrop-blur-sm flex items-center justify-center">
-                    <card.icon className="w-8 h-8 text-primary" />
+                {/* Content wrapper with flex-1 to push button down */}
+                <div className="flex-1 flex flex-col">
+                  {/* Icon */}
+                  <div className="mb-6">
+                    <div className="w-16 h-16 rounded-2xl bg-primary/10 backdrop-blur-sm flex items-center justify-center">
+                      <card.icon className="w-8 h-8 text-primary" />
+                    </div>
                   </div>
+
+                  {/* Content */}
+                  <h3 className="text-2xl font-bold text-primary mb-3">
+                    {card.title}
+                  </h3>
+                  <p className="text-foreground/80 mb-6">
+                    {card.description}
+                  </p>
                 </div>
 
-                {/* Content */}
-                <h3 className="text-2xl font-bold text-primary mb-3">
-                  {card.title}
-                </h3>
-                <p className="text-foreground/80 mb-6 min-h-[60px]">
-                  {card.description}
-                </p>
-
-                {/* Button */}
+                {/* Button - stays at bottom */}
                 <Button
                   onClick={card.action}
                   disabled={card.disabled}
