@@ -27,7 +27,8 @@ export const ContactMethodsCards = () => {
       gradient: 'from-gray-400 to-gray-500',
       disabled: true,
       action: () => {},
-      buttonText: t('contact.methods.ai_button')
+      buttonText: t('contact.methods.ai_button'),
+      iconColor: 'text-muted-foreground'
     },
     {
       icon: MessageCircle,
@@ -36,7 +37,8 @@ export const ContactMethodsCards = () => {
       gradient: 'from-[#25D366] to-[#22c55e]',
       disabled: false,
       action: handleWhatsApp,
-      buttonText: t('contact.methods.whatsapp_button')
+      buttonText: t('contact.methods.whatsapp_button'),
+      iconColor: 'text-[#25D366]'
     },
     {
       icon: Calendar,
@@ -45,7 +47,8 @@ export const ContactMethodsCards = () => {
       gradient: 'from-accent to-accent/80',
       disabled: false,
       action: handleSchedule,
-      buttonText: t('contact.methods.schedule_button')
+      buttonText: t('contact.methods.schedule_button'),
+      iconColor: 'text-blue-400'
     }
   ];
 
@@ -93,7 +96,7 @@ export const ContactMethodsCards = () => {
                   {/* Icon */}
                   <div className="mb-6">
                     <div className="w-16 h-16 rounded-2xl bg-primary/10 backdrop-blur-sm flex items-center justify-center">
-                      <card.icon className="w-8 h-8 text-primary" />
+                      <card.icon className={`w-8 h-8 ${card.iconColor}`} />
                     </div>
                   </div>
 
