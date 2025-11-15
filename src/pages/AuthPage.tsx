@@ -16,7 +16,17 @@ const authSchema = z.object({
   password: z.string().min(6, "La contraseña debe tener al menos 6 caracteres"),
 });
 
+const signupSchema = z.object({
+  email: z.string().email("Email inválido"),
+  password: z.string().min(6, "La contraseña debe tener al menos 6 caracteres"),
+  confirmPassword: z.string(),
+}).refine((data) => data.password === data.confirmPassword, {
+  message: "Las contraseñas no coinciden",
+  path: ["confirmPassword"],
+});
+
 type AuthFormValues = z.infer<typeof authSchema>;
+type SignupFormValues = z.infer<typeof signupSchema>;
 
 const AuthPage = () => {
   const { user, signIn, signUp, isLoading } = useAuth();
@@ -28,9 +38,9 @@ const AuthPage = () => {
     defaultValues: { email: "", password: "" },
   });
 
-  const signupForm = useForm<AuthFormValues>({
-    resolver: zodResolver(authSchema),
-    defaultValues: { email: "", password: "" },
+  const signupForm = useForm<SignupFormValues>({
+    resolver: zodResolver(signupSchema),
+    defaultValues: { email: "", password: "", confirmPassword: "" },
   });
 
   useEffect(() => {
@@ -43,7 +53,7 @@ const AuthPage = () => {
     await signIn(values.email, values.password);
   };
 
-  const onSignup = async (values: AuthFormValues) => {
+  const onSignup = async (values: SignupFormValues) => {
     await signUp(values.email, values.password);
   };
 
@@ -127,6 +137,19 @@ const AuthPage = () => {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel>Contraseña</FormLabel>
+                        <FormControl>
+                          <Input type="password" placeholder="••••••" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={signupForm.control}
+                    name="confirmPassword"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Confirmar Contraseña</FormLabel>
                         <FormControl>
                           <Input type="password" placeholder="••••••" {...field} />
                         </FormControl>

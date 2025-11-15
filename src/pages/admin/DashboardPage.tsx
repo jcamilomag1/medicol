@@ -19,8 +19,12 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { toast } from "sonner";
+import { useAuth } from "@/contexts/AuthContext";
+import { useIsAdmin } from "@/hooks/useUserRole";
 
 const DashboardPage = () => {
+  const { user } = useAuth();
+  const { isAdmin } = useIsAdmin(user?.id);
   const { data: posts, isLoading } = useAllBlogPosts();
   const queryClient = useQueryClient();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -101,6 +105,10 @@ const DashboardPage = () => {
   });
 
   const handleCreate = () => {
+    if (!isAdmin) {
+      toast.error("Solo los administradores pueden crear nuevos posts");
+      return;
+    }
     setSelectedPost(undefined);
     setIsDialogOpen(true);
   };
@@ -111,6 +119,10 @@ const DashboardPage = () => {
   };
 
   const handleDelete = (post: BlogPost) => {
+    if (!isAdmin) {
+      toast.error("Solo los administradores pueden eliminar posts");
+      return;
+    }
     setPostToDelete(post);
     setIsDeleteDialogOpen(true);
   };
@@ -143,16 +155,19 @@ const DashboardPage = () => {
               {totalPosts} {totalPosts === 1 ? 'artículo' : 'artículos'} • {publishedPosts} {publishedPosts === 1 ? 'publicado' : 'publicados'}
             </p>
           </div>
-          <Button onClick={handleCreate}>
-            <Plus className="h-4 w-4 mr-2" />
-            Nuevo Post
-          </Button>
+          {isAdmin && (
+            <Button onClick={handleCreate}>
+              <Plus className="h-4 w-4 mr-2" />
+              Nuevo Post
+            </Button>
+          )}
         </div>
 
         <BlogPostTable
           posts={posts || []}
           onEdit={handleEdit}
           onDelete={handleDelete}
+          isAdmin={isAdmin}
         />
       </div>
 
