@@ -38,6 +38,21 @@ export const useAllBlogPosts = () => {
   });
 };
 
+export const useAllBlogPostsAdmin = () => {
+  return useQuery({
+    queryKey: ["blog-posts-admin"],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("blog_posts")
+        .select("*")
+        .order("published_at", { ascending: false });
+
+      if (error) throw error;
+      return data as BlogPost[];
+    },
+  });
+};
+
 export const useLatestBlogPosts = (limit: number = 3) => {
   return useQuery({
     queryKey: ["blog-posts-latest", limit],
