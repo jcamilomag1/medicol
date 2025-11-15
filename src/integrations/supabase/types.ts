@@ -33,7 +33,6 @@ export type Database = {
           title_en: string
           title_es: string
           updated_at: string | null
-          views: number | null
         }
         Insert: {
           author?: string | null
@@ -53,7 +52,6 @@ export type Database = {
           title_en: string
           title_es: string
           updated_at?: string | null
-          views?: number | null
         }
         Update: {
           author?: string | null
@@ -73,7 +71,6 @@ export type Database = {
           title_en?: string
           title_es?: string
           updated_at?: string | null
-          views?: number | null
         }
         Relationships: []
       }

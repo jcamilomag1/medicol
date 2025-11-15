@@ -80,10 +80,6 @@ const BlogPage = () => {
                               {date}
                             </span>
                           )}
-                          <span className="flex items-center gap-1">
-                            <Clock className="w-3 h-3" />
-                            {post.views} {t("blog.views")}
-                          </span>
                         </div>
                         <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors line-clamp-2">
                           {title}
