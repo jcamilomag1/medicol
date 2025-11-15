@@ -9,30 +9,42 @@ export const ContactInfoGrid = () => {
     {
       icon: Phone,
       title: t('contact.info.phone_title'),
-      primary: t('contact.info.phone_number'),
-      secondary: t('contact.info.phone_hours'),
-      color: 'text-accent'
+      description: t('contact.info.phone_hours'),
+      contactData: t('contact.info.phone_number'),
     },
     {
       icon: Mail,
       title: t('contact.info.email_title'),
-      primary: t('contact.info.email_address'),
-      secondary: t('contact.info.email_response'),
-      color: 'text-accent'
+      description: t('contact.info.email_response'),
+      contactData: t('contact.info.email_address'),
     },
     {
       icon: MapPin,
       title: t('contact.info.location_title'),
-      primary: t('contact.info.location_address'),
-      secondary: t('contact.info.location_city'),
-      color: 'text-accent'
+      description: t('contact.info.location_city'),
+      contactData: t('contact.info.location_address'),
     }
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-muted/30">
+    <section className="py-16 md:py-20 bg-background">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {/* Header Section */}
+        <div className="max-w-3xl mx-auto text-center mb-4">
+          <span className="px-3 py-1.5 text-xs border border-primary/30 rounded-full text-primary font-medium bg-primary/5">
+            {t('contact.info.badge', 'Contáctanos')}
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold mt-6 text-primary">
+            {t('contact.info.header_title', 'Nos Encantaría Escucharte')}
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            {t('contact.info.header_subtitle', 'O contáctanos directamente a')}{' '}
+            <span className="text-primary font-medium">{t('contact.info.email_address')}</span>
+          </p>
+        </div>
+
+        {/* Contact Cards Grid */}
+        <div className="grid md:grid-cols-3 gap-12 mt-16 max-w-5xl mx-auto">
           {contactInfo.map((item, index) => (
             <motion.div
               key={index}
@@ -40,23 +52,26 @@ export const ContactInfoGrid = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-card rounded-2xl p-8 shadow-lg border border-border hover:shadow-xl transition-shadow duration-300"
             >
-              <div className={`w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 ${item.color}`}>
-                <item.icon className="w-7 h-7" />
+              {/* Icon */}
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <item.icon className="w-6 h-6 text-primary" />
               </div>
               
-              <h3 className="text-xl font-bold text-primary mb-3">
+              {/* Title */}
+              <h3 className="text-lg font-bold mt-4 text-primary">
                 {item.title}
               </h3>
               
-              <p className="text-lg font-semibold text-foreground mb-2">
-                {item.primary}
+              {/* Description */}
+              <p className="text-muted-foreground mt-2 mb-4">
+                {item.description}
               </p>
               
-              <p className="text-sm text-muted-foreground">
-                {item.secondary}
-              </p>
+              {/* Contact Data - Plain Text */}
+              <span className="text-primary font-semibold">
+                {item.contactData}
+              </span>
             </motion.div>
           ))}
         </div>
