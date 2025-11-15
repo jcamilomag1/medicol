@@ -174,10 +174,10 @@ serve(async (req) => {
       );
     }
 
-    // PATCH /admin-users/:userId - Actualizar usuario
+    // PATCH /admin-users - Actualizar usuario
     if (req.method === 'PATCH') {
-      const userId = pathParts[pathParts.length - 1];
-      const { password, role } = await req.json();
+      const { userId, password, role } = await req.json();
+      console.log('Updating user:', userId, 'password:', !!password, 'role:', role);
 
       if (!userId) {
         return new Response(
@@ -241,9 +241,10 @@ serve(async (req) => {
       );
     }
 
-    // DELETE /admin-users/:userId - Eliminar usuario
+    // DELETE /admin-users - Eliminar usuario
     if (req.method === 'DELETE') {
-      const userId = pathParts[pathParts.length - 1];
+      const { userId } = await req.json();
+      console.log('Deleting user:', userId);
 
       if (!userId) {
         return new Response(
