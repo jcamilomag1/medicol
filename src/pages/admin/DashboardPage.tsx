@@ -34,7 +34,6 @@ const DashboardPage = () => {
 
   const totalPosts = posts?.length || 0;
   const publishedPosts = posts?.filter(p => p.published).length || 0;
-  const totalViews = posts?.reduce((sum, p) => sum + p.views, 0) || 0;
 
   const createMutation = useMutation({
     mutationFn: async (values: any) => {

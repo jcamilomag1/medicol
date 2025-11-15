@@ -17,7 +17,6 @@ export interface BlogPost {
   published_at: string | null;
   created_at: string;
   updated_at: string;
-  views: number;
   meta_description_es: string | null;
   meta_description_en: string | null;
 }
@@ -82,15 +81,6 @@ export const useBlogPostBySlug = (slug: string) => {
         .single();
 
       if (error) throw error;
-
-      // Increment views
-      if (data) {
-        await supabase
-          .from("blog_posts")
-          .update({ views: data.views + 1 })
-          .eq("id", data.id);
-      }
-
       return data as BlogPost;
     },
     enabled: !!slug,

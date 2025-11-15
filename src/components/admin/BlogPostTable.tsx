@@ -3,7 +3,7 @@ import { BlogPost } from "@/hooks/useBlogPosts";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { Pencil, Trash2, Eye, Search } from "lucide-react";
+import { Pencil, Trash2, Search } from "lucide-react";
 import {
   Table,
   TableBody,
@@ -76,7 +76,6 @@ export const BlogPostTable = ({ posts, onEdit, onDelete, isAdmin = true }: BlogP
               <TableHead>Título (EN)</TableHead>
               <TableHead>Categoría</TableHead>
               <TableHead>Estado</TableHead>
-              <TableHead>Vistas</TableHead>
               <TableHead>Fecha</TableHead>
               <TableHead className="text-right">Acciones</TableHead>
             </TableRow>
@@ -84,7 +83,7 @@ export const BlogPostTable = ({ posts, onEdit, onDelete, isAdmin = true }: BlogP
           <TableBody>
             {filteredPosts.length === 0 ? (
               <TableRow>
-                <TableCell colSpan={7} className="text-center text-muted-foreground">
+                <TableCell colSpan={6} className="text-center text-muted-foreground">
                   No se encontraron posts
                 </TableCell>
               </TableRow>
@@ -102,12 +101,6 @@ export const BlogPostTable = ({ posts, onEdit, onDelete, isAdmin = true }: BlogP
                     <Badge variant={post.published ? "default" : "secondary"}>
                       {post.published ? "Publicado" : "Borrador"}
                     </Badge>
-                  </TableCell>
-                  <TableCell>
-                    <div className="flex items-center gap-1">
-                      <Eye className="h-3 w-3" />
-                      {post.views}
-                    </div>
                   </TableCell>
                   <TableCell>
                     {post.published_at
