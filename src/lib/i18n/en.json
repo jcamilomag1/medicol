@@ -747,6 +747,7 @@
     "views": "views",
     "back_to_blog": "Back to blog",
     "related_posts": "Related articles",
+    "recommended_posts": "Recommended articles",
     "not_found": "Article not found",
     "not_found_description": "The article you're looking for doesn't exist or has been removed.",
     "no_posts": "No published articles yet.",
