@@ -1,7 +1,8 @@
+import React from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Layout from "@/components/Layout";
-import { useBlogPostBySlug, useBlogPostsByCategory } from "@/hooks/useBlogPosts";
+import { useBlogPostBySlug, useBlogPostsByCategory, useLatestBlogPosts } from "@/hooks/useBlogPosts";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, ArrowLeft, ArrowRight, User } from "lucide-react";
@@ -24,6 +25,7 @@ const BlogPostPage = () => {
   const navigate = useNavigate();
   const { data: post, isLoading, error } = useBlogPostBySlug(slug || "");
   const { data: relatedPosts } = useBlogPostsByCategory(post?.category || "");
+  const { data: latestPosts } = useLatestBlogPosts(4);
 
   if (isLoading) {
     return (
@@ -66,6 +68,35 @@ const BlogPostPage = () => {
         { year: "numeric", month: "long", day: "numeric" }
       )
     : "";
+
+  // Combine related posts with latest posts for recommendations
+  const recommendedPosts = React.useMemo(() => {
+    if (!post) return [];
+    
+    // Filter related posts (same category, exclude current post)
+    const categoryPosts = (relatedPosts || []).filter(p => p.id !== post.id);
+    
+    // If we have enough category posts (2+), use them
+    if (categoryPosts.length >= 2) {
+      return categoryPosts.slice(0, 3); // Show up to 3
+    }
+    
+    // If not, combine with recent posts
+    const recentPostsFiltered = (latestPosts || [])
+      .filter(p => p.id !== post.id); // Exclude current post
+    
+    // Combine: first category posts, then recent posts
+    const combined = [...categoryPosts];
+    
+    for (const recentPost of recentPostsFiltered) {
+      // Avoid duplicates
+      if (!combined.find(p => p.id === recentPost.id) && combined.length < 3) {
+        combined.push(recentPost);
+      }
+    }
+    
+    return combined;
+  }, [post, relatedPosts, latestPosts]);
 
   return (
     <Layout>
@@ -177,18 +208,18 @@ const BlogPostPage = () => {
           </div>
         </article>
 
-        {/* Related Posts */}
-        {relatedPosts && relatedPosts.length > 1 && (
+        {/* Recommended Posts */}
+        {recommendedPosts.length > 0 && (
           <section className="py-16 bg-muted/30">
             <div className="container mx-auto px-4 max-w-4xl">
               <h2 className="text-3xl font-bold text-foreground mb-8">
-                {t("blog.related_posts")}
+                {recommendedPosts.some(p => p.category === post.category && p.category)
+                  ? t("blog.related_posts")
+                  : t("blog.recommended_posts")
+                }
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {relatedPosts
-                  .filter((p) => p.id !== post.id)
-                  .slice(0, 2)
-                  .map((relatedPost) => {
+                {recommendedPosts.map((relatedPost) => {
                     const relatedTitle = i18n.language === "es" ? relatedPost.title_es : relatedPost.title_en;
                     const relatedExcerpt = i18n.language === "es" ? relatedPost.excerpt_es : relatedPost.excerpt_en;
 
