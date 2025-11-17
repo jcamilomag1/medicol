@@ -27,6 +27,35 @@ const BlogPostPage = () => {
   const { data: relatedPosts } = useBlogPostsByCategory(post?.category || "");
   const { data: latestPosts } = useLatestBlogPosts(4);
 
+  // Combine related posts with latest posts for recommendations
+  const recommendedPosts = React.useMemo(() => {
+    if (!post) return [];
+    
+    // Filter related posts (same category, exclude current post)
+    const categoryPosts = (relatedPosts || []).filter(p => p.id !== post.id);
+    
+    // If we have enough category posts (2+), use them
+    if (categoryPosts.length >= 2) {
+      return categoryPosts.slice(0, 3); // Show up to 3
+    }
+    
+    // If not, combine with recent posts
+    const recentPostsFiltered = (latestPosts || [])
+      .filter(p => p.id !== post.id); // Exclude current post
+    
+    // Combine: first category posts, then recent posts
+    const combined = [...categoryPosts];
+    
+    for (const recentPost of recentPostsFiltered) {
+      // Avoid duplicates
+      if (!combined.find(p => p.id === recentPost.id) && combined.length < 3) {
+        combined.push(recentPost);
+      }
+    }
+    
+    return combined;
+  }, [post, relatedPosts, latestPosts]);
+
   if (isLoading) {
     return (
       <Layout>
@@ -68,35 +97,6 @@ const BlogPostPage = () => {
         { year: "numeric", month: "long", day: "numeric" }
       )
     : "";
-
-  // Combine related posts with latest posts for recommendations
-  const recommendedPosts = React.useMemo(() => {
-    if (!post) return [];
-    
-    // Filter related posts (same category, exclude current post)
-    const categoryPosts = (relatedPosts || []).filter(p => p.id !== post.id);
-    
-    // If we have enough category posts (2+), use them
-    if (categoryPosts.length >= 2) {
-      return categoryPosts.slice(0, 3); // Show up to 3
-    }
-    
-    // If not, combine with recent posts
-    const recentPostsFiltered = (latestPosts || [])
-      .filter(p => p.id !== post.id); // Exclude current post
-    
-    // Combine: first category posts, then recent posts
-    const combined = [...categoryPosts];
-    
-    for (const recentPost of recentPostsFiltered) {
-      // Avoid duplicates
-      if (!combined.find(p => p.id === recentPost.id) && combined.length < 3) {
-        combined.push(recentPost);
-      }
-    }
-    
-    return combined;
-  }, [post, relatedPosts, latestPosts]);
 
   return (
     <Layout>
