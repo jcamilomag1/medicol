@@ -20,7 +20,8 @@ const testimonialsData: Testimonial[] = [
   {
     name: 'Evvete',
     quoteKey: 'video_testimonials.testimonials.evvete.quote',
-    driveId: '1SMzUAliaarWoHuTvUBNc0i8F_SKHEwNN'
+    driveId: '1SMzUAliaarWoHuTvUBNc0i8F_SKHEwNN',
+    thumbnailUrl: '/testimonials/evvete.jpg'
   },
   {
     name: 'Janeth',
