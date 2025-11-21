@@ -26,7 +26,7 @@ const testimonialsData: Testimonial[] = [
     name: 'Janeth',
     quoteKey: 'video_testimonials.testimonials.janeth.quote',
     driveId: '10PEt3O_m8_vBTVNQR9TiY-b5sKFQj6_Q',
-    thumbnailUrl: '/testimonials/janeth.png'
+    thumbnailUrl: '/testimonials/janeth.jpg'
   }
 ];
 
