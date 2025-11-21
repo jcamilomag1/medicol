@@ -19,6 +19,8 @@ const DiagnosticsPage = lazy(() => import('./pages/DiagnosticsPage'));
 const BlogPage = lazy(() => import('./pages/BlogPage'));
 const BlogPostPage = lazy(() => import('./pages/BlogPostPage'));
 const AuthPage = lazy(() => import('./pages/AuthPage'));
+const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
+const UserAgreementPage = lazy(() => import('./pages/UserAgreementPage'));
 const DashboardPage = lazy(() => import('./pages/admin/DashboardPage'));
 const UsersPage = lazy(() => import('./pages/admin/UsersPage'));
 const NotFound = lazy(() => import('./pages/NotFound'));
@@ -57,6 +59,10 @@ const App = () => (
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/blog/:slug" element={<BlogPostPage />} />
               <Route path="/auth" element={<AuthPage />} />
+              <Route path="/politica-de-privacidad" element={<PrivacyPolicyPage />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+              <Route path="/acuerdo-de-usuario" element={<UserAgreementPage />} />
+              <Route path="/user-agreement" element={<UserAgreementPage />} />
               <Route path="/admin" element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} />
               <Route path="/admin/users" element={<ProtectedRoute requiresAdmin><UsersPage /></ProtectedRoute>} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -17,8 +17,8 @@ const footerNav = {
     { key: 'nav.blog', href: '/blog' },
   ],
   legal: [
-    { key: 'footer.legal.privacy', href: '/politica-privacidad' },
-    { key: 'footer.legal.terms', href: '/terminos-condiciones' },
+    { key: 'footer.legal.privacy', href: '/politica-de-privacidad' },
+    { key: 'footer.legal.terms', href: '/acuerdo-de-usuario' },
   ],
 };
 
