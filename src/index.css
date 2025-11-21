@@ -2,6 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Legal Content Styling */
+.legal-content h2 {
+  @apply text-2xl font-bold text-foreground mb-4 mt-8;
+}
+
+.legal-content h3 {
+  @apply text-xl font-semibold text-foreground mb-3 mt-6;
+}
+
+.legal-content p {
+  @apply text-muted-foreground mb-4 leading-relaxed;
+}
+
+.legal-content ul {
+  @apply list-disc pl-6 space-y-2 text-muted-foreground mb-4;
+}
+
+.legal-content ol {
+  @apply list-decimal pl-6 space-y-2 text-muted-foreground mb-4;
+}
+
+.legal-content li {
+  @apply leading-relaxed;
+}
+
+.legal-content strong {
+  @apply font-semibold text-foreground;
+}
+
+.legal-content a {
+  @apply text-primary hover:underline;
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
