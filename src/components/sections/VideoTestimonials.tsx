@@ -6,45 +6,25 @@ import { Badge } from '@/components/ui/badge';
 
 interface Testimonial {
   name: string;
-  procedure: string;
-  countryKey: string;
-  thumbnailUrl: string;
-  videoUrl: string;
-  youtubeId: string;
+  quoteKey: string;
+  driveId: string;
 }
 
 const testimonialsData: Testimonial[] = [
   {
-    name: 'Jennifer Martinez',
-    procedure: 'Breast Augmentation',
-    countryKey: 'countries.usa',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&h=600&fit=crop',
-    videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-    youtubeId: 'dQw4w9WgXcQ'
+    name: 'Estefania Snyder',
+    quoteKey: 'video_testimonials.testimonials.estefania.quote',
+    driveId: '1ptAJ-Ssy5ek7-oExyp_fINNbu_HD_yjq'
   },
   {
-    name: 'Sarah Williams',
-    procedure: 'Rhinoplasty',
-    countryKey: 'countries.canada',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&h=600&fit=crop',
-    videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-    youtubeId: 'dQw4w9WgXcQ'
+    name: 'Evvete',
+    quoteKey: 'video_testimonials.testimonials.evvete.quote',
+    driveId: '1SMzUAliaarWoHuTvUBNc0i8F_SKHEwNN'
   },
   {
-    name: 'Maria Rodriguez',
-    procedure: 'BBL',
-    countryKey: 'countries.spain',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=600&fit=crop',
-    videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-    youtubeId: 'dQw4w9WgXcQ'
-  },
-  {
-    name: 'Emma Thompson',
-    procedure: 'Tummy Tuck',
-    countryKey: 'countries.uk',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&h=600&fit=crop',
-    videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-    youtubeId: 'dQw4w9WgXcQ'
+    name: 'Janeth',
+    quoteKey: 'video_testimonials.testimonials.janeth.quote',
+    driveId: '10PEt3O_m8_vBTVNQR9TiY-b5sKFQj6_Q'
   }
 ];
 
@@ -75,7 +55,7 @@ export const VideoTestimonials = () => {
         </motion.div>
 
         {/* Video Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonialsData.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -83,30 +63,24 @@ export const VideoTestimonials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="group relative bg-card border-2 border-border rounded-xl overflow-hidden hover:border-primary/50 hover:shadow-2xl transition-all duration-300 cursor-pointer"
+              className="group relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer aspect-square"
               onClick={() => setSelectedVideo(testimonial)}
             >
-              {/* Thumbnail */}
-              <div className="relative aspect-[9/16] overflow-hidden">
-                <img
-                  src={testimonial.thumbnailUrl}
-                  alt={testimonial.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
+              <div className="h-full flex flex-col items-center justify-center p-8 text-center gap-6">
+                {/* Play Icon */}
+                <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Play className="w-7 h-7 text-accent-foreground ml-1" fill="currentColor" />
+                </div>
                 
-                {/* Play Button Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full bg-accent/90 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 group-hover:bg-accent transition-all duration-300 shadow-xl">
-                    <Play className="w-7 h-7 text-accent-foreground ml-1" fill="currentColor" />
-                  </div>
-                </div>
-
-                {/* Info Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  <h3 className="font-bold text-lg mb-1">{testimonial.name}</h3>
-                  <p className="text-sm text-white/80">{testimonial.procedure}</p>
-                  <p className="text-xs text-white/60 mt-1">{t(testimonial.countryKey)}</p>
-                </div>
+                {/* Name */}
+                <h3 className="font-bold text-xl text-foreground">
+                  {testimonial.name}
+                </h3>
+                
+                {/* Quote */}
+                <p className="text-muted-foreground italic">
+                  "{t(testimonial.quoteKey)}"
+                </p>
               </div>
             </motion.div>
           ))}
@@ -142,9 +116,9 @@ export const VideoTestimonials = () => {
                   <iframe
                     width="100%"
                     height="100%"
-                    src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}?autoplay=1`}
+                    src={`https://drive.google.com/file/d/${selectedVideo.driveId}/preview`}
                     title={selectedVideo.name}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="autoplay"
                     allowFullScreen
                     className="w-full h-full"
                   />
@@ -155,8 +129,8 @@ export const VideoTestimonials = () => {
                   <h3 className="text-2xl font-bold text-foreground mb-2">
                     {selectedVideo.name}
                   </h3>
-                  <p className="text-muted-foreground">
-                    {selectedVideo.procedure} • {t(selectedVideo.countryKey)}
+                  <p className="text-muted-foreground italic">
+                    "{t(selectedVideo.quoteKey)}"
                   </p>
                 </div>
               </motion.div>

@@ -301,7 +301,18 @@
   "video_testimonials": {
     "badge": "Historias Reales",
     "title": "Testimonios en Video",
-    "subtitle": "Escucha directamente de nuestros pacientes sobre su experiencia y resultados transformadores."
+    "subtitle": "Escucha directamente de nuestros pacientes sobre su experiencia y resultados transformadores.",
+    "testimonials": {
+      "estefania": {
+        "quote": "Medicol fue mi elección y no me decepcionó"
+      },
+      "evvete": {
+        "quote": "De Texas a Medellín tuve el mejor acompañamiento posible"
+      },
+      "janeth": {
+        "quote": "Medicol me hizo sentir como en casa de inicio a fin"
+      }
+    }
   },
   "hero": {
     "title": "Confianza Médica con Acompañamiento VIP",
