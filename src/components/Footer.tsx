@@ -6,15 +6,14 @@ import { useIsAdmin } from '@/hooks/useUserRole';
 
 const footerNav = {
   solutions: [
-    { key: 'nav.cosmetic', href: '/procedimientos/cirugia-cosmetica' },
-    { key: 'nav.regenerative', href: '/procedimientos/medicina-regenerativa' },
-    { key: 'nav.dental', href: '/procedimientos/diseno-de-sonrisa' },
-    { key: 'nav.diagnostics', href: '/procedimientos/chequeos-avanzados' },
+    { key: 'nav.cosmetic', href: '/servicios/cirugia-plastica' },
+    { key: 'nav.regenerative', href: '/servicios/celulas-madre' },
+    { key: 'nav.dental', href: '/servicios/procedimientos-dentales' },
+    { key: 'nav.diagnostics', href: '/servicios/diagnosticos' },
   ],
   company: [
-    { key: 'nav.experience', href: '/experiencia-medicol' },
-    { key: 'nav.team', href: '/nuestro-equipo' },
-    { key: 'nav.results', href: '/resultados' },
+    { key: 'nav.experience', href: '/experiencia' },
+    { key: 'nav.team', href: '/equipo' },
     { key: 'nav.blog', href: '/blog' },
   ],
   legal: [
