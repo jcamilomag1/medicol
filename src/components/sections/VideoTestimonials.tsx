@@ -8,6 +8,7 @@ interface Testimonial {
   name: string;
   quoteKey: string;
   driveId: string;
+  thumbnailUrl?: string;
 }
 
 const testimonialsData: Testimonial[] = [
@@ -24,7 +25,8 @@ const testimonialsData: Testimonial[] = [
   {
     name: 'Janeth',
     quoteKey: 'video_testimonials.testimonials.janeth.quote',
-    driveId: '10PEt3O_m8_vBTVNQR9TiY-b5sKFQj6_Q'
+    driveId: '10PEt3O_m8_vBTVNQR9TiY-b5sKFQj6_Q',
+    thumbnailUrl: '/testimonials/janeth.png'
   }
 ];
 
@@ -63,25 +65,54 @@ export const VideoTestimonials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="group relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer aspect-square"
+              className="group relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden"
               onClick={() => setSelectedVideo(testimonial)}
             >
-              <div className="h-full flex flex-col items-center justify-center p-8 text-center gap-6">
-                {/* Play Icon */}
-                <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Play className="w-7 h-7 text-accent-foreground ml-1" fill="currentColor" />
+              {testimonial.thumbnailUrl ? (
+                <div className="relative aspect-[3/4]">
+                  {/* Image */}
+                  <img 
+                    src={testimonial.thumbnailUrl} 
+                    alt={testimonial.name}
+                    className="w-full h-full object-cover"
+                  />
+                  
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                  
+                  {/* Play Icon */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-accent/90 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Play className="w-7 h-7 text-accent-foreground ml-1" fill="currentColor" />
+                  </div>
+                  
+                  {/* Text Content */}
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h3 className="font-bold text-xl mb-2">
+                      {testimonial.name}
+                    </h3>
+                    <p className="text-sm italic opacity-90">
+                      "{t(testimonial.quoteKey)}"
+                    </p>
+                  </div>
                 </div>
-                
-                {/* Name */}
-                <h3 className="font-bold text-xl text-foreground">
-                  {testimonial.name}
-                </h3>
-                
-                {/* Quote */}
-                <p className="text-muted-foreground italic">
-                  "{t(testimonial.quoteKey)}"
-                </p>
-              </div>
+              ) : (
+                <div className="h-full flex flex-col items-center justify-center p-8 text-center gap-6 aspect-square">
+                  {/* Play Icon */}
+                  <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Play className="w-7 h-7 text-accent-foreground ml-1" fill="currentColor" />
+                  </div>
+                  
+                  {/* Name */}
+                  <h3 className="font-bold text-xl text-foreground">
+                    {testimonial.name}
+                  </h3>
+                  
+                  {/* Quote */}
+                  <p className="text-muted-foreground italic">
+                    "{t(testimonial.quoteKey)}"
+                  </p>
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
