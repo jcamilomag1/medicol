@@ -55,7 +55,7 @@ export const PlasticHeroSection = () => {
         y: 0
       }} transition={{
         duration: 0.8
-      }} className="max-w-4xl mx-auto text-center">
+      }} className="max-w-2xl text-left">
           {/* Title */}
           <motion.h1 initial={{
           opacity: 0,
@@ -96,7 +96,7 @@ export const PlasticHeroSection = () => {
         }} transition={{
           delay: 0.6,
           duration: 0.8
-        }} className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto">
+        }} className="text-xl md:text-2xl text-white/90 mb-10 max-w-xl">
             {t('plastic_surgery.hero.subtitle')}
           </motion.p>
 
@@ -110,7 +110,7 @@ export const PlasticHeroSection = () => {
         }} transition={{
           delay: 0.8,
           duration: 0.8
-        }} className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        }} className="flex flex-col sm:flex-row gap-4 justify-start mb-12">
             <Button size="lg" onClick={handleCTAClick} className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all">
               {t('plastic_surgery.hero.cta_button')}
             </Button>
@@ -129,7 +129,7 @@ export const PlasticHeroSection = () => {
         }} transition={{
           delay: 1,
           duration: 0.8
-        }} className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
+        }} className="flex flex-wrap items-center justify-start gap-6 md:gap-8">
             <div className="flex items-center gap-2 text-white/90">
               <Star className="w-5 h-5 fill-accent text-accent" />
               <span className="text-sm md:text-base font-medium">
