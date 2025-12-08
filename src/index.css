@@ -4,11 +4,11 @@
 
 /* Legal Content Styling */
 .legal-content h2 {
-  @apply text-2xl font-bold text-foreground mb-4 mt-8;
+  @apply text-2xl font-bold text-foreground mb-4 mt-8 font-serif;
 }
 
 .legal-content h3 {
-  @apply text-xl font-semibold text-foreground mb-3 mt-6;
+  @apply text-xl font-semibold text-foreground mb-3 mt-6 font-serif;
 }
 
 .legal-content p {
@@ -146,5 +146,9 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  h1, h2, h3 {
+    font-family: 'PT Serif', Georgia, serif;
   }
 }

@@ -107,7 +107,7 @@ export function MedicalServicesCarousel({ services }: MedicalServicesCarouselPro
                     </span>
                     <h3
                       style={{
-                        fontFamily: "Inter, sans-serif",
+                        fontFamily: "'PT Serif', Georgia, serif",
                         fontSize: "24px",
                         fontWeight: 600,
                         color: "#FFFFFF",
