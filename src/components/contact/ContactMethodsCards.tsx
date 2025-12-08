@@ -8,7 +8,7 @@ export const ContactMethodsCards = () => {
   const { t } = useTranslation();
 
   const handleWhatsApp = () => {
-    const phone = '573001234567';
+    const phone = '13054290812';
     const message = encodeURIComponent(t('contact.methods.whatsapp_message'));
     window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
   };
