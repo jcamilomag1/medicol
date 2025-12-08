@@ -50,7 +50,7 @@ const ExperiencePage = () => {
       subtitle: t('experience.timeline.steps.step3.subtitle'),
       description: t('experience.timeline.steps.step3.description'),
       items: t('experience.timeline.steps.step3.items', { returnObjects: true }) as string[],
-      image: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=1260&q=80"
+      image: "https://images.unsplash.com/photo-1599413941725-4c417e4c27f3?auto=format&fit=crop&w=1260&q=80"
     },
     {
       icon: Stethoscope,
