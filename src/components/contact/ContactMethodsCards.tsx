@@ -8,9 +8,7 @@ export const ContactMethodsCards = () => {
   const { t } = useTranslation();
 
   const handleWhatsApp = () => {
-    const phone = '13054290812';
-    const message = encodeURIComponent(t('contact.methods.whatsapp_message'));
-    window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+    window.open('https://api.whatsapp.com/send/?phone=13054290812&text=Hello,%20I%20would%20like%20to%20know%20more%20information', '_blank');
   };
 
   const handleSchedule = () => {
