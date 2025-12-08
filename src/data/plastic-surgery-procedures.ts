@@ -323,8 +323,8 @@ export const procedures: Procedure[] = [
   {
     id: 'liposuction',
     category: 'body',
-    name_es: 'Liposucción',
-    name_en: 'Liposuction',
+    name_es: 'Liposucción 360°',
+    name_en: '360° Liposuction',
     description_es: 'Eliminación de grasa localizada para esculpir y definir el contorno corporal.',
     description_en: 'Removal of localized fat to sculpt and define body contour.',
     price_usd: 2800,
