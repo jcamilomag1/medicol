@@ -19,6 +19,7 @@ export const ProcedureCard = ({ procedure, onClick }: ProcedureCardProps) => {
       whileHover={{ y: -8 }}
       transition={{ duration: 0.3 }}
       className="h-full"
+      onClick={onClick}
     >
       <Card className="h-full overflow-hidden cursor-pointer group shadow-soft hover:shadow-medium transition-all duration-300 flex flex-col min-h-[480px]">
         <div className="relative aspect-video overflow-hidden bg-muted">
@@ -54,8 +55,7 @@ export const ProcedureCard = ({ procedure, onClick }: ProcedureCardProps) => {
 
         <CardFooter className="p-6 pt-0">
           <Button
-            onClick={onClick}
-            className="w-full bg-primary hover:bg-primary-light text-primary-foreground"
+            className="w-full bg-primary hover:bg-primary-light text-primary-foreground pointer-events-none"
           >
             {t('plastic_surgery.procedures.view_details')}
           </Button>
