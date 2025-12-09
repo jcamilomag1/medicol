@@ -1,7 +1,1 @@
 project_id = "oiheljynhjpklmkpcpnj"
-
-[functions.admin-users]
-verify_jwt = true
-
-[functions.generate-procedure-image]
-verify_jwt = false

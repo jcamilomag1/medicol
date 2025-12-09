@@ -24,7 +24,6 @@ const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
 const UserAgreementPage = lazy(() => import('./pages/UserAgreementPage'));
 const DashboardPage = lazy(() => import('./pages/admin/DashboardPage'));
 const UsersPage = lazy(() => import('./pages/admin/UsersPage'));
-const ImageGeneratorPage = lazy(() => import('./pages/admin/ImageGeneratorPage'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 const queryClient = new QueryClient();
@@ -68,7 +67,6 @@ const App = () => (
               <Route path="/user-agreement" element={<UserAgreementPage />} />
               <Route path="/admin" element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} />
               <Route path="/admin/users" element={<ProtectedRoute requiresAdmin><UsersPage /></ProtectedRoute>} />
-              <Route path="/admin/image-generator" element={<ProtectedRoute requiresAdmin><ImageGeneratorPage /></ProtectedRoute>} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
