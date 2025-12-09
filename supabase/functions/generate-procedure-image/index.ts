@@ -5,133 +5,133 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
-// Prompts optimizados por procedimiento
+// Prompts neutrales y seguros - enfocados en bienestar y confianza
 const procedurePrompts: Record<string, { prompt: string; suggestedBackground: string }> = {
   // ROSTRO Y CUELLO
   'rhinoplasty': {
-    prompt: 'Professional portrait photo of a beautiful woman with refined elegant nose profile, natural soft lighting, showing perfect nose contour and harmony with facial features, photorealistic, high quality medical aesthetic result, no text no watermarks',
+    prompt: 'Professional portrait of a confident smiling woman with elegant facial features, beautiful profile view, soft natural lighting, high-end beauty photography',
     suggestedBackground: 'unicolor'
   },
   'facelift': {
-    prompt: 'Professional portrait of an elegant mature woman in her 50s with smooth rejuvenated facial skin, natural youthful appearance, refined jawline, premium lighting, photorealistic, no text no watermarks',
+    prompt: 'Professional portrait of a radiant woman in her 50s with glowing healthy skin, warm confident smile, elegant and refined appearance, soft studio lighting',
     suggestedBackground: 'home'
   },
   'blepharoplasty': {
-    prompt: 'Close-up professional portrait of a woman with beautiful refreshed eyes, no eye bags, smooth eyelids, bright alert expression, natural beauty, soft lighting, photorealistic, no text no watermarks',
+    prompt: 'Professional beauty portrait of a woman with bright expressive eyes, refreshed alert look, natural makeup, soft lighting, wellness photography',
     suggestedBackground: 'unicolor'
   },
   'otoplasty': {
-    prompt: 'Professional side profile portrait of a young person with beautifully proportioned ears, natural appearance, elegant ear positioning, soft lighting, photorealistic, no text no watermarks',
+    prompt: 'Professional side profile portrait of a confident young person, elegant hairstyle, natural lighting, lifestyle photography',
     suggestedBackground: 'unicolor'
   },
   'brow-lift': {
-    prompt: 'Professional portrait of a woman with elegantly lifted eyebrows, open refreshed eye area, youthful forehead, natural expression, premium lighting, photorealistic, no text no watermarks',
+    prompt: 'Professional portrait of a woman with open expressive eyes, relaxed happy expression, natural beauty, soft studio lighting',
     suggestedBackground: 'unicolor'
   },
   'neck-lift': {
-    prompt: 'Professional portrait of an elegant woman showing refined neck contour and jawline, smooth neck skin, youthful profile, premium lighting, photorealistic, no text no watermarks',
+    prompt: 'Professional portrait of an elegant woman, refined profile, graceful neck and jawline, premium lighting, beauty photography',
     suggestedBackground: 'home'
   },
   'facial-rejuvenation': {
-    prompt: 'Professional portrait of a radiant woman with glowing rejuvenated skin, youthful appearance, natural beauty, premium soft lighting, photorealistic, no text no watermarks',
+    prompt: 'Professional portrait of a radiant woman with glowing healthy skin, natural beauty, confident smile, spa wellness atmosphere',
     suggestedBackground: 'medical'
   },
   
   // CONTORNO CORPORAL
   'liposuction': {
-    prompt: 'Professional photo of a fit woman in elegant activewear showing toned sculpted body contour, flat stomach, defined waist, natural lighting, photorealistic, tasteful, no text no watermarks',
+    prompt: 'Professional lifestyle photo of a fit confident woman in elegant athletic wear, healthy active lifestyle, bright natural lighting, wellness photography',
     suggestedBackground: 'home'
   },
   'tummy-tuck': {
-    prompt: 'Professional photo of a confident woman showing flat toned abdomen, defined waist, smooth stomach contour, elegant pose, natural lighting, photorealistic, tasteful, no text no watermarks',
+    prompt: 'Professional lifestyle photo of a confident woman in elegant casual attire, healthy posture, modern home interior, natural lighting',
     suggestedBackground: 'home'
   },
   'arm-lift': {
-    prompt: 'Professional photo of a woman with toned sculpted arms, smooth skin, elegant pose with arms visible, natural lighting, photorealistic, tasteful, no text no watermarks',
+    prompt: 'Professional lifestyle photo of a confident woman in elegant sleeveless top, healthy active appearance, natural lighting, wellness photography',
     suggestedBackground: 'unicolor'
   },
   'thigh-lift': {
-    prompt: 'Professional photo of a woman with toned sculpted legs and thighs, smooth skin contour, elegant confident pose, natural lighting, photorealistic, tasteful, no text no watermarks',
+    prompt: 'Professional lifestyle photo of a confident woman, healthy active lifestyle, elegant casual wear, bright natural lighting',
     suggestedBackground: 'unicolor'
   },
   '360-liposuction': {
-    prompt: 'Professional photo of a woman with beautifully sculpted hourglass figure, defined waist from all angles, toned body contour, elegant pose, natural lighting, photorealistic, tasteful, no text no watermarks',
+    prompt: 'Professional lifestyle photo of a confident woman with elegant posture, healthy appearance, modern wellness setting, natural lighting',
     suggestedBackground: 'medical'
   },
   'back-liposuction': {
-    prompt: 'Professional photo of a woman showing smooth sculpted back contour, elegant back view, toned appearance, natural lighting, photorealistic, tasteful, no text no watermarks',
+    prompt: 'Professional lifestyle photo from behind of a woman in elegant attire, confident posture, modern setting, soft lighting',
     suggestedBackground: 'unicolor'
   },
   'chin-liposuction': {
-    prompt: 'Professional portrait of a woman with defined jawline and chin, no double chin, elegant neck contour, refined profile, soft lighting, photorealistic, no text no watermarks',
+    prompt: 'Professional portrait of a confident person with refined profile and jawline, elegant appearance, soft studio lighting',
     suggestedBackground: 'unicolor'
   },
   
   // SENOS
   'breast-augmentation': {
-    prompt: 'Professional tasteful photo of a confident woman in elegant dress showing natural proportionate bust, feminine silhouette, elegant pose, natural lighting, photorealistic, classy, no text no watermarks',
+    prompt: 'Professional portrait of a confident elegant woman in sophisticated dress, happy smile, modern setting, soft natural lighting',
     suggestedBackground: 'home'
   },
   'breast-lift': {
-    prompt: 'Professional tasteful photo of a confident woman in elegant top showing youthful lifted bust contour, feminine silhouette, elegant pose, natural lighting, photorealistic, classy, no text no watermarks',
+    prompt: 'Professional portrait of a confident radiant woman in elegant attire, positive expression, modern interior, natural lighting',
     suggestedBackground: 'home'
   },
   'breast-reduction': {
-    prompt: 'Professional tasteful photo of a confident woman with proportionate balanced bust, comfortable elegant posture, feminine silhouette, natural lighting, photorealistic, classy, no text no watermarks',
+    prompt: 'Professional portrait of a confident relaxed woman, comfortable posture, elegant casual wear, soft natural lighting',
     suggestedBackground: 'home'
   },
   'breast-augmentation-lift': {
-    prompt: 'Professional tasteful photo of a confident woman in elegant attire showing beautifully enhanced and lifted bust, youthful silhouette, elegant pose, natural lighting, photorealistic, classy, no text no watermarks',
+    prompt: 'Professional portrait of a confident elegant woman, sophisticated attire, modern wellness clinic setting, soft lighting',
     suggestedBackground: 'medical'
   },
   
   // GLÚTEOS
   'bbl': {
-    prompt: 'Professional tasteful photo of a confident woman showing beautifully sculpted rounded buttocks, hourglass figure, elegant pose, natural lighting, photorealistic, classy, no text no watermarks',
+    prompt: 'Professional lifestyle photo of a confident fit woman in elegant activewear, healthy active lifestyle, modern gym or wellness setting',
     suggestedBackground: 'home'
   },
   'gluteal-implants': {
-    prompt: 'Professional tasteful photo of a confident woman showing enhanced rounded buttocks silhouette, elegant figure, confident pose, natural lighting, photorealistic, classy, no text no watermarks',
+    prompt: 'Professional lifestyle photo of a confident woman in elegant athletic wear, modern fitness setting, natural lighting',
     suggestedBackground: 'unicolor'
   },
   
   // COMBINADOS
   'mommy-makeover': {
-    prompt: 'Professional photo of a radiant confident mother with restored toned body, flat stomach, youthful figure, happy confident expression, elegant casual attire, warm home setting, photorealistic, no text no watermarks',
+    prompt: 'Professional portrait of a happy radiant mother, confident smile, elegant casual attire, warm home setting with soft natural lighting',
     suggestedBackground: 'home'
   },
   'full-body-makeover': {
-    prompt: 'Professional photo of a transformed confident woman with sculpted harmonious body proportions, elegant figure, radiant appearance, premium medical spa setting, photorealistic, no text no watermarks',
+    prompt: 'Professional portrait of a confident transformed woman, elegant attire, modern wellness spa setting, soft ambient lighting',
     suggestedBackground: 'medical'
   },
   'post-weight-loss': {
-    prompt: 'Professional photo of a proud confident woman showing transformed toned body after weight loss, smooth skin contour, triumphant confident pose, inspirational, photorealistic, no text no watermarks',
+    prompt: 'Professional portrait of a proud confident person celebrating health transformation, elegant casual wear, bright inspiring setting',
     suggestedBackground: 'home'
   },
   
   // ESPECIALIZADOS
   'gynecomastia': {
-    prompt: 'Professional photo of a fit confident man with flat masculine chest contour, athletic build, confident pose, natural lighting, photorealistic, no text no watermarks',
+    prompt: 'Professional portrait of a confident fit man in casual polo shirt, healthy athletic appearance, natural lighting, lifestyle photography',
     suggestedBackground: 'unicolor'
   },
   'scar-revision': {
-    prompt: 'Close-up professional photo showing smooth healed skin, flawless skin texture, natural skin tone, soft medical lighting, photorealistic, no text no watermarks',
+    prompt: 'Close-up professional photo of smooth healthy skin texture, soft spa lighting, wellness and skincare concept',
     suggestedBackground: 'medical'
   },
   'labiaplasty': {
-    prompt: 'Professional tasteful portrait of a confident relaxed woman in spa setting, comfortable serene expression, wellness atmosphere, soft lighting, photorealistic, no text no watermarks',
+    prompt: 'Professional portrait of a confident relaxed woman in spa robe, serene peaceful expression, wellness spa atmosphere, soft ambient lighting',
     suggestedBackground: 'medical'
   },
   'fat-transfer-face': {
-    prompt: 'Professional portrait of a woman with youthful volumized facial features, plump cheeks, smooth skin, natural rejuvenated appearance, soft lighting, photorealistic, no text no watermarks',
+    prompt: 'Professional beauty portrait of a woman with youthful glowing skin, natural healthy appearance, soft studio lighting',
     suggestedBackground: 'unicolor'
   }
 };
 
 const backgroundPrompts: Record<string, string> = {
-  'unicolor': 'clean minimal soft cream or light gray gradient background, studio lighting',
-  'home': 'elegant modern luxury home interior background, warm natural lighting, tasteful decor',
-  'medical': 'premium modern medical clinic or spa environment, professional clean aesthetic, soft ambient lighting, high-end medical equipment visible'
+  'unicolor': 'clean minimal soft cream or light gray gradient studio background',
+  'home': 'elegant modern luxury home interior with warm natural lighting and tasteful decor',
+  'medical': 'premium modern wellness spa or medical clinic with clean professional aesthetic and soft ambient lighting'
 };
 
 serve(async (req) => {
@@ -157,7 +157,7 @@ serve(async (req) => {
     const bgType = backgroundType || procedureConfig?.suggestedBackground || 'unicolor';
     const backgroundPrompt = backgroundPrompts[bgType];
 
-    const fullPrompt = `${basePrompt}, ${backgroundPrompt}, ultra high resolution, professional photography, 16:9 aspect ratio`;
+    const fullPrompt = `${basePrompt}, ${backgroundPrompt}, ultra high resolution, professional photography, 16:9 aspect ratio, photorealistic, no text, no watermarks, no logos`;
 
     console.log(`Generating image for procedure: ${procedureId}`);
     console.log(`Full prompt: ${fullPrompt}`);
@@ -203,11 +203,30 @@ serve(async (req) => {
     const data = await response.json();
     console.log('AI response received');
 
+    // Check if the model refused to generate
+    const textContent = data.choices?.[0]?.message?.content;
+    if (textContent && textContent.includes("can't help") || textContent?.includes("cannot")) {
+      console.error('Model refused to generate:', textContent);
+      return new Response(JSON.stringify({ 
+        error: 'The AI model could not generate this image. Try a different background type or regenerate.',
+        details: textContent
+      }), {
+        status: 400,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+
     const imageUrl = data.choices?.[0]?.message?.images?.[0]?.image_url?.url;
     
     if (!imageUrl) {
       console.error('No image in response:', JSON.stringify(data));
-      throw new Error('No image generated in response');
+      return new Response(JSON.stringify({ 
+        error: 'No image was generated. Try a different background type.',
+        details: textContent || 'Unknown reason'
+      }), {
+        status: 400,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
     }
 
     return new Response(JSON.stringify({ 
