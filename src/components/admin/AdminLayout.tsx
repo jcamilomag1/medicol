@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
-import { LogOut, LayoutDashboard, Users } from "lucide-react";
+import { LogOut, LayoutDashboard, Users, Image } from "lucide-react";
 import { useIsAdmin } from "@/hooks/useUserRole";
 
 interface AdminLayoutProps {
@@ -48,15 +48,26 @@ export const AdminLayout = ({ children }: AdminLayoutProps) => {
               </Button>
             </Link>
             {isAdmin && (
-              <Link to="/admin/users">
-                <Button 
-                  variant={location.pathname === '/admin/users' ? 'default' : 'ghost'} 
-                  className="w-full justify-start"
-                >
-                  <Users className="h-4 w-4 mr-2" />
-                  Usuarios
-                </Button>
-              </Link>
+              <>
+                <Link to="/admin/users">
+                  <Button 
+                    variant={location.pathname === '/admin/users' ? 'default' : 'ghost'} 
+                    className="w-full justify-start"
+                  >
+                    <Users className="h-4 w-4 mr-2" />
+                    Usuarios
+                  </Button>
+                </Link>
+                <Link to="/admin/image-generator">
+                  <Button 
+                    variant={location.pathname === '/admin/image-generator' ? 'default' : 'ghost'} 
+                    className="w-full justify-start"
+                  >
+                    <Image className="h-4 w-4 mr-2" />
+                    Generador de Imágenes
+                  </Button>
+                </Link>
+              </>
             )}
           </nav>
         </aside>
