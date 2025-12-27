@@ -42,7 +42,7 @@ export const ProceduresGrid = () => {
       procedure.description_en.toLowerCase().includes(searchLower);
       
     return matchesCategory && matchesSearch;
-  });
+  }).sort((a, b) => a.name_es.localeCompare(b.name_es, 'es'));
 
   const handleProcedureClick = (procedure: Procedure) => {
     setSelectedProcedure(procedure);
