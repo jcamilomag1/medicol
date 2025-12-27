@@ -28,6 +28,13 @@ import lipoBreastImplantsImg from '@/assets/procedures/lipo-breast-implants.png'
 import mommyMakeoverNewImg from '@/assets/procedures/mommy-makeover-new.png';
 import gynecomastiaImg from '@/assets/procedures/gynecomastia.png';
 
+// Batch 2 custom images
+import rhinoplastyNewImg from '@/assets/procedures/rhinoplasty-new.png';
+import blepharoplastyNewImg from '@/assets/procedures/blepharoplasty-new.png';
+import faceliftNewImg from '@/assets/procedures/facelift-new.png';
+import lateralBrowLiftImg from '@/assets/procedures/lateral-brow-lift.png';
+import thighLiftNewImg from '@/assets/procedures/thigh-lift-new.jpg';
+
 export interface Procedure {
   id: string;
   category: 'face' | 'body' | 'breast' | 'buttocks' | 'combined' | 'specialized';
@@ -65,7 +72,7 @@ export const procedures: Procedure[] = [
     price_usd: 2500,
     price_comparison_us: 8333,
     savings_percentage: 70,
-    image: rhinoplastyImg,
+    image: rhinoplastyNewImg,
     surgery_time_es: '2-3 horas',
     surgery_time_en: '2-3 hours',
     anesthesia_es: 'General',
@@ -157,7 +164,7 @@ export const procedures: Procedure[] = [
     price_usd: 1500,
     price_comparison_us: 3750,
     savings_percentage: 60,
-    image: blepharoplastyImg,
+    image: blepharoplastyNewImg,
     surgery_time_es: '1-2 horas',
     surgery_time_en: '1-2 hours',
     anesthesia_es: 'Local con Sedación',
@@ -203,7 +210,7 @@ export const procedures: Procedure[] = [
     price_usd: 9500,
     price_comparison_us: 21111,
     savings_percentage: 55,
-    image: faceliftImg,
+    image: faceliftNewImg,
     surgery_time_es: '3-5 horas',
     surgery_time_en: '3-5 hours',
     anesthesia_es: 'General',
@@ -249,7 +256,7 @@ export const procedures: Procedure[] = [
     price_usd: 2050,
     price_comparison_us: 5125,
     savings_percentage: 60,
-    image: browLiftImg,
+    image: lateralBrowLiftImg,
     surgery_time_es: '1-2 horas',
     surgery_time_en: '1-2 hours',
     anesthesia_es: 'Local con Sedación',
@@ -480,7 +487,7 @@ export const procedures: Procedure[] = [
     price_usd: 2800,
     price_comparison_us: 6222,
     savings_percentage: 55,
-    image: thighLiftImg,
+    image: thighLiftNewImg,
     surgery_time_es: '2-3 horas',
     surgery_time_en: '2-3 hours',
     anesthesia_es: 'General',
