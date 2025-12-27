@@ -1,3 +1,15 @@
+// Importar imágenes dentales
+import disenoSonrisaImg from '@/assets/dental/diseno-sonrisa.jpg';
+import blanqueamientoImg from '@/assets/dental/blanqueamiento.png';
+import carillasImg from '@/assets/dental/carillas.png';
+import coronaImg from '@/assets/dental/corona.png';
+import implanteImg from '@/assets/dental/implante.png';
+import endodonciaImg from '@/assets/dental/endodoncia.png';
+import limpiezaProfundaImg from '@/assets/dental/limpieza-profunda.png';
+import ortodonciaImg from '@/assets/dental/ortodoncia.png';
+import protesisImg from '@/assets/dental/protesis.png';
+import consultorioImg from '@/assets/dental/consultorio.jpg';
+
 export interface DentalService {
   id: string;
   category: 'design' | 'cosmetic' | 'restorative' | 'orthodontics' | 'technology';
@@ -34,7 +46,7 @@ export const dentalServices: DentalService[] = [
     price_usd: 850,
     price_comparison_us: 2500,
     savings_percentage: 66,
-    image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80',
+    image: disenoSonrisaImg,
     treatment_time_es: '2-3 horas',
     treatment_time_en: '2-3 hours',
     anesthesia_es: 'Local',
@@ -216,7 +228,7 @@ export const dentalServices: DentalService[] = [
     price_usd: 75,
     price_comparison_us: 1400,
     savings_percentage: 95,
-    image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80',
+    image: carillasImg,
     treatment_time_es: '1 hora por diente',
     treatment_time_en: '1 hour per tooth',
     anesthesia_es: 'Local',
@@ -262,7 +274,7 @@ export const dentalServices: DentalService[] = [
     price_usd: 300,
     price_comparison_us: 1000,
     savings_percentage: 70,
-    image: 'https://images.unsplash.com/photo-1609840114035-3c981a782dfe?auto=format&fit=crop&w=800&q=80',
+    image: blanqueamientoImg,
     treatment_time_es: '1 hora',
     treatment_time_en: '1 hour',
     anesthesia_es: 'No requerida',
@@ -446,7 +458,7 @@ export const dentalServices: DentalService[] = [
     price_usd: 175,
     price_comparison_us: 650,
     savings_percentage: 73,
-    image: 'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=800&q=80',
+    image: ortodonciaImg,
     treatment_time_es: '1 hora',
     treatment_time_en: '1 hour',
     anesthesia_es: 'No requerida',
@@ -492,7 +504,7 @@ export const dentalServices: DentalService[] = [
     price_usd: 300,
     price_comparison_us: 1250,
     savings_percentage: 76,
-    image: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=800&q=80',
+    image: endodonciaImg,
     treatment_time_es: '1-1.5 horas',
     treatment_time_en: '1-1.5 hours',
     anesthesia_es: 'Local',
@@ -588,7 +600,7 @@ export const dentalServices: DentalService[] = [
     price_usd: 375,
     price_comparison_us: 2250,
     savings_percentage: 83,
-    image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80',
+    image: protesisImg,
     treatment_time_es: '3-4 visitas',
     treatment_time_en: '3-4 visits',
     anesthesia_es: 'No requerida',
@@ -684,7 +696,7 @@ export const dentalServices: DentalService[] = [
     price_usd: 1125,
     price_comparison_us: 3750,
     savings_percentage: 70,
-    image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80',
+    image: implanteImg,
     treatment_time_es: '2-3 meses (proceso completo)',
     treatment_time_en: '2-3 months (complete process)',
     anesthesia_es: 'Local o sedación',
@@ -732,7 +744,7 @@ export const dentalServices: DentalService[] = [
     price_usd: 625,
     price_comparison_us: 1600,
     savings_percentage: 61,
-    image: 'https://images.unsplash.com/photo-1643329368060-84724752d0e5?auto=format&fit=crop&w=800&q=80',
+    image: coronaImg,
     treatment_time_es: '2 visitas',
     treatment_time_en: '2 visits',
     anesthesia_es: 'Local',
@@ -1112,7 +1124,7 @@ export const dentalServices: DentalService[] = [
     price_usd: 125,
     price_comparison_us: 300,
     savings_percentage: 58,
-    image: 'https://images.unsplash.com/photo-1609840113935-ea1e4abf6b2e?auto=format&fit=crop&w=800&q=80',
+    image: limpiezaProfundaImg,
     treatment_time_es: '1-2 horas',
     treatment_time_en: '1-2 hours',
     anesthesia_es: 'Local',
