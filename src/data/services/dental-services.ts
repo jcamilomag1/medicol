@@ -9,6 +9,17 @@ import limpiezaProfundaImg from '@/assets/dental/limpieza-profunda.png';
 import ortodonciaImg from '@/assets/dental/ortodoncia.png';
 import protesisImg from '@/assets/dental/protesis.png';
 import consultorioImg from '@/assets/dental/consultorio.jpg';
+// Segunda tanda de imágenes
+import disenoArcadaImg from '@/assets/dental/diseno-arcada.jpg';
+import radiografiaImg from '@/assets/dental/radiografia.jpg';
+import radiografia2Img from '@/assets/dental/radiografia-2.jpg';
+import doctoraPreparacionImg from '@/assets/dental/doctora-preparacion.jpg';
+import doctoraPacienteImg from '@/assets/dental/doctora-paciente.jpg';
+import herramientasDentalesImg from '@/assets/dental/herramientas-dentales.jpg';
+import lamparaCuradoImg from '@/assets/dental/lampara-curado.jpg';
+import ortodoncia2Img from '@/assets/dental/ortodoncia-2.jpg';
+import procedimiento1Img from '@/assets/dental/procedimiento-1.jpg';
+import procedimiento3Img from '@/assets/dental/procedimiento-3.jpg';
 
 export interface DentalService {
   id: string;
@@ -94,7 +105,7 @@ export const dentalServices: DentalService[] = [
     price_usd: 625,
     price_comparison_us: 1800,
     savings_percentage: 65,
-    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80',
+    image: disenoArcadaImg,
     treatment_time_es: '1-2 horas',
     treatment_time_en: '1-2 hours',
     anesthesia_es: 'Local',
@@ -140,7 +151,7 @@ export const dentalServices: DentalService[] = [
     price_usd: 500,
     price_comparison_us: 1500,
     savings_percentage: 67,
-    image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80',
+    image: herramientasDentalesImg,
     treatment_time_es: '1 hora',
     treatment_time_en: '1 hour',
     anesthesia_es: 'Local o no requerida',
@@ -184,7 +195,7 @@ export const dentalServices: DentalService[] = [
     price_usd: 37.50,
     price_comparison_us: 175,
     savings_percentage: 79,
-    image: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=800&q=80',
+    image: lamparaCuradoImg,
     treatment_time_es: '30-45 minutos',
     treatment_time_en: '30-45 minutes',
     anesthesia_es: 'Generalmente no requerida',
@@ -412,7 +423,7 @@ export const dentalServices: DentalService[] = [
     price_usd: 500,
     price_comparison_us: 1250,
     savings_percentage: 60,
-    image: 'https://images.unsplash.com/photo-1629909615957-be38c326b21e?auto=format&fit=crop&w=800&q=80',
+    image: doctoraPreparacionImg,
     treatment_time_es: '30 minutos',
     treatment_time_en: '30 minutes',
     anesthesia_es: 'No requerida',
@@ -552,7 +563,7 @@ export const dentalServices: DentalService[] = [
     price_usd: 375,
     price_comparison_us: 1500,
     savings_percentage: 75,
-    image: 'https://images.unsplash.com/photo-1588776814432-ec3c2fe0c731?auto=format&fit=crop&w=800&q=80',
+    image: radiografiaImg,
     treatment_time_es: '1.5-2 horas',
     treatment_time_en: '1.5-2 hours',
     anesthesia_es: 'Local',
@@ -648,7 +659,7 @@ export const dentalServices: DentalService[] = [
     price_usd: 625,
     price_comparison_us: 3000,
     savings_percentage: 79,
-    image: 'https://images.unsplash.com/photo-1606811860617-4a8df1e2ac8b?auto=format&fit=crop&w=800&q=80',
+    image: doctoraPacienteImg,
     treatment_time_es: '4-5 visitas',
     treatment_time_en: '4-5 visits',
     anesthesia_es: 'No requerida',
@@ -840,7 +851,7 @@ export const dentalServices: DentalService[] = [
     price_usd: 500,
     price_comparison_us: 1250,
     savings_percentage: 60,
-    image: 'https://images.unsplash.com/photo-1606811860618-4b20d6faf36f?auto=format&fit=crop&w=800&q=80',
+    image: radiografia2Img,
     treatment_time_es: '2 visitas',
     treatment_time_en: '2 visits',
     anesthesia_es: 'Local',
@@ -888,7 +899,7 @@ export const dentalServices: DentalService[] = [
     price_usd: 175,
     price_comparison_us: 600,
     savings_percentage: 71,
-    image: 'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=800&q=80',
+    image: procedimiento1Img,
     treatment_time_es: '30-45 minutos',
     treatment_time_en: '30-45 minutes',
     anesthesia_es: 'Local',
@@ -934,7 +945,7 @@ export const dentalServices: DentalService[] = [
     price_usd: 175,
     price_comparison_us: 700,
     savings_percentage: 75,
-    image: 'https://images.unsplash.com/photo-1606811860717-c1a657e34d2f?auto=format&fit=crop&w=800&q=80',
+    image: procedimiento3Img,
     treatment_time_es: '1 hora',
     treatment_time_en: '1 hour',
     anesthesia_es: 'Local',
@@ -980,7 +991,7 @@ export const dentalServices: DentalService[] = [
     price_usd: 300,
     price_comparison_us: 750,
     savings_percentage: 60,
-    image: 'https://images.unsplash.com/photo-1609840114104-e1e2c4e6d3e1?auto=format&fit=crop&w=800&q=80',
+    image: ortodoncia2Img,
     treatment_time_es: '30 minutos (elaboración)',
     treatment_time_en: '30 minutes (preparation)',
     anesthesia_es: 'No requerida',
