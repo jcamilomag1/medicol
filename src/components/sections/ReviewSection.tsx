@@ -190,15 +190,6 @@ export const ReviewSection = () => {
                 <p className="text-muted-foreground text-sm mb-6 px-2">
                   {t('reviews.cta_google_text', 'Ve lo que dicen nuestros pacientes')}
                 </p>
-                
-                {/* CTA Button */}
-                <Button 
-                  variant="default" 
-                  className="group-hover:scale-105 transition-transform"
-                >
-                  {t('common.learn_more')}
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
               </motion.a>
             </CarouselItem>
           </CarouselContent>
