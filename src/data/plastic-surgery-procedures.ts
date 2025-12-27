@@ -35,19 +35,21 @@ import faceliftNewImg from '@/assets/procedures/facelift-new.png';
 import lateralBrowLiftImg from '@/assets/procedures/lateral-brow-lift.png';
 import thighLiftNewImg from '@/assets/procedures/thigh-lift-new.jpg';
 
-// Stock images from Unsplash
+// Stock images (only for otoplasty and cheek-surgery)
 import otoplastyStockImg from '@/assets/procedures/otoplasty-stock.jpg';
-import tummyTuckStockImg from '@/assets/procedures/tummy-tuck-stock.jpg';
-import miniTummyTuckStockImg from '@/assets/procedures/mini-tummy-tuck-stock.jpg';
-import armLiftStockImg from '@/assets/procedures/arm-lift-stock.jpg';
-import bodyLiftStockImg from '@/assets/procedures/body-lift-stock.jpg';
-import buttImplantsStockImg from '@/assets/procedures/butt-implants-stock.jpg';
-import gluteoplastyStockImg from '@/assets/procedures/gluteoplasty-stock.jpg';
-import lipoRhinoplastyStockImg from '@/assets/procedures/lipo-rhinoplasty-stock.jpg';
-import bichectomyStockImg from '@/assets/procedures/bichectomy-stock.jpg';
 import cheekSurgeryStockImg from '@/assets/procedures/cheek-surgery-stock.jpg';
-import scarRevisionStockImg from '@/assets/procedures/scar-revision-stock.jpg';
-import biopolymerRemovalStockImg from '@/assets/procedures/biopolymer-removal-stock.jpg';
+
+// New custom images from user
+import tummyTuckNewImg from '@/assets/procedures/tummy-tuck-new.jpg';
+import miniTummyTuckNewImg from '@/assets/procedures/mini-tummy-tuck-new.jpg';
+import armLiftNewImg from '@/assets/procedures/arm-lift-new.jpg';
+import bodyLiftNewImg from '@/assets/procedures/body-lift-new.jpg';
+import buttImplantsNewImg from '@/assets/procedures/butt-implants-new.jpg';
+import gluteoplastyNewImg from '@/assets/procedures/gluteoplasty-new.jpg';
+import lipoRhinoplastyNewImg from '@/assets/procedures/lipo-rhinoplasty-new.jpg';
+import bichectomyNewImg from '@/assets/procedures/bichectomy-new.jpg';
+import scarRevisionNewImg from '@/assets/procedures/scar-revision-new.jpg';
+import biopolymerRemovalNewImg from '@/assets/procedures/biopolymer-removal-new.jpg';
 
 export interface Procedure {
   id: string;
@@ -409,7 +411,7 @@ export const procedures: Procedure[] = [
     price_usd: 5500,
     price_comparison_us: 15714,
     savings_percentage: 65,
-    image: tummyTuckStockImg,
+    image: tummyTuckNewImg,
     surgery_time_es: '2-4 horas',
     surgery_time_en: '2-4 hours',
     anesthesia_es: 'General',
@@ -455,7 +457,7 @@ export const procedures: Procedure[] = [
     price_usd: 3500,
     price_comparison_us: 8750,
     savings_percentage: 60,
-    image: miniTummyTuckStockImg,
+    image: miniTummyTuckNewImg,
     surgery_time_es: '1.5-2.5 horas',
     surgery_time_en: '1.5-2.5 hours',
     anesthesia_es: 'General',
@@ -547,7 +549,7 @@ export const procedures: Procedure[] = [
     price_usd: 3500,
     price_comparison_us: 8750,
     savings_percentage: 60,
-    image: armLiftStockImg,
+    image: armLiftNewImg,
     surgery_time_es: '2-3 horas',
     surgery_time_en: '2-3 hours',
     anesthesia_es: 'General',
@@ -593,7 +595,7 @@ export const procedures: Procedure[] = [
     price_usd: 4400,
     price_comparison_us: 9778,
     savings_percentage: 55,
-    image: bodyLiftStockImg,
+    image: bodyLiftNewImg,
     surgery_time_es: '4-6 horas',
     surgery_time_en: '4-6 hours',
     anesthesia_es: 'General',
@@ -825,7 +827,7 @@ export const procedures: Procedure[] = [
     price_usd: 5800,
     price_comparison_us: 16571,
     savings_percentage: 65,
-    image: buttImplantsStockImg,
+    image: buttImplantsNewImg,
     surgery_time_es: '2-3 horas',
     surgery_time_en: '2-3 hours',
     anesthesia_es: 'General',
@@ -871,7 +873,7 @@ export const procedures: Procedure[] = [
     price_usd: 5999,
     price_comparison_us: 14998,
     savings_percentage: 60,
-    image: gluteoplastyStockImg,
+    image: gluteoplastyNewImg,
     surgery_time_es: '2-4 horas',
     surgery_time_en: '2-4 hours',
     anesthesia_es: 'General',
@@ -1012,7 +1014,7 @@ export const procedures: Procedure[] = [
     price_usd: 7500,
     price_comparison_us: 18750,
     savings_percentage: 60,
-    image: lipoRhinoplastyStockImg,
+    image: lipoRhinoplastyNewImg,
     surgery_time_es: '4-6 horas',
     surgery_time_en: '4-6 hours',
     anesthesia_es: 'General',
@@ -1157,7 +1159,7 @@ export const procedures: Procedure[] = [
     price_usd: 1300,
     price_comparison_us: 3714,
     savings_percentage: 65,
-    image: bichectomyStockImg,
+    image: bichectomyNewImg,
     surgery_time_es: '30-60 minutos',
     surgery_time_en: '30-60 minutes',
     anesthesia_es: 'Local con Sedación',
@@ -1249,7 +1251,7 @@ export const procedures: Procedure[] = [
     price_usd: 1600,
     price_comparison_us: 4000,
     savings_percentage: 60,
-    image: scarRevisionStockImg,
+    image: scarRevisionNewImg,
     surgery_time_es: '1-2 horas',
     surgery_time_en: '1-2 hours',
     anesthesia_es: 'Local con Sedación',
@@ -1295,7 +1297,7 @@ export const procedures: Procedure[] = [
     price_usd: 1500,
     price_comparison_us: 5000,
     savings_percentage: 70,
-    image: biopolymerRemovalStockImg,
+    image: biopolymerRemovalNewImg,
     surgery_time_es: '1-3 horas',
     surgery_time_en: '1-3 hours',
     anesthesia_es: 'General o Local con Sedación',
