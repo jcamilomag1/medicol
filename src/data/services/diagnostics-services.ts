@@ -86,7 +86,7 @@ export const diagnosticPrograms: DiagnosticProgram[] = [
     price_usd: 1800,
     price_comparison_us: 6000,
     savings_percentage: 70,
-    image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80',
+    image: '/diagnostics/second-opinion-ct.png',
     treatment_time_es: '2-3 días',
     treatment_time_en: '2-3 days',
     anesthesia_es: 'No requerida',
