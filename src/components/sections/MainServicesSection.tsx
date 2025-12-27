@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { MedicalServicesCarousel } from '@/components/ui/medical-services-carousel';
 import cirugiaPlasticaImg from '@/assets/services/cirugia-plastica.jpg';
 import medicalCheckupImg from '@/assets/services/medical-checkup.jpg';
+import regenerativeMedicineImg from '@/assets/services/regenerative-medicine.png';
 
 const servicesData = [
   {
@@ -16,7 +17,7 @@ const servicesData = [
     titleKey: 'main_services.regenerative.title',
     categoryKey: 'main_services.regenerative.category',
     href: '/servicios/celulas-madre',
-    imageUrl: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=800&fit=crop&q=80',
+    imageUrl: regenerativeMedicineImg,
     themeColor: '280 70% 50%',
   },
   {
