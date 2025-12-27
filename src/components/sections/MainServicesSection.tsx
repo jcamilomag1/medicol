@@ -1,13 +1,15 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { MedicalServicesCarousel } from '@/components/ui/medical-services-carousel';
+import cirugiaPlasticaImg from '@/assets/services/cirugia-plastica.jpg';
+import medicalCheckupImg from '@/assets/services/medical-checkup.jpg';
 
 const servicesData = [
   {
     titleKey: 'main_services.plastic_surgery.title',
     categoryKey: 'main_services.plastic_surgery.category',
     href: '/servicios/cirugia-plastica',
-    imageUrl: 'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=800&fit=crop&q=80',
+    imageUrl: cirugiaPlasticaImg,
     themeColor: '210 100% 45%',
   },
   {
@@ -28,7 +30,7 @@ const servicesData = [
     titleKey: 'main_services.diagnostics.title',
     categoryKey: 'main_services.diagnostics.category',
     href: '/servicios/diagnosticos',
-    imageUrl: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=800&fit=crop&q=80',
+    imageUrl: medicalCheckupImg,
     themeColor: '150 50% 40%',
   },
 ];
