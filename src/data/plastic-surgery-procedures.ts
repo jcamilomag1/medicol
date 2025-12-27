@@ -16,6 +16,18 @@ import bblImg from '@/assets/procedures/bbl.jpg';
 import mommyMakeoverImg from '@/assets/procedures/mommy-makeover.jpg';
 import facialRejuvenationImg from '@/assets/procedures/facial-rejuvenation.jpg';
 
+// New custom images
+import tipRhinoplastyImg from '@/assets/procedures/tip-rhinoplasty.png';
+import liposuction360Img from '@/assets/procedures/liposuction-360.png';
+import breastImplantsImg from '@/assets/procedures/breast-implants.png';
+import mastopexyImg from '@/assets/procedures/mastopexy.png';
+import breastReductionNewImg from '@/assets/procedures/breast-reduction-new.png';
+import breastImplantReplacementImg from '@/assets/procedures/breast-implant-replacement.png';
+import biopolymerRemovalButtocksImg from '@/assets/procedures/biopolymer-removal-buttocks.png';
+import lipoBreastImplantsImg from '@/assets/procedures/lipo-breast-implants.png';
+import mommyMakeoverNewImg from '@/assets/procedures/mommy-makeover-new.png';
+import gynecomastiaImg from '@/assets/procedures/gynecomastia.png';
+
 export interface Procedure {
   id: string;
   category: 'face' | 'body' | 'breast' | 'buttocks' | 'combined' | 'specialized';
@@ -99,7 +111,7 @@ export const procedures: Procedure[] = [
     price_usd: 1650,
     price_comparison_us: 4714,
     savings_percentage: 65,
-    image: rhinoplastyImg,
+    image: tipRhinoplastyImg,
     surgery_time_es: '1-2 horas',
     surgery_time_en: '1-2 hours',
     anesthesia_es: 'General o Local con Sedación',
@@ -330,7 +342,7 @@ export const procedures: Procedure[] = [
     price_usd: 2800,
     price_comparison_us: 7500,
     savings_percentage: 63,
-    image: liposuctionImg,
+    image: liposuction360Img,
     surgery_time_es: '2-4 horas',
     surgery_time_en: '2-4 hours',
     anesthesia_es: 'General o Epidural',
@@ -607,7 +619,7 @@ export const procedures: Procedure[] = [
     price_usd: 4000,
     price_comparison_us: 10000,
     savings_percentage: 60,
-    image: breastAugmentationImg,
+    image: breastImplantsImg,
     surgery_time_es: '1-2 horas',
     surgery_time_en: '1-2 hours',
     anesthesia_es: 'General',
@@ -653,7 +665,7 @@ export const procedures: Procedure[] = [
     price_usd: 4300,
     price_comparison_us: 9556,
     savings_percentage: 55,
-    image: breastLiftImg,
+    image: mastopexyImg,
     surgery_time_es: '2-3 horas',
     surgery_time_en: '2-3 hours',
     anesthesia_es: 'General',
@@ -699,7 +711,7 @@ export const procedures: Procedure[] = [
     price_usd: 4300,
     price_comparison_us: 10750,
     savings_percentage: 60,
-    image: breastReductionImg,
+    image: breastReductionNewImg,
     surgery_time_es: '2-4 horas',
     surgery_time_en: '2-4 hours',
     anesthesia_es: 'General',
@@ -745,7 +757,7 @@ export const procedures: Procedure[] = [
     price_usd: 3800,
     price_comparison_us: 8444,
     savings_percentage: 55,
-    image: breastAugmentationImg,
+    image: breastImplantReplacementImg,
     surgery_time_es: '1-2 horas',
     surgery_time_en: '1-2 hours',
     anesthesia_es: 'General',
@@ -884,7 +896,7 @@ export const procedures: Procedure[] = [
     price_usd: 1200,
     price_comparison_us: 4000,
     savings_percentage: 70,
-    image: bblImg,
+    image: biopolymerRemovalButtocksImg,
     surgery_time_es: '2-3 horas',
     surgery_time_en: '2-3 hours',
     anesthesia_es: 'General',
@@ -931,7 +943,7 @@ export const procedures: Procedure[] = [
     price_usd: 8800,
     price_comparison_us: 25143,
     savings_percentage: 65,
-    image: mommyMakeoverImg,
+    image: lipoBreastImplantsImg,
     surgery_time_es: '3-5 horas',
     surgery_time_en: '3-5 hours',
     anesthesia_es: 'General',
@@ -1027,7 +1039,7 @@ export const procedures: Procedure[] = [
     price_usd: 11500,
     price_comparison_us: 38333,
     savings_percentage: 70,
-    image: mommyMakeoverImg,
+    image: mommyMakeoverNewImg,
     surgery_time_es: '5-7 horas',
     surgery_time_en: '5-7 hours',
     anesthesia_es: 'General',
@@ -1078,7 +1090,7 @@ export const procedures: Procedure[] = [
     price_usd: 3100,
     price_comparison_us: 7750,
     savings_percentage: 60,
-    image: breastReductionImg,
+    image: gynecomastiaImg,
     surgery_time_es: '1.5-2.5 horas',
     surgery_time_en: '1.5-2.5 hours',
     anesthesia_es: 'General',
