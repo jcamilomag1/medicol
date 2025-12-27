@@ -159,15 +159,12 @@ export const ReviewSection = () => {
 
             {/* Google Reviews CTA Card */}
             <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
-              <motion.a
-                href="https://www.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
+              <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: reviews.length * 0.15, duration: 0.5 }}
-                className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300 h-[320px] flex flex-col items-center justify-center text-center group cursor-pointer"
+                className="bg-white p-6 rounded-xl shadow h-[320px] flex flex-col items-center justify-center text-center"
               >
                 {/* Google Reviews Logo */}
                 <div className="mb-4">
@@ -190,7 +187,7 @@ export const ReviewSection = () => {
                 <p className="text-muted-foreground text-sm mb-6 px-2">
                   {t('reviews.cta_google_text', 'Ve lo que dicen nuestros pacientes')}
                 </p>
-              </motion.a>
+              </motion.div>
             </CarouselItem>
           </CarouselContent>
           
