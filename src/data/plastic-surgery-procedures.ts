@@ -35,6 +35,20 @@ import faceliftNewImg from '@/assets/procedures/facelift-new.png';
 import lateralBrowLiftImg from '@/assets/procedures/lateral-brow-lift.png';
 import thighLiftNewImg from '@/assets/procedures/thigh-lift-new.jpg';
 
+// Stock images from Unsplash
+import otoplastyStockImg from '@/assets/procedures/otoplasty-stock.jpg';
+import tummyTuckStockImg from '@/assets/procedures/tummy-tuck-stock.jpg';
+import miniTummyTuckStockImg from '@/assets/procedures/mini-tummy-tuck-stock.jpg';
+import armLiftStockImg from '@/assets/procedures/arm-lift-stock.jpg';
+import bodyLiftStockImg from '@/assets/procedures/body-lift-stock.jpg';
+import buttImplantsStockImg from '@/assets/procedures/butt-implants-stock.jpg';
+import gluteoplastyStockImg from '@/assets/procedures/gluteoplasty-stock.jpg';
+import lipoRhinoplastyStockImg from '@/assets/procedures/lipo-rhinoplasty-stock.jpg';
+import bichectomyStockImg from '@/assets/procedures/bichectomy-stock.jpg';
+import cheekSurgeryStockImg from '@/assets/procedures/cheek-surgery-stock.jpg';
+import scarRevisionStockImg from '@/assets/procedures/scar-revision-stock.jpg';
+import biopolymerRemovalStockImg from '@/assets/procedures/biopolymer-removal-stock.jpg';
+
 export interface Procedure {
   id: string;
   category: 'face' | 'body' | 'breast' | 'buttocks' | 'combined' | 'specialized';
@@ -302,7 +316,7 @@ export const procedures: Procedure[] = [
     price_usd: 1900,
     price_comparison_us: 5429,
     savings_percentage: 65,
-    image: otoplastyImg,
+    image: otoplastyStockImg,
     surgery_time_es: '1-2 horas',
     surgery_time_en: '1-2 hours',
     anesthesia_es: 'General o Local con Sedación',
@@ -395,7 +409,7 @@ export const procedures: Procedure[] = [
     price_usd: 5500,
     price_comparison_us: 15714,
     savings_percentage: 65,
-    image: tummyTuckImg,
+    image: tummyTuckStockImg,
     surgery_time_es: '2-4 horas',
     surgery_time_en: '2-4 hours',
     anesthesia_es: 'General',
@@ -441,7 +455,7 @@ export const procedures: Procedure[] = [
     price_usd: 3500,
     price_comparison_us: 8750,
     savings_percentage: 60,
-    image: tummyTuckImg,
+    image: miniTummyTuckStockImg,
     surgery_time_es: '1.5-2.5 horas',
     surgery_time_en: '1.5-2.5 hours',
     anesthesia_es: 'General',
@@ -533,7 +547,7 @@ export const procedures: Procedure[] = [
     price_usd: 3500,
     price_comparison_us: 8750,
     savings_percentage: 60,
-    image: armLiftImg,
+    image: armLiftStockImg,
     surgery_time_es: '2-3 horas',
     surgery_time_en: '2-3 hours',
     anesthesia_es: 'General',
@@ -579,7 +593,7 @@ export const procedures: Procedure[] = [
     price_usd: 4400,
     price_comparison_us: 9778,
     savings_percentage: 55,
-    image: liposuctionImg,
+    image: bodyLiftStockImg,
     surgery_time_es: '4-6 horas',
     surgery_time_en: '4-6 hours',
     anesthesia_es: 'General',
@@ -811,7 +825,7 @@ export const procedures: Procedure[] = [
     price_usd: 5800,
     price_comparison_us: 16571,
     savings_percentage: 65,
-    image: bblImg,
+    image: buttImplantsStockImg,
     surgery_time_es: '2-3 horas',
     surgery_time_en: '2-3 hours',
     anesthesia_es: 'General',
@@ -857,7 +871,7 @@ export const procedures: Procedure[] = [
     price_usd: 5999,
     price_comparison_us: 14998,
     savings_percentage: 60,
-    image: bblImg,
+    image: gluteoplastyStockImg,
     surgery_time_es: '2-4 horas',
     surgery_time_en: '2-4 hours',
     anesthesia_es: 'General',
@@ -998,7 +1012,7 @@ export const procedures: Procedure[] = [
     price_usd: 7500,
     price_comparison_us: 18750,
     savings_percentage: 60,
-    image: facialRejuvenationImg,
+    image: lipoRhinoplastyStockImg,
     surgery_time_es: '4-6 horas',
     surgery_time_en: '4-6 hours',
     anesthesia_es: 'General',
@@ -1143,7 +1157,7 @@ export const procedures: Procedure[] = [
     price_usd: 1300,
     price_comparison_us: 3714,
     savings_percentage: 65,
-    image: faceliftImg,
+    image: bichectomyStockImg,
     surgery_time_es: '30-60 minutos',
     surgery_time_en: '30-60 minutes',
     anesthesia_es: 'Local con Sedación',
@@ -1189,7 +1203,7 @@ export const procedures: Procedure[] = [
     price_usd: 5600,
     price_comparison_us: 12444,
     savings_percentage: 55,
-    image: faceliftImg,
+    image: cheekSurgeryStockImg,
     surgery_time_es: '1.5-2.5 horas',
     surgery_time_en: '1.5-2.5 hours',
     anesthesia_es: 'General o Local con Sedación',
@@ -1235,7 +1249,7 @@ export const procedures: Procedure[] = [
     price_usd: 1600,
     price_comparison_us: 4000,
     savings_percentage: 60,
-    image: facialRejuvenationImg,
+    image: scarRevisionStockImg,
     surgery_time_es: '1-2 horas',
     surgery_time_en: '1-2 hours',
     anesthesia_es: 'Local con Sedación',
@@ -1281,7 +1295,7 @@ export const procedures: Procedure[] = [
     price_usd: 1500,
     price_comparison_us: 5000,
     savings_percentage: 70,
-    image: facialRejuvenationImg,
+    image: biopolymerRemovalStockImg,
     surgery_time_es: '1-3 horas',
     surgery_time_en: '1-3 hours',
     anesthesia_es: 'General o Local con Sedación',
