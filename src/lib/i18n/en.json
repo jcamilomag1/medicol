@@ -986,8 +986,9 @@
     "final_cta": {
       "title": "Ready for the Next Step?",
       "subtitle": "Schedule your free virtual consultation with one of our specialists",
-      "cta_primary": "Schedule Your Free Consultation",
-      "cta_secondary": "More Information"
+      "cta_primary": "Contact via WhatsApp",
+      "cta_secondary": "More Information",
+      "cta_schedule": "Schedule Appointment"
     }
   },
   "diagnostics": {

@@ -4,11 +4,13 @@ import { useRef } from 'react';
 import { useInView } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Calendar, MessageCircle } from 'lucide-react';
+import { useCalendly } from '@/hooks/useCalendly';
 
 const TeamCTASection = () => {
   const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { openCalendlyPopup } = useCalendly();
 
   const whatsappMessage = encodeURIComponent(t('team.cta.whatsapp_message'));
   const whatsappUrl = `https://wa.me/573137371978?text=${whatsappMessage}`;
@@ -32,20 +34,13 @@ const TeamCTASection = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
-              asChild 
+              onClick={openCalendlyPopup}
               size="lg"
               variant="secondary"
-              className="min-h-12 text-base md:text-lg px-8"
+              className="min-h-12 text-base md:text-lg px-8 flex items-center gap-2"
             >
-              <a 
-                href="https://calendly.com/medicol/consultation" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
-              >
-                <Calendar className="w-5 h-5" />
-                {t('team.cta.button_calendly')}
-              </a>
+              <Calendar className="w-5 h-5" />
+              {t('team.cta.button_calendly')}
             </Button>
 
             <Button 

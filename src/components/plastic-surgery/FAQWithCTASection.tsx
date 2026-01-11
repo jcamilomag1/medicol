@@ -2,7 +2,8 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { faqs } from '@/data/plastic-surgery-faqs';
 import { Button } from '@/components/ui/button';
-import { MessageCircle, Mail } from 'lucide-react';
+import { MessageCircle, Calendar } from 'lucide-react';
+import { useCalendly } from '@/hooks/useCalendly';
 import {
   Accordion,
   AccordionContent,
@@ -13,6 +14,7 @@ import {
 export const FAQWithCTASection = () => {
   const { t, i18n } = useTranslation();
   const isEnglish = i18n.language === 'en';
+  const { openCalendlyPopup } = useCalendly();
 
   const handleWhatsAppClick = () => {
     const whatsappNumber = "573001234567";
@@ -20,10 +22,6 @@ export const FAQWithCTASection = () => {
       "Hola! Me gustaría agendar una consulta virtual gratuita sobre cirugía plástica."
     );
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
-  };
-
-  const handleContactClick = () => {
-    window.location.href = '/contacto';
   };
 
   return (
@@ -96,13 +94,13 @@ export const FAQWithCTASection = () => {
                   </Button>
                   
                   <Button
-                    onClick={handleContactClick}
+                    onClick={openCalendlyPopup}
                     size="lg"
                     variant="outline"
                     className="w-full bg-white/10 hover:bg-white/20 text-white border-white/30 font-bold py-6 gap-2"
                   >
-                    <Mail className="w-5 h-5" />
-                    {t('plastic_surgery.final_cta.cta_secondary')}
+                    <Calendar className="w-5 h-5" />
+                    {t('plastic_surgery.final_cta.cta_schedule')}
                   </Button>
                 </div>
               </div>
