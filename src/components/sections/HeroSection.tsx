@@ -3,9 +3,11 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
 import accreditationsImage from "@/assets/accreditations.png";
+import { useCalendly } from "@/hooks/useCalendly";
 
 export const HeroSection = () => {
   const { t } = useTranslation();
+  const { openCalendlyPopup } = useCalendly();
   
   return (
     <section id="home" className="relative min-h-[60vh] md:min-h-[70vh] flex items-center overflow-hidden">
@@ -128,6 +130,7 @@ export const HeroSection = () => {
               >
                 <Button 
                   size="lg"
+                  onClick={openCalendlyPopup}
                   className="w-full h-12 sm:h-14 md:h-16 lg:h-20 px-3 sm:px-4 md:px-6 text-xs sm:text-sm md:text-base lg:text-lg font-bold bg-accent text-primary hover:bg-accent/90 shadow-lg shadow-accent/50 hover:shadow-xl hover:shadow-accent/60 transition-all duration-300 hover:scale-105 group flex items-center justify-center text-center leading-tight"
                 >
                   <span className="flex-1 text-center px-1">
