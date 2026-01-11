@@ -986,8 +986,9 @@
     "final_cta": {
       "title": "¿Lista para el Siguiente Paso?",
       "subtitle": "Agenda tu consulta virtual gratuita con uno de nuestros especialistas",
-      "cta_primary": "Agenda tu Consulta Gratuita",
-      "cta_secondary": "Más Información"
+      "cta_primary": "Consultar por WhatsApp",
+      "cta_secondary": "Más Información",
+      "cta_schedule": "Agendar Cita"
     }
   },
   "diagnostics": {

@@ -1,8 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { MessageCircle, Phone } from 'lucide-react';
+import { MessageCircle, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useCalendly } from '@/hooks/useCalendly';
 import {
   Accordion,
   AccordionContent,
@@ -16,16 +17,13 @@ const ExperienceFAQWithCTA = () => {
   const { i18n } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { openCalendlyPopup } = useCalendly();
   
   const isSpanish = i18n.language === 'es';
 
   const handleWhatsAppClick = () => {
     const message = isSpanish ? experienceTexts.whatsapp_message_es : experienceTexts.whatsapp_message_en;
     window.open(`https://wa.me/573001234567?text=${encodeURIComponent(message)}`, '_blank');
-  };
-
-  const handleContactClick = () => {
-    window.location.href = '/contacto';
   };
 
   return (
@@ -103,11 +101,11 @@ const ExperienceFAQWithCTA = () => {
                   <Button
                     size="lg"
                     variant="outline"
-                    onClick={handleContactClick}
+                    onClick={openCalendlyPopup}
                     className="w-full bg-white/10 text-white border-white/30 hover:bg-white/20 hover:text-white font-semibold"
                   >
-                    <Phone className="mr-2 h-5 w-5" />
-                    {isSpanish ? experienceTexts.contact_button_es : experienceTexts.contact_button_en}
+                    <Calendar className="mr-2 h-5 w-5" />
+                    {isSpanish ? 'Agendar Cita' : 'Schedule Appointment'}
                   </Button>
                 </div>
 

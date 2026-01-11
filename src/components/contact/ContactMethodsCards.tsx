@@ -3,17 +3,14 @@ import { motion } from 'framer-motion';
 import { Bot, MessageCircle, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { useCalendly } from '@/hooks/useCalendly';
 
 export const ContactMethodsCards = () => {
   const { t } = useTranslation();
+  const { openCalendlyPopup } = useCalendly();
 
   const handleWhatsApp = () => {
     window.open('https://api.whatsapp.com/send/?phone=13054290812&text=Hello,%20I%20would%20like%20to%20know%20more%20information', '_blank');
-  };
-
-  const handleSchedule = () => {
-    // Mockup URL - will be replaced with real Calendly link
-    window.open('https://calendly.com/medicol-ejemplo', '_blank');
   };
 
   const cards = [
@@ -44,7 +41,7 @@ export const ContactMethodsCards = () => {
       description: t('contact.methods.schedule_description'),
       gradient: 'from-accent to-accent/80',
       disabled: false,
-      action: handleSchedule,
+      action: openCalendlyPopup,
       buttonText: t('contact.methods.schedule_button'),
       iconColor: 'text-blue-400'
     }

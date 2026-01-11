@@ -7,7 +7,8 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
-import { MessageCircle, Mail } from 'lucide-react';
+import { MessageCircle, Calendar } from 'lucide-react';
+import { useCalendly } from '@/hooks/useCalendly';
 
 interface FAQ {
   question_es: string;
@@ -39,14 +40,11 @@ export const ServiceFAQSection = ({
 }: ServiceFAQSectionProps) => {
   const { t, i18n } = useTranslation();
   const isSpanish = i18n.language === 'es';
+  const { openCalendlyPopup } = useCalendly();
 
   const handleWhatsAppContact = () => {
     const message = encodeURIComponent(ctaConfig.whatsappMessage);
     window.open(`https://wa.me/573001234567?text=${message}`, '_blank');
-  };
-
-  const handleContactClick = () => {
-    window.location.href = '/contacto';
   };
 
   return (
@@ -127,13 +125,13 @@ export const ServiceFAQSection = ({
                   </Button>
                   
                   <Button
-                    onClick={handleContactClick}
+                    onClick={openCalendlyPopup}
                     size="lg"
                     variant="outline"
                     className="w-full bg-white/10 hover:bg-white/20 text-white border-white/30 font-bold py-6 gap-2"
                   >
-                    <Mail className="w-5 h-5" />
-                    {t(ctaConfig.secondaryButtonKey)}
+                    <Calendar className="w-5 h-5" />
+                    {isSpanish ? 'Agendar Cita' : 'Schedule Appointment'}
                   </Button>
                 </div>
               </div>
