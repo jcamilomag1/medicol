@@ -10,6 +10,15 @@ declare global {
         branding?: boolean;
       }) => void;
     };
+    requestIdleCallback?: (
+      callback: (deadline: IdleDeadline) => void,
+      options?: { timeout: number }
+    ) => number;
+  }
+
+  interface IdleDeadline {
+    didTimeout: boolean;
+    timeRemaining: () => number;
   }
 }
 
