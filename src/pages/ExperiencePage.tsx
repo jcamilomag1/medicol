@@ -74,7 +74,7 @@ const ExperiencePage = () => {
       subtitle: t('experience.timeline.steps.step6.subtitle'),
       description: t('experience.timeline.steps.step6.description'),
       items: t('experience.timeline.steps.step6.items', { returnObjects: true }) as string[],
-      image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1260&q=80"
+      image: "/assets/recovery-house.jpg"
     },
     {
       icon: UserCheck,
