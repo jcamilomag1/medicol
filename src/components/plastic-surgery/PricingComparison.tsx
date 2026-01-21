@@ -4,13 +4,19 @@ import { Badge } from '@/components/ui/badge';
 import { TrendingDown } from 'lucide-react';
 
 interface PricingComparisonProps {
-  medicolPrice: number;
-  usPrice: number;
-  savingsPercentage: number;
+  medicolPrice: number | null;
+  usPrice: number | null;
+  savingsPercentage: number | null;
 }
 
 export const PricingComparison = ({ medicolPrice, usPrice, savingsPercentage }: PricingComparisonProps) => {
   const { t } = useTranslation();
+  
+  // Si no hay precio, no renderizar el componente
+  if (medicolPrice === null || usPrice === null || savingsPercentage === null) {
+    return null;
+  }
+  
   const savings = usPrice - medicolPrice;
 
   return (

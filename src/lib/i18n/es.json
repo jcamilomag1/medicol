@@ -953,7 +953,8 @@
       "from_price": "Desde",
       "save_up_to": "Ahorra hasta",
       "view_details": "Ver Detalles",
-      "learn_more": "Más Información"
+      "learn_more": "Más Información",
+      "price_quote": "Cotizar"
     },
     "categories": {
       "all": "Todos",
@@ -971,7 +972,7 @@
       "final_results": "Resultados Finales",
       "ideal_for": "Ideal para candidatos que...",
       "package_includes": "El Paquete Incluye",
-      "price_in_medicol": "Precio en Medicol",
+      "price_in_medicol": "Precio en Medicol (desde)",
       "price_in_us": "Precio promedio en EE.UU.",
       "your_savings": "Tu Ahorro Potencial",
       "cta_button": "Solicitar Presupuesto",
