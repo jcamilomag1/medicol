@@ -60,7 +60,7 @@ const TeamAdminSection = () => {
                   <h3 className="text-base md:text-lg font-bold text-foreground">
                     {t(`team.admin.${member.key}.name`)}
                   </h3>
-                  <p className="text-primary font-semibold mt-1 text-sm md:text-base">
+                  <p className="text-primary mt-1 text-sm md:text-base">
                     {t(`team.admin.${member.key}.role`)}
                   </p>
                 </div>
