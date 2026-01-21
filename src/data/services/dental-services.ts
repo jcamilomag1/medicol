@@ -47,6 +47,7 @@ export interface DentalService {
 }
 
 export const dentalServices: DentalService[] = [
+  // ==================== DESIGN ====================
   {
     id: 'smile-design',
     category: 'design',
@@ -185,6 +186,632 @@ export const dentalServices: DentalService[] = [
       'Follow-up photos'
     ]
   },
+
+  // ==================== COSMETIC - CARILLAS Y REHABILITACIÓN ====================
+  {
+    id: 'ceramic-veneers-10',
+    category: 'cosmetic',
+    name_es: 'Carillas Cerámica 10 Dientes',
+    name_en: 'Ceramic Veneers 10 Teeth',
+    description_es: 'Paquete de 10 carillas de cerámica premium para transformación completa de sonrisa',
+    description_en: 'Package of 10 premium ceramic veneers for complete smile transformation',
+    price_usd: 2797,
+    price_comparison_us: 14000,
+    savings_percentage: 80,
+    image: carillasImg,
+    treatment_time_es: '2-3 visitas',
+    treatment_time_en: '2-3 visits',
+    anesthesia_es: 'Local',
+    anesthesia_en: 'Local',
+    recovery_days_es: '1-2 días',
+    recovery_days_en: '1-2 days',
+    final_results_timeline_es: '2 semanas',
+    final_results_timeline_en: '2 weeks',
+    ideal_candidates_es: [
+      'Dientes manchados o descoloridos',
+      'Dientes ligeramente torcidos',
+      'Espacios entre dientes',
+      'Deseo de sonrisa perfecta'
+    ],
+    ideal_candidates_en: [
+      'Stained or discolored teeth',
+      'Slightly crooked teeth',
+      'Gaps between teeth',
+      'Desire for perfect smile'
+    ],
+    package_includes_es: [
+      '10 carillas de porcelana E-max premium',
+      'Diseño digital de sonrisa con IA',
+      'Preparación dental mínimamente invasiva',
+      'Carillas temporales incluidas',
+      'Cementación adhesiva permanente',
+      'Garantía de 10 años'
+    ],
+    package_includes_en: [
+      '10 premium E-max porcelain veneers',
+      'AI digital smile design',
+      'Minimally invasive dental preparation',
+      'Temporary veneers included',
+      'Permanent adhesive cementation',
+      '10-year warranty'
+    ]
+  },
+  {
+    id: 'ceramic-veneers-20',
+    category: 'cosmetic',
+    name_es: 'Carillas Cerámica 20 Dientes',
+    name_en: 'Ceramic Veneers 20 Teeth',
+    description_es: 'Paquete completo de 20 carillas de cerámica para transformación total de sonrisa',
+    description_en: 'Complete package of 20 ceramic veneers for total smile transformation',
+    price_usd: 4997,
+    price_comparison_us: 28000,
+    savings_percentage: 82,
+    image: carillasImg,
+    treatment_time_es: '3-4 visitas',
+    treatment_time_en: '3-4 visits',
+    anesthesia_es: 'Local',
+    anesthesia_en: 'Local',
+    recovery_days_es: '1-2 días',
+    recovery_days_en: '1-2 days',
+    final_results_timeline_es: '2-3 semanas',
+    final_results_timeline_en: '2-3 weeks',
+    ideal_candidates_es: [
+      'Transformación completa de sonrisa',
+      'Múltiples dientes manchados o dañados',
+      'Corrección de forma y tamaño dental',
+      'Rehabilitación estética completa'
+    ],
+    ideal_candidates_en: [
+      'Complete smile transformation',
+      'Multiple stained or damaged teeth',
+      'Dental shape and size correction',
+      'Complete aesthetic rehabilitation'
+    ],
+    package_includes_es: [
+      '20 carillas de porcelana E-max premium',
+      'Diseño digital de sonrisa completo',
+      'Preparación dental mínimamente invasiva',
+      'Carillas temporales incluidas',
+      'Cementación adhesiva permanente',
+      'Garantía de 10 años'
+    ],
+    package_includes_en: [
+      '20 premium E-max porcelain veneers',
+      'Complete digital smile design',
+      'Minimally invasive dental preparation',
+      'Temporary veneers included',
+      'Permanent adhesive cementation',
+      '10-year warranty'
+    ]
+  },
+  {
+    id: 'ceramic-crowns-10',
+    category: 'cosmetic',
+    name_es: 'Rehabilitación Cerámica 10 Dientes',
+    name_en: 'Ceramic Rehabilitation 10 Teeth',
+    description_es: 'Paquete de 10 coronas de cerámica para rehabilitación dental completa',
+    description_en: 'Package of 10 ceramic crowns for complete dental rehabilitation',
+    price_usd: 4054,
+    price_comparison_us: 16000,
+    savings_percentage: 75,
+    image: coronaImg,
+    treatment_time_es: '3-4 visitas',
+    treatment_time_en: '3-4 visits',
+    anesthesia_es: 'Local',
+    anesthesia_en: 'Local',
+    recovery_days_es: '3-5 días',
+    recovery_days_en: '3-5 days',
+    final_results_timeline_es: '2-3 semanas',
+    final_results_timeline_en: '2-3 weeks',
+    ideal_candidates_es: [
+      'Dientes severamente dañados',
+      'Después de múltiples endodoncias',
+      'Restauraciones grandes existentes',
+      'Rehabilitación funcional y estética'
+    ],
+    ideal_candidates_en: [
+      'Severely damaged teeth',
+      'After multiple root canals',
+      'Existing large restorations',
+      'Functional and aesthetic rehabilitation'
+    ],
+    package_includes_es: [
+      '10 coronas de porcelana premium',
+      'Diseño digital CAD/CAM',
+      'Preparación dental completa',
+      'Coronas temporales incluidas',
+      'Cementación permanente',
+      'Garantía de 7 años'
+    ],
+    package_includes_en: [
+      '10 premium porcelain crowns',
+      'CAD/CAM digital design',
+      'Complete dental preparation',
+      'Temporary crowns included',
+      'Permanent cementation',
+      '7-year warranty'
+    ]
+  },
+  {
+    id: 'ceramic-crowns-20',
+    category: 'cosmetic',
+    name_es: 'Rehabilitación Cerámica 20 Dientes',
+    name_en: 'Ceramic Rehabilitation 20 Teeth',
+    description_es: 'Paquete completo de 20 coronas de cerámica para rehabilitación oral total',
+    description_en: 'Complete package of 20 ceramic crowns for total oral rehabilitation',
+    price_usd: 6254,
+    price_comparison_us: 32000,
+    savings_percentage: 80,
+    image: coronaImg,
+    treatment_time_es: '4-5 visitas',
+    treatment_time_en: '4-5 visits',
+    anesthesia_es: 'Local o sedación',
+    anesthesia_en: 'Local or sedation',
+    recovery_days_es: '5-7 días',
+    recovery_days_en: '5-7 days',
+    final_results_timeline_es: '3-4 semanas',
+    final_results_timeline_en: '3-4 weeks',
+    ideal_candidates_es: [
+      'Rehabilitación oral completa',
+      'Desgaste dental severo',
+      'Múltiples dientes fracturados',
+      'Cambio funcional y estético total'
+    ],
+    ideal_candidates_en: [
+      'Complete oral rehabilitation',
+      'Severe dental wear',
+      'Multiple fractured teeth',
+      'Total functional and aesthetic change'
+    ],
+    package_includes_es: [
+      '20 coronas de porcelana premium',
+      'Planificación digital completa',
+      'Preparación dental integral',
+      'Coronas temporales incluidas',
+      'Ajuste oclusal completo',
+      'Garantía de 7 años'
+    ],
+    package_includes_en: [
+      '20 premium porcelain crowns',
+      'Complete digital planning',
+      'Integral dental preparation',
+      'Temporary crowns included',
+      'Complete occlusal adjustment',
+      '7-year warranty'
+    ]
+  },
+  {
+    id: 'resin-veneers-10',
+    category: 'cosmetic',
+    name_es: 'Carillas Resina 10 Dientes',
+    name_en: 'Resin Veneers 10 Teeth',
+    description_es: 'Paquete de 10 carillas de resina para mejora estética accesible',
+    description_en: 'Package of 10 resin veneers for accessible aesthetic improvement',
+    price_usd: 1504,
+    price_comparison_us: 5000,
+    savings_percentage: 70,
+    image: lamparaCuradoImg,
+    treatment_time_es: '1-2 visitas',
+    treatment_time_en: '1-2 visits',
+    anesthesia_es: 'Local mínima',
+    anesthesia_en: 'Minimal local',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
+    final_results_timeline_es: 'Inmediato',
+    final_results_timeline_en: 'Immediate',
+    ideal_candidates_es: [
+      'Mejora estética accesible',
+      'Corrección de forma dental',
+      'Espacios pequeños entre dientes',
+      'Alternativa a carillas de cerámica'
+    ],
+    ideal_candidates_en: [
+      'Accessible aesthetic improvement',
+      'Dental shape correction',
+      'Small gaps between teeth',
+      'Alternative to ceramic veneers'
+    ],
+    package_includes_es: [
+      '10 carillas de resina compuesta de alta calidad',
+      'Diseño de sonrisa personalizado',
+      'Aplicación en una sola sesión',
+      'Pulido y acabado profesional',
+      'Instrucciones de cuidado',
+      'Garantía de 3 años'
+    ],
+    package_includes_en: [
+      '10 high-quality composite resin veneers',
+      'Personalized smile design',
+      'Single session application',
+      'Professional polishing and finishing',
+      'Care instructions',
+      '3-year warranty'
+    ]
+  },
+  {
+    id: 'resin-veneers-20',
+    category: 'cosmetic',
+    name_es: 'Carillas Resina 20 Dientes',
+    name_en: 'Resin Veneers 20 Teeth',
+    description_es: 'Paquete completo de 20 carillas de resina para transformación estética total',
+    description_en: 'Complete package of 20 resin veneers for total aesthetic transformation',
+    price_usd: 2671,
+    price_comparison_us: 10000,
+    savings_percentage: 73,
+    image: lamparaCuradoImg,
+    treatment_time_es: '2-3 visitas',
+    treatment_time_en: '2-3 visits',
+    anesthesia_es: 'Local mínima',
+    anesthesia_en: 'Minimal local',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
+    final_results_timeline_es: 'Inmediato',
+    final_results_timeline_en: 'Immediate',
+    ideal_candidates_es: [
+      'Transformación estética completa económica',
+      'Múltiples dientes con imperfecciones',
+      'Presupuesto limitado para cerámica',
+      'Resultados inmediatos deseados'
+    ],
+    ideal_candidates_en: [
+      'Economical complete aesthetic transformation',
+      'Multiple teeth with imperfections',
+      'Limited budget for ceramic',
+      'Immediate results desired'
+    ],
+    package_includes_es: [
+      '20 carillas de resina compuesta premium',
+      'Diseño de sonrisa completo',
+      'Aplicación en sesiones continuas',
+      'Pulido y acabado profesional',
+      'Kit de mantenimiento',
+      'Garantía de 3 años'
+    ],
+    package_includes_en: [
+      '20 premium composite resin veneers',
+      'Complete smile design',
+      'Application in continuous sessions',
+      'Professional polishing and finishing',
+      'Maintenance kit',
+      '3-year warranty'
+    ]
+  },
+  {
+    id: 'resin-bonding-4',
+    category: 'cosmetic',
+    name_es: 'Bordes en Resina (Bonding) 4 Dientes',
+    name_en: 'Resin Bonding 4 Teeth',
+    description_es: 'Corrección de bordes dentales con resina para 4 dientes',
+    description_en: 'Dental edge correction with resin for 4 teeth',
+    price_usd: 493,
+    price_comparison_us: 1600,
+    savings_percentage: 69,
+    image: lamparaCuradoImg,
+    treatment_time_es: '1 hora',
+    treatment_time_en: '1 hour',
+    anesthesia_es: 'No requerida',
+    anesthesia_en: 'Not required',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
+    final_results_timeline_es: 'Inmediato',
+    final_results_timeline_en: 'Immediate',
+    ideal_candidates_es: [
+      'Bordes irregulares en dientes frontales',
+      'Pequeñas astillas o fracturas',
+      'Espacios mínimos entre dientes',
+      'Mejoras cosméticas menores'
+    ],
+    ideal_candidates_en: [
+      'Irregular edges on front teeth',
+      'Small chips or fractures',
+      'Minimal gaps between teeth',
+      'Minor cosmetic improvements'
+    ],
+    package_includes_es: [
+      'Bonding de resina en 4 dientes',
+      'Preparación mínima o nula',
+      'Moldeo artístico personalizado',
+      'Pulido y acabado estético',
+      'Ajuste de mordida',
+      'Garantía de 2 años'
+    ],
+    package_includes_en: [
+      'Resin bonding on 4 teeth',
+      'Minimal or no preparation',
+      'Custom artistic molding',
+      'Aesthetic polishing and finishing',
+      'Bite adjustment',
+      '2-year warranty'
+    ]
+  },
+  {
+    id: 'resin-bonding-6',
+    category: 'cosmetic',
+    name_es: 'Bordes en Resina (Bonding) 6 Dientes',
+    name_en: 'Resin Bonding 6 Teeth',
+    description_es: 'Corrección de bordes dentales con resina para 6 dientes',
+    description_en: 'Dental edge correction with resin for 6 teeth',
+    price_usd: 690,
+    price_comparison_us: 2400,
+    savings_percentage: 71,
+    image: lamparaCuradoImg,
+    treatment_time_es: '1.5 horas',
+    treatment_time_en: '1.5 hours',
+    anesthesia_es: 'No requerida',
+    anesthesia_en: 'Not required',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
+    final_results_timeline_es: 'Inmediato',
+    final_results_timeline_en: 'Immediate',
+    ideal_candidates_es: [
+      'Corrección de sonrisa social completa',
+      'Múltiples bordes irregulares',
+      'Espacios entre dientes frontales',
+      'Alternativa económica a carillas'
+    ],
+    ideal_candidates_en: [
+      'Complete social smile correction',
+      'Multiple irregular edges',
+      'Gaps between front teeth',
+      'Economical alternative to veneers'
+    ],
+    package_includes_es: [
+      'Bonding de resina en 6 dientes',
+      'Diseño de sonrisa personalizado',
+      'Moldeo artístico profesional',
+      'Pulido y acabado premium',
+      'Ajuste oclusal completo',
+      'Garantía de 2 años'
+    ],
+    package_includes_en: [
+      'Resin bonding on 6 teeth',
+      'Personalized smile design',
+      'Professional artistic molding',
+      'Premium polishing and finishing',
+      'Complete occlusal adjustment',
+      '2-year warranty'
+    ]
+  },
+
+  // ==================== COSMETIC - BLANQUEAMIENTO ====================
+  {
+    id: 'whitening-combo',
+    category: 'cosmetic',
+    name_es: 'Blanqueamiento Combinado',
+    name_en: 'Combined Whitening',
+    description_es: 'Tratamiento completo de blanqueamiento en consultorio + kit para casa',
+    description_en: 'Complete in-office whitening treatment + take-home kit',
+    price_usd: 339,
+    price_comparison_us: 1200,
+    savings_percentage: 72,
+    image: blanqueamientoImg,
+    treatment_time_es: '1 hora + uso en casa',
+    treatment_time_en: '1 hour + home use',
+    anesthesia_es: 'No requerida',
+    anesthesia_en: 'Not required',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
+    final_results_timeline_es: '2-4 semanas',
+    final_results_timeline_en: '2-4 weeks',
+    ideal_candidates_es: [
+      'Deseo de resultados máximos',
+      'Manchas moderadas a severas',
+      'Mantenimiento a largo plazo',
+      'Eventos importantes próximos'
+    ],
+    ideal_candidates_en: [
+      'Desire for maximum results',
+      'Moderate to severe stains',
+      'Long-term maintenance',
+      'Upcoming important events'
+    ],
+    package_includes_es: [
+      'Sesión de blanqueamiento en consultorio',
+      'Activación con láser LED',
+      'Cubetas personalizadas para casa',
+      'Gel blanqueador profesional (4 jeringas)',
+      'Instrucciones de uso detalladas',
+      'Seguimiento a 6 meses'
+    ],
+    package_includes_en: [
+      'In-office whitening session',
+      'LED laser activation',
+      'Custom take-home trays',
+      'Professional whitening gel (4 syringes)',
+      'Detailed usage instructions',
+      '6-month follow-up'
+    ]
+  },
+  {
+    id: 'laser-whitening',
+    category: 'cosmetic',
+    name_es: 'Blanqueamiento en Consultorio',
+    name_en: 'In-Office Whitening',
+    description_es: 'Tratamiento profesional de blanqueamiento con láser en una sesión',
+    description_en: 'Professional laser whitening treatment in one session',
+    price_usd: 347,
+    price_comparison_us: 1000,
+    savings_percentage: 65,
+    image: blanqueamientoImg,
+    treatment_time_es: '1 hora',
+    treatment_time_en: '1 hour',
+    anesthesia_es: 'No requerida',
+    anesthesia_en: 'Not required',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
+    final_results_timeline_es: 'Inmediato',
+    final_results_timeline_en: 'Immediate',
+    ideal_candidates_es: [
+      'Dientes amarillentos o manchados',
+      'Descoloración por edad o hábitos',
+      'Deseo de sonrisa más brillante',
+      'Evento especial próximo'
+    ],
+    ideal_candidates_en: [
+      'Yellowed or stained teeth',
+      'Discoloration from age or habits',
+      'Desire for brighter smile',
+      'Upcoming special event'
+    ],
+    package_includes_es: [
+      'Limpieza dental previa',
+      'Aplicación de gel blanqueador profesional',
+      'Activación con láser LED',
+      'Tratamiento de sensibilidad',
+      'Seguimiento a 6 meses'
+    ],
+    package_includes_en: [
+      'Prior dental cleaning',
+      'Professional whitening gel application',
+      'LED laser activation',
+      'Sensitivity treatment',
+      '6-month follow-up'
+    ]
+  },
+  {
+    id: 'custom-whitening-trays',
+    category: 'cosmetic',
+    name_es: 'Blanqueamiento en Casa',
+    name_en: 'Take-Home Whitening',
+    description_es: 'Kit profesional de blanqueamiento con cubetas personalizadas',
+    description_en: 'Professional whitening kit with custom trays',
+    price_usd: 253,
+    price_comparison_us: 500,
+    savings_percentage: 49,
+    image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80',
+    treatment_time_es: '45 minutos (elaboración)',
+    treatment_time_en: '45 minutes (preparation)',
+    anesthesia_es: 'No requerida',
+    anesthesia_en: 'Not required',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
+    final_results_timeline_es: '2-4 semanas',
+    final_results_timeline_en: '2-4 weeks',
+    ideal_candidates_es: [
+      'Preferencia por tratamiento en casa',
+      'Dientes sensibles',
+      'Deseo de blanqueamiento gradual',
+      'Mantenimiento post-tratamiento láser'
+    ],
+    ideal_candidates_en: [
+      'Preference for home treatment',
+      'Sensitive teeth',
+      'Desire for gradual whitening',
+      'Post-laser treatment maintenance'
+    ],
+    package_includes_es: [
+      'Cubetas personalizadas hechas a medida',
+      'Gel blanqueador profesional (4 jeringas)',
+      'Instrucciones de uso detalladas',
+      'Estuche de almacenamiento',
+      'Consulta de seguimiento'
+    ],
+    package_includes_en: [
+      'Custom-made personalized trays',
+      'Professional whitening gel (4 syringes)',
+      'Detailed usage instructions',
+      'Storage case',
+      'Follow-up consultation'
+    ]
+  },
+
+  // ==================== COSMETIC - VALORACIONES ====================
+  {
+    id: 'exam-cleaning-combo',
+    category: 'cosmetic',
+    name_es: 'Valoración + Limpieza Profunda',
+    name_en: 'Exam + Deep Cleaning Combo',
+    description_es: 'Examen completo con radiografías y limpieza dental profunda',
+    description_en: 'Complete exam with X-rays and deep dental cleaning',
+    price_usd: 96,
+    price_comparison_us: 350,
+    savings_percentage: 73,
+    image: consultorioImg,
+    treatment_time_es: '1-1.5 horas',
+    treatment_time_en: '1-1.5 hours',
+    anesthesia_es: 'No requerida',
+    anesthesia_en: 'Not required',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
+    final_results_timeline_es: 'Inmediato',
+    final_results_timeline_en: 'Immediate',
+    ideal_candidates_es: [
+      'Primera visita al dentista',
+      'Chequeo dental anual',
+      'Evaluación completa de salud oral',
+      'Antes de iniciar tratamientos'
+    ],
+    ideal_candidates_en: [
+      'First visit to dentist',
+      'Annual dental checkup',
+      'Complete oral health evaluation',
+      'Before starting treatments'
+    ],
+    package_includes_es: [
+      'Examen oral completo',
+      'Radiografías panorámicas',
+      'Limpieza profunda con ultrasonido',
+      'Aplicación de flúor',
+      'Plan de tratamiento personalizado',
+      'Instrucciones de higiene oral'
+    ],
+    package_includes_en: [
+      'Complete oral exam',
+      'Panoramic X-rays',
+      'Deep ultrasonic cleaning',
+      'Fluoride application',
+      'Personalized treatment plan',
+      'Oral hygiene instructions'
+    ]
+  },
+  {
+    id: 'exam-only',
+    category: 'cosmetic',
+    name_es: 'Valoración Presencial',
+    name_en: 'In-Person Exam',
+    description_es: 'Consulta y evaluación presencial con especialista',
+    description_en: 'In-person consultation and evaluation with specialist',
+    price_usd: 41,
+    price_comparison_us: 150,
+    savings_percentage: 73,
+    image: doctoraPacienteImg,
+    treatment_time_es: '30 minutos',
+    treatment_time_en: '30 minutes',
+    anesthesia_es: 'No requerida',
+    anesthesia_en: 'Not required',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
+    final_results_timeline_es: 'Inmediato',
+    final_results_timeline_en: 'Immediate',
+    ideal_candidates_es: [
+      'Consulta inicial',
+      'Segunda opinión',
+      'Evaluación de opciones de tratamiento',
+      'Pacientes internacionales'
+    ],
+    ideal_candidates_en: [
+      'Initial consultation',
+      'Second opinion',
+      'Treatment options evaluation',
+      'International patients'
+    ],
+    package_includes_es: [
+      'Consulta con especialista',
+      'Examen visual completo',
+      'Diagnóstico preliminar',
+      'Recomendaciones de tratamiento',
+      'Cotización personalizada'
+    ],
+    package_includes_en: [
+      'Consultation with specialist',
+      'Complete visual exam',
+      'Preliminary diagnosis',
+      'Treatment recommendations',
+      'Personalized quote'
+    ]
+  },
+
+  // ==================== COSMETIC - OTROS ====================
   {
     id: 'small-resin-repair',
     category: 'cosmetic',
@@ -230,64 +857,18 @@ export const dentalServices: DentalService[] = [
     ]
   },
   {
-    id: 'complete-veneer',
+    id: 'professional-cleaning',
     category: 'cosmetic',
-    name_es: 'Carilla Completa',
-    name_en: 'Complete Veneer',
-    description_es: 'Aplicación completa de carilla dental',
-    description_en: 'Full dental veneer application',
-    price_usd: 75,
-    price_comparison_us: 1400,
-    savings_percentage: 95,
-    image: carillasImg,
-    treatment_time_es: '1 hora por diente',
-    treatment_time_en: '1 hour per tooth',
-    anesthesia_es: 'Local',
-    anesthesia_en: 'Local',
-    recovery_days_es: '1-2 días',
-    recovery_days_en: '1-2 days',
-    final_results_timeline_es: '2 semanas',
-    final_results_timeline_en: '2 weeks',
-    ideal_candidates_es: [
-      'Dientes manchados o descoloridos',
-      'Dientes ligeramente torcidos',
-      'Espacios entre dientes',
-      'Dientes desgastados o astillados'
-    ],
-    ideal_candidates_en: [
-      'Stained or discolored teeth',
-      'Slightly crooked teeth',
-      'Gaps between teeth',
-      'Worn or chipped teeth'
-    ],
-    package_includes_es: [
-      'Consulta de diseño de sonrisa',
-      'Carilla de porcelana premium',
-      'Preparación dental mínima',
-      'Cementación permanente',
-      'Garantía de 5 años'
-    ],
-    package_includes_en: [
-      'Smile design consultation',
-      'Premium porcelain veneer',
-      'Minimal dental preparation',
-      'Permanent cementation',
-      '5-year warranty'
-    ]
-  },
-  {
-    id: 'laser-whitening',
-    category: 'cosmetic',
-    name_es: 'Blanqueamiento Dental Láser',
-    name_en: 'Laser Teeth Whitening',
-    description_es: 'Tratamiento avanzado de blanqueamiento con láser',
-    description_en: 'Advanced laser whitening treatment',
-    price_usd: 300,
-    price_comparison_us: 1000,
-    savings_percentage: 70,
-    image: blanqueamientoImg,
-    treatment_time_es: '1 hora',
-    treatment_time_en: '1 hour',
+    name_es: 'Limpieza Profesional',
+    name_en: 'Professional Cleaning',
+    description_es: 'Limpieza profunda y pulido',
+    description_en: 'Deep cleaning and polishing',
+    price_usd: 62.50,
+    price_comparison_us: 200,
+    savings_percentage: 69,
+    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80',
+    treatment_time_es: '45-60 minutos',
+    treatment_time_en: '45-60 minutes',
     anesthesia_es: 'No requerida',
     anesthesia_en: 'Not required',
     recovery_days_es: 'Inmediato',
@@ -295,78 +876,84 @@ export const dentalServices: DentalService[] = [
     final_results_timeline_es: 'Inmediato',
     final_results_timeline_en: 'Immediate',
     ideal_candidates_es: [
-      'Dientes amarillentos o manchados',
-      'Descoloración por edad o hábitos',
-      'Deseo de sonrisa más brillante',
-      'Evento especial próximo'
+      'Mantenimiento oral regular',
+      'Acumulación de placa',
+      'Prevención de enfermedades',
+      'Antes de otros tratamientos'
     ],
     ideal_candidates_en: [
-      'Yellowed or stained teeth',
-      'Discoloration from age or habits',
-      'Desire for brighter smile',
-      'Upcoming special event'
+      'Regular oral maintenance',
+      'Plaque buildup',
+      'Disease prevention',
+      'Before other treatments'
     ],
     package_includes_es: [
-      'Limpieza dental previa',
-      'Aplicación de gel blanqueador profesional',
-      'Activación con láser LED',
-      'Kit de mantenimiento para casa',
-      'Seguimiento a 6 meses'
+      'Remoción de placa y sarro',
+      'Pulido dental',
+      'Aplicación de flúor',
+      'Examen oral completo',
+      'Instrucciones de higiene',
+      'Recomendaciones personalizadas'
     ],
     package_includes_en: [
-      'Prior dental cleaning',
-      'Professional whitening gel application',
-      'LED laser activation',
-      'Home maintenance kit',
-      '6-month follow-up'
+      'Plaque and tartar removal',
+      'Dental polishing',
+      'Fluoride application',
+      'Complete oral exam',
+      'Hygiene instructions',
+      'Personalized recommendations'
     ]
   },
   {
-    id: 'custom-whitening-trays',
+    id: 'deep-scaling',
     category: 'cosmetic',
-    name_es: 'Cubetas de Blanqueamiento Personalizadas',
-    name_en: 'Custom Whitening Trays',
-    description_es: 'Kit profesional de blanqueamiento para casa',
-    description_en: 'Professional take-home whitening kit',
-    price_usd: 200,
-    price_comparison_us: 500,
-    savings_percentage: 60,
-    image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80',
-    treatment_time_es: '45 minutos (elaboración)',
-    treatment_time_en: '45 minutes (preparation)',
-    anesthesia_es: 'No requerida',
-    anesthesia_en: 'Not required',
-    recovery_days_es: 'Inmediato',
-    recovery_days_en: 'Immediate',
-    final_results_timeline_es: '2-4 semanas',
-    final_results_timeline_en: '2-4 weeks',
+    name_es: 'Raspado Profundo',
+    name_en: 'Deep Scaling',
+    description_es: 'Limpieza periodontal avanzada',
+    description_en: 'Advanced periodontal cleaning',
+    price_usd: 125,
+    price_comparison_us: 300,
+    savings_percentage: 58,
+    image: limpiezaProfundaImg,
+    treatment_time_es: '1-2 horas',
+    treatment_time_en: '1-2 hours',
+    anesthesia_es: 'Local',
+    anesthesia_en: 'Local',
+    recovery_days_es: '2-3 días',
+    recovery_days_en: '2-3 days',
+    final_results_timeline_es: '1-2 semanas',
+    final_results_timeline_en: '1-2 weeks',
     ideal_candidates_es: [
-      'Preferencia por tratamiento en casa',
-      'Dientes sensibles',
-      'Deseo de blanqueamiento gradual',
-      'Mantenimiento post-tratamiento láser'
+      'Enfermedad periodontal',
+      'Bolsas periodontales profundas',
+      'Inflamación de encías',
+      'Sangrado gingival'
     ],
     ideal_candidates_en: [
-      'Preference for home treatment',
-      'Sensitive teeth',
-      'Desire for gradual whitening',
-      'Post-laser treatment maintenance'
+      'Periodontal disease',
+      'Deep periodontal pockets',
+      'Gum inflammation',
+      'Gingival bleeding'
     ],
     package_includes_es: [
-      'Cubetas personalizadas hechas a medida',
-      'Gel blanqueador profesional (4 jeringas)',
-      'Instrucciones de uso detalladas',
-      'Estuche de almacenamiento',
-      'Consulta de seguimiento'
+      'Raspado y alisado radicular',
+      'Limpieza subgingival',
+      'Anestesia local completa',
+      'Medicamentos antibióticos si necesario',
+      'Instrucciones post-operatorias',
+      'Seguimiento periodontal'
     ],
     package_includes_en: [
-      'Custom-made personalized trays',
-      'Professional whitening gel (4 syringes)',
-      'Detailed usage instructions',
-      'Storage case',
-      'Follow-up consultation'
+      'Scaling and root planing',
+      'Subgingival cleaning',
+      'Complete local anesthesia',
+      'Antibiotic medication if needed',
+      'Post-operative instructions',
+      'Periodontal follow-up'
     ]
   },
+
+  // ==================== ORTHODONTICS ====================
   {
     id: 'protective-guard',
     category: 'orthodontics',
@@ -411,52 +998,6 @@ export const dentalServices: DentalService[] = [
       'Protective case',
       'Care instructions',
       'Discounted replacement'
-    ]
-  },
-  {
-    id: 'botox-bruxism',
-    category: 'technology',
-    name_es: 'Botox para Bruxismo',
-    name_en: 'Botox for Bruxism',
-    description_es: 'Tratamiento de ATM y rechinamiento dental',
-    description_en: 'TMJ and teeth grinding treatment',
-    price_usd: 500,
-    price_comparison_us: 1250,
-    savings_percentage: 60,
-    image: doctoraPreparacionImg,
-    treatment_time_es: '30 minutos',
-    treatment_time_en: '30 minutes',
-    anesthesia_es: 'No requerida',
-    anesthesia_en: 'Not required',
-    recovery_days_es: '1-2 días',
-    recovery_days_en: '1-2 days',
-    final_results_timeline_es: '1-2 semanas',
-    final_results_timeline_en: '1-2 weeks',
-    ideal_candidates_es: [
-      'Bruxismo severo',
-      'Dolor de mandíbula o ATM',
-      'Desgaste dental por rechinamiento',
-      'Dolores de cabeza por tensión mandibular'
-    ],
-    ideal_candidates_en: [
-      'Severe bruxism',
-      'Jaw or TMJ pain',
-      'Dental wear from grinding',
-      'Headaches from jaw tension'
-    ],
-    package_includes_es: [
-      'Evaluación de ATM completa',
-      'Inyecciones de Botox en músculos masticadores',
-      'Duración de 3-6 meses',
-      'Consulta de seguimiento',
-      'Plan de mantenimiento'
-    ],
-    package_includes_en: [
-      'Complete TMJ evaluation',
-      'Botox injections in masticatory muscles',
-      '3-6 month duration',
-      'Follow-up consultation',
-      'Maintenance plan'
     ]
   },
   {
@@ -505,6 +1046,56 @@ export const dentalServices: DentalService[] = [
       'Treatment options consultation'
     ]
   },
+  {
+    id: 'night-guard',
+    category: 'orthodontics',
+    name_es: 'Guarda Nocturna',
+    name_en: 'Night Guard',
+    description_es: 'Protección nocturna personalizada',
+    description_en: 'Custom-made night protection',
+    price_usd: 300,
+    price_comparison_us: 750,
+    savings_percentage: 60,
+    image: ortodoncia2Img,
+    treatment_time_es: '30 minutos (elaboración)',
+    treatment_time_en: '30 minutes (preparation)',
+    anesthesia_es: 'No requerida',
+    anesthesia_en: 'Not required',
+    recovery_days_es: 'Inmediato',
+    recovery_days_en: 'Immediate',
+    final_results_timeline_es: 'Inmediato',
+    final_results_timeline_en: 'Immediate',
+    ideal_candidates_es: [
+      'Bruxismo nocturno',
+      'Desgaste dental evidente',
+      'Dolor mandibular matutino',
+      'Protección de restauraciones'
+    ],
+    ideal_candidates_en: [
+      'Nocturnal bruxism',
+      'Evident dental wear',
+      'Morning jaw pain',
+      'Restoration protection'
+    ],
+    package_includes_es: [
+      'Guarda rígida personalizada',
+      'Material de grado médico',
+      'Ajuste perfecto',
+      'Estuche de almacenamiento',
+      'Instrucciones de limpieza',
+      'Ajustes incluidos (1 año)'
+    ],
+    package_includes_en: [
+      'Custom rigid guard',
+      'Medical-grade material',
+      'Perfect fit',
+      'Storage case',
+      'Cleaning instructions',
+      'Adjustments included (1 year)'
+    ]
+  },
+
+  // ==================== RESTORATIVE ====================
   {
     id: 'single-root-canal',
     category: 'restorative',
@@ -981,196 +1572,52 @@ export const dentalServices: DentalService[] = [
       'Crown preparation'
     ]
   },
+
+  // ==================== TECHNOLOGY ====================
   {
-    id: 'night-guard',
-    category: 'orthodontics',
-    name_es: 'Guarda Nocturna',
-    name_en: 'Night Guard',
-    description_es: 'Protección nocturna personalizada',
-    description_en: 'Custom-made night protection',
-    price_usd: 300,
-    price_comparison_us: 750,
+    id: 'botox-bruxism',
+    category: 'technology',
+    name_es: 'Botox para Bruxismo',
+    name_en: 'Botox for Bruxism',
+    description_es: 'Tratamiento de ATM y rechinamiento dental',
+    description_en: 'TMJ and teeth grinding treatment',
+    price_usd: 500,
+    price_comparison_us: 1250,
     savings_percentage: 60,
-    image: ortodoncia2Img,
-    treatment_time_es: '30 minutos (elaboración)',
-    treatment_time_en: '30 minutes (preparation)',
+    image: doctoraPreparacionImg,
+    treatment_time_es: '30 minutos',
+    treatment_time_en: '30 minutes',
     anesthesia_es: 'No requerida',
     anesthesia_en: 'Not required',
-    recovery_days_es: 'Inmediato',
-    recovery_days_en: 'Immediate',
-    final_results_timeline_es: 'Inmediato',
-    final_results_timeline_en: 'Immediate',
-    ideal_candidates_es: [
-      'Bruxismo nocturno',
-      'Desgaste dental evidente',
-      'Dolor mandibular matutino',
-      'Protección de restauraciones'
-    ],
-    ideal_candidates_en: [
-      'Nocturnal bruxism',
-      'Evident dental wear',
-      'Morning jaw pain',
-      'Restoration protection'
-    ],
-    package_includes_es: [
-      'Guarda rígida personalizada',
-      'Material de grado médico',
-      'Ajuste perfecto',
-      'Estuche de almacenamiento',
-      'Instrucciones de limpieza',
-      'Ajustes incluidos (1 año)'
-    ],
-    package_includes_en: [
-      'Custom rigid guard',
-      'Medical-grade material',
-      'Perfect fit',
-      'Storage case',
-      'Cleaning instructions',
-      'Adjustments included (1 year)'
-    ]
-  },
-  {
-    id: 'ceramic-veneer',
-    category: 'cosmetic',
-    name_es: 'Carilla de Cerámica',
-    name_en: 'Ceramic Veneer',
-    description_es: 'Carilla dental premium de cerámica',
-    description_en: 'Premium ceramic dental veneer',
-    price_usd: 500,
-    price_comparison_us: 2000,
-    savings_percentage: 75,
-    image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80',
-    treatment_time_es: '2 visitas',
-    treatment_time_en: '2 visits',
-    anesthesia_es: 'Local mínima',
-    anesthesia_en: 'Minimal local',
     recovery_days_es: '1-2 días',
     recovery_days_en: '1-2 days',
-    final_results_timeline_es: '2 semanas',
-    final_results_timeline_en: '2 weeks',
-    ideal_candidates_es: [
-      'Deseo de sonrisa perfecta',
-      'Dientes con manchas permanentes',
-      'Forma o tamaño dental irregular',
-      'Espacios entre dientes'
-    ],
-    ideal_candidates_en: [
-      'Desire for perfect smile',
-      'Teeth with permanent stains',
-      'Irregular tooth shape or size',
-      'Gaps between teeth'
-    ],
-    package_includes_es: [
-      'Carilla de porcelana E-max',
-      'Diseño digital de sonrisa',
-      'Preparación mínimamente invasiva',
-      'Cementación adhesiva permanente',
-      'Color personalizado',
-      'Garantía de 10 años'
-    ],
-    package_includes_en: [
-      'E-max porcelain veneer',
-      'Digital smile design',
-      'Minimally invasive preparation',
-      'Permanent adhesive cementation',
-      'Custom color',
-      '10-year warranty'
-    ]
-  },
-  {
-    id: 'professional-cleaning',
-    category: 'cosmetic',
-    name_es: 'Limpieza Profesional',
-    name_en: 'Professional Cleaning',
-    description_es: 'Limpieza profunda y pulido',
-    description_en: 'Deep cleaning and polishing',
-    price_usd: 62.50,
-    price_comparison_us: 200,
-    savings_percentage: 69,
-    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80',
-    treatment_time_es: '45-60 minutos',
-    treatment_time_en: '45-60 minutes',
-    anesthesia_es: 'No requerida',
-    anesthesia_en: 'Not required',
-    recovery_days_es: 'Inmediato',
-    recovery_days_en: 'Immediate',
-    final_results_timeline_es: 'Inmediato',
-    final_results_timeline_en: 'Immediate',
-    ideal_candidates_es: [
-      'Mantenimiento oral regular',
-      'Acumulación de placa',
-      'Prevención de enfermedades',
-      'Antes de otros tratamientos'
-    ],
-    ideal_candidates_en: [
-      'Regular oral maintenance',
-      'Plaque buildup',
-      'Disease prevention',
-      'Before other treatments'
-    ],
-    package_includes_es: [
-      'Remoción de placa y sarro',
-      'Pulido dental',
-      'Aplicación de flúor',
-      'Examen oral completo',
-      'Instrucciones de higiene',
-      'Recomendaciones personalizadas'
-    ],
-    package_includes_en: [
-      'Plaque and tartar removal',
-      'Dental polishing',
-      'Fluoride application',
-      'Complete oral exam',
-      'Hygiene instructions',
-      'Personalized recommendations'
-    ]
-  },
-  {
-    id: 'deep-scaling',
-    category: 'cosmetic',
-    name_es: 'Raspado Profundo',
-    name_en: 'Deep Scaling',
-    description_es: 'Limpieza periodontal avanzada',
-    description_en: 'Advanced periodontal cleaning',
-    price_usd: 125,
-    price_comparison_us: 300,
-    savings_percentage: 58,
-    image: limpiezaProfundaImg,
-    treatment_time_es: '1-2 horas',
-    treatment_time_en: '1-2 hours',
-    anesthesia_es: 'Local',
-    anesthesia_en: 'Local',
-    recovery_days_es: '2-3 días',
-    recovery_days_en: '2-3 days',
     final_results_timeline_es: '1-2 semanas',
     final_results_timeline_en: '1-2 weeks',
     ideal_candidates_es: [
-      'Enfermedad periodontal',
-      'Bolsas periodontales profundas',
-      'Inflamación de encías',
-      'Sangrado gingival'
+      'Bruxismo severo',
+      'Dolor de mandíbula o ATM',
+      'Desgaste dental por rechinamiento',
+      'Dolores de cabeza por tensión mandibular'
     ],
     ideal_candidates_en: [
-      'Periodontal disease',
-      'Deep periodontal pockets',
-      'Gum inflammation',
-      'Gingival bleeding'
+      'Severe bruxism',
+      'Jaw or TMJ pain',
+      'Dental wear from grinding',
+      'Headaches from jaw tension'
     ],
     package_includes_es: [
-      'Raspado y alisado radicular',
-      'Limpieza subgingival',
-      'Anestesia local completa',
-      'Medicamentos antibióticos si necesario',
-      'Instrucciones post-operatorias',
-      'Seguimiento periodontal'
+      'Evaluación de ATM completa',
+      'Inyecciones de Botox en músculos masticadores',
+      'Duración de 3-6 meses',
+      'Consulta de seguimiento',
+      'Plan de mantenimiento'
     ],
     package_includes_en: [
-      'Scaling and root planing',
-      'Subgingival cleaning',
-      'Complete local anesthesia',
-      'Antibiotic medication if needed',
-      'Post-operative instructions',
-      'Periodontal follow-up'
+      'Complete TMJ evaluation',
+      'Botox injections in masticatory muscles',
+      '3-6 month duration',
+      'Follow-up consultation',
+      'Maintenance plan'
     ]
   }
 ];
