@@ -38,25 +38,35 @@ export const ProcedureListItem = ({ procedure, onClick }: ProcedureListItemProps
           <h4 className="text-base font-bold text-foreground group-hover:text-primary transition-colors duration-300 flex-1">
             {isEnglish ? procedure.name_en : procedure.name_es}
           </h4>
-          <Badge 
-            variant="secondary" 
-            className="flex-shrink-0 bg-accent/15 text-accent border-accent/30 font-bold group-hover:bg-accent group-hover:text-accent-foreground group-hover:scale-105 transition-all duration-300 animate-pulse group-hover:animate-none"
-          >
-            <Sparkles className="w-3 h-3 mr-1" />
-            {procedure.savings_percentage}%
-          </Badge>
+          {procedure.savings_percentage !== null && (
+            <Badge 
+              variant="secondary" 
+              className="flex-shrink-0 bg-accent/15 text-accent border-accent/30 font-bold group-hover:bg-accent group-hover:text-accent-foreground group-hover:scale-105 transition-all duration-300 animate-pulse group-hover:animate-none"
+            >
+              <Sparkles className="w-3 h-3 mr-1" />
+              {procedure.savings_percentage}%
+            </Badge>
+          )}
         </div>
         <p className="text-sm text-muted-foreground line-clamp-2 mb-2 pr-2">
           {isEnglish ? procedure.description_en : procedure.description_es}
         </p>
-        <div className="flex items-center gap-2">
-          <span className="text-xs text-muted-foreground">
-            {t('plastic_surgery.procedures.from_price')}
-          </span>
-          <span className="text-lg font-bold text-accent group-hover:text-primary transition-colors duration-300">
-            ${procedure.price_usd.toLocaleString()}
-          </span>
-        </div>
+        {procedure.price_usd !== null ? (
+          <div className="flex items-center gap-2">
+            <span className="text-xs text-muted-foreground">
+              {t('plastic_surgery.procedures.from_price')}
+            </span>
+            <span className="text-lg font-bold text-accent group-hover:text-primary transition-colors duration-300">
+              ${procedure.price_usd.toLocaleString()}
+            </span>
+          </div>
+        ) : (
+          <div className="flex items-center gap-2">
+            <span className="text-lg font-bold text-accent group-hover:text-primary transition-colors duration-300">
+              {t('plastic_surgery.procedures.price_quote')}
+            </span>
+          </div>
+        )}
       </div>
       
       {/* Action Button */}

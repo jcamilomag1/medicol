@@ -121,14 +121,16 @@ export const ProcedureModal = ({ procedure, open, onOpenChange }: ProcedureModal
               </div>
             </div>
 
-            {/* Pricing Comparison */}
-            <div className="mb-8">
-              <PricingComparison
-                medicolPrice={procedure.price_usd}
-                usPrice={procedure.price_comparison_us}
-                savingsPercentage={procedure.savings_percentage}
-              />
-            </div>
+            {/* Pricing Comparison - Solo si hay precio */}
+            {procedure.price_usd !== null && (
+              <div className="mb-8">
+                <PricingComparison
+                  medicolPrice={procedure.price_usd}
+                  usPrice={procedure.price_comparison_us}
+                  savingsPercentage={procedure.savings_percentage}
+                />
+              </div>
+            )}
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">

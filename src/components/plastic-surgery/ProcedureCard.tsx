@@ -31,9 +31,11 @@ export const ProcedureCard = ({ procedure, onClick }: ProcedureCardProps) => {
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             style={{ backgroundColor: '#e5e7eb' }}
           />
-          <Badge className="absolute top-4 right-4 bg-accent text-accent-foreground font-bold shadow-lg">
-            {t('plastic_surgery.procedures.save_up_to')} {procedure.savings_percentage}%
-          </Badge>
+          {procedure.savings_percentage !== null && (
+            <Badge className="absolute top-4 right-4 bg-accent text-accent-foreground font-bold shadow-lg">
+              {t('plastic_surgery.procedures.save_up_to')} {procedure.savings_percentage}%
+            </Badge>
+          )}
         </div>
         
         <CardContent className="p-6 flex-grow flex flex-col">
@@ -43,14 +45,22 @@ export const ProcedureCard = ({ procedure, onClick }: ProcedureCardProps) => {
           <p className="text-muted-foreground text-sm mb-4 line-clamp-3 min-h-[60px]">
             {isEnglish ? procedure.description_en : procedure.description_es}
           </p>
-          <div className="flex items-baseline gap-2 mt-auto">
-            <span className="text-sm text-muted-foreground">
-              {t('plastic_surgery.procedures.from_price')}
-            </span>
-            <span className="text-2xl font-bold text-accent">
-              ${procedure.price_usd.toLocaleString()} USD
-            </span>
-          </div>
+          {procedure.price_usd !== null ? (
+            <div className="flex items-baseline gap-2 mt-auto">
+              <span className="text-sm text-muted-foreground">
+                {t('plastic_surgery.procedures.from_price')}
+              </span>
+              <span className="text-2xl font-bold text-accent">
+                ${procedure.price_usd.toLocaleString()} USD
+              </span>
+            </div>
+          ) : (
+            <div className="mt-auto">
+              <span className="text-2xl font-bold text-accent">
+                {t('plastic_surgery.procedures.price_quote')}
+              </span>
+            </div>
+          )}
         </CardContent>
 
         <CardFooter className="p-6 pt-0">

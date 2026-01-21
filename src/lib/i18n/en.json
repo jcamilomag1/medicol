@@ -953,7 +953,8 @@
       "from_price": "From",
       "save_up_to": "Save up to",
       "view_details": "View Details",
-      "learn_more": "Learn More"
+      "learn_more": "Learn More",
+      "price_quote": "Request Quote"
     },
     "categories": {
       "all": "All",
@@ -971,7 +972,7 @@
       "final_results": "Final Results",
       "ideal_for": "Ideal for candidates who...",
       "package_includes": "Package Includes",
-      "price_in_medicol": "Price at Medicol",
+      "price_in_medicol": "Price at Medicol (starting at)",
       "price_in_us": "Average Price in U.S.",
       "your_savings": "Your Potential Savings",
       "cta_button": "Request Quote",
