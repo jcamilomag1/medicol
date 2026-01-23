@@ -17,7 +17,7 @@ export const FAQWithCTASection = () => {
   const { openCalendlyPopup } = useCalendly();
 
   const handleWhatsAppClick = () => {
-    const whatsappNumber = "573001234567";
+    const whatsappNumber = "573052276747";
     const message = encodeURIComponent(
       "Hola! Me gustaría agendar una consulta virtual gratuita sobre cirugía plástica."
     );

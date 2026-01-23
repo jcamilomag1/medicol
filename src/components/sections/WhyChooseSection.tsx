@@ -47,7 +47,7 @@ export const WhyChooseSection = () => {
 
   const handleWhatsAppContact = () => {
     const message = encodeURIComponent(t('why_choose.whatsapp_message'));
-    window.open(`https://wa.me/573322385474?text=${message}`, '_blank');
+    window.open(`https://wa.me/573052276747?text=${message}`, '_blank');
   };
 
   return (

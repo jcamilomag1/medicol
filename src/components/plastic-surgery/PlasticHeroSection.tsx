@@ -14,7 +14,7 @@ export const PlasticHeroSection = () => {
     });
   };
   const handleCTAClick = () => {
-    const whatsappNumber = "573001234567"; // Replace with actual number
+    const whatsappNumber = "573052276747";
     const message = encodeURIComponent(t('plastic_surgery.hero.cta_button'));
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
   };

@@ -58,7 +58,7 @@ export const ServiceModal = ({ service, isOpen, onClose }: ServiceModalProps) =>
     const message = encodeURIComponent(
       `Hola, me interesa el tratamiento: ${name}`
     );
-    window.open(`https://wa.me/573001234567?text=${message}`, '_blank');
+    window.open(`https://wa.me/573052276747?text=${message}`, '_blank');
   };
 
   return (

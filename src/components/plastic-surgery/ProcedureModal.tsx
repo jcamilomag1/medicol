@@ -20,7 +20,7 @@ export const ProcedureModal = ({ procedure, open, onOpenChange }: ProcedureModal
   if (!procedure) return null;
 
   const handleWhatsAppClick = () => {
-    const whatsappNumber = "573001234567"; // Replace with actual number
+    const whatsappNumber = "573052276747";
     const message = encodeURIComponent(
       `${t('plastic_surgery.modal.cta_button')}: ${isEnglish ? procedure.name_en : procedure.name_es}`
     );

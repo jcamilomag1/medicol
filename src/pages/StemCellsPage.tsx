@@ -22,7 +22,7 @@ const StemCellsPage = () => {
     ctaPrimaryKey: 'stem_cells.hero.cta_primary',
     ctaSecondaryKey: 'stem_cells.hero.cta_secondary',
     ctaSecondaryTarget: '#services',
-    whatsappNumber: '573001234567',
+    whatsappNumber: '573052276747',
     whatsappMessageKey: 'stem_cells.hero.whatsapp_message',
     trustBadges: [
       { icon: Shield, textKey: 'stem_cells.hero.trust_badge_1' },
