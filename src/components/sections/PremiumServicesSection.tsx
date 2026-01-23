@@ -61,7 +61,7 @@ export const PremiumServicesSection = () => {
 
   const handleWhatsAppContact = () => {
     const message = encodeURIComponent(t('premium_services.whatsapp_message'));
-    window.open(`https://wa.me/573104459819?text=${message}`, '_blank');
+    window.open(`https://wa.me/573052276747?text=${message}`, '_blank');
   };
 
   return (

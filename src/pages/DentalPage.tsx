@@ -22,7 +22,7 @@ const DentalPage = () => {
     ctaPrimaryKey: 'dental.hero.cta_primary',
     ctaSecondaryKey: 'dental.hero.cta_secondary',
     ctaSecondaryTarget: '#services',
-    whatsappNumber: '573001234567',
+    whatsappNumber: '573052276747',
     whatsappMessageKey: 'dental.hero.whatsapp_message',
     trustBadges: [
       { icon: Sparkles, textKey: 'dental.hero.trust_badge_1' },

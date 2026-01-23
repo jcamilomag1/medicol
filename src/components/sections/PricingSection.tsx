@@ -196,7 +196,7 @@ export const PricingSection = () => {
                   asChild
                 >
                   <a 
-                    href={`https://wa.me/573053333333?text=${whatsappMessage}`}
+                    href={`https://wa.me/573052276747?text=${whatsappMessage}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

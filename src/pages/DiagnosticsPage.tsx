@@ -22,7 +22,7 @@ const DiagnosticsPage = () => {
     ctaPrimaryKey: 'diagnostics.hero.cta_primary',
     ctaSecondaryKey: 'diagnostics.hero.cta_secondary',
     ctaSecondaryTarget: '#programs',
-    whatsappNumber: '573001234567',
+    whatsappNumber: '573052276747',
     whatsappMessageKey: 'diagnostics.hero.whatsapp_message',
     trustBadges: [
       { icon: Brain, textKey: 'diagnostics.hero.trust_badge_1' },

@@ -44,7 +44,7 @@ export const ServiceFAQSection = ({
 
   const handleWhatsAppContact = () => {
     const message = encodeURIComponent(ctaConfig.whatsappMessage);
-    window.open(`https://wa.me/573001234567?text=${message}`, '_blank');
+    window.open(`https://wa.me/573052276747?text=${message}`, '_blank');
   };
 
   return (

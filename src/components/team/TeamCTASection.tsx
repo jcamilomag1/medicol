@@ -13,7 +13,7 @@ const TeamCTASection = () => {
   const { openCalendlyPopup } = useCalendly();
 
   const whatsappMessage = encodeURIComponent(t('team.cta.whatsapp_message'));
-  const whatsappUrl = `https://wa.me/573137371978?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/573052276747?text=${whatsappMessage}`;
 
   return (
     <section ref={ref} className="py-16 md:py-24 bg-gradient-to-r from-primary to-accent overflow-hidden">

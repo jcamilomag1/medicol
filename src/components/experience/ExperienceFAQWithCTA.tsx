@@ -23,7 +23,7 @@ const ExperienceFAQWithCTA = () => {
 
   const handleWhatsAppClick = () => {
     const message = isSpanish ? experienceTexts.whatsapp_message_es : experienceTexts.whatsapp_message_en;
-    window.open(`https://wa.me/573001234567?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/573052276747?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   return (
