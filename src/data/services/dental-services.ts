@@ -28,7 +28,7 @@ export interface DentalService {
   name_en: string;
   description_es: string;
   description_en: string;
-  price_usd: number;
+  price_usd: number | null;
   price_comparison_us: number;
   savings_percentage: number;
   image: string;
@@ -55,7 +55,7 @@ export const dentalServices: DentalService[] = [
     name_en: 'Smile Design',
     description_es: 'Planificación completa y visualización del diseño de tu sonrisa',
     description_en: 'Complete smile design planning and visualization',
-    price_usd: 850,
+    price_usd: null,
     price_comparison_us: 2500,
     savings_percentage: 66,
     image: disenoSonrisaImg,

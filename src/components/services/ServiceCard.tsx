@@ -11,7 +11,7 @@ interface ServiceCardProps {
   name_en: string;
   description_es: string;
   description_en: string;
-  price_usd: number;
+  price_usd: number | null;
   onViewDetails: () => void;
   index: number;
 }
@@ -60,11 +60,19 @@ export const ServiceCard = ({
 
           <div className="flex items-center justify-between mt-auto pt-4 border-t">
             <div className="flex items-center gap-2">
-              <DollarSign className="w-5 h-5 text-primary" />
-              <span className="text-2xl font-bold text-primary">
-                {price_usd.toLocaleString()}
-              </span>
-              <span className="text-sm text-muted-foreground">USD</span>
+              {price_usd !== null ? (
+                <>
+                  <DollarSign className="w-5 h-5 text-primary" />
+                  <span className="text-2xl font-bold text-primary">
+                    {price_usd.toLocaleString()}
+                  </span>
+                  <span className="text-sm text-muted-foreground">USD</span>
+                </>
+              ) : (
+                <span className="text-2xl font-bold text-primary">
+                  {isSpanish ? 'Cotizar' : 'Quote'}
+                </span>
+              )}
             </div>
 
             <Button
