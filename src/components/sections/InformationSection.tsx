@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Home, Plane, BadgeCheck, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import recoveryImage from '@/assets/medical-tourism-recovery.jpg';
+import recoveryImage from '@/assets/recovery-house-new.jpg';
 
 export const InformationSection = () => {
   const { t } = useTranslation();
