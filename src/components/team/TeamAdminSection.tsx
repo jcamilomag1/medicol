@@ -7,6 +7,7 @@ import felipeMuneraImg from '@/assets/team/felipe-munera.png';
 import ismaelSalazarImg from '@/assets/team/ismael-salazar.png';
 import linaJaramilloImg from '@/assets/team/lina-jaramillo.png';
 import sebastianBoteroImg from '@/assets/team/sebastian-botero.png';
+import arleyValenciaImg from '@/assets/team/arley-valencia.png';
 
 const TeamAdminSection = () => {
   const { t } = useTranslation();
@@ -19,6 +20,7 @@ const TeamAdminSection = () => {
     { key: 'ismael', image: ismaelSalazarImg },
     { key: 'lina', image: linaJaramilloImg },
     { key: 'sebastian', image: sebastianBoteroImg },
+    { key: 'arley', image: arleyValenciaImg },
   ];
 
   return (
@@ -38,7 +40,7 @@ const TeamAdminSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 mx-auto">
           {adminTeam.map((member, index) => (
             <motion.div
               key={member.key}
