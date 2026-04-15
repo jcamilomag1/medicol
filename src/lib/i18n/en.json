@@ -722,7 +722,9 @@
     "legal": {
       "title": "Legal",
       "privacy": "Privacy Policy",
-      "terms": "User Agreement"
+      "terms": "User Agreement",
+      "terms_conditions": "Terms and Conditions",
+      "technical_scope": "Technical Scope"
     },
     "contact_us": "Contact Us",
     "social": "Follow Us",

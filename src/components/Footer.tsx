@@ -17,8 +17,10 @@ const footerNav = {
     { key: 'nav.blog', href: '/blog' },
   ],
   legal: [
-    { key: 'footer.legal.privacy', href: '/politica-de-privacidad' },
-    { key: 'footer.legal.terms', href: '/acuerdo-de-usuario' },
+    { key: 'footer.legal.privacy', href: '/politica-de-privacidad', external: false },
+    { key: 'footer.legal.terms', href: '/acuerdo-de-usuario', external: false },
+    { key: 'footer.legal.terms_conditions', href: '/docs/terminos-y-condiciones.pdf', external: true },
+    { key: 'footer.legal.technical_scope', href: '/docs/alcance-tecnico.pdf', external: true },
   ],
 };
 
@@ -83,6 +85,7 @@ export const Footer = () => {
                 <li key={link.key}>
                   <a
                     href={link.href}
+                    {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                     className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
                   >
                     {t(link.key)}
