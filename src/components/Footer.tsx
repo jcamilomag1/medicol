@@ -85,6 +85,7 @@ export const Footer = () => {
                 <li key={link.key}>
                   <a
                     href={link.href}
+                    {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                     className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
                   >
                     {t(link.key)}
