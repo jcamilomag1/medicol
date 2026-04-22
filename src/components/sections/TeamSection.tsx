@@ -28,8 +28,8 @@ const teamMembers: Doctor[] = [
     bio: 'Especialista en cirugía estética facial y corporal con enfoque en resultados naturales. Pionero en técnicas mínimamente invasivas.',
     imageUrl: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop',
     profileUrl: '/team',
-    instagram: 'https://instagram.com',
-    linkedin: 'https://linkedin.com'
+    instagram: 'https://www.instagram.com/isoesthetic/',
+    linkedin: 'https://www.linkedin.com/company/isoesthetic/?viewAsMember=true'
   },
   {
     name: 'Dra. María González',
@@ -40,8 +40,8 @@ const teamMembers: Doctor[] = [
     bio: 'Experta en contorno corporal y rejuvenecimiento facial. Certificada en las últimas tecnologías de lipoescultura.',
     imageUrl: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop',
     profileUrl: '/team',
-    instagram: 'https://instagram.com',
-    linkedin: 'https://linkedin.com'
+    instagram: 'https://www.instagram.com/isoesthetic/',
+    linkedin: 'https://www.linkedin.com/company/isoesthetic/?viewAsMember=true'
   },
   {
     name: 'Dr. Carlos Ramírez',
@@ -52,8 +52,8 @@ const teamMembers: Doctor[] = [
     bio: 'Líder en terapias con células madre y medicina anti-aging. Investigador activo en regeneración tisular.',
     imageUrl: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop',
     profileUrl: '/team',
-    instagram: 'https://instagram.com',
-    linkedin: 'https://linkedin.com'
+    instagram: 'https://www.instagram.com/isoesthetic/',
+    linkedin: 'https://www.linkedin.com/company/isoesthetic/?viewAsMember=true'
   },
   {
     name: 'Dr. Andrés Martínez',
@@ -64,8 +64,8 @@ const teamMembers: Doctor[] = [
     bio: 'Especialista en diseño de sonrisa y implantes dentales. Certificado en odontología digital y estética avanzada.',
     imageUrl: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&h=400&fit=crop',
     profileUrl: '/team',
-    instagram: 'https://instagram.com',
-    linkedin: 'https://linkedin.com'
+    instagram: 'https://www.instagram.com/isoesthetic/',
+    linkedin: 'https://www.linkedin.com/company/isoesthetic/?viewAsMember=true'
   }
 ];
 
