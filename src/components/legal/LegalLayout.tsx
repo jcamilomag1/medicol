@@ -48,8 +48,8 @@ export const LegalLayout = ({ children, title, lastUpdated, breadcrumb }: LegalL
           <div className="mt-16 pt-8 border-t border-border/40">
             <p className="text-sm text-muted-foreground">
               If you have any questions about this document, please contact us at{" "}
-              <a href="mailto:info@medicol.me" className="text-primary hover:underline">
-                info@medicol.me
+              <a href="mailto:management@isoesthetic.com" className="text-primary hover:underline">
+                management@isoesthetic.com
               </a>
             </p>
           </div>

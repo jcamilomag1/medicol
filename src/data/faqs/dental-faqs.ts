@@ -13,8 +13,8 @@ export const dentalFAQs: FAQ[] = [
     answer_en: 'AI smile design uses advanced artificial intelligence technology to create a 3D digital simulation of your perfect smile before starting any treatment. We analyze your facial shape, proportions, and personal preferences to design a smile that looks natural and beautiful. You can see exactly how you will look before making any decisions, giving you complete control and confidence in your treatment.'
   },
   {
-    question_es: '¿Son seguros los procedimientos dentales en Medicol?',
-    question_en: 'Are dental procedures at Medicol safe?',
+    question_es: '¿Son seguros los procedimientos dentales en Isoesthetic?',
+    question_en: 'Are dental procedures at Isoesthetic safe?',
     answer_es: 'Absolutamente. Todos nuestros procedimientos dentales cumplen con los más altos estándares internacionales de seguridad e higiene. Contamos con certificaciones de la Asociación Dental Americana (ADA) y utilizamos únicamente equipos y materiales aprobados por la FDA. Nuestros dentistas están altamente capacitados con años de experiencia en odontología cosmética y restaurativa. Además, ofrecemos múltiples opciones de sedación para que tu experiencia sea completamente cómoda y libre de ansiedad.',
     answer_en: 'Absolutely. All our dental procedures meet the highest international safety and hygiene standards. We have certifications from the American Dental Association (ADA) and use only FDA-approved equipment and materials. Our dentists are highly trained with years of experience in cosmetic and restorative dentistry. Additionally, we offer multiple sedation options to make your experience completely comfortable and anxiety-free.'
   },

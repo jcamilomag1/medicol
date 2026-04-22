@@ -138,7 +138,7 @@ export const PricingSection = () => {
             </Card>
           </TimelineContent>
 
-          {/* Medicol Colombia Plan - DESTACADA */}
+          {/* Isoesthetic Colombia Plan - DESTACADA */}
           <TimelineContent
             as="div"
             animationNum={2}

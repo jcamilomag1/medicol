@@ -11,7 +11,7 @@ export const ContactHeroSection = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={contactHeroBg}
-          alt="Medicol Contact"
+          alt="Isoesthetic Contact"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/90 to-accent/85" />

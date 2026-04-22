@@ -21,8 +21,8 @@ const testimonials = [
     procedure: 'Rinoplastia',
     image: testimonialRhinoplasty,
     rating: 5,
-    text_es: 'La mejor decisión que pude haber tomado. El equipo de Medicol me acompañó en todo momento y los resultados superaron mis expectativas. Me sentí segura y bien cuidada durante todo el proceso.',
-    text_en: 'The best decision I could have made. The Medicol team supported me every step of the way and the results exceeded my expectations. I felt safe and well cared for throughout the entire process.',
+    text_es: 'La mejor decisión que pude haber tomado. El equipo de Isoesthetic me acompañó en todo momento y los resultados superaron mis expectativas. Me sentí segura y bien cuidada durante todo el proceso.',
+    text_en: 'The best decision I could have made. The Isoesthetic team supported me every step of the way and the results exceeded my expectations. I felt safe and well cared for throughout the entire process.',
   },
   {
     name: 'John Smith',

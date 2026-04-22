@@ -82,7 +82,7 @@ export const Navbar = () => {
           <Link to="/" className="flex items-center">
             <img
               src={medicolLogo}
-              alt="Medicol Logo"
+              alt="Isoesthetic Logo"
               className="h-10 w-auto"
             />
           </Link>

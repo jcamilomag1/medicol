@@ -101,7 +101,7 @@ const BlogPostPage = () => {
   return (
     <Layout>
       <Helmet>
-        <title>{title} | Medicol</title>
+        <title>{title} | Isoesthetic</title>
         <meta name="description" content={metaDescription || title} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={metaDescription || title} />

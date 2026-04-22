@@ -25,8 +25,8 @@ const featuredTestimonials: FeaturedTestimonial[] = [
     country: 'United States',
     countryFlag: '🇺🇸',
     procedure: 'Brazilian Butt Lift',
-    quote_es: 'La mejor experiencia médica que he tenido. El equipo de Medicol superó todas mis expectativas.',
-    quote_en: 'The best medical experience I\'ve ever had. The Medicol team exceeded all my expectations.',
+    quote_es: 'La mejor experiencia médica que he tenido. El equipo de Isoesthetic superó todas mis expectativas.',
+    quote_en: 'The best medical experience I\'ve ever had. The Isoesthetic team exceeded all my expectations.',
     videoUrl: 'https://drive.google.com/file/d/1ptAJ-Ssy5ek7-oExyp_fINNbu_HD_yjq/preview',
     avatarUrl: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=100&h=100&fit=crop',
     rating: 5

@@ -5,8 +5,8 @@ const PrivacyPolicyPage = () => {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy - Medicol Medical Tourism</title>
-        <meta name="description" content="Privacy Policy for Medicol Medical Tourism - Learn how we collect, use, and protect your personal information." />
+        <title>Privacy Policy - Isoesthetic Medical Tourism</title>
+        <meta name="description" content="Privacy Policy for Isoesthetic Medical Tourism - Learn how we collect, use, and protect your personal information." />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
 
@@ -18,7 +18,7 @@ const PrivacyPolicyPage = () => {
         <div className="space-y-8">
           <section>
             <p className="text-lg">
-              Medicol Medical Tourism ("we," "us," or "our") is committed to protecting the privacy and security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our medical tourism services and website.
+              Isoesthetic Medical Tourism ("we," "us," or "our") is committed to protecting the privacy and security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our medical tourism services and website.
             </p>
           </section>
 
@@ -107,7 +107,7 @@ const PrivacyPolicyPage = () => {
               <li><strong>Data Portability:</strong> Request your data in a portable format</li>
             </ul>
             <p className="mt-3">
-              To exercise these rights, contact us at <a href="mailto:info@medicol.me" className="text-primary hover:underline">info@medicol.me</a>.
+              To exercise these rights, contact us at <a href="mailto:management@isoesthetic.com" className="text-primary hover:underline">management@isoesthetic.com</a>.
             </p>
           </section>
 
@@ -146,8 +146,8 @@ const PrivacyPolicyPage = () => {
               If you have any questions or concerns about this Privacy Policy, please contact us:
             </p>
             <div className="bg-muted/50 p-6 rounded-lg border border-border/40">
-              <p className="font-semibold text-foreground mb-2">Medicol Medical Tourism</p>
-              <p>Email: <a href="mailto:info@medicol.me" className="text-primary hover:underline">info@medicol.me</a></p>
+              <p className="font-semibold text-foreground mb-2">Isoesthetic Medical Tourism</p>
+              <p>Email: <a href="mailto:management@isoesthetic.com" className="text-primary hover:underline">management@isoesthetic.com</a></p>
               <p>Phone: <a href="tel:+573052757316" className="text-primary hover:underline">+57 305 275 7316</a></p>
               <p>WhatsApp: <a href="https://wa.me/573052757316" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">+57 305 275 7316</a></p>
             </div>

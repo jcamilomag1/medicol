@@ -10,7 +10,7 @@ interface ComparisonItem {
     text: string;
     negative?: boolean;
   };
-  medicol: {
+  isoesthetic: {
     icon: LucideIcon;
     text: string;
   };
@@ -54,7 +54,7 @@ export const ComparisonTable = ({ data }: ComparisonTableProps) => {
         {/* Rows */}
         {data.map((row, index) => {
           const OthersIcon = row.others.icon;
-          const MedicolIcon = row.medicol.icon;
+          const IsoestheticIcon = row.isoesthetic.icon;
           
           return (
             <motion.div
@@ -88,11 +88,11 @@ export const ComparisonTable = ({ data }: ComparisonTableProps) => {
                 </span>
               </div>
 
-              {/* Medicol */}
+              {/* Isoesthetic */}
               <div className="p-6 flex items-center gap-3 bg-gradient-to-r from-primary/5 to-transparent border-t md:border-t-0 md:border-l border-border">
-                <MedicolIcon className="w-5 h-5 text-primary flex-shrink-0" />
+                <IsoestheticIcon className="w-5 h-5 text-primary flex-shrink-0" />
                 <span className="text-sm font-medium text-foreground">
-                  {row.medicol.text}
+                  {row.isoesthetic.text}
                 </span>
               </div>
             </motion.div>
