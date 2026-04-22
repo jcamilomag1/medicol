@@ -119,10 +119,10 @@ export const Footer = () => {
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 text-gray-300 mt-0.5 flex-shrink-0" />
                 <a
-                  href="mailto:medicol.mde@gmail.com"
+                  href="mailto:management@isoesthetic.com"
                   className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
                 >
-                  medicol.mde@gmail.com
+                  management@isoesthetic.com
                 </a>
               </li>
             </ul>
@@ -132,7 +132,7 @@ export const Footer = () => {
             </h4>
             <div className="flex gap-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=61573490323474"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors"
@@ -141,7 +141,7 @@ export const Footer = () => {
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/isoesthetic/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors"
@@ -150,7 +150,7 @@ export const Footer = () => {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/isoesthetic/?viewAsMember=true"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors"
@@ -176,7 +176,7 @@ export const Footer = () => {
 
           {/* Columna central - Copyright */}
           <p className="text-xs leading-5 text-gray-400 text-center">
-            &copy; {new Date().getFullYear()} Medicol. {t('footer.rights_reserved')}
+            &copy; {new Date().getFullYear()} Isoesthetic. {t('footer.rights_reserved')}
           </p>
 
           {/* Columna derecha - Vacía */}

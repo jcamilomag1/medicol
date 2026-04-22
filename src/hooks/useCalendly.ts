@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 
-const CALENDLY_URL = 'https://calendly.com/medicol-mde/30min';
+const CALENDLY_URL = 'https://calendly.com/isoesthetic-mde/30min';
 const CALENDLY_SCRIPT_URL = 'https://assets.calendly.com/assets/external/widget.js';
 
 // Variable global para rastrear si ya se inicio la carga

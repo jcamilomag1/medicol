@@ -9,7 +9,7 @@ interface DifferentiatorCard {
   descriptionKey: string;
 }
 
-interface MedicolDifferentiatorsProps {
+interface IsoestheticDifferentiatorsProps {
   titleKey?: string;
   cards?: DifferentiatorCard[];
 }
@@ -33,7 +33,7 @@ export const MedicolDifferentiators = ({
       descriptionKey: "stem_cells.differentiators.cards.innovation_description"
     }
   ]
-}: MedicolDifferentiatorsProps) => {
+}: IsoestheticDifferentiatorsProps) => {
   const { t } = useTranslation();
 
   return (

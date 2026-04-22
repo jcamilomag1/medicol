@@ -46,7 +46,7 @@ const DiagnosticsPage = () => {
     noResultsKey: 'diagnostics.programs.no_results',
   };
 
-  // Cards para "La Diferencia MediCol: Datos → Acción"
+  // Cards para "La Diferencia Isoesthetic: Datos → Acción"
   const differenceCards = [
     {
       icon: Brain,
@@ -138,7 +138,7 @@ const DiagnosticsPage = () => {
     <Layout>
       <ServiceHeroSection {...heroProps} />
       
-      {/* La Diferencia MediCol: Datos → Acción */}
+      {/* La Diferencia Isoesthetic: Datos → Acción */}
       <MedicolDifferentiators 
         titleKey="diagnostics.difference.title"
         cards={differenceCards}

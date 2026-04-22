@@ -1,12 +1,12 @@
 {
   "dental": {
     "hero": {
-      "title": "Dental Procedures at MediCol - Premium Care",
-      "subtitle": "Experience the future of dentistry with AI-guided precision, same-day solutions, and cutting-edge technology for your perfect smile at MediCol. Compare our affordable prices with US rates.",
+      "title": "Dental Procedures at Isoesthetic - Premium Care",
+      "subtitle": "Experience the future of dentistry with AI-guided precision, same-day solutions, and cutting-edge technology for your perfect smile at Isoesthetic. Compare our affordable prices with US rates.",
       "badge": "Comfort and care",
       "cta_primary": "Free Virtual Consultation",
       "cta_secondary": "View Treatments",
-      "whatsapp_message": "Hello, I'm interested in learning more about dental procedures at MediCol",
+      "whatsapp_message": "Hello, I'm interested in learning more about dental procedures at Isoesthetic",
       "trust_badge_1": "CAD/CAM Technology",
       "trust_badge_2": "Same-Day Solutions",
       "trust_badge_3": "1,000+ Smiles Created"
@@ -55,7 +55,7 @@
     },
     "differentiators": {
       "cards": {
-        "title": "Why choose Medicol for your smile?",
+        "title": "Why choose Isoesthetic for your smile?",
         "ai_precision_title": "AI Precision",
         "ai_precision_description": "We use artificial intelligence to design your perfect smile before starting any treatment.",
         "same_day_title": "Same-Day Results",
@@ -120,27 +120,27 @@
     },
     "differentiators": {
       "badge": "Why 5,000+ patients choose us",
-      "title": "The Medicol Difference",
+      "title": "The Isoesthetic Difference",
       "subtitle": "Not all medical tourism agencies are equal. Discover what makes us unique.",
       "comparison": {
         "header_aspect": "Aspect",
         "header_others": "Other Agencies",
-        "header_medicol": "Medicol",
+        "header_medicol": "Isoesthetic",
         "hospital": "Hospitals",
         "hospital_others": "Not certified",
-        "hospital_medicol": "JCI International Accreditation",
+        "hospital_isoesthetic": "JCI International Accreditation",
         "recovery": "Recovery",
         "recovery_others": "Generic hotels",
         "recovery_medicol": "Private house + 24/7 Nursing",
         "translator": "Communication",
         "translator_others": "No medical translator",
-        "translator_medicol": "Professional medical translator",
+        "translator_isoesthetic": "Professional medical translator",
         "pricing": "Pricing",
         "pricing_others": "Hidden costs",
-        "pricing_medicol": "Transparent all-inclusive (50-70% savings)",
+        "pricing_isoesthetic": "Transparent all-inclusive (50-70% savings)",
         "followup": "Follow-up",
         "followup_others": "Limited or none",
-        "followup_medicol": "Complete 6-month follow-up"
+        "followup_isoesthetic": "Complete 6-month follow-up"
       },
       "trust": {
         "certification_title": "International Certification",
@@ -153,14 +153,14 @@
         "care_desc": "Private house with specialized nursing"
       },
       "cta": {
-        "title": "Ready for the Medicol Experience?",
+        "title": "Ready for the Isoesthetic Experience?",
         "subtitle": "Join 5,000+ satisfied patients who trusted us",
         "primary": "Free WhatsApp Consultation",
         "secondary": "View All-Inclusive Packages",
-        "whatsapp_message": "Hello, I want to learn about the Medicol difference and schedule a free consultation"
+        "whatsapp_message": "Hello, I want to learn about the Isoesthetic difference and schedule a free consultation"
       },
       "cards": {
-        "title": "Why Choose Medicol?",
+        "title": "Why Choose Isoesthetic?",
         "subtitle": "Experience that makes the difference",
         "worry_free_title": "We manage your complete journey.",
         "worry_free_description": "We take care of everything for you. From your arrival to your full recovery, we cover every detail so you have no worries.",
@@ -199,7 +199,7 @@
   },
   "accreditations": {
     "badge": "Certified Quality",
-    "title": "Why Medicol is Different",
+    "title": "Why Isoesthetic is Different",
     "subtitle": "International accreditations that guarantee your safety and exceptional results",
     "jci": {
       "title": "JCI Accreditation",
@@ -270,13 +270,13 @@
   "featured_testimonials": {
     "badge": "Real Testimonials",
     "title": "Real Patients, Life-Changing Results",
-    "subtitle": "Hear directly from those who trusted Medicol to transform their lives",
+    "subtitle": "Hear directly from those who trusted Isoesthetic to transform their lives",
     "verified_badge": "Verified Patient",
     "estefania": {
       "name": "Estefanía",
       "country": "United States",
       "procedure": "Brazilian Butt Lift",
-      "quote": "The best medical experience I've ever had. The Medicol team exceeded all my expectations."
+      "quote": "The best medical experience I've ever had. The Isoesthetic team exceeded all my expectations."
     },
     "janette": {
       "name": "Janette",
@@ -305,13 +305,13 @@
     "subtitle": "Hear directly from our patients about their experience and transformative results.",
     "testimonials": {
       "estefania": {
-        "quote": "Medicol was my choice and it didn't disappoint me"
+        "quote": "Isoesthetic was my choice and it didn't disappoint me"
       },
       "evvete": {
         "quote": "From Texas to Medellín I had the best support possible"
       },
       "janeth": {
-        "quote": "Medicol made me feel at home from start to finish"
+        "quote": "Isoesthetic made me feel at home from start to finish"
       }
     }
   },
@@ -416,13 +416,13 @@
     }
   },
   "about": {
-    "main_title": "Choose trust, choose Medicol",
+    "main_title": "Choose trust, choose Isoesthetic",
     "hero_title": "Your peace of mind is our commitment. We coordinate your health and your journey, from start to finish.",
     "hero_description": "We are specialists in medical tourism that combines plastic surgery, advanced diagnostics, regenerative medicine, dental treatments, and entertainment with over 15 years of experience.",
     "badge_jci": "JCI Accreditation",
     "badge_sccp": "SCCP Certified",
     "badge_acicme": "ACICME Members",
-    "team_image_alt": "Medicol Medical Team",
+    "team_image_alt": "Isoesthetic Medical Team",
     "stats": {
       "patients": "Satisfied Patients",
       "years": "Years of Experience",
@@ -430,10 +430,10 @@
     },
     "cta_consult": "Schedule Your Free Virtual Consultation",
     "cta_team": "Meet Our Team",
-    "cta_experience": "Meet Medicol Experience"
+    "cta_experience": "Meet Isoesthetic Experience"
   },
   "why_choose": {
-    "section_title": "Why Choose Medicol",
+    "section_title": "Why Choose Isoesthetic",
     "section_subtitle": "What makes us different from other clinics in Medellín",
     "jci_hospitals": "JCI Accredited Hospitals",
     "jci_desc": "We operate in certified hospitals with the highest international safety standards. Your well-being is our priority.",
@@ -508,7 +508,7 @@
     },
     "mission": {
       "title": "Our Mission: Your Worry-Free Wellbeing",
-      "paragraph1": "MediCol was born from a simple idea: access to world-class medicine shouldn't be complicated.",
+      "paragraph1": "Isoesthetic was born from a simple idea: access to world-class medicine shouldn't be complicated.",
       "paragraph2": "We act as your personal health curators in Medellín. We select only the most renowned specialists and the most advanced technology, and build a 'white-glove' experience around you.",
       "paragraph3": "We handle the logistics, appointments, language, and every detail, so your only focus is healing."
     },
@@ -525,7 +525,7 @@
         "name": "Daniel Ramírez",
         "role": "Chief Executive Officer",
         "quote": "My commitment is to ensure that every patient experiences a transformative and stress-free journey.",
-        "bio": "Visionary leader dedicated to revolutionizing medical tourism. Coordinates MediCol's global strategy to ensure exceptional experiences."
+        "bio": "Visionary leader dedicated to revolutionizing medical tourism. Coordinates Isoesthetic's global strategy to ensure exceptional experiences."
       },
       "felipe": {
         "name": "Felipe Múnera",
@@ -559,7 +559,7 @@
       }
     },
     "testimonial": {
-      "text": "MediCol didn't just connect me with an exceptional surgeon, they took care of EVERYTHING: flights, hotel, translator, private nurse. I felt at home 5,000 km away.",
+      "text": "Isoesthetic didn't just connect me with an exceptional surgeon, they took care of EVERYTHING: flights, hotel, translator, private nurse. I felt at home 5,000 km away.",
       "author": "Sarah M., USA 🇺🇸"
     },
     "medical": {
@@ -697,7 +697,7 @@
       "description": "Your health is what matters most. Speak with a member of our care team today to plan your medical journey to Medellín. The first consultation is free.",
       "button_calendly": "Schedule Free Consultation",
       "button_whatsapp": "Talk via WhatsApp",
-      "whatsapp_message": "Hello, I want to talk to the MediCol team about my medical journey"
+      "whatsapp_message": "Hello, I want to talk to the Isoesthetic team about my medical journey"
     }
   },
   "medical_tourism": {
@@ -710,7 +710,7 @@
     "logistics_description": "Management of flights at preferential prices, vehicle rental with private driver, and accommodation options (apartments, houses, or hotels) in the best areas of Medellín.",
     "pricing_title": "Best Prices Guaranteed",
     "pricing_description": "Clients get better prices and exclusive benefits by booking everything through us, thanks to our strategic partnerships.",
-    "cta_text": "Discover the Medicol Experience"
+    "cta_text": "Discover the Isoesthetic Experience"
   },
   "testimonials": {
     "video_title": "What Our Patients Say",
@@ -718,7 +718,7 @@
   },
   "footer": {
     "solutions": "Procedures",
-    "company": "Medicol",
+    "company": "Isoesthetic",
     "legal": {
       "title": "Legal",
       "privacy": "Privacy Policy",
@@ -739,7 +739,7 @@
       "dental": "Dental Procedures",
       "diagnostics": "Medical Diagnostics"
     },
-    "experience": "Medicol Experience",
+    "experience": "Isoesthetic Experience",
     "team": "Our Team",
     "blog": "Blog",
     "contact": "Contact Us"
@@ -755,7 +755,7 @@
     "regenerative": "Regenerative Medicine",
     "dental": "Smile Design",
     "diagnostics": "Advanced Checkups",
-    "experience": "The Medicol Experience",
+    "experience": "The Isoesthetic Experience",
     "team": "Our Team",
     "results": "Results",
     "blog": "Blog"
@@ -880,7 +880,7 @@
   },
   "reviews": {
     "section_title": "What our patients say",
-    "section_subtitle": "Real reviews from satisfied patients who transformed their lives with Medicol",
+    "section_subtitle": "Real reviews from satisfied patients who transformed their lives with Isoesthetic",
     "badge_text": "Your transformation begins here",
     "review1": {
       "name": "María González",
@@ -907,7 +907,7 @@
     "procedure_label": "Procedure",
     "date_label": "Date",
     "cta_badge": "Watch video testimonials",
-    "cta_title": "Discover the Medicol Experience",
+    "cta_title": "Discover the Isoesthetic Experience",
     "cta_description": "Where every detail matters",
     "cta_button": "Explore Experience",
     "cta_trust_badge": "Over 500 video testimonials from real patients"
@@ -980,7 +980,7 @@
       "final_results": "Final Results",
       "ideal_for": "Ideal for candidates who...",
       "package_includes": "Package Includes",
-      "price_in_medicol": "Price at Medicol (starting at)",
+      "price_in_medicol": "Price at Isoesthetic (starting at)",
       "price_in_us": "Average Price in U.S.",
       "your_savings": "Your Potential Savings",
       "cta_button": "Request Quote",
@@ -1013,7 +1013,7 @@
       "badge": "Precision and trust",
       "cta_primary": "Free Virtual Consultation",
       "cta_secondary": "View Programs",
-      "whatsapp_message": "Hello, I'm interested in learning more about advanced medical diagnostics at MediCol",
+      "whatsapp_message": "Hello, I'm interested in learning more about advanced medical diagnostics at Isoesthetic",
       "trust_badge_1": "AI-Powered Analysis",
       "trust_badge_2": "24-48h Results",
       "trust_badge_3": "Specialist Panel"
@@ -1029,7 +1029,7 @@
       "category_genetic": "Genetic"
     },
     "difference": {
-      "title": "The MediCol Advantage: Data Converted into Action",
+      "title": "The Isoesthetic Advantage: Data Converted into Action",
       "ai_analysis_title": "AI-Powered Analysis",
       "ai_analysis_description": "We use AI software to analyze your images (MRI, CT) and lab results, detecting subtle patterns that the human eye might miss for superior diagnostic accuracy.",
       "smart_report_title": "Smart Report",
@@ -1040,9 +1040,9 @@
     "experience": {
       "title": "Your Wellness, Stress-Free",
       "concierge_title": "Personal Health Concierge",
-      "concierge_description": "Your MediCol coordinator schedules and manages all your appointments consecutively. No waiting, no bureaucracy. Your only concern is your health.",
+      "concierge_description": "Your Isoesthetic coordinator schedules and manages all your appointments consecutively. No waiting, no bureaucracy. Your only concern is your health.",
       "efficiency_title": "Maximum Efficiency",
-      "efficiency_description": "Complete all your exams, imaging, and consultations in one place and in record time. What would take months in your country, takes days at MediCol.",
+      "efficiency_description": "Complete all your exams, imaging, and consultations in one place and in record time. What would take months in your country, takes days at Isoesthetic.",
       "results_title": "Consolidated Results",
       "results_description": "Receive all your results (translated if necessary) in a single digital package and in a follow-up consultation (virtual or in-person) with your specialist."
     },
@@ -1054,7 +1054,7 @@
       "title": "Frequently Asked Questions",
       "subtitle": "Everything you need to know about our diagnostic programs",
       "cta_title": "Take Complete Control of Your Health",
-      "cta_subtitle": "Prevention is the medicine of the future. Schedule a free virtual consultation to design your personalized diagnostic plan with a MediCol health advisor.",
+      "cta_subtitle": "Prevention is the medicine of the future. Schedule a free virtual consultation to design your personalized diagnostic plan with a Isoesthetic health advisor.",
       "cta_primary": "Design My Checkup",
       "cta_secondary": "Contact via WhatsApp"
     }
@@ -1062,7 +1062,7 @@
   "contact": {
     "hero": {
       "title": "We're Here For You",
-      "subtitle": "Contact Medicol and discover how we can help you achieve your health and wellness goals"
+      "subtitle": "Contact Isoesthetic and discover how we can help you achieve your health and wellness goals"
     },
     "methods": {
       "section_title": "How Would You Like to Contact Us?",
@@ -1074,7 +1074,7 @@
       "whatsapp_title": "Chat via WhatsApp",
       "whatsapp_description": "Quick response via direct message",
       "whatsapp_button": "Open WhatsApp",
-      "whatsapp_message": "Hello, I would like to get more information about Medicol services",
+      "whatsapp_message": "Hello, I would like to get more information about Isoesthetic services",
       "schedule_title": "Schedule Your Consultation",
       "schedule_description": "Book your appointment with our specialists",
       "schedule_button": "Schedule Now"
@@ -1084,7 +1084,7 @@
       "phone_number": "+57 305 2276747",
       "phone_hours": "Mon - Fri: 8:00 AM - 6:00 PM",
       "email_title": "Email Us",
-      "email_address": "medicol@medellinmedicalcenter.com",
+      "email_address": "management@isoesthetic.com",
       "email_response": "We'll respond within 24 hours",
       "location_title": "Visit Us",
       "location_address": "Calle 10 #43B-30, Complex Las Vegas, Consulorio 214",
@@ -1125,7 +1125,7 @@
       "cta": "Learn More"
     },
     "timeline": {
-      "title": "The Medicol Patient Journey",
+      "title": "The Isoesthetic Patient Journey",
       "description": "Your transformation, simplified. We accompany you every step with security, luxury, and personalized care. This is how we treat you like family.",
       "steps": {
         "step1": {
@@ -1186,7 +1186,7 @@
         "step6": {
           "title": "6. Five-Star Recovery",
           "subtitle": "Step 6: Comprehensive 24/7 Care",
-          "description": "This is where Medicol redefines care. Your recovery takes place in our exclusive private Recovery Houses, designed for your comfort and healing.",
+          "description": "This is where Isoesthetic redefines care. Your recovery takes place in our exclusive private Recovery Houses, designed for your comfort and healing.",
           "items": [
             "Professional nursing care 24/7 by your side.",
             "Personalized meals according to your medical diet.",
@@ -1219,14 +1219,14 @@
       },
       "faq": {
         "title": "Frequently Asked Questions",
-        "subtitle": "Everything you need to know about your journey with Medicol"
+        "subtitle": "Everything you need to know about your journey with Isoesthetic"
       },
       "cta": {
         "title": "Ready for Your Transformation?",
         "subtitle": "Schedule your free virtual consultation today and take the first step towards the best version of yourself.",
         "whatsapp_button": "Chat on WhatsApp",
         "contact_button": "Go to Contact",
-        "whatsapp_message": "Hello! I'm interested in learning more about the Medicol patient journey process. Could you provide me with more information?"
+        "whatsapp_message": "Hello! I'm interested in learning more about the Isoesthetic patient journey process. Could you provide me with more information?"
       }
     }
   }
