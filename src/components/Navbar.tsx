@@ -10,7 +10,7 @@ import {
   DropdownMenuItem, 
   DropdownMenuTrigger 
 } from '@/components/ui/dropdown-menu';
-import medicolLogo from '@/assets/medicol-logo-blanco.png';
+import isoestheticLogo from '@/assets/isoesthetic-logo-blanco.svg';
 import { useAuth } from '@/contexts/AuthContext';
 import { useIsAdmin } from '@/hooks/useUserRole';
 
@@ -81,7 +81,7 @@ export const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
-              src={medicolLogo}
+              src={isoestheticLogo}
               alt="Isoesthetic Logo"
               className="h-10 w-auto"
             />
